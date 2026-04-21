@@ -1,0 +1,31 @@
+:root {
+  --text: #9D00FF;
+  --bg: #00FFFF;
+  --border: #FF00FF;
+  --border-green: #39FF14;
+  --border-yellow: #FFFF33;
+  --error-color: #DC2626;
+  
+  --bebas: "Bebas Neue", sans-serif;
+  --orbitron: "Orbitron", sans-serif;
+
+  font: 18px/145% var(--bebas);
+  letter-spacing: 0.18px;
+  color-scheme: light dark;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* --text-h: #08060d; */
+  /* --code-bg: #f4f3ec; */
+  /* --accent: #aa3bff; */
+  /* --accent-bg: rgba(170, 59, 255, 0.1); */
+  /* --accent-border: rgba(170, 59, 255, 0.5); */
+}
+
+body {
+  margin: 0;
+}

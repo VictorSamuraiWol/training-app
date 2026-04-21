@@ -1,0 +1,9 @@
+input {
+  color: var(--border-green);
+  background-color: var(--text);
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-yellow);
+  border-radius: 8px;
+  outline: none;
+}

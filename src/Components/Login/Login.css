@@ -1,0 +1,73 @@
+.login {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 14.9vh;
+  color: var(--border-green);
+  text-shadow: 2px 2px 3px var(--border);
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-green);
+  background-image: url(../../assets/images/bg-header-footer.png);
+  background-position: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid var(--border-green);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px var(--border);
+  transition: all 0.3s ease-in-out;
+  background-image: url(../../assets/images/image-login-logout.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.form-labels-inputs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label-input {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.alert-login-message {
+  position: absolute;
+  bottom: -50%;
+  font-size: 1rem;
+  color: var(--error-color);
+  text-shadow: 0 0 0;
+  background-color: var(--border-yellow);
+  padding: 0 2px;
+  border: 1px solid var(--error-color);
+  border-radius: 4px;
+}
+
+.container-button {
+  display: flex;
+  justify-content: end;
+}
+
+.specificStylesLoginButton {
+  font-size: 0.9rem;
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-yellow);
+  padding: 2px 8px;
+  border: 1px solid var(--text);
+  border-radius: 4px;
+}
+
+.specificStylesLoginButton:hover {
+  color: var(--border-yellow);
+  background-color: var(--text);
+  border: 1px solid var(--border-yellow);
+}

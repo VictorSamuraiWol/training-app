@@ -1,0 +1,94 @@
+.container-modal-button {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--text);
+  padding: 8px 16px;
+  border: 1px solid var(--border-yellow);
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-modal-button:hover {
+  color: var(--text);
+  background-color: var(--border-yellow);
+  border: 1px solid var(--text);
+}
+
+.modalLoginOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modalLoginContent {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  background: var(--bg);
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  width: 80%;
+  padding: 0 8px 8px 8px;
+  border: 1px solid var(--border-green);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px var(--border-yellow), 10px 10px 10px var(--border-yellow);
+  transition: all 0.3s ease-in-out;
+  background-image: url(../../assets/images/bg-header-footer.png);
+  background-position: center;
+}
+
+.modalLoginContent:focus {
+  outline: none;
+}
+
+.modalLoginContent:hover {
+  border: 1px solid var(--border-yellow);
+  box-shadow: -5px 5px 5px var(--border-green), -10px 10px 10px var(--border-green);
+}
+
+.container-modal-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.cotainer-modal-delete-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.login-users-passwords {
+  cursor: default;
+}
+
+.static-dinamic-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-users-passwords-users {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-users-passwords-user {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0 4px;
+  border: 1px solid var(--border-green);
+  border-radius: 8px;
+}

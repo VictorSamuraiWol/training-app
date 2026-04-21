@@ -1,0 +1,36 @@
+.notes-page-styles {
+  display: flex;
+  flex-direction: column;
+  min-height: 78vh;
+}
+
+.cards-info-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 32px;
+  flex: 1;
+  background-image: url(../../assets/images/bg-header-footer.png);
+  color: var(--border-green);
+  text-shadow: 4px 2px 3px var(--border);
+  cursor: default;
+}
+
+.cards-info-notes-title {
+  font-size: 3rem;
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  padding-top: 32px;
+}
+
+.cards-info-notes-itens {
+  font-size: 2rem;
+  color: var(--border-yellow);
+  text-shadow: 3px 2px 3px var(--border);
+}
+
+.cards-info-notes-itens:hover {
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+}

@@ -1,0 +1,22 @@
+import './NavigateDefault.css';
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+function NavigateDefault({ isLogged, setActivateNavigateDefault }) {
+  
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (isLogged) {
+      navigate("/")
+
+    }
+
+    setActivateNavigateDefault(false)
+
+  }, [isLogged, navigate, setActivateNavigateDefault])
+
+  // return <div>Loading...</div>;
+}
+
+export default NavigateDefault;

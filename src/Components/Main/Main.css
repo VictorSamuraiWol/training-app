@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 78vh;
+  gap: 40px;
+  width: 100%;
+  background-image: url(../../assets/images/bg-image.png);
+}

@@ -1,0 +1,28 @@
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timer-display {
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: default;
+  padding: 6px;
+  border: 1px solid var(--border-green);
+  border-radius: 6px;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.timer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

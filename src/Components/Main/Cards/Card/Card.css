@@ -1,0 +1,59 @@
+.cards-training {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+.cards-training-title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cards-training-title h2 {
+  font-size: 3rem;
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+} 
+
+.cards-training-exercises-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 8px;
+  border-bottom: 2px solid var(--border-green);
+  border-radius: 8px;
+}
+
+.cards-training-exercises {
+  font-size: 2rem;
+  color: var(--border-yellow);
+  text-shadow: 2px 2px 3px var(--border);
+ }
+
+.cards-training-exercises:hover {
+  color: var(--border-green);
+  text-shadow: 2px 2px 3px var(--border);
+}
+
+.specificStyleTimerExercises {
+  flex-direction: row-reverse;
+}
+
+.specificStyleTimerDisplayExercises {
+  font-size: 1.7rem;
+  color: var(--border-yellow);
+  text-shadow: 2px 2px 3px var(--border);
+}
+
+.specificStyleTimerButtonExercises {
+  color: var(--text);
+  box-shadow: 2px 2px 3px var(--border);
+  background-color: var(--border-yellow);
+  padding: 4px 16px;
+}

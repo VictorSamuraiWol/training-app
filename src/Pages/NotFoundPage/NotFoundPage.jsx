@@ -1,0 +1,28 @@
+import './NotFoundPage.css';
+import { Link } from 'react-router-dom';
+
+function PageNotFound() {
+    return(
+        <div className='page-not-found'>
+          <div className='page-not-found-text404-title'>
+              <span className='text404'>404</span>
+
+              <h1 className='title'>
+                  Oops! Page not found!
+              </h1>
+              
+          </div>
+
+          <p className='paragrafh'>
+              "Is this what you were looking for? Please verify the address in the adress bar or click the link below to return to the previous page."
+          </p>
+
+          <Link className='link-previous-page' to='/'>
+              <div className='back-page'>Previous Page</div>
+          </Link>
+
+        </div>
+    )
+}
+
+export default PageNotFound;

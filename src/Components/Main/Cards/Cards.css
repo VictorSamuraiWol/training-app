@@ -1,0 +1,151 @@
+.cards {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 40px;
+  min-width: 25%;
+  padding: 0 32px 32px 32px;
+  border: 4px solid var(--border-green);
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px var(--border-green), 10px 10px 10px var(--border-green), 20px 20px 20px var(--border-green);
+  transition: all 0.3s ease-in-out;
+  background-image: url(../../../assets/images/designer-cards.png);
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.cards:hover {
+  border: 4px solid var(--border-yellow);
+  box-shadow: -5px 5px 5px var(--border-yellow), -10px 10px 10px var(--border-yellow), -20px 20px 20px var(--border-yellow);
+}
+
+h2, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.7rem;
+  cursor: default;
+}
+
+.cards-info {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--bg);
+  background-color: var(--text);
+  width: 100%;
+  padding: 32px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+.cards-info-measures {
+  display: flex;
+  gap: 16px;
+  font-size: 1.7rem;
+}
+
+.link-workout-A {
+  padding-top: 148px;
+  text-decoration: none;
+}
+
+.link-workout-B {
+  text-decoration: none;
+}
+
+.link-workout-C {
+  text-decoration: none;
+}
+
+.link-nutrition {
+  text-decoration: none;
+}
+
+.link-notes {
+  text-decoration: none;
+}
+
+.specificStylesButtonA {
+  color: var(--bg);
+  text-shadow: 1px 1px 2px var(--bg);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--text);
+  border: 0;
+}
+
+.specificStylesButtonA:hover {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 0 5px var(--text);
+}
+
+.specificStylesButtonB {
+  color: var(--border);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 0 5px var(--border);
+  border: 0;
+}
+
+.specificStylesButtonB:hover {
+  color: var(--bg);
+  text-shadow: 1px 1px 2px var(--bg);
+  background-color: var(--border);
+  box-shadow: 0 0 5px var(--border);
+}
+
+.specificStylesButtonC {
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border);
+  box-shadow: 0 0 5px var(--border-green);
+  border: 0;
+}
+
+.specificStylesButtonC:hover {
+  color: var(--border);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-green);
+  box-shadow: 0 0 5px var(--border);
+}
+
+.specificStylesButtonNutrition {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--text);
+  box-shadow: 0 0 5px var(--border-yellow);
+  background-color: var(--border-green);
+  border: 0;
+}
+
+.specificStylesButtonNutrition:hover {
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--text);
+  box-shadow: 0 0 5px var(--border-green);
+  background-color: var(--border-yellow);
+}
+
+.specificStylesButtonNotes {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-yellow);
+  box-shadow: 0 0 5px var(--text);
+  border: 0;
+}
+
+.specificStylesButtonNotes:hover {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--border-yellow);
+}
