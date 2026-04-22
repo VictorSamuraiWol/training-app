@@ -25,8 +25,8 @@
 
 <!-- The application implements full CRUD (Create, Read, Update, Delete) operations for managing cards in a dynamic and efficient manner, ensuring a responsive and interactive user experience. I am grateful to God for the completion of this project. -->
 
-<!-- <a href="" title="View Project now"> 📟 Click here to view the application</a><br/> -->
-<a href="" title="View Repository now"> 📜 Click here to view the repository</a>
+<a href="https://training-app-liard-ten.vercel.app/" title="View Project now"> 📟 Click here to view the application</a><br/>
+<a href="https://github.com/VictorSamuraiWol/training-app" title="View Repository now"> 📜 Click here to view the repository</a>
 
 ## 💻 Technologies used in the project
 

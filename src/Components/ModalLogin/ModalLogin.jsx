@@ -56,7 +56,7 @@ function ModalLogin() {
             <div className='login-users-passwords-users'>
               <div className='login-users-passwords-user'>
                 <p className='login-users-passwords-user-name'>Name: Leimar</p>
-                <p>/</p>
+                <p>;</p>
                 <p className='login-users-passwords-password'>Password: Leimar</p>
               </div>
 
@@ -66,7 +66,7 @@ function ModalLogin() {
             <div className='login-users-passwords-users'>
               <div className='login-users-passwords-user'>
                 <p className='login-users-passwords-user-name'>Name: New User 1</p>
-                <p>/</p>
+                <p>;</p>
                 <p className='login-users-passwords-password'>Password: New User 1</p>
               </div>
 
@@ -80,7 +80,7 @@ function ModalLogin() {
               >
                 <div className='login-users-passwords-user'>
                   <p className='login-users-passwords-user-name'>Name: {user.name}</p>
-                  <p>/</p>
+                  <p>;</p>
                   <p className='login-users-passwords-password'>Password: {user.password}</p>
                   <p></p>
                 </div>

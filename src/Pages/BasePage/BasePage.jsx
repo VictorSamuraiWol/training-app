@@ -13,9 +13,26 @@ function BasePage() {
 
   const [activateNavigateDefault, setActivateNavigateDefault] = useState(false)
 
+  const compactUserName = (name) => {
+    let editUserName;
+    
+    if (name.length > 15) {
+      editUserName = name.slice(0, 15) + "..."
+
+    } else {
+      editUserName = name
+
+    }
+
+    return editUserName
+
+  }
+
+
+
   return (
     <div className='base-page-styles'>
-      {loginValidate && <Header />}
+      {loginValidate && <Header compactUserName={compactUserName} />}
 
       {!loginValidate && <Login setActivateNavigateDefault={setActivateNavigateDefault} />}
 
@@ -24,7 +41,7 @@ function BasePage() {
         setActivateNavigateDefault={setActivateNavigateDefault} 
       />
 
-      <Outlet context={{ setActivateNavigateDefault }} />
+      <Outlet context={{ setActivateNavigateDefault, compactUserName }} />
 
       <Footer />
       

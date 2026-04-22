@@ -5,17 +5,19 @@ import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
 import profileNewUser1 from '../../assets/images/profiles/profile-new-user-1.png';
 import profileVictor from '../../assets/images/profiles/profile-victor.png';
 import profileNewUser2 from '../../assets/images/profiles/profile-new-user-2.png';
+import profileNewUser3 from '../../assets/images/profiles/profile-new-user-3.png';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
 
-function Header() {
+function Header({ compactUserName }) {
 
   const { nameUser, setNameUser, setLoginValidate, usersContents } = useContext(DataContext)
 
   const [imagesDescriptions] = useState({
       profileVictor: profileVictor,
-      profileNewUser2: profileNewUser2
+      profileNewUser2: profileNewUser2,
+      profileNewUser3: profileNewUser3
 
   })
 
@@ -24,6 +26,21 @@ function Header() {
     setNameUser('')
 
   }
+
+  // function compactUserName(name) {
+  //   let editUserName;
+    
+  //   if (name.length > 15) {
+  //     editUserName = name.slice(0, 15) + "..."
+
+  //   } else {
+  //     editUserName = name
+
+  //   }
+
+  //   return editUserName
+
+  // }
 
   return (
     <div className='header'>
@@ -91,12 +108,11 @@ function Header() {
       >
         <div className='container-login-signin-image-name'>
           <img 
-            src={imagesDescriptions[user.imageProfile]} 
-            // src={profileVictor}
+            src={imagesDescriptions[user.imageProfile]}
             className='container-login-signin-image-name-img' 
           />
 
-          <p className='container-login-signin-image-name-text'>{user.name}</p>
+          {<p className='container-login-signin-image-name-text'>{compactUserName(user.name)}</p>}
 
         </div>
 

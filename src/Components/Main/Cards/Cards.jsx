@@ -2,11 +2,13 @@ import './Cards.css';
 import ButtonDefault from '../../ButtonDefault/ButtonDefault';
 import { useContext } from 'react';
 import { DataContext } from '../../DataContext/DataContext';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 function Cards() {
 
   const { usersContents, setUserId, setTypeTrain, nameUser } = useContext(DataContext)
+
+  const { compactUserName } = useOutletContext()
 
   function clickButton(type) {
     setTypeTrain(type)
@@ -22,10 +24,12 @@ function Cards() {
         key='static-leimar-id'
       >
         <div className='cards-info'>
-          <h2>Leimar</h2>
+          {/* <h2>Leimar</h2> */}
+          <h2>{compactUserName('Leimar')}</h2>
+
           <div className='cards-info-measures'>
-            <h2>85kgs</h2> /
-            <h2>1.73cm</h2>
+            <h2>Example</h2> /
+            <h2>Example</h2>
           </div>
         </div>
 
@@ -92,7 +96,8 @@ function Cards() {
         key='static-newuser1-id'
       >
         <div className='cards-info'>
-          <h2>New User 1</h2>
+          {/* <h2>New User 1</h2> */}
+          <h2>{compactUserName('New User 1')}</h2>
           <div className='cards-info-measures'>
             <h2>Example</h2> /
             <h2>Example</h2>
@@ -163,7 +168,8 @@ function Cards() {
           key={user.id}
         >
           <div className='cards-info'>
-            <h2>{user.name}</h2>
+            {/* <h2>{user.name}</h2> */}
+            <h2>{compactUserName(user.name)}</h2>
             <div className='cards-info-measures'>
               <h2>{user.weight}</h2> /
               <h2>{user.height}</h2>

@@ -10,11 +10,11 @@
       "exercise3": [["A", "Forearms: (up) 3x 12-14 (6kg - dumbbell) (already warmed up)"], ["B", "Stiff (Romanian Deadlift): 1x 16-20 (bodyweight) + 2x 12-14 (bodyweight)"], ["C", "Front Raise: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plate)"]],
       "exercise4": [["A", "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)"], ["B", "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"], ["C", "Lateral Raise: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)"]],
       "exercise5": [["A", "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"], ["B", "Crunch (Abs): 1x 12-14 (bodyweight) + 3x 7-9 (bodyweight)"], ["C", "Incline Push-up: 1x 16-20 + 2x 12-14 (bodyweight)"]],
-      "exercise6": [["A", "Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 3x 12-14 (12kg - dumbbell)"], ["B", "Plank: 1x (30 seconds)"], ["C", "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"]],
+      "exercise6": [["A", "Trapezius: 1x 16-20 (10kg - dumbbell) + 3x 12-14 (12kg - dumbbell)"], ["B", "Plank: 1x (35 seconds)"], ["C", "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"]],
       "exercise7": [["A", "Wrist Curl: 2x 12-14 (12kg - dumbbell) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"]],
-      "exercise8": [["A", "Wrist Extension: 2x 12-14 (6kg - plate) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Crunch (Abs): 1x 12-14 (bodyweight) + 3x 7-9 (bodyweight)"]],
-      "exercise9": [["A", "Crunch (Abs): 1x 12-14 (bodyweight) + 3x 7-9 (bodyweight)"], ["B", ""], ["C", "Plank: 1x (30 seconds)"]],
-      "exercise10": [["A", "Plank: 1x (30 seconds)"], ["B", ""], ["C", ""]],
+      "exercise8": [["A", "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Crunch (Abs): 1x 12-14 (bodyweight) + 3x 7-9 (bodyweight)"]],
+      "exercise9": [["A", "Crunch (Abs): 1x 12-14 (bodyweight) + 3x 7-9 (bodyweight)"], ["B", ""], ["C", "Plank: 1x (35 seconds)"]],
+      "exercise10": [["A", "Plank: 1x (35 seconds)"], ["B", ""], ["C", ""]],
       "exercise11": [["A", ""], ["B", ""], ["C", ""]],
       "exercise12": [["A", ""], ["B", ""], ["C", ""]],
       "exercise13": [["A", ""], ["B", ""], ["C", ""]],
@@ -23,6 +23,7 @@
       "notes": ["Rest between reps: 1 min", "Rest between sets: 1-3 min"],
       "password": "Victor",
       "imageProfile": "profileVictor",
+      "audio": "audio1",
       "id": 1
     },
     {
@@ -48,7 +49,34 @@
       "notes": ["Example", "Example"],
       "password": "New User 2",
       "imageProfile": "profileNewUser2",
+      "audio": "audio2",
       "id": 2
+    },
+    {
+      "name" : "12345678900000;151515",
+      "weight": "Example",
+      "height": "Example",
+      "nutrition": [["Supplements:", "Example"], ["Breakfast:", "Example"], ["Snack:", "Example"], ["Lunch:", "Example"], ["Snack:", "Example"], ["Dinner:", "Example"], ["Late-night Snack:", "Example"]],
+      "exercise1": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise2": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise3": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise4": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise5": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise6": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise7": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise8": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise9": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise10": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise11": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise12": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise13": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise14": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "exercise15": [["A", "Example"], ["B", "Example"], ["C", "Example"]],
+      "notes": ["Example", "Example"],
+      "password": "1",
+      "imageProfile": "profileNewUser3",
+      "audio": "audio2",
+      "id": 3
     }
   ] 
 }

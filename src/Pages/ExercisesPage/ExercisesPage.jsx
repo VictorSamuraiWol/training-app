@@ -2,7 +2,8 @@ import './ExercisesPage.css';
 import Card from '../../Components/Main/Cards/Card/Card';
 import Timer from '../../Components/Timer/Timer';
 import MusicPlayer from '../../Components/MusicPlayer/MusicPlayer';
-import music from '../../assets/audios/armin-miami-2026.mp3'
+import audio1 from '../../assets/audios/armin-miami-2026.mp3'
+import audio2 from '../../assets/audios/workout-music-2025.mp3'
 import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
@@ -12,6 +13,12 @@ function ExercisesPage() {
   const { usersContents, typeTrain, loginValidate, nameUser } = useContext(DataContext)
 
   const [isRunningAllTime, setIsRunningAllTime] = useState(false)
+
+  const [audiosDescriptions] = useState({
+      audio1: audio1,
+      audio2: audio2
+
+  })
 
   return(
     <div className='exercises-page-style'>
@@ -34,7 +41,11 @@ function ExercisesPage() {
           />
         </div>
 
-        <MusicPlayer src={music} specificStylePlayer='music-player' />
+        <MusicPlayer
+          key='0'
+          src={audiosDescriptions["audio1"]}
+          specificStylePlayer='music-player' 
+        />
 
         {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id'
@@ -106,7 +117,11 @@ function ExercisesPage() {
           />
         </div>
 
-        <MusicPlayer src={music} specificStylePlayer='music-player' />
+        <MusicPlayer
+          key='0'
+          src={audiosDescriptions["audio2"]} 
+          specificStylePlayer='music-player' 
+        />
 
         {typeTrain === "A" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
           key='static-newuser1-id'
@@ -185,7 +200,11 @@ function ExercisesPage() {
             />
           </div>
 
-          <MusicPlayer src={music} specificStylePlayer='music-player' />
+          <MusicPlayer
+            key='0'
+            src={audiosDescriptions[user.audio]}
+            specificStylePlayer='music-player' 
+          />
 
           {user.exercise1[0][0] === 'A' && typeTrain === "A" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
             key={user.id}
