@@ -7,3 +7,32 @@ input {
   border-radius: 8px;
   outline: none;
 }
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  input {
+    height: 8px;
+  }
+
+}
+
+@media (min-width: 481px) {
+  input {
+    height: 10px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  input {
+    height: 12px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  input {
+    height: 15px;
+  }
+
+}

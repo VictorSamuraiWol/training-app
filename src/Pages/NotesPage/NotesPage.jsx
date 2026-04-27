@@ -3,6 +3,7 @@ import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useContext } from 'react';
 import { useOutletContext } from 'react-router-dom';
+import { FaCheck } from "react-icons/fa";
 
 function NotesPage() {
 
@@ -30,21 +31,21 @@ function NotesPage() {
             key='observation1'
             className='cards-info-notes-item' 
           >
-            ✔️ Example
+            <FaCheck className='iconCheckNotes' />Example
           </p>
 
           <p 
             key='observation2'
             className='cards-info-notes-item' 
           >
-            ✔️ Example
+            <FaCheck className='iconCheckNotes' />Example
           </p>
 
           <p 
             key='observation3'
             className='cards-info-notes-item' 
           >
-            ✔️ Example
+            <FaCheck className='iconCheckNotes' />Example
           </p>
 
         </div>
@@ -65,21 +66,21 @@ function NotesPage() {
             key='observation1'
             className='cards-info-notes-item' 
           >
-            ✔️ Example
+            <FaCheck className='iconCheckNotes' />Example
           </p>
 
           <p 
             key='observation2'
             className='cards-info-notes-item' 
           >
-            ✔️ Example
+            <FaCheck className='iconCheckNotes' />Example
           </p>
 
           <p 
             key='observation3'
             className='cards-info-notes-item' 
           >
-            ✔️ Example
+            <FaCheck className='iconCheckNotes' />Example
           </p>
 
         </div>
@@ -102,7 +103,7 @@ function NotesPage() {
             <p
               key={indice}
               className='cards-info-notes-item'>
-                ✔️ {note}
+                <FaCheck className='iconCheckNotes' />{note}
             </p>
             )}
             

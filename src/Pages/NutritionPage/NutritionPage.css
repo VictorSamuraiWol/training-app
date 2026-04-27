@@ -43,6 +43,9 @@
 }
 
 .cards-info-nutrition-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-size: 2rem;
   color: var(--border-yellow);
   text-shadow: 3px 2px 3px var(--border);
@@ -51,6 +54,10 @@
 .cards-info-nutrition-item:hover {
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
+}
+
+.iconCheckNutrition {
+  color: var(--border-green);
 }
 
 /* Responsiveness */

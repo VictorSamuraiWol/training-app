@@ -3,6 +3,7 @@ import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { useContext } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useOutletContext } from 'react-router-dom';
+import { FaCheck } from "react-icons/fa";
 
 function NutritionPage() {
 
@@ -26,13 +27,13 @@ function NutritionPage() {
           <h2 className='cards-info-nutrition-title'>Nutrition - Leimar</h2>
 
           <div className='cards-info-nutrition-itens'>
-            <p className='cards-info-nutrition-item'>✔️ Supplements: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Breakfast: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Snack: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Lunch: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Snack: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Dinner: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Late-night Snack: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Supplements: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Breakfast: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Snack: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Lunch: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Snack: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Dinner: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Late-night Snack: Example</p>
           </div>
 
         </div>
@@ -47,13 +48,13 @@ function NutritionPage() {
           <h2 className='cards-info-nutrition-title'>Nutrition - New User 1</h2>
 
           <div className='cards-info-nutrition-itens'>
-            <p className='cards-info-nutrition-item'>✔️ Supplements: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Breakfast: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Snack: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Lunch: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Snack: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Dinner: Example</p>
-            <p className='cards-info-nutrition-item'>✔️ Late-night Snack: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Supplements: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Breakfast: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Snack: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Lunch: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Snack: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Dinner: Example</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Late-night Snack: Example</p>
           </div>
 
         </div>
@@ -70,13 +71,13 @@ function NutritionPage() {
           <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName(user.name)}</h2>
 
           <div className='cards-info-nutrition-itens'>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[0][0]} {user.nutrition[0].slice(1).join(", ")}</p>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[1][0]} {user.nutrition[1].slice(1).join(", ")}</p>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[2][0]} {user.nutrition[2].slice(1).join(", ")}</p>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[3][0]} {user.nutrition[3].slice(1).join(", ")}</p>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[4][0]} {user.nutrition[4].slice(1).join(", ")}</p>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[5][0]} {user.nutrition[5].slice(1).join(", ")}</p>
-            <p className='cards-info-nutrition-item'>✔️ {user.nutrition[6][0]} {user.nutrition[6].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[0][0]} {user.nutrition[0].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[1][0]} {user.nutrition[1].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[2][0]} {user.nutrition[2].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[3][0]} {user.nutrition[3].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[4][0]} {user.nutrition[4].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[5][0]} {user.nutrition[5].slice(1).join(", ")}</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[6][0]} {user.nutrition[6].slice(1).join(", ")}</p>
 
           </div>
 
