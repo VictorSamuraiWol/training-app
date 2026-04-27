@@ -4,6 +4,14 @@
   height: 78vh;
 }
 
+.banner-nutrition-page {
+  background-image: url(../../assets//images/image-nutrition-neon.png);
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+
 .cards-info-nutrition {
   display: flex;
   flex-direction: column;
@@ -11,6 +19,7 @@
   align-items: center;
   gap: 32px;
   flex: 1;
+  padding: 16px;
   background-image: url(../../assets/images/bg-header-footer.png);
   color: var(--border-green);
   text-shadow: 4px 2px 3px var(--border);
@@ -25,12 +34,145 @@
 }
 
 .cards-info-nutrition-itens {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 32px;
+  overflow-wrap: break-word;
+}
+
+.cards-info-nutrition-item {
   font-size: 2rem;
   color: var(--border-yellow);
   text-shadow: 3px 2px 3px var(--border);
 }
 
-.cards-info-nutrition-itens:hover {
+.cards-info-nutrition-item:hover {
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .banner-nutrition-page {
+    height: 80px;
+  }
+
+  .cards-info-nutrition {
+    padding: 6px;
+  }
+
+  .cards-info-nutrition-title {
+    font-size: 1.5rem;
+  }
+
+  .cards-info-nutrition-itens {
+    align-items: start;
+    width: 100%;
+    word-break: break-all;
+  }
+
+  .cards-info-nutrition-item {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .banner-nutrition-page {
+    height: 100px;
+  }
+
+  .cards-info-nutrition {
+    padding: 8px;
+  }
+
+  .cards-info-nutrition-title {
+    font-size: 1.6rem;
+  }
+
+  .cards-info-nutrition-itens {
+    align-items: start;
+    width: 100%;
+    word-break: break-all;
+  }
+
+  .cards-info-nutrition-item {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .banner-nutrition-page {
+    height: 120px;
+  }
+
+  .cards-info-nutrition {
+    padding: 10px;
+  }
+
+  .cards-info-nutrition-title {
+    font-size: 1.7rem;
+  }
+
+  .cards-info-nutrition-itens {
+    align-items: center;
+    word-break: normal;
+  }
+
+  .cards-info-nutrition-item {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .banner-nutrition-page {
+    height: 140px;
+  }
+
+  .cards-info-nutrition {
+    padding: 12px;
+  }
+
+  .cards-info-nutrition-title {
+    font-size: 1.8rem;
+  }
+
+  .cards-info-nutrition-item {
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .cards-info-nutrition {
+    padding: 14px;
+  }
+
+  .cards-info-nutrition-title {
+    font-size: 1.9rem;
+  }
+
+  .cards-info-nutrition-item {
+    font-size: 1.4rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .cards-info-nutrition {
+    padding: 16px;
+  }
+
+  .cards-info-nutrition-title {
+    font-size: 2rem;
+  }
+
+  .cards-info-nutrition-item {
+    font-size: 1.5rem;
+  }
+
 }

@@ -27,21 +27,6 @@ function Header({ compactUserName }) {
 
   }
 
-  // function compactUserName(name) {
-  //   let editUserName;
-    
-  //   if (name.length > 15) {
-  //     editUserName = name.slice(0, 15) + "..."
-
-  //   } else {
-  //     editUserName = name
-
-  //   }
-
-  //   return editUserName
-
-  // }
-
   return (
     <div className='header'>
       <Link className='link-img' to='/'>

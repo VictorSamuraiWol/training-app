@@ -11,9 +11,13 @@ function Footer() {
 
   return(
     <div className='footer'>            
-        <img src={image} alt="icon wolverine" />
+        <img 
+          className='footer-img' 
+          src={image} 
+          alt="icon wolverine" 
+        />
 
-        <p>Created by Victor Cardoso. Feel free to connect on  
+        <p className='footer-text'>Created by Victor Cardoso. Feel free to connect on  
             <Link className='footer-link' id='contactLink' to="https://www.linkedin.com/in/victor-cardoso-cloud-front/" target="_blank"> Linkedin.</Link>
         </p>
 

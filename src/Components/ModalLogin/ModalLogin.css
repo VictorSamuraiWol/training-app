@@ -31,13 +31,13 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  gap: 4px;
+  gap: 16px;
   position: absolute;
   background: var(--bg);
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
   width: 80%;
-  padding: 0 8px 8px 8px;
+  padding: 16px;
   border: 1px solid var(--border-green);
   border-radius: 8px;
   box-shadow: 5px 5px 5px var(--border-yellow), 10px 10px 10px var(--border-yellow);
@@ -53,6 +53,10 @@
 .modalLoginContent:hover {
   border: 1px solid var(--border-yellow);
   box-shadow: -5px 5px 5px var(--border-green), -10px 10px 10px var(--border-green);
+}
+
+.login-users-passwords-title {
+  margin: 0;
 }
 
 .container-modal-delete {
@@ -76,6 +80,7 @@
   justify-content: center;
   align-items: center;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 .login-users-passwords-users {
@@ -91,4 +96,146 @@
   padding: 0 4px;
   border: 1px solid var(--border-green);
   border-radius: 8px;
+}
+
+.login-users-passwords-user-name {
+  padding-right: 4px;
+  border-right: 1px solid var(--border-green);
+  word-break: break-all;
+}
+.login-users-passwords-password {
+  padding-left: 2px;
+  word-break: break-all;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .container-modal-button {
+    font-size: 0.7rem;
+    width: 90px;
+    padding: 2px;
+  }
+
+  .image-react-modal {
+    display: none;
+  }
+
+  .show-all-names-and-passwords {
+    display: none;
+  }
+
+  .names-and-passwords {
+    display: flex;
+  }
+
+  .login-users-passwords-title {
+    font-size: 1.75rem;
+  }
+
+  .static-dinamic-content {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .container-modal-button {
+    font-size: 0.8rem;
+    width: 120px;
+    padding: 2px;
+  }
+
+  .image-react-modal {
+    display: none;
+  }
+
+  .show-all-names-and-passwords {
+    display: none;
+  }
+
+  .names-and-passwords {
+    display: flex;
+  }
+
+  .login-users-passwords-title {
+    font-size: 2rem;
+  }
+
+  .static-dinamic-content {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .container-modal-button {
+    font-size: 0.9rem;
+    width: auto;
+    padding: 4px;
+  }
+
+  .image-react-modal {
+    display: flex;
+  }
+
+  .show-all-names-and-passwords {
+    display: flex;
+  }
+
+  .names-and-passwords {
+    display: none;
+  }
+
+  .login-users-passwords-title {
+    font-size: 2.25rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .container-modal-button {
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .login-users-passwords-title {
+    font-size: 2.5rem;
+  }
+
+  .static-dinamic-content {
+    font-size: 1.05rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .container-modal-button {
+    font-size: 1.1rem;
+    padding: 8px;
+  }
+
+  .login-users-passwords-title {
+    font-size: 3rem;
+  }
+
+  .static-dinamic-content {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .container-modal-button {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .login-users-passwords-title {
+    font-size: 3.5rem;
+  }
+
+  .static-dinamic-content {
+    font-size: 1.125rem;
+  }
+
 }

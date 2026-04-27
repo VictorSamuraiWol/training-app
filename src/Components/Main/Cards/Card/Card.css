@@ -4,21 +4,10 @@
   justify-content: center;
   align-items: center;
   gap: 24px;
+  width: 100%;
   transition: all 0.3s ease-in-out;
   cursor: default;
 }
-
-.cards-training-title {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.cards-training-title h2 {
-  font-size: 3rem;
-  color: var(--border-green);
-  text-shadow: 3px 2px 3px var(--border);
-} 
 
 .cards-training-exercises-timer {
   display: flex;
@@ -56,4 +45,122 @@
   box-shadow: 2px 2px 3px var(--border);
   background-color: var(--border-yellow);
   padding: 4px 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .cards-training-exercises-timer {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cards-training-exercises {
+    font-size: 1rem;
+  }
+
+  .specificStyleTimerExercises {
+    flex-direction: column;
+  }
+
+  .specificStyleTimerDisplayExercises {
+    font-size: 1.25rem;
+  }
+
+  .specificStyleTimerButtonExercises {
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .cards-training-exercises-timer {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cards-training-exercises {
+    font-size: 1.1rem;
+  }
+
+  .specificStyleTimerExercises {
+    flex-direction: column;
+  }
+
+  .specificStyleTimerDisplayExercises {
+    font-size: 1.25rem;
+  }
+
+  .specificStyleTimerButtonExercises {
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .cards-training-exercises-timer {
+    justify-content: center;
+    width: auto;
+  }
+
+  .cards-training-exercises {
+    font-size: 1.2rem;
+  }
+
+  .specificStyleTimerExercises {
+    flex-direction: row-reverse;
+  }
+
+  .specificStyleTimerDisplayExercises {
+    font-size: 1.30rem;
+  }
+
+  .specificStyleTimerButtonExercises {
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .cards-training-exercises {
+    font-size: 1.3rem;
+  }
+
+  .specificStyleTimerDisplayExercises {
+    font-size: 1.35rem;
+  }
+
+  .specificStyleTimerButtonExercises {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .cards-training-exercises {
+    font-size: 1.4rem;
+  }
+
+  .specificStyleTimerDisplayExercises {
+    font-size: 1.40rem;
+  }
+
+  .specificStyleTimerButtonExercises {
+    font-size: 0.85rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .cards-training-exercises {
+    font-size: 1.5rem;
+  }
+
+  .specificStyleTimerDisplayExercises {
+    font-size: 1.45rem;
+  }
+
+  .specificStyleTimerButtonExercises {
+    font-size: 0.9rem;
+  }
+
 }

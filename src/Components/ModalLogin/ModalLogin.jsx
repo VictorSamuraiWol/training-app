@@ -29,8 +29,15 @@ function ModalLogin() {
       <ButtonDefault 
         onClick={openModal} 
         nameButton='SHOW ALL NAMES AND PASSWORDS'
-        specificStylesButton='container-modal-button'
-        imageReact={<GiClick />}
+        specificStylesButton='container-modal-button show-all-names-and-passwords'
+        imageReact={<GiClick className='image-react-modal'/>}
+      />
+
+      <ButtonDefault 
+        onClick={openModal} 
+        nameButton='NAMES AND PASSWORDS'
+        specificStylesButton='container-modal-button names-and-passwords'
+        imageReact={<GiClick className='image-react-modal'/>}
       />
 
       <Modal
@@ -56,7 +63,6 @@ function ModalLogin() {
             <div className='login-users-passwords-users'>
               <div className='login-users-passwords-user'>
                 <p className='login-users-passwords-user-name'>Name: Leimar</p>
-                <p>;</p>
                 <p className='login-users-passwords-password'>Password: Leimar</p>
               </div>
 
@@ -66,7 +72,6 @@ function ModalLogin() {
             <div className='login-users-passwords-users'>
               <div className='login-users-passwords-user'>
                 <p className='login-users-passwords-user-name'>Name: New User 1</p>
-                <p>;</p>
                 <p className='login-users-passwords-password'>Password: New User 1</p>
               </div>
 
@@ -80,7 +85,6 @@ function ModalLogin() {
               >
                 <div className='login-users-passwords-user'>
                   <p className='login-users-passwords-user-name'>Name: {user.name}</p>
-                  <p>;</p>
                   <p className='login-users-passwords-password'>Password: {user.password}</p>
                   <p></p>
                 </div>

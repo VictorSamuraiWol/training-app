@@ -2,7 +2,7 @@ import './Card.css';
 import Timer from '../../../Timer/Timer';
 import { useState } from 'react';
 
-function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5, 
+function Card({ exercise1, exercise2, exercise3, exercise4, exercise5, 
   exercise6, exercise7, exercise8, exercise9, exercise10, exercise11, exercise12,
   exercise13, exercise14, exercise15 }) {
 
@@ -255,12 +255,10 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
 
   return (
     <div className='cards-training'>
-      <div className='cards-training-title'>
-        <h2>{nameTrain}</h2>
-      </div>
         {exercise1 && exercise1 !== '' && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise1}</p>
+
           <Timer
             key='1'
             isRunning={isRunning1}
@@ -277,6 +275,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise2 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise2}</p>
+
           <Timer
             key='2'
             isRunning={isRunning2}
@@ -293,6 +292,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise3 &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise3}</p>
+
           <Timer
             key='3'
             isRunning={isRunning3}
@@ -309,6 +309,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise4 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise4}</p>
+
           <Timer
             key='4'
             isRunning={isRunning4}
@@ -325,6 +326,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise5 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise5}</p>
+
           <Timer
             key='5'
             isRunning={isRunning5}
@@ -341,6 +343,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise6 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise6}</p>
+
           <Timer
             key='6'
             isRunning={isRunning6}
@@ -357,6 +360,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise7 && 
         <div className='cards-training-exercises-timer'>
         <p className='cards-training-exercises'>{exercise7}</p>
+
         <Timer
             key='7'
             isRunning={isRunning7}
@@ -373,6 +377,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise8 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise8}</p>
+
           <Timer
             key='8'
             isRunning={isRunning8}
@@ -389,6 +394,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise9 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise9}</p>
+
           <Timer
             key='9'
             isRunning={isRunning9}
@@ -405,6 +411,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise10 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise10}</p>
+
           <Timer
             key='10'
             isRunning={isRunning10}
@@ -421,6 +428,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise11 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise11}</p>
+
           <Timer
             key='11'
             isRunning={isRunning11}
@@ -437,6 +445,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise12 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise12}</p>
+
           <Timer
             key='12'
             isRunning={isRunning12}
@@ -453,6 +462,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise13 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise13}</p>
+
           <Timer
             key='13'
             isRunning={isRunning13}
@@ -469,6 +479,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise14 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise14}</p>
+          
           <Timer
             key='14'
             isRunning={isRunning14}
@@ -485,6 +496,7 @@ function Card({ nameTrain, exercise1, exercise2, exercise3, exercise4, exercise5
         {exercise15 &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise15}</p>
+          
           <Timer
             key='15'
             isRunning={isRunning15}

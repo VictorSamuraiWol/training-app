@@ -50,8 +50,16 @@ h2 {
 
 .cards-info-measures {
   display: flex;
-  gap: 6px;
   font-size: 1.7rem;
+}
+
+.cards-info-measures-weight {
+  padding-right: 4px;
+  border-right: 2px solid var(--bg);
+}
+
+.cards-info-measures-height {
+  padding-left: 2px;
 }
 
 .link-workout-A {
@@ -148,4 +156,323 @@ h2 {
   text-shadow: 1px 1px 2px var(--border);
   background-color: var(--text);
   box-shadow: 0 0 5px var(--border-yellow);
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .cards {
+    gap: 24px;
+    min-width: 50%;
+    padding: 0 24px 24px 24px;
+  }
+
+  .cards-info {
+    padding: 16px;
+  }
+
+  .cards-info-title {
+    font-size: 1rem;
+  }
+
+  .cards-info-measures {
+    font-size: 1rem;
+  }
+
+  .cards-info-measures-weight {
+    font-size: 1rem;
+  }
+
+  .cards-info-measures-height {
+    font-size: 1rem;
+  }
+
+  .link-workout-A {
+    padding-top: 82px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonNutrition {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonNotes {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .cards {
+    gap: 24px;
+    min-width: 50%;
+    padding: 0 24px 24px 24px;
+  }
+
+  .cards-info {
+    padding: 16px;
+  }
+
+  .cards-info-title {
+    font-size: 1.05rem;
+  }
+
+  .cards-info-measures {
+    font-size: 1.05rem;
+  }
+
+  .cards-info-measures-weight {
+    font-size: 1.05rem;
+  }
+
+  .cards-info-measures-height {
+    font-size: 1.05rem;
+  }
+
+  .link-workout-A {
+    padding-top: 82px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonNutrition {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonNotes {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .cards {
+    gap: 28px;
+    min-width: 40%;
+    padding: 0 28px 28px 28px;
+  }
+
+  .cards-info {
+    padding: 20px;
+  }
+
+  .cards-info-title {
+    font-size: 1.05rem;
+  }
+
+  .cards-info-measures {
+    font-size: 1.05rem;
+  }
+
+  .cards-info-measures-weight {
+    font-size: 1.05rem;
+  }
+
+  .cards-info-measures-height {
+    font-size: 1.05rem;
+  }
+
+  .link-workout-A {
+    padding-top: 94px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonNutrition {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonNotes {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    gap: 32px;
+    min-width: 35%;
+    padding: 0 32px 32px 32px;
+  }
+
+  .cards-info {
+    padding: 24px;
+  }
+
+  .cards-info-title {
+    font-size: 1.1rem;
+  }
+
+  .cards-info-measures {
+    font-size: 1.1rem;
+  }
+
+  .cards-info-measures-weight {
+    font-size: 1.1rem;
+  }
+
+  .cards-info-measures-height {
+    font-size: 1.1rem;
+  }
+
+  .link-workout-A {
+    padding-top: 106px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonNutrition {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonNotes {
+    font-size: 1.05rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .cards {
+    gap: 36px;
+    min-width: 30%;
+    padding: 0 36px 36px 36px;
+  }
+
+  .cards-info {
+    padding: 28px;
+  }
+
+  .cards-info-title {
+    font-size: 1.15rem;
+  }
+
+  .cards-info-measures {
+    font-size: 1.15rem;
+  }
+
+  .cards-info-measures-weight {
+    font-size: 1.15rem;
+  }
+
+  .cards-info-measures-height {
+    font-size: 1.15rem;
+  }
+
+  .link-workout-A {
+    padding-top: 118px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonNutrition {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonNotes {
+    font-size: 1.1rem;
+  }
+  
+}
+
+@media (min-width: 1440px) {
+  .cards {
+    gap: 40px;
+    min-width: 25%;
+    padding: 0 40px 40px 40px;
+  }
+
+  .cards-info {
+    padding: 32px;
+  }
+
+  .cards-info-title {
+    font-size: 1.175rem;
+  }
+
+  .cards-info-measures {
+    font-size: 1.175rem;
+  }
+
+  .cards-info-measures-weight {
+    font-size: 1.175rem;
+  }
+
+  .cards-info-measures-height {
+    font-size: 1.175rem;
+  }
+
+  .link-workout-A {
+    padding-top: 130px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonNutrition {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonNotes {
+    font-size: 1.125rem;
+  }
+
 }

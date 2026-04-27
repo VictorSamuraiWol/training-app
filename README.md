@@ -12,18 +12,14 @@
 
   > ℹ️ **NOTE 1:** This repository was developed during my Front-End studies, with the goal of improving my knowledge in this area. The project will continue to evolve to enhance performance and code optimization.
 
-  > ℹ️ **NOTE 2:** Atualmente está sendo utilizado em telas maiores. Em breve, estará disponível para todas as versões de dispositivos.
-  
-  > ℹ️ **NOTE 2:** It is currently optimized for larger screens. Support for all device sizes will be available soon.
-
 ## ✨ Features
-✅ Bem vindos! Este é um projeto com o objetivo de criar uma aplicação em React com temática de treinamento, fornecendo informações, músicas e timer em tempo real de forma organizada para maximizar a performance dos treinos. Esta aplicação será utilizada por praticantes de atividade física durante suas rotinas de treino, alimentação e descanso. 
+✅ Bem vindos! Este é um projeto com o objetivo de criar uma aplicação em React com temática de treinamento, fornecendo informações, músicas e timer em tempo real de forma organizada para maximizar a performance dos treinos. Esta aplicação será utilizada por praticantes de atividade física durante suas rotinas de treino, alimentação e descanso. Minha gratidão a Deus pela finalização do projeto.
 
-<!-- Possui funcionalidades de ler, criar, atualizar e remover cards de forma funcional e dinâmica. Minha gratidão a Deus pela finalização do projeto. -->
+<!-- Possui funcionalidades de ler, criar, atualizar e remover cards de forma funcional e dinâmica. -->
 
-✅ Welcome! This project aims to develop a React-based application focused on training, providing structured access to information, music, and real-time timers to optimize workout performance. The application is designed to be used by individuals engaged in physical activity throughout their training routines, nutrition, and recovery. 
+✅ Welcome! This project aims to develop a React-based application focused on training, providing structured access to information, music, and real-time timers to optimize workout performance. The application is designed to be used by individuals engaged in physical activity throughout their training routines, nutrition, and recovery. I am grateful to God for the completion of this project. 
 
-<!-- The application implements full CRUD (Create, Read, Update, Delete) operations for managing cards in a dynamic and efficient manner, ensuring a responsive and interactive user experience. I am grateful to God for the completion of this project. -->
+<!-- The application implements full CRUD (Create, Read, Update, Delete) operations for managing cards in a dynamic and efficient manner, ensuring a responsive and interactive user experience. -->
 
 <a href="https://training-app-liard-ten.vercel.app/" title="View Project now"> 📟 Click here to view the application</a><br/>
 <a href="https://github.com/VictorSamuraiWol/training-app" title="View Repository now"> 📜 Click here to view the repository</a>

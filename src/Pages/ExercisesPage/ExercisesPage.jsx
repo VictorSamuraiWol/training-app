@@ -7,10 +7,13 @@ import audio2 from '../../assets/audios/workout-music-2025.mp3'
 import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
+import { useOutletContext } from 'react-router-dom';
 
 function ExercisesPage() {
 
   const { usersContents, typeTrain, loginValidate, nameUser } = useContext(DataContext)
+
+  const { compactUserName } = useOutletContext()
 
   const [isRunningAllTime, setIsRunningAllTime] = useState(false)
 
@@ -24,32 +27,46 @@ function ExercisesPage() {
     <div className='exercises-page-style'>
       {!loginValidate && <ErrorLogin />}
 
+      {typeTrain === "A" && loginValidate && <div className='banner-a-exercises-page'></div>}
+      {typeTrain === "B" && loginValidate && <div className='banner-b-exercises-page'></div>}
+      {typeTrain === "C" && loginValidate && <div className='banner-c-exercises-page'></div>}
+
       {/* Static Content */}
       {/* Static User 1 */}
       {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && loginValidate &&
-      <main className='exercises-page-style-cards' key='static-leimar-id'>
-        <div className='title-timer'>
-          <p className='title-timer-text'>Total Time:</p>
-          <Timer
-            key='0'
-            isRunning={isRunningAllTime}
-            setIsRunning={setIsRunningAllTime}  
-            specificStyleTimer='specificStyleTimer' 
-            specificStyleTimerDisplay='specificStyleTimerDisplay' 
-            specificStyleTimerButton='specificStyleTimerButton'
-            buttonPlayPauseId='0'
-          />
-        </div>
+        <main className='exercises-page-style-cards' key='static-leimar-id'>
+          <div className='exercises-page-style-cards-timer-title-music'>
+            <div className='title-timer'>
+              <p className='title-timer-text'>Total Time:</p>
+              <Timer
+                key='0'
+                isRunning={isRunningAllTime}
+                setIsRunning={setIsRunningAllTime} 
+                specificStyleTimer='specificStyleTimer' 
+                specificStyleTimerDisplay='specificStyleTimerDisplay' 
+                specificStyleTimerButton='specificStyleTimerButton'
+                buttonPlayPauseId='0'
+              />
+            </div>
 
-        <MusicPlayer
-          key='0'
-          src={audiosDescriptions["audio1"]}
-          specificStylePlayer='music-player' 
-        />
+            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - Leimar</h1>
+
+            <MusicPlayer
+              key='0'
+              src={audiosDescriptions["audio1"]}
+              specificStylePlayer='music-player'
+              specificStyleMusicButton='specificStyleMusicButton' 
+            />
+
+          </div>
+
+          <div className='exercises-page-style-cards-title'>
+            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - Leimar</h1>
+
+          </div >
 
         {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
-          key='static-leimar-id'
-          nameTrain='Workout A - Leimar' 
+          key='static-leimar-id' 
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -68,8 +85,7 @@ function ExercisesPage() {
         />}
 
         {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
-          key='static-leimar-id'
-          nameTrain='Workout B - Leimar'  
+          key='static-leimar-id'  
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -82,8 +98,7 @@ function ExercisesPage() {
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
-          key='static-leimar-id'
-          nameTrain='Workout C - Leimar'  
+          key='static-leimar-id'  
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -103,29 +118,39 @@ function ExercisesPage() {
 
       {/* Static User 2 */}
       {nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && loginValidate &&
-      <main className='exercises-page-style-cards' key='static-newuser1-id'>
-        <div className='title-timer'>
-          <p className='title-timer-text'>Total Time:</p>
-          <Timer
-            key='0'
-            isRunning={isRunningAllTime}
-            setIsRunning={setIsRunningAllTime}  
-            specificStyleTimer='specificStyleTimer' 
-            specificStyleTimerDisplay='specificStyleTimerDisplay' 
-            specificStyleTimerButton='specificStyleTimerButton'
-            buttonPlayPauseId='0'
-          />
-        </div>
+        <main className='exercises-page-style-cards' key='static-newuser1-id'>
+          <div className='exercises-page-style-cards-timer-title-music'>
+            <div className='title-timer'>
+              <p className='title-timer-text'>Total Time:</p>
+              <Timer
+                key='0'
+                isRunning={isRunningAllTime}
+                setIsRunning={setIsRunningAllTime} 
+                specificStyleTimer='specificStyleTimer' 
+                specificStyleTimerDisplay='specificStyleTimerDisplay' 
+                specificStyleTimerButton='specificStyleTimerButton'
+                buttonPlayPauseId='0'
+              />
+            </div>
 
-        <MusicPlayer
-          key='0'
-          src={audiosDescriptions["audio2"]} 
-          specificStylePlayer='music-player' 
-        />
+            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - New User 1</h1>
+
+            <MusicPlayer
+              key='0'
+              src={audiosDescriptions["audio2"]}
+              specificStylePlayer='music-player'
+              specificStyleMusicButton='specificStyleMusicButton' 
+            />
+
+          </div>
+
+          <div className='exercises-page-style-cards-title'>
+            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - New User 1</h1>
+
+          </div >
 
         {typeTrain === "A" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
-          key='static-newuser1-id'
-          nameTrain='Workout A - New User 1' 
+          key='static-newuser1-id' 
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -144,8 +169,7 @@ function ExercisesPage() {
         />}
 
         {typeTrain === "B" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
-          key='static-newuser1-id'
-          nameTrain='Workout B - New User 1'  
+          key='static-newuser1-id' 
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -163,8 +187,7 @@ function ExercisesPage() {
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
-          key='static-newuser1-id'
-          nameTrain='Workout C - New User 1'  
+          key='static-newuser1-id'  
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -187,28 +210,38 @@ function ExercisesPage() {
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => (
         <main className='exercises-page-style-cards' key={user.id}>
-          <div className='title-timer'>
-            <p className='title-timer-text'>Total Time:</p>
-            <Timer
+          <div className='exercises-page-style-cards-timer-title-music'>
+            <div className='title-timer'>
+              <p className='title-timer-text'>Total Time:</p>
+              <Timer
+                key='0'
+                isRunning={isRunningAllTime}
+                setIsRunning={setIsRunningAllTime} 
+                specificStyleTimer='specificStyleTimer' 
+                specificStyleTimerDisplay='specificStyleTimerDisplay' 
+                specificStyleTimerButton='specificStyleTimerButton'
+                buttonPlayPauseId='0'
+              />
+            </div>
+
+            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - {compactUserName(nameUser)}</h1>
+
+            <MusicPlayer
               key='0'
-              isRunning={isRunningAllTime}
-              setIsRunning={setIsRunningAllTime} 
-              specificStyleTimer='specificStyleTimer' 
-              specificStyleTimerDisplay='specificStyleTimerDisplay' 
-              specificStyleTimerButton='specificStyleTimerButton'
-              buttonPlayPauseId='0'
+              src={audiosDescriptions[user.audio]}
+              specificStylePlayer='music-player'
+              specificStyleMusicButton='specificStyleMusicButton' 
             />
+
           </div>
 
-          <MusicPlayer
-            key='0'
-            src={audiosDescriptions[user.audio]}
-            specificStylePlayer='music-player' 
-          />
+          <div className='exercises-page-style-cards-title'>
+            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - {compactUserName(nameUser)}</h1>
+
+          </div >
 
           {user.exercise1[0][0] === 'A' && typeTrain === "A" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
             key={user.id}
-            nameTrain={`Workout A - ${user.name}`} 
             exercise1={user.exercise1[0][1] !== '' && `1.${user.exercise1[0][1]}`}
             exercise2={user.exercise2[0][1] !== '' && `2.${user.exercise2[0][1]}`}
             exercise3={user.exercise3[0][1] !== '' && `3.${user.exercise3[0][1]}`}
@@ -228,7 +261,6 @@ function ExercisesPage() {
 
           {user.exercise1[1][0] === 'B' && typeTrain === "B" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
             key={user.id}
-            nameTrain={`Workout B - ${user.name}`}  
             exercise1={user.exercise1[1][1] !== '' && `1.${user.exercise1[1][1]}`}
             exercise2={user.exercise2[1][1] !== '' && `2.${user.exercise2[1][1]}`}
             exercise3={user.exercise3[1][1] !== '' && `3.${user.exercise3[1][1]}`}
@@ -247,8 +279,7 @@ function ExercisesPage() {
           />}
 
           {user.exercise1[2][0] === 'C' && typeTrain === "C" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
-            key={user.id}
-            nameTrain={`Workout C - ${user.name}`}  
+            key={user.id} 
             exercise1={user.exercise1[2][1] !== '' && `1.${user.exercise1[2][1]}`}
             exercise2={user.exercise2[2][1] !== '' && `2.${user.exercise2[2][1]}`}
             exercise3={user.exercise3[2][1] !== '' && `3.${user.exercise3[2][1]}`}

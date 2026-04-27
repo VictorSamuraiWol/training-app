@@ -17,6 +17,7 @@ function Login({ setActivateNavigateDefault }) {
 
   const onLoginValidate = (e) => {
     e.preventDefault()
+    const errorMessage = document.querySelector('#alert-login-message')
 
     let matchedStatic;
     let matchedDinamic;
@@ -38,6 +39,14 @@ function Login({ setActivateNavigateDefault }) {
       setLoginValidate(false)
       usersContents && setAlertLoginMessage('Invalid user')
       !usersContents && setAlertLoginMessage('Invalid static user')
+      errorMessage.classList.add('alert-login-message-able')
+      errorMessage.classList.remove('alert-login-message-disable')
+
+      setTimeout(() => {
+        errorMessage.classList.add('alert-login-message-disable')
+        errorMessage.classList.remove('alert-login-message-able')
+
+      } , 3000)
 
     }
 
@@ -57,7 +66,7 @@ function Login({ setActivateNavigateDefault }) {
     <div className='login'>
       <Link className='link-img' to='/'>
         <img 
-          className='link-img-logo' 
+          className='link-img-logo'
           src={logo} 
         />
       </Link>
@@ -85,7 +94,12 @@ function Login({ setActivateNavigateDefault }) {
             />
           </div>
 
-          <span className='alert-login-message'>{alertLoginMessage}</span>
+          <span
+            id='alert-login-message'
+            className='alert-login-message-disable'
+          >
+            {alertLoginMessage}
+          </span>
 
         </div>
 

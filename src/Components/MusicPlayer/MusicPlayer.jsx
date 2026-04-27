@@ -5,7 +5,7 @@ import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
 import { useRef, useState, useEffect } from "react";
 
-export default function MusicPlayer({ src, title = "Now Playing", specificStylePlayer }) {
+export default function MusicPlayer({ src, title = "Now Playing", specificStylePlayer, specificStyleMusicButton }) {
   const audioRef = useRef(null);
 
   const [isPlaying, setIsPlaying] = useState(false);
@@ -95,13 +95,26 @@ export default function MusicPlayer({ src, title = "Now Playing", specificStyleP
       />
 
       <div className="controls">
-        <button onClick={skipBackward}><FaBackward /></button>
+        <button
+          onClick={skipBackward}
+          className={specificStyleMusicButton}
+          >
+            <FaBackward />
+          </button>
 
-        <button onClick={togglePlay}>
+        <button
+          onClick={togglePlay}
+          className={specificStyleMusicButton}
+        >
           {isPlaying ? <FaPause /> : <FaPlay />}
         </button>
 
-        <button onClick={skipForward}><FaForward /></button>
+        <button
+          onClick={skipForward}
+          className={specificStyleMusicButton}
+        >
+          <FaForward />
+        </button>
         
       </div>
 

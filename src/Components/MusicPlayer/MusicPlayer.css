@@ -3,7 +3,6 @@
   flex-direction: column;
   gap: 6px;
   width: 250px;
-  margin: auto;
   text-align: center;
   padding: 6px;
   border: 1px solid var(--border-green);

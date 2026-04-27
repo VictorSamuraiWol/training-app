@@ -25,3 +25,51 @@
   text-align: justify;
   width: 50%;
 }
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .image-loading-workout {
+    width: 50%;
+  }
+
+  .error-login-styles-title {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .image-loading-workout {
+    width: 50%;
+  }
+
+  .error-login-styles-title {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .image-loading-workout {
+    width: 40%;
+  }
+
+  .error-login-styles-title {
+    font-size: 1.05rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .error-login-styles-title {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .error-login-styles-title {
+    font-size: 1.125rem;
+  }
+
+}

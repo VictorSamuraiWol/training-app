@@ -5,18 +5,44 @@
   background-image: url(../../assets/images/bg-header-footer.png);
 }
 
-main {
+.banner-a-exercises-page {
+  background-image: url(../../assets//images/image-training-a-neon.png);
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+
+.banner-b-exercises-page {
+  background-image: url(../../assets//images/image-training-b-neon.png);
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+
+.banner-c-exercises-page {
+  background-image: url(../../assets//images/image-training-c-neon.png);
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 150px;
+}
+
+.exercises-page-style-cards {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 32px;
 }
 
-.music-player {
-  position: absolute;
-  top: 3%;
-  left: 1%;
+.exercises-page-style-cards-timer-title-music {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .title-timer {
@@ -53,4 +79,256 @@ main {
   box-shadow: 2px 2px 3px var(--border);
   background-color: var(--border-green);
   padding: 6px 24px;
+}
+
+.exercises-page-style-cards-timer-title-music-text {
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  margin: 0;
+}
+
+.music-player {
+  position: absolute;
+  top: 3%;
+  left: 1%;
+}
+
+.exercises-page-style-cards-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exercises-page-style-cards-title-text {
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .exercises-page-style-cards {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .banner-a-exercises-page {
+    height: 80px;
+  }
+
+  .banner-b-exercises-page {
+    height: 80px;
+  }
+
+  .banner-c-exercises-page {
+    height: 80px;
+  }
+
+  .title-timer {
+    position: static;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.25rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.7rem;
+  }
+
+  .exercises-page-style-cards-timer-title-music {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .exercises-page-style-cards-timer-title-music-text {
+    display: none;
+  }
+
+  .music-player {
+    position: static;
+    padding-bottom: 36px;
+  }
+
+  .specificStyleMusicButton {
+    font-size: 0.7rem;
+  }
+
+  .exercises-page-style-cards-title-text {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .exercises-page-style-cards {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .banner-a-exercises-page {
+    height: 100px;
+  }
+
+  .banner-b-exercises-page {
+    height: 100px;
+  }
+
+  .banner-c-exercises-page {
+    height: 100px;
+  }
+
+  .title-timer {
+    position: static;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.25rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.7rem;
+  }
+
+  .exercises-page-style-cards-timer-title-music-text {
+    display: none;
+  }
+
+  .music-player {
+    position: static;
+  }
+
+  .specificStyleMusicButton {
+    font-size: 0.7rem;
+  }
+
+  .exercises-page-style-cards-title-text {
+    font-size: 1.6rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .exercises-page-style-cards {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .banner-a-exercises-page {
+    height: 120px;
+  }
+
+  .banner-b-exercises-page {
+    height: 120px;
+  }
+
+  .banner-c-exercises-page {
+    height: 120px;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.30rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.75rem;
+  }
+
+  .exercises-page-style-cards-timer-title-music-text {
+    display: flex;
+    font-size: 1.7rem;
+  }
+
+  .specificStyleMusicButton {
+    font-size: 0.75rem;
+  }
+
+  .exercises-page-style-cards-title {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .exercises-page-style-cards {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .banner-a-exercises-page {
+    height: 140px;
+  }
+
+  .banner-b-exercises-page {
+    height: 140px;
+  }
+
+  .banner-c-exercises-page {
+    height: 140px;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.35rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.8rem;
+  }
+
+  .exercises-page-style-cards-timer-title-music-text {
+    font-size: 1.8rem;
+  }
+
+  .specificStyleMusicButton {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .exercises-page-style-cards {
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.40rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.85rem;
+  }
+
+  .exercises-page-style-cards-timer-title-music-text {
+    font-size: 1.9rem;
+  }
+
+  .specificStyleMusicButton {
+    font-size: 0.85rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .exercises-page-style-cards {
+    gap: 28px;
+    padding: 28px;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.45rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.9rem;
+  }
+
+  .exercises-page-style-cards-timer-title-music-text {
+    font-size: 2rem;
+  }
+
+  .specificStyleMusicButton {
+    font-size: 0.9rem;
+  }
+
 }
