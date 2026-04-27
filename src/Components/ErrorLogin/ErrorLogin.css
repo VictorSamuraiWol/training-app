@@ -21,7 +21,12 @@
 
 }
 
-.error-login-styles-title {
+.error-login-styles-short-title {
+  text-align: justify;
+  width: 50%;
+}
+
+.error-login-styles-long-title {
   text-align: justify;
   width: 50%;
 }
@@ -32,8 +37,12 @@
     width: 50%;
   }
 
-  .error-login-styles-title {
+  .error-login-styles-short-title {
     font-size: 0.95rem;
+  }
+
+  .error-login-styles-long-title {
+    display: none;
   }
 
 }
@@ -43,7 +52,23 @@
     width: 50%;
   }
 
-  .error-login-styles-title {
+  .error-login-styles-short-title {
+    font-size: 1rem;
+  }
+
+  .error-login-styles-long-title {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .error-login-styles-short-title {
+    display: none;
+  }
+
+  .error-login-styles-long-title {
+    display: flex;
     font-size: 1rem;
   }
 
@@ -54,21 +79,21 @@
     width: 40%;
   }
 
-  .error-login-styles-title {
+  .error-login-styles-long-title {
     font-size: 1.05rem;
   }
 
 }
 
 @media (min-width: 1280px) {
-  .error-login-styles-title {
+  .error-login-styles-long-title {
     font-size: 1.1rem;
   }
 
 }
 
 @media (min-width: 1440px) {
-  .error-login-styles-title {
+  .error-login-styles-long-title {
     font-size: 1.125rem;
   }
 

@@ -99,7 +99,7 @@ form {
   }
 
   .alert-login-message-able {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   .specificStylesLoginButton {
@@ -125,7 +125,7 @@ form {
   }
 
   .alert-login-message-able {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .specificStylesLoginButton {
@@ -150,7 +150,7 @@ form {
   }
 
   .alert-login-message-able {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .specificStylesLoginButton {
@@ -174,7 +174,7 @@ form {
   }
 
   .alert-login-message-able {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .specificStylesLoginButton {
@@ -192,6 +192,10 @@ form {
   form {
     font-size: 1.1rem;
     width: 20%;
+  }
+
+  .alert-login-message-able {
+    font-size: 1rem;
   }
 
 }
