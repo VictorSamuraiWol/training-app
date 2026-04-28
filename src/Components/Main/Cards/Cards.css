@@ -70,19 +70,6 @@ h2 {
   padding-top: 148px;
 }
 
-/* .link-workout-A {
-  padding-top: 148px;
-  text-decoration: none;
-}
-
-.link-workout-B {
-  text-decoration: none;
-}
-
-.link-workout-C {
-  text-decoration: none;
-} */
-
 .link-nutrition {
   text-decoration: none;
 }
@@ -90,51 +77,6 @@ h2 {
 .link-notes {
   text-decoration: none;
 }
-
-/* .specificStylesButtonA {
-  color: var(--bg);
-  text-shadow: 1px 1px 2px var(--bg);
-  background-color: var(--text);
-  box-shadow: 0 0 5px var(--text);
-  border: 0;
-}
-
-.specificStylesButtonA:hover {
-  color: var(--text);
-  text-shadow: 1px 1px 2px var(--text);
-  background-color: var(--bg);
-  box-shadow: 0 0 5px var(--text);
-}
-
-.specificStylesButtonB {
-  color: var(--border);
-  text-shadow: 1px 1px 2px var(--text);
-  background-color: var(--bg);
-  box-shadow: 0 0 5px var(--border);
-  border: 0;
-}
-
-.specificStylesButtonB:hover {
-  color: var(--bg);
-  text-shadow: 1px 1px 2px var(--bg);
-  background-color: var(--border);
-  box-shadow: 0 0 5px var(--border);
-}
-
-.specificStylesButtonC {
-  color: var(--border-green);
-  text-shadow: 1px 1px 2px var(--text);
-  background-color: var(--border);
-  box-shadow: 0 0 5px var(--border-green);
-  border: 0;
-}
-
-.specificStylesButtonC:hover {
-  color: var(--border);
-  text-shadow: 1px 1px 2px var(--border);
-  background-color: var(--border-green);
-  box-shadow: 0 0 5px var(--border);
-} */
 
 .specificStylesButtonNutrition {
   color: var(--border-yellow);
@@ -194,22 +136,6 @@ h2 {
     font-size: 1rem;
   }
 
-  /* .link-workout-A {
-    padding-top: 82px;
-  }
-
-  .specificStylesButtonA {
-    font-size: 0.95rem;
-  }
-
-  .specificStylesButtonB {
-    font-size: 0.95rem;
-  }
-
-  .specificStylesButtonC {
-    font-size: 0.95rem;
-  } */
-
   .specificStylesButtonNutrition {
     font-size: 0.95rem;
   }
@@ -246,22 +172,6 @@ h2 {
   .cards-info-measures-height {
     font-size: 1.05rem;
   }
-
-  /* .link-workout-A {
-    padding-top: 82px;
-  }
-
-  .specificStylesButtonA {
-    font-size: 1rem;
-  }
-
-  .specificStylesButtonB {
-    font-size: 1rem;
-  }
-
-  .specificStylesButtonC {
-    font-size: 1rem;
-  } */
 
   .specificStylesButtonNutrition {
     font-size: 1rem;
@@ -300,22 +210,6 @@ h2 {
     font-size: 1.05rem;
   }
 
-  /* .link-workout-A {
-    padding-top: 94px;
-  }
-
-  .specificStylesButtonA {
-    font-size: 1rem;
-  }
-
-  .specificStylesButtonB {
-    font-size: 1rem;
-  }
-
-  .specificStylesButtonC {
-    font-size: 1rem;
-  } */
-
   .specificStylesButtonNutrition {
     font-size: 1rem;
   }
@@ -352,22 +246,6 @@ h2 {
   .cards-info-measures-height {
     font-size: 1.1rem;
   }
-
-  /* .link-workout-A {
-    padding-top: 106px;
-  }
-
-  .specificStylesButtonA {
-    font-size: 1.05rem;
-  }
-
-  .specificStylesButtonB {
-    font-size: 1.05rem;
-  }
-
-  .specificStylesButtonC {
-    font-size: 1.05rem;
-  } */
 
   .specificStylesButtonNutrition {
     font-size: 1.05rem;
@@ -406,22 +284,6 @@ h2 {
     font-size: 1.15rem;
   }
 
-  /* .link-workout-A {
-    padding-top: 118px;
-  }
-
-  .specificStylesButtonA {
-    font-size: 1.1rem;
-  }
-
-  .specificStylesButtonB {
-    font-size: 1.1rem;
-  }
-
-  .specificStylesButtonC {
-    font-size: 1.1rem;
-  } */
-
   .specificStylesButtonNutrition {
     font-size: 1.1rem;
   }
@@ -458,22 +320,6 @@ h2 {
   .cards-info-measures-height {
     font-size: 1.175rem;
   }
-
-  /* .link-workout-A {
-    padding-top: 130px;
-  }
-
-  .specificStylesButtonA {
-    font-size: 1.125rem;
-  }
-
-  .specificStylesButtonB {
-    font-size: 1.125rem;
-  }
-
-  .specificStylesButtonC {
-    font-size: 1.125rem;
-  } */
 
   .specificStylesButtonNutrition {
     font-size: 1.125rem;

@@ -330,6 +330,139 @@ function ExercisesPage() {
             exercise14={user.exercise14[2][1] !== '' && `14.${user.exercise14[2][1]}`}
             exercise15={user.exercise15[2][1] !== '' && `15.${user.exercise15[2][1]}`}
           />}
+
+          {user.exercise1[3][0] === 'D' && typeTrain === "D" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[3][1] !== '' && `1.${user.exercise1[3][1]}`}
+            exercise2={user.exercise2[3][1] !== '' && `2.${user.exercise2[3][1]}`}
+            exercise3={user.exercise3[3][1] !== '' && `3.${user.exercise3[3][1]}`}
+            exercise4={user.exercise4[3][1] !== '' && `4.${user.exercise4[3][1]}`}
+            exercise5={user.exercise5[3][1] !== '' && `5.${user.exercise5[3][1]}`}
+            exercise6={user.exercise6[3][1] !== '' && `6.${user.exercise6[3][1]}`}
+            exercise7={user.exercise7[3][1] !== '' && `7.${user.exercise7[3][1]}`}
+            exercise8={user.exercise8[3][1] !== '' && `8.${user.exercise8[3][1]}`}
+            exercise9={user.exercise9[3][1] !== '' && `9.${user.exercise9[3][1]}`}
+            exercise10={user.exercise10[3][1] !== '' && `10.${user.exercise10[3][1]}`}
+            exercise11={user.exercise11[3][1] !== '' && `11.${user.exercise11[3][1]}`}
+            exercise12={user.exercise12[3][1] !== '' && `12.${user.exercise12[3][1]}`}
+            exercise13={user.exercise13[3][1] !== '' && `13.${user.exercise13[3][1]}`}
+            exercise14={user.exercise14[3][1] !== '' && `14.${user.exercise14[3][1]}`}
+            exercise15={user.exercise15[3][1] !== '' && `15.${user.exercise15[3][1]}`}
+          />}
+
+          {user.exercise1[4][0] === 'E' && typeTrain === "E" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[4][1] !== '' && `1.${user.exercise1[4][1]}`}
+            exercise2={user.exercise2[4][1] !== '' && `2.${user.exercise2[4][1]}`}
+            exercise3={user.exercise3[4][1] !== '' && `3.${user.exercise3[4][1]}`}
+            exercise4={user.exercise4[4][1] !== '' && `4.${user.exercise4[4][1]}`}
+            exercise5={user.exercise5[4][1] !== '' && `5.${user.exercise5[4][1]}`}
+            exercise6={user.exercise6[4][1] !== '' && `6.${user.exercise6[4][1]}`}
+            exercise7={user.exercise7[4][1] !== '' && `7.${user.exercise7[4][1]}`}
+            exercise8={user.exercise8[4][1] !== '' && `8.${user.exercise8[4][1]}`}
+            exercise9={user.exercise9[4][1] !== '' && `9.${user.exercise9[4][1]}`}
+            exercise10={user.exercise10[4][1] !== '' && `10.${user.exercise10[4][1]}`}
+            exercise11={user.exercise11[4][1] !== '' && `11.${user.exercise11[4][1]}`}
+            exercise12={user.exercise12[4][1] !== '' && `12.${user.exercise12[4][1]}`}
+            exercise13={user.exercise13[4][1] !== '' && `13.${user.exercise13[4][1]}`}
+            exercise14={user.exercise14[4][1] !== '' && `14.${user.exercise14[4][1]}`}
+            exercise15={user.exercise15[4][1] !== '' && `15.${user.exercise15[4][1]}`}
+          />}
+
+          {user.exercise1[5][0] === 'F' && typeTrain === "F" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[5][1] !== '' && `1.${user.exercise1[5][1]}`}
+            exercise2={user.exercise2[5][1] !== '' && `2.${user.exercise2[5][1]}`}
+            exercise3={user.exercise3[5][1] !== '' && `3.${user.exercise3[5][1]}`}
+            exercise4={user.exercise4[5][1] !== '' && `4.${user.exercise4[5][1]}`}
+            exercise5={user.exercise5[5][1] !== '' && `5.${user.exercise5[5][1]}`}
+            exercise6={user.exercise6[5][1] !== '' && `6.${user.exercise6[5][1]}`}
+            exercise7={user.exercise7[5][1] !== '' && `7.${user.exercise7[5][1]}`}
+            exercise8={user.exercise8[5][1] !== '' && `8.${user.exercise8[5][1]}`}
+            exercise9={user.exercise9[5][1] !== '' && `9.${user.exercise9[5][1]}`}
+            exercise10={user.exercise10[5][1] !== '' && `10.${user.exercise10[5][1]}`}
+            exercise11={user.exercise11[5][1] !== '' && `11.${user.exercise11[5][1]}`}
+            exercise12={user.exercise12[5][1] !== '' && `12.${user.exercise12[5][1]}`}
+            exercise13={user.exercise13[5][1] !== '' && `13.${user.exercise13[5][1]}`}
+            exercise14={user.exercise14[5][1] !== '' && `14.${user.exercise14[5][1]}`}
+            exercise15={user.exercise15[5][1] !== '' && `15.${user.exercise15[5][1]}`}
+          />}
+
+          {user.exercise1[6][0] === 'G' && typeTrain === "G" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[6][1] !== '' && `1.${user.exercise1[6][1]}`}
+            exercise2={user.exercise2[6][1] !== '' && `2.${user.exercise2[6][1]}`}
+            exercise3={user.exercise3[6][1] !== '' && `3.${user.exercise3[6][1]}`}
+            exercise4={user.exercise4[6][1] !== '' && `4.${user.exercise4[6][1]}`}
+            exercise5={user.exercise5[6][1] !== '' && `5.${user.exercise5[6][1]}`}
+            exercise6={user.exercise6[6][1] !== '' && `6.${user.exercise6[6][1]}`}
+            exercise7={user.exercise7[6][1] !== '' && `7.${user.exercise7[6][1]}`}
+            exercise8={user.exercise8[6][1] !== '' && `8.${user.exercise8[6][1]}`}
+            exercise9={user.exercise9[6][1] !== '' && `9.${user.exercise9[6][1]}`}
+            exercise10={user.exercise10[6][1] !== '' && `10.${user.exercise10[6][1]}`}
+            exercise11={user.exercise11[6][1] !== '' && `11.${user.exercise11[6][1]}`}
+            exercise12={user.exercise12[6][1] !== '' && `12.${user.exercise12[6][1]}`}
+            exercise13={user.exercise13[6][1] !== '' && `13.${user.exercise13[6][1]}`}
+            exercise14={user.exercise14[6][1] !== '' && `14.${user.exercise14[6][1]}`}
+            exercise15={user.exercise15[6][1] !== '' && `15.${user.exercise15[6][1]}`}
+          />}
+
+          {user.exercise1[7][0] === 'H' && typeTrain === "H" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[7][1] !== '' && `1.${user.exercise1[7][1]}`}
+            exercise2={user.exercise2[7][1] !== '' && `2.${user.exercise2[7][1]}`}
+            exercise3={user.exercise3[7][1] !== '' && `3.${user.exercise3[7][1]}`}
+            exercise4={user.exercise4[7][1] !== '' && `4.${user.exercise4[7][1]}`}
+            exercise5={user.exercise5[7][1] !== '' && `5.${user.exercise5[7][1]}`}
+            exercise6={user.exercise6[7][1] !== '' && `6.${user.exercise6[7][1]}`}
+            exercise7={user.exercise7[7][1] !== '' && `7.${user.exercise7[7][1]}`}
+            exercise8={user.exercise8[7][1] !== '' && `8.${user.exercise8[7][1]}`}
+            exercise9={user.exercise9[7][1] !== '' && `9.${user.exercise9[7][1]}`}
+            exercise10={user.exercise10[7][1] !== '' && `10.${user.exercise10[7][1]}`}
+            exercise11={user.exercise11[7][1] !== '' && `11.${user.exercise11[7][1]}`}
+            exercise12={user.exercise12[7][1] !== '' && `12.${user.exercise12[7][1]}`}
+            exercise13={user.exercise13[7][1] !== '' && `13.${user.exercise13[7][1]}`}
+            exercise14={user.exercise14[7][1] !== '' && `14.${user.exercise14[7][1]}`}
+            exercise15={user.exercise15[7][1] !== '' && `15.${user.exercise15[7][1]}`}
+          />}
+
+          {user.exercise1[8][0] === 'I' && typeTrain === "I" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[8][1] !== '' && `1.${user.exercise1[8][1]}`}
+            exercise2={user.exercise2[8][1] !== '' && `2.${user.exercise2[8][1]}`}
+            exercise3={user.exercise3[8][1] !== '' && `3.${user.exercise3[8][1]}`}
+            exercise4={user.exercise4[8][1] !== '' && `4.${user.exercise4[8][1]}`}
+            exercise5={user.exercise5[8][1] !== '' && `5.${user.exercise5[8][1]}`}
+            exercise6={user.exercise6[8][1] !== '' && `6.${user.exercise6[8][1]}`}
+            exercise7={user.exercise7[8][1] !== '' && `7.${user.exercise7[8][1]}`}
+            exercise8={user.exercise8[8][1] !== '' && `8.${user.exercise8[8][1]}`}
+            exercise9={user.exercise9[8][1] !== '' && `9.${user.exercise9[8][1]}`}
+            exercise10={user.exercise10[8][1] !== '' && `10.${user.exercise10[8][1]}`}
+            exercise11={user.exercise11[8][1] !== '' && `11.${user.exercise11[8][1]}`}
+            exercise12={user.exercise12[8][1] !== '' && `12.${user.exercise12[8][1]}`}
+            exercise13={user.exercise13[8][1] !== '' && `13.${user.exercise13[8][1]}`}
+            exercise14={user.exercise14[8][1] !== '' && `14.${user.exercise14[8][1]}`}
+            exercise15={user.exercise15[8][1] !== '' && `15.${user.exercise15[8][1]}`}
+          />}
+
+          {user.exercise1[9][0] === 'J' && typeTrain === "J" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+            key={user.id} 
+            exercise1={user.exercise1[9][1] !== '' && `1.${user.exercise1[9][1]}`}
+            exercise2={user.exercise2[9][1] !== '' && `2.${user.exercise2[9][1]}`}
+            exercise3={user.exercise3[9][1] !== '' && `3.${user.exercise3[9][1]}`}
+            exercise4={user.exercise4[9][1] !== '' && `4.${user.exercise4[9][1]}`}
+            exercise5={user.exercise5[9][1] !== '' && `5.${user.exercise5[9][1]}`}
+            exercise6={user.exercise6[9][1] !== '' && `6.${user.exercise6[9][1]}`}
+            exercise7={user.exercise7[9][1] !== '' && `7.${user.exercise7[9][1]}`}
+            exercise8={user.exercise8[9][1] !== '' && `8.${user.exercise8[9][1]}`}
+            exercise9={user.exercise9[9][1] !== '' && `9.${user.exercise9[9][1]}`}
+            exercise10={user.exercise10[9][1] !== '' && `10.${user.exercise10[9][1]}`}
+            exercise11={user.exercise11[9][1] !== '' && `11.${user.exercise11[9][1]}`}
+            exercise12={user.exercise12[9][1] !== '' && `12.${user.exercise12[9][1]}`}
+            exercise13={user.exercise13[9][1] !== '' && `13.${user.exercise13[9][1]}`}
+            exercise14={user.exercise14[9][1] !== '' && `14.${user.exercise14[9][1]}`}
+            exercise15={user.exercise15[9][1] !== '' && `15.${user.exercise15[9][1]}`}
+          />}
  
         </main>))}
 

@@ -31,7 +31,7 @@ function TrainingModal() {
   }
 
   const whatTrainingType = (exercises) => {
-    let training = false
+    let training = false 
 
     exercises.forEach(exercise => {
       if (exercise !== "") {
