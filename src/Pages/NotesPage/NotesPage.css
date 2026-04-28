@@ -75,8 +75,8 @@
 
   .cards-info-notes-itens {
     align-items: start;
+    gap: 8px;
     width: 100%;
-    word-break: break-all;
   }
 
   .cards-info-notes-item {
@@ -100,8 +100,8 @@
 
   .cards-info-notes-itens {
     align-items: start;
+    gap: 8px;
     width: 100%;
-    word-break: break-all;
   }
 
   .cards-info-notes-item {
@@ -125,7 +125,7 @@
 
   .cards-info-notes-itens {
     align-items: center;
-    word-break: normal;
+    gap: 16px;
   }
 
   .cards-info-notes-item {
@@ -147,6 +147,10 @@
     font-size: 1.8rem;
   }
 
+  .cards-info-notes-itens {
+    gap: 24px;
+  }
+
   .cards-info-notes-item {
     font-size: 1.3rem;
   }
@@ -162,6 +166,10 @@
     font-size: 1.9rem;
   }
 
+  .cards-info-notes-itens {
+    gap: 28px;
+  }
+
   .cards-info-notes-item {
     font-size: 1.4rem;
   }
@@ -175,6 +183,10 @@
 
   .cards-info-notes-title {
     font-size: 2rem;
+  }
+
+  .cards-info-notes-itens {
+    gap: 32px;
   }
 
   .cards-info-notes-item {

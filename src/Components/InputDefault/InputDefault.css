@@ -1,4 +1,5 @@
 input {
+  font-family: var(--bebas);
   color: var(--border-green);
   background-color: var(--text);
   width: 100%;
@@ -11,14 +12,20 @@ input {
 /* Responsiveness */
 @media (max-width: 480px) {
   input {
+    font-size: 0.95rem;
     height: 8px;
+    padding: 6px;
+    border-radius: 6px;
   }
 
 }
 
 @media (min-width: 481px) {
   input {
+    font-size: 1rem;
     height: 10px;
+    padding: 6px;
+    border-radius: 6px;
   }
 
 }
@@ -26,13 +33,30 @@ input {
 @media (min-width: 768px) {
   input {
     height: 12px;
+    padding: 8px;
+    border-radius: 8px;
   }
 
 }
 
 @media (min-width: 1024px) {
   input {
+    font-size: 1.05rem;
     height: 15px;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  input {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  input {
+    font-size: 1.125rem;
   }
 
 }

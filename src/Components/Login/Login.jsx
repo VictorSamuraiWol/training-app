@@ -2,7 +2,7 @@ import './Login.css';
 import InputDefault from '../InputDefault/InputDefault';
 import LabelDefault from '../LabelDefault/LabelDefault';
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
-import ModalLogin from '../ModalLogin/ModalLogin';
+import LoginModal from '../LoginModal/LoginModal';
 import logo from '../../assets/images/logo-neonfit.png';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
@@ -23,10 +23,11 @@ function Login({ setActivateNavigateDefault }) {
     let matchedDinamic;
 
     matchedStatic = (
-      // static user 1
-      (nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase()) && passwordUser.toLowerCase().trim() === 'Leimar'.toLowerCase() ||
-      // static user 2
-      (nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase()) && passwordUser.toLowerCase().trim() === 'New User 1'.toLowerCase()) 
+      // Victor Static - Static User 1
+      (nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase()) && passwordUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() ||
+      // Leimar - Static User 2
+      (nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase()) && passwordUser.toLowerCase().trim() === 'Leimar'.toLowerCase()
+    ) 
 
     matchedDinamic = usersContents && usersContents.filter(user => 
       (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
@@ -71,7 +72,7 @@ function Login({ setActivateNavigateDefault }) {
         />
       </Link>
 
-      <ModalLogin />
+      <LoginModal />
 
       <form onSubmit={onLoginValidate}>
         <div className='form-labels-inputs'>
@@ -81,16 +82,30 @@ function Login({ setActivateNavigateDefault }) {
               onChange={onNameUserValidate}
               value={nameUser}
               inputId='name'
-              required={true} 
+              required={true}
+              name='name'
             />
           </div>
-          <div className='form-label-input'>
+
+          <div className='form-label-input short-pass'>
+            <LabelDefault htmlFor='password' nameLabel='Pass:' />
+            <InputDefault
+              onChange={onPasswordUserValidate}
+              value={passwordUser}
+              inputId='password'
+              required={true}
+              name='password'
+            />
+          </div>
+
+          <div className='form-label-input long-pass'>
             <LabelDefault htmlFor='password' nameLabel='Password:' />
             <InputDefault
               onChange={onPasswordUserValidate}
               value={passwordUser}
               inputId='password'
               required={true}
+              name='password'
             />
           </div>
 

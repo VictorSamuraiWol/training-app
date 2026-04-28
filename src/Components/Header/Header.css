@@ -70,7 +70,7 @@
   font-size: 1.3rem;
   color: var(--border-yellow);
   text-shadow: 2px 2px 3px var(--border);
-  word-break: break-all;
+  overflow-wrap: break-word;
   cursor: default;
 }
 

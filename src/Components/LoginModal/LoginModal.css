@@ -1,4 +1,7 @@
 .container-modal-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--border-yellow);
   text-shadow: 1px 1px 2px var(--border);
   background-color: var(--text);
@@ -55,18 +58,19 @@
   box-shadow: -5px 5px 5px var(--border-green), -10px 10px 10px var(--border-green);
 }
 
-.login-users-passwords-title {
-  margin: 0;
-}
-
-.container-modal-delete {
+.container-login-modal-delete {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.cotainer-modal-delete-icon {
+.container-login-modal-delete-text {
+  margin: 0;
+  cursor: default;
+}
+
+.container-login-modal-delete-icon {
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -101,11 +105,10 @@
 .login-users-passwords-user-name {
   padding-right: 4px;
   border-right: 1px solid var(--border-green);
-  word-break: break-all;
+  overflow-wrap: break-word;
 }
 .login-users-passwords-password {
   padding-left: 2px;
-  word-break: break-all;
 }
 
 /* Responsiveness */
@@ -128,7 +131,7 @@
     display: flex;
   }
 
-  .login-users-passwords-title {
+  .container-login-modal-delete-text {
     font-size: 1.75rem;
   }
 
@@ -157,7 +160,7 @@
     display: flex;
   }
 
-  .login-users-passwords-title {
+  .container-login-modal-delete-text {
     font-size: 2rem;
   }
 
@@ -186,7 +189,7 @@
     display: none;
   }
 
-  .login-users-passwords-title {
+  .container-login-modal-delete-text {
     font-size: 2.25rem;
   }
 
@@ -198,7 +201,7 @@
     padding: 6px;
   }
 
-  .login-users-passwords-title {
+  .container-login-modal-delete-text {
     font-size: 2.5rem;
   }
 
@@ -214,7 +217,7 @@
     padding: 8px;
   }
 
-  .login-users-passwords-title {
+  .container-login-modal-delete-text {
     font-size: 3rem;
   }
 
@@ -230,7 +233,7 @@
     padding: 8px;
   }
 
-  .login-users-passwords-title {
+  .container-login-modal-delete-text {
     font-size: 3.5rem;
   }
 

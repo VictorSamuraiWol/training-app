@@ -1,0 +1,650 @@
+.container-training-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 148px;
+}
+
+.container-training-modal-button {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border-yellow);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--border-yellow);
+  border: 0;
+}
+
+.container-training-modal-button:hover {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border-yellow);
+  box-shadow: 0 0 5px var(--text);
+}
+
+.modalTrainingOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.modalTrainingContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  position: absolute;
+  background: var(--bg);
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  width: 80%;
+  height: 60%;
+  padding: 16px;
+  border: 1px solid var(--border-green);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px var(--border-yellow), 10px 10px 10px var(--border-yellow);
+  transition: all 0.3s ease-in-out;
+  background-image: url(../../assets/images/bg-header-footer.png);
+  background-position: center;
+}
+
+.modalTrainingContent:focus {
+  outline: none;
+}
+
+.modalTrainingContent:hover {
+  border: 1px solid var(--border-yellow);
+  box-shadow: -5px 5px 5px var(--border-green), -10px 10px 10px var(--border-green);
+}
+
+.container-training-modal-title-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid var(--border-yellow);
+}
+
+.container-training-modal-title-delete-text {
+  margin: 0;
+  cursor: default;
+}
+
+.container-training-modal-title-delete-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container-training-modal-trainings {
+  width: 100%;
+  height: 90%;
+}
+
+.container-training-modal-trainings-users {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 32px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.container-training-modal-trainings-users::-webkit-scrollbar {
+  height: 8px;
+}
+
+.container-training-modal-trainings-users::-webkit-scrollbar-track {
+  background: var(--text);
+  border-radius: 10px;
+}
+
+.container-training-modal-trainings-users::-webkit-scrollbar-thumb {
+  background: var(--border-green);
+  border-radius: 10px;
+}
+
+.container-training-modal-trainings-users::-webkit-scrollbar-thumb:hover {
+  background: var(--border-yellow);
+}
+
+.link-workout-A {
+  text-decoration: none;
+}
+
+.link-workout-B {
+  text-decoration: none;
+}
+
+.link-workout-C {
+  text-decoration: none;
+}
+
+.link-workout-D {
+  text-decoration: none;
+}
+
+.link-workout-E {
+  text-decoration: none;
+}
+
+.link-workout-F {
+  text-decoration: none;
+}
+
+.link-workout-G {
+  text-decoration: none;
+}
+
+.link-workout-H {
+  text-decoration: none;
+}
+
+.link-workout-I {
+  text-decoration: none;
+}
+
+.link-workout-J {
+  text-decoration: none;
+}
+
+.specificStylesButtonA {
+  color: var(--bg);
+  text-shadow: 1px 1px 2px var(--bg);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--text);
+  border: 0;
+}
+
+.specificStylesButtonA:hover {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 0 5px var(--text);
+}
+
+.specificStylesButtonB {
+  color: var(--border);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 0 5px var(--border);
+  border: 0;
+}
+
+.specificStylesButtonB:hover {
+  color: var(--bg);
+  text-shadow: 1px 1px 2px var(--bg);
+  background-color: var(--border);
+  box-shadow: 0 0 5px var(--border);
+}
+
+.specificStylesButtonC {
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border);
+  box-shadow: 0 0 5px var(--border-green);
+  border: 0;
+}
+
+.specificStylesButtonC:hover {
+  color: var(--border);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-green);
+  box-shadow: 0 0 5px var(--border);
+}
+
+.specificStylesButtonD {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border-green);
+  box-shadow: 0 0 5px var(--border-yellow);
+  border: 0;
+}
+
+.specificStylesButtonD:hover {
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border-yellow);
+  box-shadow: 0 0 5px var(--border-green);
+}
+
+.specificStylesButtonE {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-yellow);
+  box-shadow: 0 0 5px var(--text);
+  border: 0;
+}
+
+.specificStylesButtonE:hover {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border-yellow);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--border-yellow);
+}
+.specificStylesButtonF {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 0 5px var(--text);
+  border: 0;
+}
+
+.specificStylesButtonF:hover {
+  color: var(--bg);
+  text-shadow: 1px 1px 2px var(--bg);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--text);
+}
+.specificStylesButtonG {
+  color: var(--bg);
+  text-shadow: 1px 1px 2px var(--bg);
+  background-color: var(--border);
+  box-shadow: 0 0 5px var(--border);
+  border: 0;
+}
+
+.specificStylesButtonG:hover {
+  color: var(--border);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--bg);
+  box-shadow: 0 0 5px var(--border);
+}
+.specificStylesButtonH {
+  color: var(--border);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-green);
+  box-shadow: 0 0 5px var(--border);
+  border: 0;
+}
+
+.specificStylesButtonH:hover {
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border);
+  box-shadow: 0 0 5px var(--border-green);
+}
+.specificStylesButtonI {
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border-yellow);
+  box-shadow: 0 0 5px var(--border-green);
+  border: 0;
+}
+
+.specificStylesButtonI:hover {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--text);
+  background-color: var(--border-green);
+  box-shadow: 0 0 5px var(--border-yellow);
+}
+.specificStylesButtonJ {
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border-yellow);
+  background-color: var(--text);
+  box-shadow: 0 0 5px var(--border-yellow);
+  border: 0;
+}
+
+.specificStylesButtonJ:hover {
+  color: var(--text);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--border-yellow);
+  box-shadow: 0 0 5px var(--text);
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .container-training-modal {
+    padding-top: 82px;
+  }
+
+  .container-training-modal-button {
+    font-size: 0.95rem;
+  }
+
+  .modalTrainingContent {
+    padding: 8px;
+  }
+
+  .container-training-modal-title-delete {
+    padding: 8px;
+  }
+
+  .container-training-modal-title-delete-text {
+    font-size: 1.75rem;
+  }
+
+  .container-training-modal-trainings-users::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonD {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonE {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonF {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonG {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonH {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonI {
+    font-size: 0.95rem;
+  }
+
+  .specificStylesButtonJ {
+    font-size: 0.95rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .container-training-modal {
+    padding-top: 82px;
+  }
+
+  .container-training-modal-button {
+    font-size: 1rem;
+  }
+
+  .modalTrainingContent {
+    padding: 8px;
+  }
+
+  .container-training-modal-title-delete {
+    padding: 8px;
+  }
+
+  .container-training-modal-title-delete-text {
+    font-size: 2rem;
+  }
+
+  .container-training-modal-trainings-users::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonD {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonE {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonF {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonG {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonH {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonI {
+    font-size: 1rem;
+  }
+
+  .specificStylesButtonJ {
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .container-training-modal {
+    padding-top: 94px;
+  }
+
+  .modalTrainingContent {
+    padding: 10px;
+  }
+
+  .container-training-modal-title-delete {
+    padding: 10px;
+  }
+
+  .container-training-modal-title-delete-text {
+    font-size: 2.25rem;
+  }
+
+  .container-training-modal-trainings-users::-webkit-scrollbar {
+    height: 8px;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .container-training-modal {
+    padding-top: 106px;
+  }
+
+  .container-training-modal-button {
+    font-size: 1.05rem;
+  }
+
+  .modalTrainingContent {
+    padding: 12px;
+  }
+
+  .container-training-modal-title-delete {
+    padding: 12px;
+  }
+
+  .container-training-modal-title-delete-text {
+    font-size: 2.5rem;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonD {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonE {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonF {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonG {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonH {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonI {
+    font-size: 1.05rem;
+  }
+
+  .specificStylesButtonJ {
+    font-size: 1.05rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .container-training-modal {
+    padding-top: 118px;
+  }
+
+  .container-training-modal-button {
+    font-size: 1.1rem;
+  }
+
+  .modalTrainingContent {
+    padding: 14px;
+  }
+
+  .container-training-modal-title-delete {
+    padding: 14px;
+  }
+
+  .container-training-modal-title-delete-text{
+    font-size: 3rem;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonD {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonE {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonF {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonG {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonH {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonI {
+    font-size: 1.1rem;
+  }
+
+  .specificStylesButtonJ {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .container-training-modal {
+    padding-top: 130px;
+  }
+
+  .container-training-modal-button {
+    font-size: 1.125rem;
+  }
+
+  .modalTrainingContent {
+    padding: 16px;
+  }
+
+  .container-training-modal-title-delete {
+    padding: 16px;
+  }
+
+  .container-training-modal-title-delete-text {
+    font-size: 3.5rem;
+  }
+
+  .specificStylesButtonA {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonB {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonC {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonD {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonE {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonF {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonG {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonH {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonI {
+    font-size: 1.125rem;
+  }
+
+  .specificStylesButtonJ {
+    font-size: 1.125rem;
+  }
+
+}

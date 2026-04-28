@@ -11,7 +11,7 @@ function ErrorLogin() {
         alt='image-loading-workout' 
       />
 
-      <p className='error-login-styles-short-title'>"Please log in on the home page using a username and password provided via the 'NAMES AND PASSWORDS' button, located in the top-center of the screen, before accessing the full content. Thank you!"</p>
+      <p className='error-login-styles-short-title'>"Please log in on the home page using a username and password provided via the 'NAMES AND PASS' button, located in the top-center of the screen, before accessing the full content. Thank you!"</p>
       <p className='error-login-styles-long-title'>"Please log in on the home page using a username and password provided via the 'SHOW ALL NAMES AND PASSWORDS' button, located in the top-center of the screen, before accessing the full content. Thank you!"</p>
       
     </div>

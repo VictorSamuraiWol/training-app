@@ -23,6 +23,7 @@
   font-size: 2rem;
   color: var(--border-yellow);
   text-shadow: 2px 2px 3px var(--border);
+  overflow-wrap: break-word;
  }
 
 .cards-training-exercises:hover {
@@ -49,6 +50,10 @@
 
 /* Responsiveness */
 @media (max-width: 480px) {
+  .cards-training {
+    gap:14px;
+  }
+
   .cards-training-exercises-timer {
     justify-content: space-between;
     width: 100%;
@@ -73,6 +78,10 @@
 }
 
 @media (min-width: 481px) {
+  .cards-training {
+    gap:16px;
+  }
+
   .cards-training-exercises-timer {
     justify-content: space-between;
     width: 100%;
@@ -97,6 +106,10 @@
 }
 
 @media (min-width: 768px) {
+  .cards-training {
+    gap:20px;
+  }
+
   .cards-training-exercises-timer {
     justify-content: center;
     width: auto;
@@ -121,6 +134,10 @@
 }
 
 @media (min-width: 1024px) {
+  .cards-training {
+    gap:22px;
+  }
+
   .cards-training-exercises {
     font-size: 1.3rem;
   }
@@ -136,6 +153,10 @@
 }
 
 @media (min-width: 1280px) {
+  .cards-training {
+    gap:24px;
+  }
+
   .cards-training-exercises {
     font-size: 1.4rem;
   }

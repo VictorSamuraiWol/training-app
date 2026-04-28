@@ -32,7 +32,79 @@ function ExercisesPage() {
       {typeTrain === "C" && loginValidate && <div className='banner-c-exercises-page'></div>}
 
       {/* Static Content */}
-      {/* Static User 1 */}
+      {/* Victor Static - Static User 1 */}
+      {nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && loginValidate &&
+        <main className='exercises-page-style-cards' key='static-victor-static-id'>
+          <div className='exercises-page-style-cards-timer-title-music'>
+            <div className='title-timer'>
+              <p className='title-timer-text'>Total Time:</p>
+              <Timer
+                key='0'
+                isRunning={isRunningAllTime}
+                setIsRunning={setIsRunningAllTime} 
+                specificStyleTimer='specificStyleTimer' 
+                specificStyleTimerDisplay='specificStyleTimerDisplay' 
+                specificStyleTimerButton='specificStyleTimerButton'
+                buttonPlayPauseId='0'
+              />
+            </div>
+
+            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - Victor Static</h1>
+
+            <MusicPlayer
+              key='0'
+              src={audiosDescriptions["audio1"]}
+              specificStylePlayer='music-player'
+              specificStyleMusicButton='specificStyleMusicButton' 
+            />
+
+          </div>
+
+          <div className='exercises-page-style-cards-title'>
+            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - Victor Static</h1>
+
+          </div >
+
+        {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <Card
+          key='static-victor-static-id' 
+          exercise1='1.Warm-up: HIIT - 10-12 min'
+          exercise2='2.Biceps: 1x 12-14 (6kg - dumbbell) + (up) 3x 7-9 (8kg - dumbbell)'
+          exercise3='3.Forearms: (up) 3x 12-14 (6kg - dumbbell) (already warmed up)'
+          exercise4='4.Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)'
+          exercise5='5.Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)'
+          exercise6='6.Trapezius: 1x 16-20 (10kg - dumbbell) + 3x 12-14 (12kg - dumbbell)'
+          exercise7='7.Wrist Curl: 2x 12-14 (12kg - dumbbell) (already warmed up, no rest between reps)'
+          exercise8='8.Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'
+          exercise9='9.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
+          exercise10='10.Plank: 1x (35 seconds)'
+        />}
+
+        {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <Card
+          key='static-victor-static-id'  
+          exercise1='1.Warm-up: HIIT - 10-12 min'
+          exercise2='2.Squat: 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
+          exercise3='3.Stiff (Romanian Deadlift): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
+          exercise4='4.Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)'
+          exercise5='5.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
+          exercise6='6.Plank: 1x (35 seconds)'
+        />}
+
+        {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <Card
+          key='static-victor-static-id'  
+          exercise1='1.Warm-up: HIIT - 10-12 min'
+          exercise2='2.Triceps: 1x 12-14 (6kg - dumbbell) + 2x 7-9 (8kg - dumbbell)'
+          exercise3='3.Front Raise: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plate)'
+          exercise4='4.Lateral Raise: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)'
+          exercise5='5.Incline Push-up: 1x 16-20 + 2x 12-14 (bodyweight)'
+          exercise6='6.Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'
+          exercise7='7.Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'
+          exercise8='8.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
+          exercise9='9.Plank: 1x (35 seconds)'
+        />}
+ 
+      </main>}
+
+      {/* Static User 2 */}
       {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && loginValidate &&
         <main className='exercises-page-style-cards' key='static-leimar-id'>
           <div className='exercises-page-style-cards-timer-title-music'>
@@ -113,44 +185,9 @@ function ExercisesPage() {
           exercise12='12.Example'
           exercise13='13.Example'
         />}
- 
-      </main>}
 
-      {/* Static User 2 */}
-      {nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && loginValidate &&
-        <main className='exercises-page-style-cards' key='static-newuser1-id'>
-          <div className='exercises-page-style-cards-timer-title-music'>
-            <div className='title-timer'>
-              <p className='title-timer-text'>Total Time:</p>
-              <Timer
-                key='0'
-                isRunning={isRunningAllTime}
-                setIsRunning={setIsRunningAllTime} 
-                specificStyleTimer='specificStyleTimer' 
-                specificStyleTimerDisplay='specificStyleTimerDisplay' 
-                specificStyleTimerButton='specificStyleTimerButton'
-                buttonPlayPauseId='0'
-              />
-            </div>
-
-            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - New User 1</h1>
-
-            <MusicPlayer
-              key='0'
-              src={audiosDescriptions["audio2"]}
-              specificStylePlayer='music-player'
-              specificStyleMusicButton='specificStyleMusicButton' 
-            />
-
-          </div>
-
-          <div className='exercises-page-style-cards-title'>
-            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - New User 1</h1>
-
-          </div >
-
-        {typeTrain === "A" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
-          key='static-newuser1-id' 
+        {typeTrain === "D" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+          key='static-leimar-id'  
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -164,12 +201,10 @@ function ExercisesPage() {
           exercise11='11.Example'
           exercise12='12.Example'
           exercise13='13.Example'
-          exercise14='14.Example'
-          exercise15='15.Example'
         />}
 
-        {typeTrain === "B" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
-          key='static-newuser1-id' 
+        {typeTrain === "E" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+          key='static-leimar-id'  
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -183,11 +218,10 @@ function ExercisesPage() {
           exercise11='11.Example'
           exercise12='12.Example'
           exercise13='13.Example'
-          exercise14='14.Example'
         />}
 
-        {typeTrain === "C" && nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <Card
-          key='static-newuser1-id'  
+        {typeTrain === "F" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+          key='static-leimar-id'  
           exercise1='1.Example'
           exercise2='2.Example'
           exercise3='3.Example'
@@ -297,9 +331,7 @@ function ExercisesPage() {
             exercise15={user.exercise15[2][1] !== '' && `15.${user.exercise15[2][1]}`}
           />}
  
-        </main>
-
-      ))}
+        </main>))}
 
     </div>
   )

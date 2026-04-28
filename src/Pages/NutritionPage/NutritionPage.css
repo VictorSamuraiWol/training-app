@@ -76,8 +76,8 @@
 
   .cards-info-nutrition-itens {
     align-items: start;
+    gap:8px;
     width: 100%;
-    word-break: break-all;
   }
 
   .cards-info-nutrition-item {
@@ -101,8 +101,8 @@
 
   .cards-info-nutrition-itens {
     align-items: start;
+    gap: 8px;
     width: 100%;
-    word-break: break-all;
   }
 
   .cards-info-nutrition-item {
@@ -126,7 +126,7 @@
 
   .cards-info-nutrition-itens {
     align-items: center;
-    word-break: normal;
+    gap: 16px;
   }
 
   .cards-info-nutrition-item {
@@ -148,6 +148,10 @@
     font-size: 1.8rem;
   }
 
+  .cards-info-nutrition-itens {
+    gap: 24px;
+  }
+
   .cards-info-nutrition-item {
     font-size: 1.3rem;
   }
@@ -163,6 +167,10 @@
     font-size: 1.9rem;
   }
 
+  .cards-info-nutrition-itens {
+    gap: 28px;
+  }
+
   .cards-info-nutrition-item {
     font-size: 1.4rem;
   }
@@ -176,6 +184,10 @@
 
   .cards-info-nutrition-title {
     font-size: 2rem;
+  }
+
+  .cards-info-nutrition-itens {
+    gap: 32px;
   }
 
   .cards-info-nutrition-item {

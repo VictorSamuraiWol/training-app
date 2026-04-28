@@ -1,9 +1,8 @@
 import './Header.css';
 import logo from '../../assets/images/logo-neonfit.png';
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
-import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
-import profileNewUser1 from '../../assets/images/profiles/profile-new-user-1.png';
 import profileVictor from '../../assets/images/profiles/profile-victor.png';
+import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
 import profileNewUser2 from '../../assets/images/profiles/profile-new-user-2.png';
 import profileNewUser3 from '../../assets/images/profiles/profile-new-user-3.png';
 import { Link } from 'react-router-dom';
@@ -39,11 +38,11 @@ function Header({ compactUserName }) {
       <h1 className='header-title'>NEONFIT APP</h1>
 
       {/* Static Content */}
-      {/* Static User 1 */}
-      {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <div className='container-login-signin'>
+      {/* Victor Static - Static User 1 */}
+      {nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <div className='container-login-signin'>
         <div className='container-login-signin-image-name'>
           <img 
-            src={profileLeimar} 
+            src={profileVictor} 
             className='container-login-signin-image-name-img' 
           />
 
@@ -61,11 +60,11 @@ function Header({ compactUserName }) {
 
       </div>}
 
-      {/* Static User 2 */}
-      {nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <div className='container-login-signin'>
+      {/* Leimar - Static User 2 */}
+      {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <div className='container-login-signin'>
         <div className='container-login-signin-image-name'>
           <img 
-            src={profileNewUser1} 
+            src={profileLeimar} 
             className='container-login-signin-image-name-img' 
           />
 

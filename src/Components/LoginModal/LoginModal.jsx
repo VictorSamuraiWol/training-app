@@ -1,4 +1,4 @@
-import './ModalLogin.css'
+import './LoginModal.css'
 import Modal from 'react-modal'
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
 import { useContext, useState } from 'react';
@@ -35,7 +35,7 @@ function ModalLogin() {
 
       <ButtonDefault 
         onClick={openModal} 
-        nameButton='NAMES AND PASSWORDS'
+        nameButton='NAMES AND PASS'
         specificStylesButton='container-modal-button names-and-passwords'
         imageReact={<GiClick className='image-react-modal'/>}
       />
@@ -47,12 +47,12 @@ function ModalLogin() {
           overlayClassName='modalLoginOverlay'
           className='modalLoginContent'
       > 
-        <div className='container-modal-delete'>
-          <h1 className='login-users-passwords-title'>LOGIN</h1>
+        <div className='container-login-modal-delete'>
+          <h1 className='container-login-modal-delete-text'>LOGIN</h1>
 
           <TiDeleteOutline
               onClick={closeModal}
-              className='cotainer-modal-delete-icon'
+              className='container-login-modal-delete-icon'
           /> 
         </div>
 
@@ -62,8 +62,8 @@ function ModalLogin() {
             {/* static user 1 */}
             <div className='login-users-passwords-users'>
               <div className='login-users-passwords-user'>
-                <p className='login-users-passwords-user-name'>Name: Leimar</p>
-                <p className='login-users-passwords-password'>Password: Leimar</p>
+                <p className='login-users-passwords-user-name'>Name: Victor Static</p>
+                <p className='login-users-passwords-password'>Password: Victor Static</p>
               </div>
 
             </div>
@@ -71,8 +71,8 @@ function ModalLogin() {
             {/* static user 2 */}
             <div className='login-users-passwords-users'>
               <div className='login-users-passwords-user'>
-                <p className='login-users-passwords-user-name'>Name: New User 1</p>
-                <p className='login-users-passwords-password'>Password: New User 1</p>
+                <p className='login-users-passwords-user-name'>Name: Leimar</p>
+                <p className='login-users-passwords-password'>Password: Leimar</p>
               </div>
 
             </div>

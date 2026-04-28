@@ -1,76 +1,41 @@
 import './Cards.css';
 import ButtonDefault from '../../ButtonDefault/ButtonDefault';
+import TrainingModal from '../../TrainingModal/TrainingModal';
 import { useContext } from 'react';
 import { DataContext } from '../../DataContext/DataContext';
 import { Link, useOutletContext } from 'react-router-dom';
 
 function Cards() {
 
-  const { usersContents, setUserId, setTypeTrain, nameUser } = useContext(DataContext)
+  const { usersContents, setUserId, nameUser } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
-
-  function clickButton(type) {
-    setTypeTrain(type)
-
-  }
 
   return (
     <>
       {/* Static Content */}
-      {/* Static User 1 */}
-      {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <div 
+      {/* Victor Static - Static User 1 */}
+      {nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <div 
         className='cards' 
-        key='static-leimar-id'
+        key={nameUser}
       >
         <div className='cards-info'>
-          <h2 className='cards-info-title'>{compactUserName('Leimar')}</h2>
+          <h2 className='cards-info-title'>{compactUserName('Victor Static')}</h2>
 
           <div className='cards-info-measures'>
-            <h2 className='cards-info-measures-weight'>Example</h2>
-            <h2 className='cards-info-measures-height'>Example</h2>
+            <h2 className='cards-info-measures-weight'>80 kgs</h2>
+            <h2 className='cards-info-measures-height'>1.69 cm</h2>
           </div>
         </div>
 
-        <Link
-          className='link-workout-A' 
-          to='/exercises-page'
-        >
-          <ButtonDefault
-            onClick={() => {clickButton('A'); setUserId('static-leimar-id')}}
-            nameButton='Workout A'
-            specificStylesButton='specificStylesButtonA'
-          />
-        </Link>
-
-        <Link
-          className='link-workout-B'
-          to='/exercises-page'
-        >
-          <ButtonDefault 
-            onClick={() => {clickButton('B'); setUserId('static-leimar-id')}}
-            nameButton='Workout B'
-            specificStylesButton='specificStylesButtonB'
-          />
-        </Link>
-
-        <Link
-          className='link-workout-C'
-          to='/exercises-page'
-        >
-          <ButtonDefault 
-            onClick={() => {clickButton('C'); setUserId('static-leimar-id')}}
-            nameButton='Workout C'
-            specificStylesButton='specificStylesButtonC'
-          />
-        </Link>
+        <TrainingModal className='training-modal'/>
 
         <Link 
           className='link-nutrition' 
           to='/nutrition-page'
         >
           <ButtonDefault
-            onClick={() => {setUserId('static-leimar-id')}}
+            onClick={() => {setUserId(nameUser)}}
             nameButton='Nutrition Plan'
             specificStylesButton='specificStylesButtonNutrition'
           />
@@ -81,7 +46,7 @@ function Cards() {
           to='/notes-page'
         >
           <ButtonDefault
-            onClick={() => {setUserId('static-leimar-id')}}
+            onClick={() => {setUserId(nameUser)}}
             nameButton='Notes'
             specificStylesButton='specificStylesButtonNotes'
           />
@@ -89,58 +54,28 @@ function Cards() {
 
       </div>}
 
-      {/* Static User 2 */}
-      {nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && <div 
+      {/* Leimar - Static User 2 */}
+      {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <div 
         className='cards' 
-        key='static-newuser1-id'
+        key={nameUser}
       >
         <div className='cards-info'>
-          <h2 className='cards-info-title'>{compactUserName('New User 1')}</h2>
+          <h2 className='cards-info-title'>{compactUserName('Leimar')}</h2>
+
           <div className='cards-info-measures'>
-            <h2 className='cards-info-measures-weight'>Example</h2>
-            <h2 className='cards-info-measures-height'>Example</h2>
+            <h2 className='cards-info-measures-weight'>87 kgs</h2>
+            <h2 className='cards-info-measures-height'>1,75 cm</h2>
           </div>
         </div>
 
-        <Link
-          className='link-workout-A' 
-          to='/exercises-page'
-        >
-          <ButtonDefault
-            onClick={() => {clickButton('A'); setUserId('static-newuser1-id')}}
-            nameButton='Workout A'
-            specificStylesButton='specificStylesButtonA'
-          />
-        </Link>
-
-        <Link
-          className='link-workout-B'
-          to='/exercises-page'
-        >
-          <ButtonDefault 
-            onClick={() => {clickButton('B'); setUserId('static-newuser1-id')}}
-            nameButton='Workout B'
-            specificStylesButton='specificStylesButtonB'
-          />
-        </Link>
-
-        <Link
-          className='link-workout-C'
-          to='/exercises-page'
-        >
-          <ButtonDefault 
-            onClick={() => {clickButton('C'); setUserId('static-newuser1-id')}}
-            nameButton='Workout C'
-            specificStylesButton='specificStylesButtonC'
-          />
-        </Link>
+        <TrainingModal className='training-modal'/>
 
         <Link 
           className='link-nutrition' 
           to='/nutrition-page'
         >
           <ButtonDefault
-            onClick={() => {setUserId('static-newuser1-id')}}
+            onClick={() => {setUserId(nameUser)}}
             nameButton='Nutrition Plan'
             specificStylesButton='specificStylesButtonNutrition'
           />
@@ -151,7 +86,7 @@ function Cards() {
           to='/notes-page'
         >
           <ButtonDefault
-            onClick={() => {setUserId('static-newuser1-id')}}
+            onClick={() => {setUserId(nameUser)}}
             nameButton='Notes'
             specificStylesButton='specificStylesButtonNotes'
           />
@@ -173,38 +108,7 @@ function Cards() {
             </div>
           </div>
 
-          <Link 
-            className='link-workout-A' 
-            to='/exercises-page'
-          >
-            <ButtonDefault
-              onClick={() => {clickButton('A'); setUserId(user.id)}}
-              nameButton='Workout A'
-              specificStylesButton='specificStylesButtonA'
-            />
-          </Link>
-
-          <Link
-            className='link-workout-B' 
-            to='/exercises-page'
-          >
-            <ButtonDefault 
-              onClick={() => {clickButton('B'); setUserId(user.id)}}
-              nameButton='Workout B'
-              specificStylesButton='specificStylesButtonB'
-            />
-          </Link>
-
-          <Link
-            className='link-workout-C'
-            to='/exercises-page'
-          >
-            <ButtonDefault 
-              onClick={() => {clickButton('C'); setUserId(user.id)}}    
-              nameButton='Workout C'
-              specificStylesButton='specificStylesButtonC'
-            />
-          </Link>
+          <TrainingModal className='training-modal'/>
 
           <Link className='link-nutrition' to='/nutrition-page'>
             <ButtonDefault

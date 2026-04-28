@@ -18,7 +18,41 @@ function NotesPage() {
       {loginValidate && <div className='banner-notes-page'></div>}
 
       {/* Static Content */}
-      {/* Static User 1 */}
+      {/* Victor Static - Static User 1 */}
+      {nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && loginValidate &&
+      <div
+        key='static-victor-static-id'
+        className='cards-info-notes'
+      >
+        <h2 className='cards-info-notes-title'>Notes - Victor Static</h2>
+
+        <div className='cards-info-notes-itens'>
+          <p 
+            key='observation1'
+            className='cards-info-notes-item' 
+          >
+            <FaCheck className='iconCheckNotes' />Start date: 8 January 2026
+          </p>
+
+          <p 
+            key='observation2'
+            className='cards-info-notes-item' 
+          >
+            <FaCheck className='iconCheckNotes' />Rest between reps: 1 min
+          </p>
+
+          <p 
+            key='observation3'
+            className='cards-info-notes-item' 
+          >
+            <FaCheck className='iconCheckNotes' />Rest between sets: 1-3 min
+          </p>
+
+        </div>
+
+      </div>}
+
+      {/* Leimar - Static User 2 */}
       {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && loginValidate &&
       <div
         key='static-leimar-id'
@@ -31,62 +65,19 @@ function NotesPage() {
             key='observation1'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Example
+            <FaCheck className='iconCheckNotes' />Rest between reps: 1 min
           </p>
 
           <p 
             key='observation2'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Example
-          </p>
-
-          <p 
-            key='observation3'
-            className='cards-info-notes-item' 
-          >
-            <FaCheck className='iconCheckNotes' />Example
+            <FaCheck className='iconCheckNotes' />Rest between sets: 1-3 min
           </p>
 
         </div>
 
-      </div>
-      }
-
-      {/* Static User 2 */}
-      {nameUser.toLowerCase().trim() === 'New User 1'.toLowerCase() && loginValidate &&
-      <div
-        key='static-newuser1-id'
-        className='cards-info-notes'
-      >
-        <h2 className='cards-info-notes-title'>Notes - New User 1</h2>
-
-        <div className='cards-info-notes-itens'>
-          <p 
-            key='observation1'
-            className='cards-info-notes-item' 
-          >
-            <FaCheck className='iconCheckNotes' />Example
-          </p>
-
-          <p 
-            key='observation2'
-            className='cards-info-notes-item' 
-          >
-            <FaCheck className='iconCheckNotes' />Example
-          </p>
-
-          <p 
-            key='observation3'
-            className='cards-info-notes-item' 
-          >
-            <FaCheck className='iconCheckNotes' />Example
-          </p>
-
-        </div>
-
-      </div>
-      }
+      </div>}
 
       {/* Dinamic Content */}
       {loginValidate && usersContents && usersContents
