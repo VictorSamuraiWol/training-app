@@ -5,6 +5,7 @@ import MusicPlayer from '../../Components/MusicPlayer/MusicPlayer';
 import audio1 from '../../assets/audios/armin-miami-2026.mp3'
 import audio2 from '../../assets/audios/workout-music-2025.mp3'
 import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
+import ToggleDefault from '../../Components/ToggleDefault/ToggleDefault';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useOutletContext } from 'react-router-dom';
@@ -47,13 +48,18 @@ function ExercisesPage() {
               />
             </div>
 
-            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - Victor Static</h1>
+            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - Victor Static</h1>   
 
             <MusicPlayer
               key='0'
               src={audiosDescriptions["audio1"]}
               specificStylePlayer='music-player'
               specificStyleMusicButton='specificStyleMusicButton' 
+            />
+
+            <ToggleDefault 
+              specificStyleTitleToggle='toggle-default-timer-title-music' 
+              specificStyleTitleToggleText='toggle-default-timer-title-music-text' 
             />
 
           </div>
@@ -126,6 +132,11 @@ function ExercisesPage() {
               src={audiosDescriptions["audio1"]}
               specificStylePlayer='music-player'
               specificStyleMusicButton='specificStyleMusicButton' 
+            />
+
+            <ToggleDefault 
+              specificStyleTitleToggle='toggle-default-timer-title-music' 
+              specificStyleTitleToggleText='toggle-default-timer-title-music-text' 
             />
 
           </div>
@@ -222,6 +233,11 @@ function ExercisesPage() {
               src={audiosDescriptions[user.audio]}
               specificStylePlayer='music-player'
               specificStyleMusicButton='specificStyleMusicButton' 
+            />
+
+            <ToggleDefault 
+              specificStyleTitleToggle='toggle-default-timer-title-music' 
+              specificStyleTitleToggleText='toggle-default-timer-title-music-text' 
             />
 
           </div>

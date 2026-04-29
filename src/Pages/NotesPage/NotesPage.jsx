@@ -28,21 +28,21 @@ function NotesPage() {
 
         <div className='cards-info-notes-itens'>
           <p 
-            key='observation1'
+            key='note1'
             className='cards-info-notes-item' 
           >
             <FaCheck className='iconCheckNotes' />Start date: 8 January 2026
           </p>
 
           <p 
-            key='observation2'
+            key='note2'
             className='cards-info-notes-item' 
           >
             <FaCheck className='iconCheckNotes' />Rest between reps: 1 min
           </p>
 
           <p 
-            key='observation3'
+            key='note3'
             className='cards-info-notes-item' 
           >
             <FaCheck className='iconCheckNotes' />Rest between sets: 1-3 min
@@ -62,21 +62,21 @@ function NotesPage() {
 
         <div className='cards-info-notes-itens'>
           <p 
-            key='observation1'
+            key='note1'
             className='cards-info-notes-item' 
           >
             <FaCheck className='iconCheckNotes' />Intervalos entre repetições: 1 min
           </p>
 
           <p 
-            key='observation2'
+            key='note2'
             className='cards-info-notes-item' 
           >
             <FaCheck className='iconCheckNotes' />Intervalo entre séries: 1-3 min
           </p>
 
           <p 
-            key='observation2'
+            key='note3'
             className='cards-info-notes-item' 
           >
             <FaCheck className='iconCheckNotes' />Aquecimento: 60% da carga

@@ -13,11 +13,13 @@ function BasePage() {
 
   const [activateNavigateDefault, setActivateNavigateDefault] = useState(false)
 
+  const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
+
   const compactUserName = (name) => {
     let editUserName;
     
-    if (name.length > 15) {
-      editUserName = name.slice(0, 15) + "..."
+    if (name.length > 11) {
+      editUserName = name.slice(0, 11) + "..."
 
     } else {
       editUserName = name
@@ -41,7 +43,7 @@ function BasePage() {
         setActivateNavigateDefault={setActivateNavigateDefault} 
       />
 
-      <Outlet context={{ setActivateNavigateDefault, compactUserName }} />
+      <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, setIsOnToggleTimersExercises }} />
 
       <Footer />
       

@@ -1,6 +1,7 @@
 import './Card.css';
 import Timer from '../../../Timer/Timer';
 import { useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 
 function Card({ exercise1, exercise2, exercise3, exercise4, exercise5, 
   exercise6, exercise7, exercise8, exercise9, exercise10, exercise11, exercise12,
@@ -22,6 +23,8 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
   const [isRunning14, setIsRunning14] = useState(false)
   const [isRunning15, setIsRunning15] = useState(false)
   const [playPauseId, setPlayPauseId] = useState('')
+
+  const { isOnToggleTimersExercises } = useOutletContext()
 
   function pauseOthersExercisesTimers() {    
     if (isRunning1 && playPauseId === '1') {
@@ -259,7 +262,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise1}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='1'
             isRunning={isRunning1}
             setIsRunning={setIsRunning1} 
@@ -269,14 +272,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='1'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise2 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise2}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='2'
             isRunning={isRunning2}
             setIsRunning={setIsRunning2} 
@@ -286,14 +289,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='2'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>    
         }
         {exercise3 &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise3}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='3'
             isRunning={isRunning3}
             setIsRunning={setIsRunning3}  
@@ -303,14 +306,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='3' 
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>     
         }
         {exercise4 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise4}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='4'
             isRunning={isRunning4}
             setIsRunning={setIsRunning4} 
@@ -320,14 +323,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='4'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise5 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise5}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='5'
             isRunning={isRunning5}
             setIsRunning={setIsRunning5}  
@@ -337,14 +340,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='5'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise6 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise6}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='6'
             isRunning={isRunning6}
             setIsRunning={setIsRunning6} 
@@ -354,14 +357,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='6'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>    
         }
         {exercise7 && 
         <div className='cards-training-exercises-timer'>
         <p className='cards-training-exercises'>{exercise7}</p>
 
-        <Timer
+        {isOnToggleTimersExercises && <Timer
             key='7'
             isRunning={isRunning7}
             setIsRunning={setIsRunning7}  
@@ -371,14 +374,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='7'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>  
         }
         {exercise8 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise8}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='8'
             isRunning={isRunning8}
             setIsRunning={setIsRunning8} 
@@ -388,14 +391,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='8'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>  
         }
         {exercise9 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise9}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='9'
             isRunning={isRunning9}
             setIsRunning={setIsRunning9}  
@@ -405,14 +408,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='9'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise10 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise10}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='10'
             isRunning={isRunning10}
             setIsRunning={setIsRunning10}  
@@ -422,14 +425,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='10'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise11 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise11}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='11'
             isRunning={isRunning11}
             setIsRunning={setIsRunning11}  
@@ -439,14 +442,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='11'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise12 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise12}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='12'
             isRunning={isRunning12}
             setIsRunning={setIsRunning12}  
@@ -456,14 +459,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='12'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise13 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise13}</p>
 
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='13'
             isRunning={isRunning13}
             setIsRunning={setIsRunning13}  
@@ -473,14 +476,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='13'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise14 && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise14}</p>
           
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='14'
             isRunning={isRunning14}
             setIsRunning={setIsRunning14}  
@@ -490,14 +493,14 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='14'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
         {exercise15 &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise15}</p>
           
-          <Timer
+          {isOnToggleTimersExercises && <Timer
             key='15'
             isRunning={isRunning15}
             setIsRunning={setIsRunning15}  
@@ -507,7 +510,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='15'
             setPlayPauseId={setPlayPauseId}
-          />
+          />}
         </div>
         }
 
