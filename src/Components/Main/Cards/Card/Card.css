@@ -1,12 +1,33 @@
 .cards-training {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 24px;
   width: 100%;
+  padding: 0 8px;
   transition: all 0.3s ease-in-out;
   cursor: default;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cards-training::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cards-training::-webkit-scrollbar-track {
+  background: var(--text);
+  border-radius: 10px;
+}
+
+.cards-training::-webkit-scrollbar-thumb {
+  background: var(--border-green);
+  border-radius: 10px;
+}
+
+.cards-training::-webkit-scrollbar-thumb:hover {
+  background: var(--border-yellow);
 }
 
 .cards-training-exercises-timer {
@@ -52,6 +73,12 @@
 @media (max-width: 480px) {
   .cards-training {
     gap:14px;
+    height: calc(78.2vh - 325px);
+    overflow-y: auto;
+  }
+
+  .cards-training::-webkit-scrollbar {
+    width: 4px;
   }
 
   .cards-training-exercises-timer {
@@ -80,6 +107,12 @@
 @media (min-width: 481px) {
   .cards-training {
     gap:16px;
+    height: calc(78.2vh - 259px);
+    overflow-y: auto;
+  }
+
+  .cards-training::-webkit-scrollbar {
+    width: 4px;
   }
 
   .cards-training-exercises-timer {
@@ -108,6 +141,8 @@
 @media (min-width: 768px) {
   .cards-training {
     gap:20px;
+    height: auto;
+    overflow-y: hidden;
   }
 
   .cards-training-exercises-timer {

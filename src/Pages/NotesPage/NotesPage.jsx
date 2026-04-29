@@ -65,14 +65,21 @@ function NotesPage() {
             key='observation1'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Rest between reps: 1 min
+            <FaCheck className='iconCheckNotes' />Intervalos entre repetições: 1 min
           </p>
 
           <p 
             key='observation2'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Rest between sets: 1-3 min
+            <FaCheck className='iconCheckNotes' />Intervalo entre séries: 1-3 min
+          </p>
+
+          <p 
+            key='observation2'
+            className='cards-info-notes-item' 
+          >
+            <FaCheck className='iconCheckNotes' />Aquecimento: 60% da carga
           </p>
 
         </div>

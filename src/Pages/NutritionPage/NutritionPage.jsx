@@ -48,13 +48,12 @@ function NutritionPage() {
           <h2 className='cards-info-nutrition-title'>Nutrition - Leimar</h2>
 
           <div className='cards-info-nutrition-itens'>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Supplements: Whey, Creatina</p>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Breakfast: Coffee, 5 Eggs, Bread</p>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Snack: Whey, 3 Bananas</p>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Lunch: Meat, Eggs, Rice, Beans</p>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Snack: Banana Smoothie, Whey, Bread, Eggs</p>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Dinner: Meat, Eggs, Rice, Beans</p>
-            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Late-night Snack: Eggs</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Suplementos: Whey, Creatina</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Café da Manhã: Café, Ovos, Manteiga, Abacate</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Almoço: Carne, Frango, Arroz, Feijão, Batata Doce, Mandioca</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Lanche: Vitamina de Banana, Pão, Ovos</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Jantar: Carne, Frango, Arroz, Feijão, Batata Doce, Mandioca</p>
+            <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Ceia: Chá, Castanha, Amendoim </p>
           </div>
 
         </div>

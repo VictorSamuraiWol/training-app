@@ -97,3 +97,11 @@
   background: #fff;
   box-shadow: 0 0 8px #00f5ff, 0 0 12px #ff00c8;
 }
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .player-title {
+    display: none;
+  }
+
+}

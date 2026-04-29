@@ -27,9 +27,7 @@ function ExercisesPage() {
     <div className='exercises-page-style'>
       {!loginValidate && <ErrorLogin />}
 
-      {typeTrain === "A" && loginValidate && <div className='banner-a-exercises-page'></div>}
-      {typeTrain === "B" && loginValidate && <div className='banner-b-exercises-page'></div>}
-      {typeTrain === "C" && loginValidate && <div className='banner-c-exercises-page'></div>}
+      {loginValidate && <div className='banner-exercises-page'></div>}
 
       {/* Static Content */}
       {/* Victor Static - Static User 1 */}
@@ -139,102 +137,61 @@ function ExercisesPage() {
 
         {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id' 
-          exercise1='1.Example'
-          exercise2='2.Example'
-          exercise3='3.Example'
-          exercise4='4.Example'
-          exercise5='5.Example'
-          exercise6='6.Example'
-          exercise7='7.Example'
-          exercise8='8.Example'
-          exercise9='9.Example'
-          exercise10='10.Example'
-          exercise11='11.Example'
-          exercise12='12.Example'
-          exercise13='13.Example'
-          exercise14='14.Example'
-          exercise15='15.Example'
+          exercise1='1.Supino Horizontal: 1x16-20 (60% da carga) + 5x12-14 (20kgs cada)'
+          exercise2='2.Voador: 5x12-14 (5 barras)'
+          exercise3='3.Elevação Frontal: 4x7-9 (3 barras)'
+          exercise4='4.Elevação Lateral: 4x7-9 (3 barras)'
+          exercise5='5.Remada Alta: 4x12-14 (5 barras)'
         />}
 
         {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id'  
-          exercise1='1.Example'
-          exercise2='2.Example'
-          exercise3='3.Example'
-          exercise4='4.Example'
-          exercise5='5.Example'
-          exercise6='6.Example'
-          exercise7='7.Example'
-          exercise8='8.Example'
-          exercise9='9.Example'
+          exercise1='1.Leg Press: 1x16-20 (60% da carga) + 3x12-14 (30kgs cada)'
+          exercise2='2.Stiff: 1x16-20 (60% da carga) + 3x12-14 (barra)'
+          exercise3='3.Cadeira Flexora: 3x12-14 (5 barras)'
+          exercise4='4.Cadeira Extensora: 3x12-14 (5 barras)'
+          exercise5='5.Abdominal supra: 3x12-14 (peso do corpo)'
+          exercise6='6.Prancha: 30s'
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id'  
-          exercise1='1.Example'
-          exercise2='2.Example'
-          exercise3='3.Example'
-          exercise4='4.Example'
-          exercise5='5.Example'
-          exercise6='6.Example'
-          exercise7='7.Example'
-          exercise8='8.Example'
-          exercise9='9.Example'
-          exercise10='10.Example'
-          exercise11='11.Example'
-          exercise12='12.Example'
-          exercise13='13.Example'
+          exercise1='1.Remada na máquina: 1x16-20 (60% da carga) + 5x12-14 (5 barras)'
+          exercise2='2.Puxador: 5x12-14 (5 barras)'
+          exercise3='3.Remada Alta: 4x12-14 (5 barras)'
+          exercise4='4.Rosca Punho: 3x12-14 (20kgs)'
+          exercise5='5.Rosca Punho Invertida: 3x12-14 (20kgs)'
         />}
 
         {typeTrain === "D" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id'  
-          exercise1='1.Example'
-          exercise2='2.Example'
-          exercise3='3.Example'
-          exercise4='4.Example'
-          exercise5='5.Example'
-          exercise6='6.Example'
-          exercise7='7.Example'
-          exercise8='8.Example'
-          exercise9='9.Example'
-          exercise10='10.Example'
-          exercise11='11.Example'
-          exercise12='12.Example'
-          exercise13='13.Example'
+          exercise1='1.HIIT (burpess, polichinelo, pular corda, etc): 10-15 min'
+          exercise2='2.Abdominal supra: 3x12-14 (peso do corpo)'
+          exercise3='3.Abdominal oblíquo: 3x12-14 (peso do corpo)'
+          exercise4='4.Abdominal infra: 3x12-14 (peso do corpo)'
+          exercise5='5.Prancha: 30s'
         />}
 
         {typeTrain === "E" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id'  
-          exercise1='1.Example'
-          exercise2='2.Example'
-          exercise3='3.Example'
-          exercise4='4.Example'
-          exercise5='5.Example'
-          exercise6='6.Example'
-          exercise7='7.Example'
-          exercise8='8.Example'
-          exercise9='9.Example'
-          exercise10='10.Example'
-          exercise11='11.Example'
-          exercise12='12.Example'
-          exercise13='13.Example'
+          exercise1='1.Extensão de Triceps na Barra: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)'
+          exercise2='2.Triceps Francês: 3x7-9 (20kgs)'
+          exercise3='3.Triceps Corda: 3x7-9 (8 barras)'
+          exercise4='4.Elevação Frontal: 4x7-9 (3 barras)'
+          exercise5='5.Elevação Lateral: 4x7-9 (3 barras)'
+          exercise6='6.Panturrilha em pé: 1x16-20 (60% da carga) + 3x12-14 (20kgs cada)'
+          exercise7='7.Panturrilha sentado: 3x12-14 (20kgs cada)'
         />}
 
         {typeTrain === "F" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
           key='static-leimar-id'  
-          exercise1='1.Example'
-          exercise2='2.Example'
-          exercise3='3.Example'
-          exercise4='4.Example'
-          exercise5='5.Example'
-          exercise6='6.Example'
-          exercise7='7.Example'
-          exercise8='8.Example'
-          exercise9='9.Example'
-          exercise10='10.Example'
-          exercise11='11.Example'
-          exercise12='12.Example'
-          exercise13='13.Example'
+          exercise1='1.Rosca Direta: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)'
+          exercise2='2.Biceps Concentrado: 3x7-9 (10kgs)'
+          exercise3='3.Biceps Alternado: 3x7-9 (10kgs)'
+          exercise4='4.Rosca Punho: 3x12-14 (10kgs cada)'
+          exercise5='5.Rosca Punho Invertida: 3x12-14 (10kgs cada)'
+          exercise6='6.Abdominal oblíquo: 3x12-14 (peso do corpo)'
+          exercise7='7.Abdominal infra: 3x12-14 (peso do corpo)'
         />}
  
       </main>}

@@ -5,28 +5,24 @@
   background-image: url(../../assets/images/bg-header-footer.png);
 }
 
-.banner-a-exercises-page {
-  background-image: url(../../assets//images/image-training-a-neon.png);
+.banner-exercises-page {
+  background-image: url(../../assets/images/image-training-neon.png);
   background-position: center;
   background-size: contain;
   width: 100%;
   height: 150px;
 }
 
-.banner-b-exercises-page {
-  background-image: url(../../assets//images/image-training-b-neon.png);
-  background-position: center;
-  background-size: contain;
+/* .container-banner-exercises-page {
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 150px;
-}
+  overflow: hidden;
+} */
 
-.banner-c-exercises-page {
-  background-image: url(../../assets//images/image-training-c-neon.png);
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 150px;
+.banner-exercises-page {
+  /* width: 150px; */
+  /* height: 150px; */
 }
 
 .exercises-page-style-cards {
@@ -107,25 +103,25 @@
 
 /* Responsiveness */
 @media (max-width: 480px) {
+  .exercises-page-style {
+    min-height: 0;
+  }
+
   .exercises-page-style-cards {
     gap: 12px;
     padding: 12px;
   }
 
-  .banner-a-exercises-page {
-    height: 80px;
-  }
-
-  .banner-b-exercises-page {
-    height: 80px;
-  }
-
-  .banner-c-exercises-page {
+  .banner-exercises-page {
     height: 80px;
   }
 
   .title-timer {
     position: static;
+  }
+
+  .title-timer-text {
+    display: none;
   }
 
   .specificStyleTimerDisplay {
@@ -161,21 +157,17 @@
 }
 
 @media (min-width: 481px) {
+  .exercises-page-style {
+    min-height: 0;
+  }
+
   .exercises-page-style-cards {
     gap: 12px;
     padding: 12px;
   }
 
-  .banner-a-exercises-page {
-    height: 100px;
-  }
-
-  .banner-b-exercises-page {
-    height: 100px;
-  }
-
-  .banner-c-exercises-page {
-    height: 100px;
+  .banner-exercises-page {
+    height: 70px;
   }
 
   .title-timer {
@@ -209,20 +201,16 @@
 }
 
 @media (min-width: 768px) {
+  .exercises-page-style {
+    min-height: 78vh;
+  }
+
   .exercises-page-style-cards {
     gap: 16px;
     padding: 16px;
   }
 
-  .banner-a-exercises-page {
-    height: 120px;
-  }
-
-  .banner-b-exercises-page {
-    height: 120px;
-  }
-
-  .banner-c-exercises-page {
+  .banner-exercises-page {
     height: 120px;
   }
 
@@ -255,15 +243,7 @@
     padding: 20px;
   }
 
-  .banner-a-exercises-page {
-    height: 140px;
-  }
-
-  .banner-b-exercises-page {
-    height: 140px;
-  }
-
-  .banner-c-exercises-page {
+  .banner-exercises-page {
     height: 140px;
   }
 
