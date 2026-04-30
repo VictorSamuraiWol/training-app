@@ -51,13 +51,15 @@ function Header({ compactUserName }) {
 
         </div>
 
-        <div className='container-button-signout'>
-          <ButtonDefault
-            onClick={signOut}
-            nameButton='SIGN OUT'
-            specificStylesButton='specificStylesSignoutButton'
-          />
-        </div>
+        <Link className='link-container-button-signout' to='/'>
+          <div className='container-button-signout'>
+            <ButtonDefault
+              onClick={signOut}
+              nameButton='SIGN OUT'
+              specificStylesButton='specificStylesSignoutButton'
+            />
+          </div>
+        </Link>
 
       </div>}
 
@@ -74,13 +76,15 @@ function Header({ compactUserName }) {
 
         </div>
 
-        <div className='container-button-signout'>
-          <ButtonDefault
-            onClick={signOut}
-            nameButton='SIGN OUT'
-            specificStylesButton='specificStylesSignoutButton'
-          />
-        </div>
+        <Link className='link-container-button-signout' to='/'>
+          <div className='container-button-signout'>
+            <ButtonDefault
+              onClick={signOut}
+              nameButton='SIGN OUT'
+              specificStylesButton='specificStylesSignoutButton'
+            />
+          </div>
+        </Link>
 
       </div>}
 
@@ -101,16 +105,17 @@ function Header({ compactUserName }) {
           {<p className='container-login-signin-image-name-short-text'>{compactUserName(user.name, 8)}</p>}
           {<p className='container-login-signin-image-name-long-text'>{compactUserName(user.name, 15)}</p>}
 
-
         </div>
 
-        <div className='container-button-signout'>
-          <ButtonDefault
-            onClick={signOut}
-            nameButton='SIGN OUT'
-            specificStylesButton='specificStylesSignoutButton'
-          />
-        </div>
+        <Link className='link-container-button-signout' to='/'>
+          <div className='container-button-signout'>
+            <ButtonDefault
+              onClick={signOut}
+              nameButton='SIGN OUT'
+              specificStylesButton='specificStylesSignoutButton'
+            />
+          </div>
+        </Link>
 
       </div>))}
 

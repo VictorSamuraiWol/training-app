@@ -90,6 +90,14 @@
   box-shadow: 5px 3px 3px var(--border-yellow);
 }
 
+.link-container-button-signout {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+}
+
 .container-button-signout {
   display: flex;
   justify-content: end;
