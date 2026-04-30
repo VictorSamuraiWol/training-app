@@ -48,7 +48,11 @@ h2 {
   cursor: default;
 }
 
-.cards-info-title {
+.cards-info-short-title {
+  text-decoration: underline;
+}
+
+.cards-info-long-title {
   text-decoration: underline;
 }
 
@@ -120,8 +124,12 @@ h2 {
     padding: 16px;
   }
 
-  .cards-info-title {
+  .cards-info-short-title {
     font-size: 1rem;
+  }
+
+  .cards-info-long-title {
+    display: none;
   }
 
   .cards-info-measures {
@@ -157,7 +165,12 @@ h2 {
     padding: 16px;
   }
 
-  .cards-info-title {
+  .cards-info-short-title {
+    display: none;
+  }
+
+  .cards-info-long-title {
+    display: flex;
     font-size: 1.05rem;
   }
 
@@ -194,7 +207,7 @@ h2 {
     padding: 20px;
   }
 
-  .cards-info-title {
+  .cards-info-long-title {
     font-size: 1.05rem;
   }
 
@@ -231,7 +244,7 @@ h2 {
     padding: 24px;
   }
 
-  .cards-info-title {
+  .cards-info-long-title {
     font-size: 1.1rem;
   }
 
@@ -268,7 +281,7 @@ h2 {
     padding: 28px;
   }
 
-  .cards-info-title {
+  .cards-info-long-title {
     font-size: 1.15rem;
   }
 
@@ -305,7 +318,7 @@ h2 {
     padding: 32px;
   }
 
-  .cards-info-title {
+  .cards-info-long-title {
     font-size: 1.175rem;
   }
 

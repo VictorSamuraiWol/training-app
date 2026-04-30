@@ -24,7 +24,7 @@ function NutritionPage() {
           key='static-victor-static-id'
           className='cards-info-nutrition'
         >
-          <h2 className='cards-info-nutrition-title'>Nutrition - Victor Static</h2>
+          <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName('Victor Static', 15)}</h2>
 
           <div className='cards-info-nutrition-itens'>
             <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Supplements: Whey, Creatina, Dextrose</p>
@@ -45,7 +45,7 @@ function NutritionPage() {
           key='static-leimar-id'
           className='cards-info-nutrition'
         >
-          <h2 className='cards-info-nutrition-title'>Nutrition - Leimar</h2>
+          <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName('Leimar', 15)}</h2>
 
           <div className='cards-info-nutrition-itens'>
             <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />Suplementos: Whey, Creatina</p>
@@ -67,7 +67,7 @@ function NutritionPage() {
           key={user.id}
           className='cards-info-nutrition'
         >
-          <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName(user.name)}</h2>
+          <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName(user.name, 15)}</h2>
 
           <div className='cards-info-nutrition-itens'>
             <p className='cards-info-nutrition-item'><FaCheck className='iconCheckNutrition' />{user.nutrition[0][0]} {user.nutrition[0].slice(1).join(", ")}</p>

@@ -24,7 +24,7 @@ function NotesPage() {
         key='static-victor-static-id'
         className='cards-info-notes'
       >
-        <h2 className='cards-info-notes-title'>Notes - Victor Static</h2>
+        <h2 className='cards-info-notes-title'>Notes - {compactUserName('Victor Static', 15)}</h2>
 
         <div className='cards-info-notes-itens'>
           <p 
@@ -58,7 +58,7 @@ function NotesPage() {
         key='static-leimar-id'
         className='cards-info-notes'
       >
-        <h2 className='cards-info-notes-title'>Notes - Leimar</h2>
+        <h2 className='cards-info-notes-title'>Notes - {compactUserName('Leimar', 15)}</h2>
 
         <div className='cards-info-notes-itens'>
           <p 
@@ -94,7 +94,7 @@ function NotesPage() {
           key={user.id}
           className='cards-info-notes'
         >
-          <h2 className='cards-info-notes-title'>Notes - {compactUserName(nameUser)}</h2>
+          <h2 className='cards-info-notes-title'>Notes - {compactUserName(nameUser, 15)}</h2>
 
           <div className='cards-info-notes-itens'>
             {user.notes.map((note, indice) =>

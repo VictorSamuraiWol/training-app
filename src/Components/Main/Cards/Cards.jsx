@@ -20,7 +20,8 @@ function Cards() {
         key={nameUser}
       >
         <div className='cards-info'>
-          <h2 className='cards-info-title'>{compactUserName('Victor Static')}</h2>
+          <h2 className='cards-info-short-title'>{compactUserName('Victor Static', 8)}</h2>
+          <h2 className='cards-info-long-title'>{compactUserName('Victor Static', 15)}</h2>
 
           <div className='cards-info-measures'>
             <h2 className='cards-info-measures-weight'>80 kgs</h2>
@@ -60,7 +61,8 @@ function Cards() {
         key={nameUser}
       >
         <div className='cards-info'>
-          <h2 className='cards-info-title'>{compactUserName('Leimar')}</h2>
+          <h2 className='cards-info-short-title'>{compactUserName('Leimar', 8)}</h2>
+          <h2 className='cards-info-long-title'>{compactUserName('Leimar', 15)}</h2>
 
           <div className='cards-info-measures'>
             <h2 className='cards-info-measures-weight'>87 kgs</h2>
@@ -101,7 +103,9 @@ function Cards() {
           key={user.id}
         >
           <div className='cards-info'>
-            <h2 className='cards-info-title'>{compactUserName(user.name)}</h2>
+            <h2 className='cards-info-short-title'>{compactUserName(user.name, 8)}</h2>
+            <h2 className='cards-info-long-title'>{compactUserName(user.name, 15)}</h2>
+
             <div className='cards-info-measures'>
               <h2 className='cards-info-measures-weight'>{user.weight}</h2>
               <h2 className='cards-info-measures-height'>{user.height}</h2>

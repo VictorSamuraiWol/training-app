@@ -46,7 +46,8 @@ function Header({ compactUserName }) {
             className='container-login-signin-image-name-img' 
           />
 
-          <p className='container-login-signin-image-name-text'>{nameUser}</p>
+          <p className='container-login-signin-image-name-short-text'>{compactUserName('Victor Static', 8)}</p>
+          <p className='container-login-signin-image-name-long-text'>{compactUserName('Victor Static', 15)}</p>
 
         </div>
 
@@ -68,7 +69,8 @@ function Header({ compactUserName }) {
             className='container-login-signin-image-name-img' 
           />
 
-          <p className='container-login-signin-image-name-text'>{nameUser}</p>
+          <p className='container-login-signin-image-name-short-text'>{compactUserName('Leimar', 8)}</p>
+          <p className='container-login-signin-image-name-long-text'>{compactUserName('Leimar', 15)}</p>
 
         </div>
 
@@ -96,7 +98,9 @@ function Header({ compactUserName }) {
             className='container-login-signin-image-name-img' 
           />
 
-          {<p className='container-login-signin-image-name-text'>{compactUserName(user.name)}</p>}
+          {<p className='container-login-signin-image-name-short-text'>{compactUserName(user.name, 8)}</p>}
+          {<p className='container-login-signin-image-name-long-text'>{compactUserName(user.name, 15)}</p>}
+
 
         </div>
 

@@ -48,7 +48,7 @@ function ExercisesPage() {
               />
             </div>
 
-            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - Victor Static</h1>   
+            <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName('Victor Static', 15)}</h1>   
 
             <MusicPlayer
               key='0'
@@ -65,11 +65,13 @@ function ExercisesPage() {
           </div>
 
           <div className='exercises-page-style-cards-title'>
-            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - Victor Static</h1>
+            <h1 className='exercises-page-style-cards-title-short-text'>Workout {typeTrain} - {compactUserName('Victor Static', 8)}</h1>
+            <h1 className='exercises-page-style-cards-title-long-text'>Workout {typeTrain} - {compactUserName('Victor Static', 15)}</h1>
 
           </div >
 
-        {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <Card
+        {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
+        <Card
           key='static-victor-static-id' 
           exercise1='1.Warm-up: HIIT - 10-12 min'
           exercise2='2.Biceps: 1x 12-14 (6kg - dumbbell) + (up) 3x 7-9 (8kg - dumbbell)'
@@ -83,7 +85,8 @@ function ExercisesPage() {
           exercise10='10.Plank: 1x (35 seconds)'
         />}
 
-        {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <Card
+        {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
+        <Card
           key='static-victor-static-id'  
           exercise1='1.Warm-up: HIIT - 10-12 min'
           exercise2='2.Squat: 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
@@ -93,7 +96,8 @@ function ExercisesPage() {
           exercise6='6.Plank: 1x (35 seconds)'
         />}
 
-        {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <Card
+        {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
+        <Card
           key='static-victor-static-id'  
           exercise1='1.Warm-up: HIIT - 10-12 min'
           exercise2='2.Triceps: 1x 12-14 (6kg - dumbbell) + 2x 7-9 (8kg - dumbbell)'
@@ -125,7 +129,7 @@ function ExercisesPage() {
               />
             </div>
 
-            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - Leimar</h1>
+            <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName('Leimar', 15)}</h1>
 
             <MusicPlayer
               key='0'
@@ -142,11 +146,13 @@ function ExercisesPage() {
           </div>
 
           <div className='exercises-page-style-cards-title'>
-            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - Leimar</h1>
+            <h1 className='exercises-page-style-cards-title-short-text'>Workout {typeTrain} - {compactUserName('Leimar', 8)}</h1>
+            <h1 className='exercises-page-style-cards-title-long-text'>Workout {typeTrain} - {compactUserName('Leimar', 15)}</h1>
 
           </div >
 
-        {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+        {typeTrain === "A" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
+        <Card
           key='static-leimar-id' 
           exercise1='1.Supino Horizontal: 1x16-20 (60% da carga) + 5x12-14 (20kgs cada)'
           exercise2='2.Voador: 5x12-14 (5 barras)'
@@ -155,7 +161,8 @@ function ExercisesPage() {
           exercise5='5.Remada Alta: 4x12-14 (5 barras)'
         />}
 
-        {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+        {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
+        <Card
           key='static-leimar-id'  
           exercise1='1.Leg Press: 1x16-20 (60% da carga) + 3x12-14 (30kgs cada)'
           exercise2='2.Stiff: 1x16-20 (60% da carga) + 3x12-14 (barra)'
@@ -165,7 +172,8 @@ function ExercisesPage() {
           exercise6='6.Prancha: 30s'
         />}
 
-        {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+        {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
+        <Card
           key='static-leimar-id'  
           exercise1='1.Remada na máquina: 1x16-20 (60% da carga) + 5x12-14 (5 barras)'
           exercise2='2.Puxador: 5x12-14 (5 barras)'
@@ -174,7 +182,8 @@ function ExercisesPage() {
           exercise5='5.Rosca Punho Invertida: 3x12-14 (20kgs)'
         />}
 
-        {typeTrain === "D" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+        {typeTrain === "D" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
+        <Card
           key='static-leimar-id'  
           exercise1='1.HIIT (burpess, polichinelo, pular corda, etc): 10-15 min'
           exercise2='2.Abdominal supra: 3x12-14 (peso do corpo)'
@@ -183,7 +192,8 @@ function ExercisesPage() {
           exercise5='5.Prancha: 30s'
         />}
 
-        {typeTrain === "E" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+        {typeTrain === "E" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
+        <Card
           key='static-leimar-id'  
           exercise1='1.Extensão de Triceps na Barra: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)'
           exercise2='2.Triceps Francês: 3x7-9 (20kgs)'
@@ -194,7 +204,8 @@ function ExercisesPage() {
           exercise7='7.Panturrilha sentado: 3x12-14 (20kgs cada)'
         />}
 
-        {typeTrain === "F" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <Card
+        {typeTrain === "F" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
+        <Card
           key='static-leimar-id'  
           exercise1='1.Rosca Direta: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)'
           exercise2='2.Biceps Concentrado: 3x7-9 (10kgs)'
@@ -226,7 +237,7 @@ function ExercisesPage() {
               />
             </div>
 
-            <h1 className='exercises-page-style-cards-timer-title-music-text'>Workout {typeTrain} - {compactUserName(nameUser)}</h1>
+            <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>
 
             <MusicPlayer
               key='0'
@@ -243,11 +254,13 @@ function ExercisesPage() {
           </div>
 
           <div className='exercises-page-style-cards-title'>
-            <h1 className='exercises-page-style-cards-title-text'>Workout {typeTrain} - {compactUserName(nameUser)}</h1>
+            <h1 className='exercises-page-style-cards-title-short-text'>Workout {typeTrain} - {compactUserName(nameUser, 8)}</h1>
+            <h1 className='exercises-page-style-cards-title-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>
 
           </div >
 
-          {user.exercise1[0][0] === 'A' && typeTrain === "A" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[0] && user.exercise1[0][0] === 'A' && typeTrain === "A" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id}
             exercise1={user.exercise1[0][1] !== '' && `1.${user.exercise1[0][1]}`}
             exercise2={user.exercise2[0][1] !== '' && `2.${user.exercise2[0][1]}`}
@@ -266,7 +279,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[0][1] !== '' && `15.${user.exercise15[0][1]}`}
           />}
 
-          {user.exercise1[1][0] === 'B' && typeTrain === "B" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[1] && user.exercise1[1][0] === 'B' && typeTrain === "B" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id}
             exercise1={user.exercise1[1][1] !== '' && `1.${user.exercise1[1][1]}`}
             exercise2={user.exercise2[1][1] !== '' && `2.${user.exercise2[1][1]}`}
@@ -285,7 +299,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[1][1] !== '' && `15.${user.exercise15[1][1]}`}
           />}
 
-          {user.exercise1[2][0] === 'C' && typeTrain === "C" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[2] && user.exercise1[2][0] === 'C' && typeTrain === "C" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[2][1] !== '' && `1.${user.exercise1[2][1]}`}
             exercise2={user.exercise2[2][1] !== '' && `2.${user.exercise2[2][1]}`}
@@ -304,7 +319,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[2][1] !== '' && `15.${user.exercise15[2][1]}`}
           />}
 
-          {user.exercise1[3][0] === 'D' && typeTrain === "D" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[3] && user.exercise1[3][0] === 'D' && typeTrain === "D" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[3][1] !== '' && `1.${user.exercise1[3][1]}`}
             exercise2={user.exercise2[3][1] !== '' && `2.${user.exercise2[3][1]}`}
@@ -323,7 +339,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[3][1] !== '' && `15.${user.exercise15[3][1]}`}
           />}
 
-          {user.exercise1[4][0] === 'E' && typeTrain === "E" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[4] && user.exercise1[4][0] === 'E' && typeTrain === "E" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[4][1] !== '' && `1.${user.exercise1[4][1]}`}
             exercise2={user.exercise2[4][1] !== '' && `2.${user.exercise2[4][1]}`}
@@ -342,7 +359,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[4][1] !== '' && `15.${user.exercise15[4][1]}`}
           />}
 
-          {user.exercise1[5][0] === 'F' && typeTrain === "F" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[5] && user.exercise1[5][0] === 'F' && typeTrain === "F" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[5][1] !== '' && `1.${user.exercise1[5][1]}`}
             exercise2={user.exercise2[5][1] !== '' && `2.${user.exercise2[5][1]}`}
@@ -361,7 +379,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[5][1] !== '' && `15.${user.exercise15[5][1]}`}
           />}
 
-          {user.exercise1[6][0] === 'G' && typeTrain === "G" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[6] && user.exercise1[6][0] === 'G' && typeTrain === "G" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[6][1] !== '' && `1.${user.exercise1[6][1]}`}
             exercise2={user.exercise2[6][1] !== '' && `2.${user.exercise2[6][1]}`}
@@ -380,7 +399,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[6][1] !== '' && `15.${user.exercise15[6][1]}`}
           />}
 
-          {user.exercise1[7][0] === 'H' && typeTrain === "H" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[7] && user.exercise1[7][0] === 'H' && typeTrain === "H" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[7][1] !== '' && `1.${user.exercise1[7][1]}`}
             exercise2={user.exercise2[7][1] !== '' && `2.${user.exercise2[7][1]}`}
@@ -399,7 +419,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[7][1] !== '' && `15.${user.exercise15[7][1]}`}
           />}
 
-          {user.exercise1[8][0] === 'I' && typeTrain === "I" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[8] && user.exercise1[8][0] === 'I' && typeTrain === "I" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[8][1] !== '' && `1.${user.exercise1[8][1]}`}
             exercise2={user.exercise2[8][1] !== '' && `2.${user.exercise2[8][1]}`}
@@ -418,7 +439,8 @@ function ExercisesPage() {
             exercise15={user.exercise15[8][1] !== '' && `15.${user.exercise15[8][1]}`}
           />}
 
-          {user.exercise1[9][0] === 'J' && typeTrain === "J" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && <Card
+          {user.exercise1[9] && user.exercise1[9][0] === 'J' && typeTrain === "J" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          <Card
             key={user.id} 
             exercise1={user.exercise1[9][1] !== '' && `1.${user.exercise1[9][1]}`}
             exercise2={user.exercise2[9][1] !== '' && `2.${user.exercise2[9][1]}`}

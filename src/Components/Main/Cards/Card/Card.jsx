@@ -258,7 +258,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
 
   return (
     <div className='cards-training'>
-        {exercise1 && exercise1 !== '' && 
+        {exercise1 && exercise1 !== '' && exercise1 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise1}</p>
 
@@ -275,7 +275,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise2 && 
+        {exercise2 && exercise2 !== '' && exercise2 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise2}</p>
 
@@ -292,7 +292,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>    
         }
-        {exercise3 &&
+        {exercise3 && exercise3 !== '' && exercise3 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise3}</p>
 
@@ -309,7 +309,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>     
         }
-        {exercise4 && 
+        {exercise4 && exercise4 !== '' && exercise4 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise4}</p>
 
@@ -326,7 +326,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise5 && 
+        {exercise5 && exercise5 !== '' && exercise5 !== undefined && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise5}</p>
 
@@ -343,7 +343,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise6 && 
+        {exercise6 && exercise6 !== '' && exercise6 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise6}</p>
 
@@ -360,7 +360,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>    
         }
-        {exercise7 && 
+        {exercise7 && exercise7 !== '' && exercise7 !== undefined &&
         <div className='cards-training-exercises-timer'>
         <p className='cards-training-exercises'>{exercise7}</p>
 
@@ -377,7 +377,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>  
         }
-        {exercise8 && 
+        {exercise8 && exercise8 !== '' && exercise8 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise8}</p>
 
@@ -394,7 +394,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>  
         }
-        {exercise9 && 
+        {exercise9 && exercise9 !== '' && exercise9 !== undefined && 
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise9}</p>
 
@@ -411,7 +411,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise10 && 
+        {exercise10 && exercise10 !== '' && exercise10 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise10}</p>
 
@@ -428,7 +428,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise11 && 
+        {exercise11 && exercise11 !== '' && exercise11 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise11}</p>
 
@@ -445,7 +445,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise12 && 
+        {exercise12 && exercise12 !== '' && exercise12 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise12}</p>
 
@@ -462,7 +462,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise13 && 
+        {exercise13 && exercise13 !== '' && exercise13 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise13}</p>
 
@@ -479,7 +479,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise14 && 
+        {exercise14 && exercise14 !== '' && exercise14 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise14}</p>
           
@@ -496,7 +496,7 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
           />}
         </div>
         }
-        {exercise15 &&
+        {exercise15 && exercise15 !== '' && exercise15 !== undefined &&
         <div className='cards-training-exercises-timer'>
           <p className='cards-training-exercises'>{exercise15}</p>
           

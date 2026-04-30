@@ -66,7 +66,7 @@
   padding: 6px 24px;
 }
 
-.exercises-page-style-cards-timer-title-music-text {
+.exercises-page-style-cards-timer-title-music-long-text {
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
   margin: 0;
@@ -93,7 +93,13 @@
   width: 100%;
 }
 
-.exercises-page-style-cards-title-text {
+.exercises-page-style-cards-title-short-text {
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  margin: 0;
+}
+
+.exercises-page-style-cards-title-long-text {
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
   margin: 0;
@@ -135,7 +141,7 @@
     gap: 12px;
   }
 
-  .exercises-page-style-cards-timer-title-music-text {
+  .exercises-page-style-cards-timer-title-music-long-text {
     display: none;
   }
 
@@ -155,8 +161,12 @@
     padding: 0 2px;
   }
 
-  .exercises-page-style-cards-title-text {
+  .exercises-page-style-cards-title-short-text {
     font-size: 1.5rem;
+  }
+
+  .exercises-page-style-cards-title-long-text {
+    display: none;
   }
 
 }
@@ -187,7 +197,7 @@
     font-size: 0.7rem;
   }
 
-  .exercises-page-style-cards-timer-title-music-text {
+  .exercises-page-style-cards-timer-title-music-long-text {
     display: none;
   }
 
@@ -207,8 +217,12 @@
     font-size: 0.7rem;
   }
 
+  .exercises-page-style-cards-title-short-text {
+    display: none;
+  }
 
-  .exercises-page-style-cards-title-text {
+
+  .exercises-page-style-cards-title-long-text {
     font-size: 1.6rem;
   }
 
@@ -236,7 +250,7 @@
     font-size: 0.75rem;
   }
   
-  .exercises-page-style-cards-timer-title-music-text {
+  .exercises-page-style-cards-timer-title-music-long-text {
     display: flex;
     font-size: 1.7rem;
   }
@@ -275,7 +289,7 @@
     font-size: 0.8rem;
   }
 
-  .exercises-page-style-cards-timer-title-music-text {
+  .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 1.8rem;
   }
 
@@ -299,7 +313,7 @@
     font-size: 0.85rem;
   }
 
-  .exercises-page-style-cards-timer-title-music-text {
+  .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 1.9rem;
   }
 
@@ -323,7 +337,7 @@
     font-size: 0.9rem;
   }
 
-  .exercises-page-style-cards-timer-title-music-text {
+  .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 2rem;
   }
 

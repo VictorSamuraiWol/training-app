@@ -15,11 +15,26 @@ function BasePage() {
 
   const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
 
-  const compactUserName = (name) => {
+  // const compactUserName = (name) => {
+  //   let editUserName;
+    
+  //   if (name.length > 11) {
+  //     editUserName = name.slice(0, 11) + "..."
+
+  //   } else {
+  //     editUserName = name
+
+  //   }
+
+  //   return editUserName
+
+  // }
+
+    const compactUserName = (name, numLength) => {
     let editUserName;
     
-    if (name.length > 11) {
-      editUserName = name.slice(0, 11) + "..."
+    if (name.length > numLength) {
+      editUserName = name.slice(0, numLength) + "..."
 
     } else {
       editUserName = name
