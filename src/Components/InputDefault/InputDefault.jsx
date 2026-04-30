@@ -1,6 +1,6 @@
 import './InputDefault.css';
 
-function InputDefault({ onChange, value, inputId, required, name }) {
+function InputDefault({ onChange, value, inputId, required, name, typeInput, specificStylesInput }) {
 
   return(
     <input
@@ -10,6 +10,8 @@ function InputDefault({ onChange, value, inputId, required, name }) {
       autoComplete='off'
       required={required}
       name={name}
+      type={typeInput}
+      className={specificStylesInput}
     />
   )
 

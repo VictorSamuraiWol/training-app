@@ -85,6 +85,7 @@ form {
 /* Responsiveness */
 @media (max-width: 480px) {
   .login {
+    height: 16vh;
     padding: 0 8px;
   }
 
@@ -115,6 +116,7 @@ form {
 
 @media (min-width: 481px) {
   .login {
+    height: 16vh;
     padding: 0 10px;
   }
 
@@ -145,6 +147,7 @@ form {
 
 @media (min-width: 768px) {
   .login {
+    height: 19vh;
     padding: 0 12px;
   }
 

@@ -6,6 +6,10 @@
   border-radius: 4px;
 }
 
+.styleTextToggle-text {
+  cursor: default;
+}
+
 .toggle-on, .toggle-off {
   width: 1.5rem;
   height: 1.5rem;

@@ -61,6 +61,10 @@
 
 /* Responsiveness */
 @media (max-width: 480px) {
+  .notes-page-styles {
+    min-height: 77.9vh;
+  }
+
   .banner-notes-page {
     height: 80px;
   }
@@ -86,6 +90,10 @@
 }
 
 @media (min-width: 481px) {
+  .notes-page-styles {
+    min-height: 77.9vh;
+  }
+
   .banner-notes-page {
     height: 100px;
   }
@@ -111,6 +119,10 @@
 }
 
 @media (min-width: 768px) {
+  .notes-page-styles {
+    min-height: 75.2vh;
+  }
+
   .banner-notes-page {
     height: 120px;
   }
@@ -177,6 +189,10 @@
 }
 
 @media (min-width: 1440px) {
+  .notes-page-styles {
+    min-height: 75.3vh;
+  }
+
   .cards-info-notes {
     padding: 16px;
   }

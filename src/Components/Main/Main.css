@@ -4,7 +4,8 @@
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-  min-height: 78vh;
+  /* min-height: 78vh; */
+  height: 100%;
   gap: 40px;
   width: 100%;
   background-image: url(../../assets/images/bg-image.png);

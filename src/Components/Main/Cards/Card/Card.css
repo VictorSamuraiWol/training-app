@@ -30,6 +30,13 @@
   background: var(--border-yellow);
 }
 
+.cards-training-exercises-timer-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
 .cards-training-exercises-timer {
   display: flex;
   justify-content: center;
@@ -69,6 +76,36 @@
   padding: 4px 16px;
 }
 
+.specificStylesInput {
+  appearance: none;
+  position: relative;
+  color: var(--border-yellow);
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: 2px solid var(--border-yellow);
+  border-radius: 25%;
+  transition: 0.1s ease-in-out;
+  margin: 0;
+  cursor: pointer;
+  
+}
+
+.specificStylesInput:checked {
+  border: 2px solid var(--border-green);
+}
+
+.specificStylesInput:checked::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "✓";
+  color: var(--border-green);
+  font-size: 15px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
 /* Responsiveness */
 @media (max-width: 480px) {
   .cards-training {
@@ -79,6 +116,10 @@
 
   .cards-training::-webkit-scrollbar {
     width: 4px;
+  }
+
+  .cards-training-exercises-timer-checkbox {
+    gap: 6px;
   }
 
   .cards-training-exercises-timer {
@@ -102,6 +143,15 @@
     font-size: 0.7rem;
   }
 
+  .specificStylesInput {
+    width: 10px;
+    height: 10px;
+  }
+
+  .specificStylesInput:checked::after {
+    font-size: 11px;
+  }
+
 }
 
 @media (min-width: 481px) {
@@ -113,6 +163,10 @@
 
   .cards-training::-webkit-scrollbar {
     width: 4px;
+  }
+
+  .cards-training-exercises-timer-checkbox {
+    gap: 6px;
   }
 
   .cards-training-exercises-timer {
@@ -136,6 +190,15 @@
     font-size: 0.7rem;
   }
 
+  .specificStylesInput {
+    width: 10px;
+    height: 10px;
+  }
+
+  .specificStylesInput:checked::after {
+    font-size: 11px;
+  }
+
 }
 
 @media (min-width: 768px) {
@@ -143,6 +206,10 @@
     gap:20px;
     height: auto;
     overflow-y: hidden;
+  }
+
+  .cards-training-exercises-timer-checkbox {
+    gap: 12px;
   }
 
   .cards-training-exercises-timer {
@@ -166,11 +233,24 @@
     font-size: 0.75rem;
   }
 
+  .specificStylesInput {
+    width: 12px;
+    height: 12px;
+  }
+
+  .specificStylesInput:checked::after {
+    font-size: 13px;
+  }
+
 }
 
 @media (min-width: 1024px) {
   .cards-training {
     gap:22px;
+  }
+
+  .cards-training-exercises-timer-checkbox {
+    gap: 16px;
   }
 
   .cards-training-exercises {
@@ -183,6 +263,15 @@
 
   .specificStyleTimerButtonExercises {
     font-size: 0.8rem;
+  }
+
+  .specificStylesInput {
+    width: 16px;
+    height: 16px;
+  }
+
+  .specificStylesInput:checked::after {
+    font-size: 15px;
   }
 
 }
@@ -202,6 +291,11 @@
 
   .specificStyleTimerButtonExercises {
     font-size: 0.85rem;
+  }
+
+  .specificStylesInput {
+    width: 20px;
+    height: 20px;
   }
 
 }

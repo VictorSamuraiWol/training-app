@@ -1,17 +1,33 @@
 .training-page-style {
   display: flex;
   flex-direction: column;
+  height: 78vh;
 }
 
 /* Responsiveness */
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+  .training-page-style {
+    height: 77.9vh;
+  }
 
-@media (min-width: 481px) {}
+}
 
-@media (min-width: 768px) {}
+@media (min-width: 481px) {
+  .training-page-style {
+    height: 77.9vh;
+  }
+}
 
-@media (min-width: 1024px) {}
+@media (min-width: 768px) {
+  .training-page-style {
+    height: 75.2vh;
+  }
 
-@media (min-width: 1280px) {}
+}
 
-@media (min-width: 1440px) {}
+@media (min-width: 1440px) {
+  .training-page-style {
+    height: 75.3vh;
+  }
+
+}

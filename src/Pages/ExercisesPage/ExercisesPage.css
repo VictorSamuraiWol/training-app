@@ -108,6 +108,10 @@
 /* Responsiveness */
 @media (max-width: 480px) {
   .exercises-page-style {
+    min-height: 77.9vh;
+  }
+
+  .exercises-page-style {
     min-height: 0;
   }
 
@@ -173,6 +177,10 @@
 
 @media (min-width: 481px) {
   .exercises-page-style {
+    min-height: 77.9vh;
+  }
+
+  .exercises-page-style {
     min-height: 0;
   }
 
@@ -202,11 +210,10 @@
   }
 
   .toggle-default-timer-title-music {
-    right: 1%;
-    bottom: -50%;
+    right: 0;
+    bottom: -44%;
     font-size: 0.7rem;
     padding: 0 4px;
-
   }
 
   .music-player {
@@ -229,6 +236,10 @@
 }
 
 @media (min-width: 768px) {
+  .exercises-page-style {
+    min-height: 77.9vh;
+  }
+
   .exercises-page-style {
     min-height: 78vh;
   }
@@ -253,12 +264,6 @@
   .exercises-page-style-cards-timer-title-music-long-text {
     display: flex;
     font-size: 1.7rem;
-  }
-
-  .toggle-default-timer-title-music {
-    display: flex;
-    bottom: -55%;
-    padding: 0 4px;
   }
 
   .specificStyleMusicButton {
@@ -324,6 +329,10 @@
 }
 
 @media (min-width: 1440px) {
+  .exercises-page-style {
+    min-height: 75.3vh;
+  }
+
   .exercises-page-style-cards {
     gap: 28px;
     padding: 28px;

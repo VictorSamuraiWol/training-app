@@ -49,6 +49,10 @@
 }
 
 @media (min-width: 768px) {
+  .footer {
+    height: 7.5vh;
+  }
+
   .footer-text {
     font-size: 0.9rem;    
   }

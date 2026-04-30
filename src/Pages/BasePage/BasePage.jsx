@@ -15,22 +15,7 @@ function BasePage() {
 
   const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
 
-  // const compactUserName = (name) => {
-  //   let editUserName;
-    
-  //   if (name.length > 11) {
-  //     editUserName = name.slice(0, 11) + "..."
-
-  //   } else {
-  //     editUserName = name
-
-  //   }
-
-  //   return editUserName
-
-  // }
-
-    const compactUserName = (name, numLength) => {
+  const compactUserName = (name, numLength) => {
     let editUserName;
     
     if (name.length > numLength) {
@@ -44,8 +29,6 @@ function BasePage() {
     return editUserName
 
   }
-
-
 
   return (
     <div className='base-page-styles'>
