@@ -47,6 +47,16 @@
   border-radius: 8px;
 }
 
+.new-cards-training-exercises-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 8px;
+  border-bottom: 2px solid var(--border-yellow);
+  border-radius: 8px;
+}
+
 .cards-training-exercises {
   font-size: 2rem;
   color: var(--border-yellow);
@@ -54,9 +64,11 @@
   overflow-wrap: break-word;
  }
 
-.cards-training-exercises:hover {
+.new-cards-training-exercises {
+  font-size: 2rem;
   color: var(--border-green);
   text-shadow: 2px 2px 3px var(--border);
+  overflow-wrap: break-word;
 }
 
 .specificStyleTimerExercises {
@@ -131,6 +143,10 @@
     font-size: 1rem;
   }
 
+  .new-cards-training-exercises {
+    font-size: 1rem;
+  }
+
   .specificStyleTimerExercises {
     flex-direction: column;
   }
@@ -178,6 +194,10 @@
     font-size: 1.1rem;
   }
 
+  .new-cards-training-exercises {
+    font-size: 1.1rem;
+  }
+
   .specificStyleTimerExercises {
     flex-direction: column;
   }
@@ -221,6 +241,10 @@
     font-size: 1.2rem;
   }
 
+  .new-cards-training-exercises {
+    font-size: 1.2rem;
+  }
+
   .specificStyleTimerExercises {
     flex-direction: row-reverse;
   }
@@ -257,6 +281,10 @@
     font-size: 1.3rem;
   }
 
+  .new-cards-training-exercises {
+    font-size: 1.3rem;
+  }
+
   .specificStyleTimerDisplayExercises {
     font-size: 1.35rem;
   }
@@ -285,6 +313,10 @@
     font-size: 1.4rem;
   }
 
+  .new-cards-training-exercises {
+    font-size: 1.4rem;
+  }
+
   .specificStyleTimerDisplayExercises {
     font-size: 1.40rem;
   }
@@ -302,6 +334,10 @@
 
 @media (min-width: 1440px) {
   .cards-training-exercises {
+    font-size: 1.5rem;
+  }
+
+  .new-cards-training-exercises {
     font-size: 1.5rem;
   }
 

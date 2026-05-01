@@ -1,5 +1,4 @@
 import './NutritionPage.css';
-import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { useContext } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useOutletContext } from 'react-router-dom';
@@ -13,8 +12,6 @@ function NutritionPage() {
 
   return (
     <div className='nutrition-page-styles'>
-      {!loginValidate && <ErrorLogin />}
-
       {loginValidate && <div className='banner-nutrition-page'></div>}
 
       {/* Static Content */}

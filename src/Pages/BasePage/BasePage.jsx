@@ -3,6 +3,7 @@ import Footer from '../../Components/Footer/Footer';
 import Header from '../../Components/Header/Header';
 import Login from '../../Components/Login/Login';
 import NavigateDefault from '../../Components/NavigateDefault/NavigateDefault';
+import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { Outlet } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
@@ -32,17 +33,21 @@ function BasePage() {
 
   return (
     <div className='base-page-styles'>
+      {!loginValidate && <Login setActivateNavigateDefault={setActivateNavigateDefault} />}
+
+      {!loginValidate && <ErrorLogin />}
+        
       {loginValidate && <Header compactUserName={compactUserName} />}
 
-      {!loginValidate && <Login setActivateNavigateDefault={setActivateNavigateDefault} />}
+      {loginValidate && <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, 
+        setIsOnToggleTimersExercises }} 
+      />}
 
       <NavigateDefault 
         isLogged={activateNavigateDefault} 
         setActivateNavigateDefault={setActivateNavigateDefault} 
       />
-
-      <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, setIsOnToggleTimersExercises }} />
-
+      
       <Footer />
       
     </div>

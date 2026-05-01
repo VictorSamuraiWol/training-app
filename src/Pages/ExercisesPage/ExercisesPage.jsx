@@ -4,7 +4,6 @@ import Timer from '../../Components/Timer/Timer';
 import MusicPlayer from '../../Components/MusicPlayer/MusicPlayer';
 import audio1 from '../../assets/audios/armin-miami-2026.mp3'
 import audio2 from '../../assets/audios/workout-music-2025.mp3'
-import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import ToggleDefault from '../../Components/ToggleDefault/ToggleDefault';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
@@ -26,8 +25,6 @@ function ExercisesPage() {
 
   return(
     <div className='exercises-page-style'>
-      {!loginValidate && <ErrorLogin />}
-
       {loginValidate && <div className='banner-exercises-page'></div>}
 
       {/* Static Content */}

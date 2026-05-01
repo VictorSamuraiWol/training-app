@@ -1,5 +1,4 @@
 import './NotesPage.css';
-import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useContext } from 'react';
 import { useOutletContext } from 'react-router-dom';
@@ -13,8 +12,6 @@ function NotesPage() {
 
   return(
     <div className='notes-page-styles'>
-      {!loginValidate && <ErrorLogin />}
-
       {loginValidate && <div className='banner-notes-page'></div>}
 
       {/* Static Content */}

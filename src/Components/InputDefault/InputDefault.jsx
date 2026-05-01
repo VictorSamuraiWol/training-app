@@ -1,12 +1,13 @@
 import './InputDefault.css';
 
-function InputDefault({ onChange, value, inputId, required, name, typeInput, specificStylesInput }) {
+function InputDefault({ onChange, onClick, value, inputId, required, name, typeInput, specificStylesInput }) {
 
   return(
     <input
       onChange={onChange}
+      onClick={onClick}
       value={value}
-      id={inputId} 
+      id={inputId}
       autoComplete='off'
       required={required}
       name={name}
