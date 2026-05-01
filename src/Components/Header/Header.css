@@ -12,6 +12,7 @@
 .link-img {
   display: flex;
   align-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-img-logo {

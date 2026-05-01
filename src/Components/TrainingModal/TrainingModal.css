@@ -74,6 +74,7 @@
 .container-training-modal-title-delete-text {
   margin: 0;
   cursor: default;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .container-training-modal-title-delete-icon {
@@ -119,42 +120,52 @@
 
 .link-workout-A {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-B {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-C {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-D {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-E {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-F {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-G {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-H {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-I {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-workout-J {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .specificStylesButtonA {

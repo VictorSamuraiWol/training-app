@@ -76,10 +76,12 @@ h2 {
 
 .link-nutrition {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .link-notes {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .specificStylesButtonNutrition {
