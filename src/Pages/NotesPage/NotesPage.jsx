@@ -131,7 +131,10 @@ function NotesPage() {
 
           <div className='cards-info-notes-itens'>
             {user.notes.map((note, indice) =>
-              <div className='cards-info-notes-itens-icon-item'>
+              <div 
+                key={indice}
+                className='cards-info-notes-itens-icon-item'
+              >
                 <GiMuscleUp className='iconMuscleNotes' />
 
                 <p 

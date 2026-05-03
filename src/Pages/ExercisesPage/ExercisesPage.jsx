@@ -9,9 +9,11 @@ import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useOutletContext } from 'react-router-dom';
 import waitingTheExercise from '../../assets/images/exercises-gif/waiting-the-exercise-gif.gif'
+import hiit from '../../assets/images/exercises-gif/hiit-gif.gif'
 import barbellBenchPress from '../../assets/images/exercises-gif/barbell-bench-press-gif.gif'
 import concentrationCurl from '../../assets/images/exercises-gif/concentration-curl-gif.gif'
 import dumbbellReverseCurl from '../../assets/images/exercises-gif/dumbbell-reverse-curl-gif.gif'
+import plank from '../../assets/images/exercises-gif/plank-gif.gif'
 
 function ExercisesPage() {
 
@@ -31,9 +33,11 @@ function ExercisesPage() {
   // exercises gifs
   const [exercisesGifs] = useState({
     waitingTheExercise: waitingTheExercise,
+    hiit: hiit,
     barbellBenchPress: barbellBenchPress,
     concentrationCurl: concentrationCurl,
-    dumbbellReverseCurl: dumbbellReverseCurl
+    dumbbellReverseCurl: dumbbellReverseCurl,
+    plank: plank
 
   })
 
@@ -94,7 +98,7 @@ function ExercisesPage() {
           exercise8='8.Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'
           exercise9='9.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
           exercise10='10.Plank: 1x (35 seconds)'
-          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise1Gif={exercisesGifs["hiit"]}
           exercise2Gif={exercisesGifs["concentrationCurl"]}
           exercise3Gif={exercisesGifs["dumbbellReverseCurl"]}
           exercise4Gif={exercisesGifs["waitingTheExercise"]}
@@ -103,7 +107,7 @@ function ExercisesPage() {
           exercise7Gif={exercisesGifs["waitingTheExercise"]}
           exercise8Gif={exercisesGifs["waitingTheExercise"]}
           exercise9Gif={exercisesGifs["waitingTheExercise"]}
-          exercise10Gif={exercisesGifs["waitingTheExercise"]}
+          exercise10Gif={exercisesGifs["plank"]}
         />}
 
         {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
@@ -115,12 +119,12 @@ function ExercisesPage() {
           exercise4='4.Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)'
           exercise5='5.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
           exercise6='6.Plank: 1x (35 seconds)'
-          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise1Gif={exercisesGifs["hiit"]}
           exercise2Gif={exercisesGifs["waitingTheExercise"]}
           exercise3Gif={exercisesGifs["waitingTheExercise"]}
           exercise4Gif={exercisesGifs["waitingTheExercise"]}
           exercise5Gif={exercisesGifs["waitingTheExercise"]}
-          exercise6Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["plank"]}
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
@@ -135,7 +139,7 @@ function ExercisesPage() {
           exercise7='7.Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'
           exercise8='8.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
           exercise9='9.Plank: 1x (35 seconds)'
-          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise1Gif={exercisesGifs["hiit"]}
           exercise2Gif={exercisesGifs["waitingTheExercise"]}
           exercise3Gif={exercisesGifs["waitingTheExercise"]}
           exercise4Gif={exercisesGifs["waitingTheExercise"]}
@@ -143,7 +147,7 @@ function ExercisesPage() {
           exercise6Gif={exercisesGifs["waitingTheExercise"]}
           exercise7Gif={exercisesGifs["waitingTheExercise"]}
           exercise8Gif={exercisesGifs["waitingTheExercise"]}
-          exercise9Gif={exercisesGifs["waitingTheExercise"]}
+          exercise9Gif={exercisesGifs["plank"]}
         />}
  
       </main>}
@@ -216,7 +220,7 @@ function ExercisesPage() {
           exercise3Gif={exercisesGifs["waitingTheExercise"]}
           exercise4Gif={exercisesGifs["waitingTheExercise"]}
           exercise5Gif={exercisesGifs["waitingTheExercise"]}
-          exercise6Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["plank"]}
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
@@ -242,11 +246,11 @@ function ExercisesPage() {
           exercise3='3.Abdominal oblíquo: 3x12-14 (peso do corpo)'
           exercise4='4.Abdominal infra: 3x12-14 (peso do corpo)'
           exercise5='5.Prancha: 30s'
-          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise1Gif={exercisesGifs["hiit"]}
           exercise2Gif={exercisesGifs["waitingTheExercise"]}
           exercise3Gif={exercisesGifs["waitingTheExercise"]}
           exercise4Gif={exercisesGifs["waitingTheExercise"]}
-          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["plank"]}
         />}
 
         {typeTrain === "E" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
