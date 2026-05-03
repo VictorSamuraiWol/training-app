@@ -29,7 +29,7 @@ function Header({ compactUserName }) {
     <div className='header'>
       <Link className='link-img' to='/'>
         <img 
-          className='link-img-logo' 
+          className='link-img-logo-header' 
           src={logo} 
         />
       </Link>

@@ -38,15 +38,24 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
   gap: 32px;
+  width: 100%;
   overflow-wrap: break-word;
 }
 
-.cards-info-notes-item {
+.cards-info-notes-itens-icon-item {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
   gap: 6px;
+}
+
+.iconMuscleNotes {
+  color: var(--border-green);
+}
+
+.cards-info-notes-item {
   font-size: 2rem;
   color: var(--border-yellow);
   text-shadow: 3px 2px 3px var(--border);
@@ -55,10 +64,6 @@
 .cards-info-notes-item:hover {
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
-}
-
-.iconMuscleNotes {
-  color: var(--border-green);
 }
 
 /* Responsiveness */
@@ -81,13 +86,21 @@
   }
 
   .cards-info-notes-itens {
-    align-items: start;
     gap: 8px;
-    width: 100%;
+  }
+
+  .cards-info-notes-itens-icon-item {
+    justify-content: start;
+    gap:8px;
+  }
+
+  .iconMuscleNotes {
+    font-size: 1rem;
   }
 
   .cards-info-notes-item {
     font-size: 1rem;
+    width: 90%;
   }
 
 }
@@ -111,9 +124,16 @@
   }
 
   .cards-info-notes-itens {
-    align-items: start;
     gap: 8px;
-    width: 100%;
+  }
+
+  .cards-info-notes-itens-icon-item {
+    justify-content: start;
+    gap:8px;
+  }
+
+  .iconMuscleNotes {
+    font-size: 1.1rem;
   }
 
   .cards-info-notes-item {
@@ -140,8 +160,16 @@
   }
 
   .cards-info-notes-itens {
-    align-items: center;
     gap: 16px;
+  }
+
+  .cards-info-notes-itens-icon-item {
+    justify-content: center;
+    gap:8px;
+  }
+
+  .iconMuscleNotes {
+    font-size: 1.2rem;
   }
 
   .cards-info-notes-item {
@@ -167,6 +195,10 @@
     gap: 24px;
   }
 
+  .iconMuscleNotes {
+    font-size: 1.3rem;
+  }
+
   .cards-info-notes-item {
     font-size: 1.3rem;
   }
@@ -184,6 +216,10 @@
 
   .cards-info-notes-itens {
     gap: 28px;
+  }
+
+  .iconMuscleNotes {
+    font-size: 1.4rem;
   }
 
   .cards-info-notes-item {
@@ -207,6 +243,10 @@
 
   .cards-info-notes-itens {
     gap: 32px;
+  }
+
+  .iconMuscleNotes {
+    font-size: 1.5rem;
   }
 
   .cards-info-notes-item {

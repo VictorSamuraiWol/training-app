@@ -24,33 +24,50 @@ function NotesPage() {
         <h2 className='cards-info-notes-title'>Notes - {compactUserName('Victor Static', 15)}</h2>
 
         <div className='cards-info-notes-itens'>
-          <p 
-            key='note1'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />Start date: 8 January 2026
-          </p>
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
 
-          <p 
-            key='note2'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />Rest between reps: 1 min
-          </p>
+            <p 
+              key='note1'
+              className='cards-info-notes-item' 
+            >
+              Start date: 8 January 2026
+            </p>
+          </div>
 
-          <p 
-            key='note3'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />Rest between sets: 1-3 min
-          </p>
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
 
-          <p 
-            key='note4'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />UP technique
-          </p>
+            <p 
+              key='note2'
+              className='cards-info-notes-item' 
+            >
+              Rest between reps: 1 min
+            </p>
+          </div>
+
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
+
+            <p 
+              key='note3'
+              className='cards-info-notes-item' 
+            >
+              Rest between sets: 1-3 min
+            </p>
+          </div>
+
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
+
+            <p 
+              key='note4'
+              className='cards-info-notes-item' 
+            >
+              UP technique
+            </p>
+
+          </div>
 
         </div>
 
@@ -65,26 +82,38 @@ function NotesPage() {
         <h2 className='cards-info-notes-title'>Notes - {compactUserName('Leimar', 15)}</h2>
 
         <div className='cards-info-notes-itens'>
-          <p 
-            key='note1'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />Intervalos entre repetições: 1 min
-          </p>
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
 
-          <p 
-            key='note2'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />Intervalo entre séries: 1-3 min
-          </p>
+            <p 
+              key='note1'
+              className='cards-info-notes-item' 
+            >
+              Intervalos entre repetições: 1 min
+            </p>
+          </div>
 
-          <p 
-            key='note3'
-            className='cards-info-notes-item' 
-          >
-            <GiMuscleUp className='iconMuscleNotes' />Aquecimento: 60% da carga
-          </p>
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
+
+            <p 
+              key='note2'
+              className='cards-info-notes-item' 
+            >
+              Intervalo entre séries: 1-3 min
+            </p>
+          </div>
+
+          <div className='cards-info-notes-itens-icon-item'>
+            <GiMuscleUp className='iconMuscleNotes' />
+
+            <p 
+              key='note3'
+              className='cards-info-notes-item' 
+            >
+              Aquecimento: 60% da carga
+            </p>
+          </div>
 
         </div>
 
@@ -102,11 +131,17 @@ function NotesPage() {
 
           <div className='cards-info-notes-itens'>
             {user.notes.map((note, indice) =>
-            <p
-              key={indice}
-              className='cards-info-notes-item'> 
-                <GiMuscleUp className='iconMuscleNotes' />{note}
-            </p>
+              <div className='cards-info-notes-itens-icon-item'>
+                <GiMuscleUp className='iconMuscleNotes' />
+
+                <p 
+                  key={indice}
+                  className='cards-info-notes-item' 
+                >
+                  {note}
+                </p>
+                
+              </div>
             )}
             
           </div>

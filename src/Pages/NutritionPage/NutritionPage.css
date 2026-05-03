@@ -39,15 +39,24 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
   gap: 32px;
+  width: 100%;
   overflow-wrap: break-word;
 }
 
-.cards-info-nutrition-item {
+.cards-info-nutrition-itens-icon-item {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100%;
   gap: 6px;
+}
+
+.iconMuscleNutrition {
+  color: var(--border-green);
+}
+
+.cards-info-nutrition-item {
   font-size: 2rem;
   color: var(--border-yellow);
   text-shadow: 3px 2px 3px var(--border);
@@ -56,10 +65,6 @@
 .cards-info-nutrition-item:hover {
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
-}
-
-.iconMuscleNutrition {
-  color: var(--border-green);
 }
 
 /* Responsiveness */
@@ -82,13 +87,21 @@
   }
 
   .cards-info-nutrition-itens {
-    align-items: start;
     gap:8px;
-    width: 100%;
+  }
+
+  .cards-info-nutrition-itens-icon-item {
+    justify-content: start;
+    gap:8px;
+  }
+
+  .iconMuscleNutrition {
+    font-size: 1rem;
   }
 
   .cards-info-nutrition-item {
     font-size: 1rem;
+    width: 90%;
   }
 
 }
@@ -112,9 +125,16 @@
   }
 
   .cards-info-nutrition-itens {
-    align-items: start;
     gap: 8px;
-    width: 100%;
+  }
+
+  .cards-info-nutrition-itens-icon-item {
+    justify-content: start;
+    gap:8px;
+  }
+
+  .iconMuscleNutrition {
+    font-size: 1.1rem;
   }
 
   .cards-info-nutrition-item {
@@ -141,8 +161,16 @@
   }
 
   .cards-info-nutrition-itens {
-    align-items: center;
     gap: 16px;
+  }
+
+  .cards-info-nutrition-itens-icon-item {
+    justify-content: center;
+    gap:8px;
+  }
+
+  .iconMuscleNutrition {
+    font-size: 1.2rem;
   }
 
   .cards-info-nutrition-item {
@@ -168,6 +196,10 @@
     gap: 24px;
   }
 
+  .iconMuscleNutrition {
+    font-size: 1.3rem;
+  }
+
   .cards-info-nutrition-item {
     font-size: 1.3rem;
   }
@@ -185,6 +217,10 @@
 
   .cards-info-nutrition-itens {
     gap: 28px;
+  }
+
+  .iconMuscleNutrition {
+    font-size: 1.4rem;
   }
 
   .cards-info-nutrition-item {
@@ -208,6 +244,10 @@
 
   .cards-info-nutrition-itens {
     gap: 32px;
+  }
+
+  .iconMuscleNutrition {
+    font-size: 1.5rem;
   }
 
   .cards-info-nutrition-item {

@@ -67,7 +67,7 @@ function Login({ setActivateNavigateDefault }) {
     <div className='login'>
       <Link className='link-img' to='/'>
         <img 
-          className='link-img-logo'
+          className='link-img-logo-login'
           src={logo} 
         />
       </Link>
