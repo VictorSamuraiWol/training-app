@@ -5,8 +5,9 @@
   height: 12.9vh;
   padding: 0 16px;
   border-bottom: 1px solid var(--border-green);
-  background-image: url(../../assets/images/bg-header-footer.png);
+  background-image: url(../../assets/images/bg-header-main-footer.png);
   background-position: center;
+  background-size: cover;
 }
 
 .link-img {

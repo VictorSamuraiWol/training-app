@@ -8,8 +8,9 @@
   text-shadow: 2px 2px 3px var(--border);
   padding: 0 16px;
   border-bottom: 1px solid var(--border-green);
-  background-image: url(../../assets/images/bg-header-footer.png);
+  background-image: url(../../assets/images/bg-header-main-footer.png);
   background-position: center;
+  background-size: cover;
 }
 
 .link-img {

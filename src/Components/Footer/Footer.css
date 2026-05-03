@@ -6,8 +6,9 @@
   width: 100%;
   height: 8.9vh;
   border-top: 1px solid var(--border-yellow);
-  background-image: url(../../assets/images/bg-header-footer.png);
+  background-image: url(../../assets/images/bg-header-main-footer.png);
   background-position: center;
+  background-size: cover;
 }
 
 .footer-img {

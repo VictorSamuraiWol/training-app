@@ -20,7 +20,8 @@
   gap: 32px;
   flex: 1;
   padding: 16px;
-  background-image: url(../../assets/images/bg-header-footer.png);
+  background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-size: cover;
   color: var(--border-green);
   text-shadow: 4px 2px 3px var(--border);
   padding-top: 32px;
