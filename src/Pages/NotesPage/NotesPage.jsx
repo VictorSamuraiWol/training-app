@@ -2,7 +2,7 @@ import './NotesPage.css';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useContext } from 'react';
 import { useOutletContext } from 'react-router-dom';
-import { FaCheck } from "react-icons/fa";
+import { GiMuscleUp } from "react-icons/gi";
 
 function NotesPage() {
 
@@ -28,21 +28,28 @@ function NotesPage() {
             key='note1'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Start date: 8 January 2026
+            <GiMuscleUp className='iconMuscleNotes' />Start date: 8 January 2026
           </p>
 
           <p 
             key='note2'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Rest between reps: 1 min
+            <GiMuscleUp className='iconMuscleNotes' />Rest between reps: 1 min
           </p>
 
           <p 
             key='note3'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Rest between sets: 1-3 min
+            <GiMuscleUp className='iconMuscleNotes' />Rest between sets: 1-3 min
+          </p>
+
+          <p 
+            key='note4'
+            className='cards-info-notes-item' 
+          >
+            <GiMuscleUp className='iconMuscleNotes' />UP technique
           </p>
 
         </div>
@@ -62,21 +69,21 @@ function NotesPage() {
             key='note1'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Intervalos entre repetições: 1 min
+            <GiMuscleUp className='iconMuscleNotes' />Intervalos entre repetições: 1 min
           </p>
 
           <p 
             key='note2'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Intervalo entre séries: 1-3 min
+            <GiMuscleUp className='iconMuscleNotes' />Intervalo entre séries: 1-3 min
           </p>
 
           <p 
             key='note3'
             className='cards-info-notes-item' 
           >
-            <FaCheck className='iconCheckNotes' />Aquecimento: 60% da carga
+            <GiMuscleUp className='iconMuscleNotes' />Aquecimento: 60% da carga
           </p>
 
         </div>
@@ -97,8 +104,8 @@ function NotesPage() {
             {user.notes.map((note, indice) =>
             <p
               key={indice}
-              className='cards-info-notes-item'>
-                <FaCheck className='iconCheckNotes' />{note}
+              className='cards-info-notes-item'> 
+                <GiMuscleUp className='iconMuscleNotes' />{note}
             </p>
             )}
             

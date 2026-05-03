@@ -16,6 +16,8 @@ function BasePage() {
 
   const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
 
+  
+
   const compactUserName = (name, numLength) => {
     let editUserName;
     
@@ -40,7 +42,7 @@ function BasePage() {
       {loginValidate && <Header compactUserName={compactUserName} />}
 
       {loginValidate && <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, 
-        setIsOnToggleTimersExercises }} 
+        setIsOnToggleTimersExercises}} 
       />}
 
       <NavigateDefault 

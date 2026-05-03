@@ -1,10 +1,9 @@
 import './Header.css';
 import logo from '../../assets/images/logo-neonfit.png';
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
+import example from '../../assets/images/profiles/example.png';
 import profileVictor from '../../assets/images/profiles/profile-victor.png';
 import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
-import profileNewUser2 from '../../assets/images/profiles/profile-new-user-2.png';
-import profileNewUser3 from '../../assets/images/profiles/profile-new-user-3.png';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
@@ -14,9 +13,9 @@ function Header({ compactUserName }) {
   const { nameUser, setNameUser, setLoginValidate, usersContents } = useContext(DataContext)
 
   const [imagesDescriptions] = useState({
-      profileVictor: profileVictor,
-      profileNewUser2: profileNewUser2,
-      profileNewUser3: profileNewUser3
+    example: example,
+    profileVictor: profileVictor,
+    profileLeimar: profileLeimar
 
   })
 
@@ -42,7 +41,7 @@ function Header({ compactUserName }) {
       {nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <div className='container-login-signin'>
         <div className='container-login-signin-image-name'>
           <img 
-            src={profileVictor} 
+            src={imagesDescriptions["profileVictor"]} 
             className='container-login-signin-image-name-img' 
           />
 
@@ -67,7 +66,7 @@ function Header({ compactUserName }) {
       {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <div className='container-login-signin'>
         <div className='container-login-signin-image-name'>
           <img 
-            src={profileLeimar} 
+            src={imagesDescriptions["profileLeimar"]} 
             className='container-login-signin-image-name-img' 
           />
 
@@ -97,10 +96,10 @@ function Header({ compactUserName }) {
         className='container-login-signin'
       >
         <div className='container-login-signin-image-name'>
-          <img 
+          {user.imageProfile && <img 
             src={imagesDescriptions[user.imageProfile]}
             className='container-login-signin-image-name-img' 
-          />
+          />}
 
           {<p className='container-login-signin-image-name-short-text'>{compactUserName(user.name, 8)}</p>}
           {<p className='container-login-signin-image-name-long-text'>{compactUserName(user.name, 15)}</p>}

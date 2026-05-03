@@ -8,6 +8,10 @@ import ToggleDefault from '../../Components/ToggleDefault/ToggleDefault';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useOutletContext } from 'react-router-dom';
+import waitingTheExercise from '../../assets/images/exercises-gif/waiting-the-exercise-gif.gif'
+import barbellBenchPress from '../../assets/images/exercises-gif/barbell-bench-press-gif.gif'
+import concentrationCurl from '../../assets/images/exercises-gif/concentration-curl-gif.gif'
+import dumbbellReverseCurl from '../../assets/images/exercises-gif/dumbbell-reverse-curl-gif.gif'
 
 function ExercisesPage() {
 
@@ -17,9 +21,19 @@ function ExercisesPage() {
 
   const [isRunningAllTime, setIsRunningAllTime] = useState(false)
 
+  // audios
   const [audiosDescriptions] = useState({
       audio1: audio1,
       audio2: audio2
+
+  })
+
+  // exercises gifs
+  const [exercisesGifs] = useState({
+    waitingTheExercise: waitingTheExercise,
+    barbellBenchPress: barbellBenchPress,
+    concentrationCurl: concentrationCurl,
+    dumbbellReverseCurl: dumbbellReverseCurl
 
   })
 
@@ -72,7 +86,7 @@ function ExercisesPage() {
           key='static-victor-static-id' 
           exercise1='1.Warm-up: HIIT - 10-12 min'
           exercise2='2.Biceps: 1x 12-14 (6kg - dumbbell) + (up) 3x 7-9 (8kg - dumbbell)'
-          exercise3='3.Forearms: (up) 3x 12-14 (6kg - dumbbell) (already warmed up)'
+          exercise3='3.Dumbbell Reverse Curl: (up) 3x 12-14 (6kg - dumbbell) (already warmed up)'
           exercise4='4.Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)'
           exercise5='5.Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)'
           exercise6='6.Trapezius: 1x 16-20 (10kg - dumbbell) + 3x 12-14 (12kg - dumbbell)'
@@ -80,6 +94,16 @@ function ExercisesPage() {
           exercise8='8.Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'
           exercise9='9.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
           exercise10='10.Plank: 1x (35 seconds)'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["concentrationCurl"]}
+          exercise3Gif={exercisesGifs["dumbbellReverseCurl"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["waitingTheExercise"]}
+          exercise7Gif={exercisesGifs["waitingTheExercise"]}
+          exercise8Gif={exercisesGifs["waitingTheExercise"]}
+          exercise9Gif={exercisesGifs["waitingTheExercise"]}
+          exercise10Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
@@ -91,6 +115,12 @@ function ExercisesPage() {
           exercise4='4.Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)'
           exercise5='5.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
           exercise6='6.Plank: 1x (35 seconds)'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && 
@@ -98,13 +128,22 @@ function ExercisesPage() {
           key='static-victor-static-id'  
           exercise1='1.Warm-up: HIIT - 10-12 min'
           exercise2='2.Triceps: 1x 12-14 (6kg - dumbbell) + 2x 7-9 (8kg - dumbbell)'
-          exercise3='3.Front Raise: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plate)'
-          exercise4='4.Lateral Raise: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)'
+          exercise3='3.Front Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plate)'
+          exercise4='4.Lateral Raise: 1x 12-14 (4kg - plates) + (up) 2x 7-9 (5kg - plates)'
           exercise5='5.Incline Push-up: 1x 16-20 + 2x 12-14 (bodyweight)'
           exercise6='6.Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'
           exercise7='7.Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'
           exercise8='8.Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'
           exercise9='9.Plank: 1x (35 seconds)'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["waitingTheExercise"]}
+          exercise7Gif={exercisesGifs["waitingTheExercise"]}
+          exercise8Gif={exercisesGifs["waitingTheExercise"]}
+          exercise9Gif={exercisesGifs["waitingTheExercise"]}
         />}
  
       </main>}
@@ -130,7 +169,7 @@ function ExercisesPage() {
 
             <MusicPlayer
               key='0'
-              src={audiosDescriptions["audio1"]}
+              src={audiosDescriptions["audio2"]}
               specificStylePlayer='music-player'
               specificStyleMusicButton='specificStyleMusicButton' 
             />
@@ -156,6 +195,11 @@ function ExercisesPage() {
           exercise3='3.Elevação Frontal: 4x7-9 (3 barras)'
           exercise4='4.Elevação Lateral: 4x7-9 (3 barras)'
           exercise5='5.Remada Alta: 4x12-14 (5 barras)'
+          exercise1Gif={exercisesGifs["barbellBenchPress"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "B" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
@@ -167,6 +211,12 @@ function ExercisesPage() {
           exercise4='4.Cadeira Extensora: 3x12-14 (5 barras)'
           exercise5='5.Abdominal supra: 3x12-14 (peso do corpo)'
           exercise6='6.Prancha: 30s'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "C" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
@@ -177,6 +227,11 @@ function ExercisesPage() {
           exercise3='3.Remada Alta: 4x12-14 (5 barras)'
           exercise4='4.Rosca Punho: 3x12-14 (20kgs)'
           exercise5='5.Rosca Punho Invertida: 3x12-14 (20kgs)'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "D" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
@@ -187,6 +242,11 @@ function ExercisesPage() {
           exercise3='3.Abdominal oblíquo: 3x12-14 (peso do corpo)'
           exercise4='4.Abdominal infra: 3x12-14 (peso do corpo)'
           exercise5='5.Prancha: 30s'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "E" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
@@ -199,6 +259,13 @@ function ExercisesPage() {
           exercise5='5.Elevação Lateral: 4x7-9 (3 barras)'
           exercise6='6.Panturrilha em pé: 1x16-20 (60% da carga) + 3x12-14 (20kgs cada)'
           exercise7='7.Panturrilha sentado: 3x12-14 (20kgs cada)'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["waitingTheExercise"]}
+          exercise7Gif={exercisesGifs["waitingTheExercise"]}
         />}
 
         {typeTrain === "F" && nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && 
@@ -211,6 +278,13 @@ function ExercisesPage() {
           exercise5='5.Rosca Punho Invertida: 3x12-14 (10kgs cada)'
           exercise6='6.Abdominal oblíquo: 3x12-14 (peso do corpo)'
           exercise7='7.Abdominal infra: 3x12-14 (peso do corpo)'
+          exercise1Gif={exercisesGifs["waitingTheExercise"]}
+          exercise2Gif={exercisesGifs["waitingTheExercise"]}
+          exercise3Gif={exercisesGifs["waitingTheExercise"]}
+          exercise4Gif={exercisesGifs["waitingTheExercise"]}
+          exercise5Gif={exercisesGifs["waitingTheExercise"]}
+          exercise6Gif={exercisesGifs["waitingTheExercise"]}
+          exercise7Gif={exercisesGifs["waitingTheExercise"]}
         />}
  
       </main>}
@@ -256,7 +330,9 @@ function ExercisesPage() {
 
           </div >
 
-          {user.exercise1[0] && user.exercise1[0][0] === 'A' && typeTrain === "A" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[0] || user.exercise2[0] || user.exercise3[0] || user.exercise4[0] || user.exercise5[0] || user.exercise6[0] || user.exercise7[0]
+            || user.exercise8[0] || user.exercise9[0] || user.exercise10[0] || user.exercise11[0] || user.exercise12[0] || user.exercise13[0] || user.exercise14[0]
+            || user.exercise15[0]) && user.exercise1[0][0] === 'A' && typeTrain === "A" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id}
             exercise1={user.exercise1[0][1] !== '' && `1.${user.exercise1[0][1]}`}
@@ -274,9 +350,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[0][1] !== '' && `13.${user.exercise13[0][1]}`}
             exercise14={user.exercise14[0][1] !== '' && `14.${user.exercise14[0][1]}`}
             exercise15={user.exercise15[0][1] !== '' && `15.${user.exercise15[0][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[0][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[0][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[0][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[0][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[0][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[0][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[0][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[0][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[0][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[0][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[0][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[0][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[0][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[0][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[0][1]]}
           />}
 
-          {user.exercise1[1] && user.exercise1[1][0] === 'B' && typeTrain === "B" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[1] || user.exercise2[1] || user.exercise3[1] || user.exercise4[1] || user.exercise5[1] || user.exercise6[1] || user.exercise7[1]
+            || user.exercise8[1] || user.exercise9[1] || user.exercise10[1] || user.exercise11[1] || user.exercise12[1] || user.exercise13[1] || user.exercise14[1]
+            || user.exercise15[1]) && user.exercise1[1][0] === 'B' && typeTrain === "B" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id}
             exercise1={user.exercise1[1][1] !== '' && `1.${user.exercise1[1][1]}`}
@@ -294,9 +387,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[1][1] !== '' && `13.${user.exercise13[1][1]}`}
             exercise14={user.exercise14[1][1] !== '' && `14.${user.exercise14[1][1]}`}
             exercise15={user.exercise15[1][1] !== '' && `15.${user.exercise15[1][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[1][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[1][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[1][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[1][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[1][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[1][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[1][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[1][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[1][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[1][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[1][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[1][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[1][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[1][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[1][1]]}
           />}
 
-          {user.exercise1[2] && user.exercise1[2][0] === 'C' && typeTrain === "C" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[2] || user.exercise2[2] || user.exercise3[2] || user.exercise4[2] || user.exercise5[2] || user.exercise6[2] || user.exercise7[2]
+            || user.exercise8[2] || user.exercise9[2] || user.exercise10[2] || user.exercise11[2] || user.exercise12[2] || user.exercise13[2] || user.exercise14[2]
+            || user.exercise15[2]) && user.exercise1[2][0] === 'C' && typeTrain === "C" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[2][1] !== '' && `1.${user.exercise1[2][1]}`}
@@ -314,9 +424,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[2][1] !== '' && `13.${user.exercise13[2][1]}`}
             exercise14={user.exercise14[2][1] !== '' && `14.${user.exercise14[2][1]}`}
             exercise15={user.exercise15[2][1] !== '' && `15.${user.exercise15[2][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[2][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[2][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[2][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[2][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[2][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[2][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[2][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[2][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[2][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[2][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[2][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[2][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[2][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[2][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[2][1]]}
           />}
 
-          {user.exercise1[3] && user.exercise1[3][0] === 'D' && typeTrain === "D" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[3] || user.exercise2[3] || user.exercise3[3] || user.exercise4[3] || user.exercise5[3] || user.exercise6[3] || user.exercise7[3]
+            || user.exercise8[3] || user.exercise9[3] || user.exercise10[3] || user.exercise11[3] || user.exercise12[3] || user.exercise13[3] || user.exercise14[3]
+            || user.exercise15[3]) && user.exercise1[3][0] === 'D' && typeTrain === "D" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[3][1] !== '' && `1.${user.exercise1[3][1]}`}
@@ -334,9 +461,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[3][1] !== '' && `13.${user.exercise13[3][1]}`}
             exercise14={user.exercise14[3][1] !== '' && `14.${user.exercise14[3][1]}`}
             exercise15={user.exercise15[3][1] !== '' && `15.${user.exercise15[3][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[3][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[3][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[3][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[3][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[3][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[3][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[3][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[3][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[3][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[3][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[3][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[3][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[3][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[3][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[3][1]]}
           />}
 
-          {user.exercise1[4] && user.exercise1[4][0] === 'E' && typeTrain === "E" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[4] || user.exercise2[4] || user.exercise3[4] || user.exercise4[4] || user.exercise5[4] || user.exercise6[4] || user.exercise7[4]
+            || user.exercise8[4] || user.exercise9[4] || user.exercise10[4] || user.exercise11[4] || user.exercise12[4] || user.exercise13[4] || user.exercise14[4]
+            || user.exercise15[4]) && user.exercise1[4][0] === 'E' && typeTrain === "E" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[4][1] !== '' && `1.${user.exercise1[4][1]}`}
@@ -354,9 +498,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[4][1] !== '' && `13.${user.exercise13[4][1]}`}
             exercise14={user.exercise14[4][1] !== '' && `14.${user.exercise14[4][1]}`}
             exercise15={user.exercise15[4][1] !== '' && `15.${user.exercise15[4][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[4][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[4][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[4][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[4][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[4][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[4][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[4][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[4][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[4][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[4][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[4][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[4][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[4][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[4][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[4][1]]}
           />}
 
-          {user.exercise1[5] && user.exercise1[5][0] === 'F' && typeTrain === "F" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[5] || user.exercise2[5] || user.exercise3[5] || user.exercise4[5] || user.exercise5[5] || user.exercise6[5] || user.exercise7[5]
+            || user.exercise8[5] || user.exercise9[5] || user.exercise10[5] || user.exercise11[5] || user.exercise12[5] || user.exercise13[5] || user.exercise14[5]
+            || user.exercise15[5]) && user.exercise1[5][0] === 'F' && typeTrain === "F" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[5][1] !== '' && `1.${user.exercise1[5][1]}`}
@@ -374,9 +535,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[5][1] !== '' && `13.${user.exercise13[5][1]}`}
             exercise14={user.exercise14[5][1] !== '' && `14.${user.exercise14[5][1]}`}
             exercise15={user.exercise15[5][1] !== '' && `15.${user.exercise15[5][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[5][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[5][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[5][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[5][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[5][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[5][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[5][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[5][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[5][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[5][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[5][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[5][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[5][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[5][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[5][1]]}
           />}
 
-          {user.exercise1[6] && user.exercise1[6][0] === 'G' && typeTrain === "G" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[6] || user.exercise2[6] || user.exercise3[6] || user.exercise4[6] || user.exercise5[6] || user.exercise6[6] || user.exercise7[6]
+            || user.exercise8[6] || user.exercise9[6] || user.exercise10[6] || user.exercise11[6] || user.exercise12[6] || user.exercise13[6] || user.exercise14[6]
+            || user.exercise15[6]) && user.exercise1[6][0] === 'G' && typeTrain === "G" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[6][1] !== '' && `1.${user.exercise1[6][1]}`}
@@ -394,9 +572,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[6][1] !== '' && `13.${user.exercise13[6][1]}`}
             exercise14={user.exercise14[6][1] !== '' && `14.${user.exercise14[6][1]}`}
             exercise15={user.exercise15[6][1] !== '' && `15.${user.exercise15[6][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[6][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[6][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[6][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[6][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[6][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[6][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[6][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[6][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[6][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[6][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[6][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[6][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[6][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[6][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[6][1]]}
           />}
 
-          {user.exercise1[7] && user.exercise1[7][0] === 'H' && typeTrain === "H" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[7] || user.exercise2[7] || user.exercise3[7] || user.exercise4[7] || user.exercise5[7] || user.exercise6[7] || user.exercise7[7]
+            || user.exercise8[7] || user.exercise9[7] || user.exercise10[7] || user.exercise11[7] || user.exercise12[7] || user.exercise13[7] || user.exercise14[7]
+            || user.exercise15[7]) && user.exercise1[7][0] === 'H' && typeTrain === "H" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[7][1] !== '' && `1.${user.exercise1[7][1]}`}
@@ -414,9 +609,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[7][1] !== '' && `13.${user.exercise13[7][1]}`}
             exercise14={user.exercise14[7][1] !== '' && `14.${user.exercise14[7][1]}`}
             exercise15={user.exercise15[7][1] !== '' && `15.${user.exercise15[7][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[7][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[7][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[7][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[7][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[7][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[7][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[7][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[7][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[7][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[7][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[7][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[7][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[7][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[7][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[7][1]]}
           />}
 
-          {user.exercise1[8] && user.exercise1[8][0] === 'I' && typeTrain === "I" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[8] || user.exercise2[8] || user.exercise3[8] || user.exercise4[8] || user.exercise5[8] || user.exercise6[8] || user.exercise7[8]
+            || user.exercise8[8] || user.exercise9[8] || user.exercise10[8] || user.exercise11[8] || user.exercise12[8] || user.exercise13[8] || user.exercise14[8]
+            || user.exercise15[8]) && user.exercise1[8][0] === 'I' && typeTrain === "I" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[8][1] !== '' && `1.${user.exercise1[8][1]}`}
@@ -434,9 +646,26 @@ function ExercisesPage() {
             exercise13={user.exercise13[8][1] !== '' && `13.${user.exercise13[8][1]}`}
             exercise14={user.exercise14[8][1] !== '' && `14.${user.exercise14[8][1]}`}
             exercise15={user.exercise15[8][1] !== '' && `15.${user.exercise15[8][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[8][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[8][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[8][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[8][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[8][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[8][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[8][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[8][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[8][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[8][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[8][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[8][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[8][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[8][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[8][1]]}
           />}
 
-          {user.exercise1[9] && user.exercise1[9][0] === 'J' && typeTrain === "J" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
+          {(user.exercise1[9] || user.exercise2[9] || user.exercise3[9] || user.exercise4[9] || user.exercise5[9] || user.exercise6[9] || user.exercise7[9]
+            || user.exercise8[9] || user.exercise9[9] || user.exercise10[9] || user.exercise11[9] || user.exercise12[9] || user.exercise13[9] || user.exercise14[9]
+            || user.exercise15[9]) && user.exercise1[9][0] === 'J' && typeTrain === "J" && user.name.toLowerCase() === nameUser.toLowerCase().trim() && 
           <Card
             key={user.id} 
             exercise1={user.exercise1[9][1] !== '' && `1.${user.exercise1[9][1]}`}
@@ -454,6 +683,21 @@ function ExercisesPage() {
             exercise13={user.exercise13[9][1] !== '' && `13.${user.exercise13[9][1]}`}
             exercise14={user.exercise14[9][1] !== '' && `14.${user.exercise14[9][1]}`}
             exercise15={user.exercise15[9][1] !== '' && `15.${user.exercise15[9][1]}`}
+            exercise1Gif={exercisesGifs[user.exercise1Gif[9][1]]}
+            exercise2Gif={exercisesGifs[user.exercise2Gif[9][1]]}
+            exercise3Gif={exercisesGifs[user.exercise3Gif[9][1]]}
+            exercise4Gif={exercisesGifs[user.exercise4Gif[9][1]]}
+            exercise5Gif={exercisesGifs[user.exercise5Gif[9][1]]}
+            exercise6Gif={exercisesGifs[user.exercise6Gif[9][1]]}
+            exercise7Gif={exercisesGifs[user.exercise7Gif[9][1]]}
+            exercise8Gif={exercisesGifs[user.exercise8Gif[9][1]]}
+            exercise9Gif={exercisesGifs[user.exercise9Gif[9][1]]}
+            exercise10Gif={exercisesGifs[user.exercise10Gif[9][1]]}
+            exercise11Gif={exercisesGifs[user.exercise11Gif[9][1]]}
+            exercise12Gif={exercisesGifs[user.exercise12Gif[9][1]]}
+            exercise13Gif={exercisesGifs[user.exercise13Gif[9][1]]}
+            exercise14Gif={exercisesGifs[user.exercise14Gif[9][1]]}
+            exercise15Gif={exercisesGifs[user.exercise15Gif[9][1]]}
           />}
  
         </main>))}

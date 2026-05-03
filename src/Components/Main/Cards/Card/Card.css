@@ -1,4 +1,5 @@
 .cards-training {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -62,6 +63,8 @@
   color: var(--border-yellow);
   text-shadow: 2px 2px 3px var(--border);
   overflow-wrap: break-word;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
  }
 
 .new-cards-training-exercises {
@@ -69,6 +72,8 @@
   color: var(--border-green);
   text-shadow: 2px 2px 3px var(--border);
   overflow-wrap: break-word;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .specificStyleTimerExercises {
