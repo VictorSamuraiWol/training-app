@@ -8,21 +8,5 @@
   gap: 40px;
   width: 100%;
   background-image: url(../../assets/images/bg-image.png);
-}
-
-/* Responsiveness */
-@media (max-width: 480px) {
-  .main {
-    background-size: contain;
-
-  }
-
-}
-
-@media (min-width: 481px) {
-  .main {
-    background-size: cover;
-    
-  }
-
+  background-size: contain;
 }
