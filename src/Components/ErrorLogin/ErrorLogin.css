@@ -35,6 +35,7 @@
 @media (max-width: 480px) {
   .error-login-styles {
     height: 74.8vh;
+    background-size: contain;
   }
 
   .image-loading-workout {
@@ -54,6 +55,7 @@
 @media (min-width: 481px) {
   .error-login-styles {
     height: 74.8vh;
+    background-size: cover;
   }
 
   .image-loading-workout {

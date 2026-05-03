@@ -3,6 +3,7 @@
   flex-direction: column;
   min-height: 78vh;
   background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-position: center;
   background-size: cover;
 }
 
@@ -112,6 +113,7 @@
 @media (max-width: 480px) {
   .exercises-page-style {
     min-height: 77.9vh;
+    background-size: contain;
   }
 
   .exercises-page-style {
@@ -181,6 +183,7 @@
 @media (min-width: 481px) {
   .exercises-page-style {
     min-height: 77.9vh;
+    background-size: cover;
   }
 
   .exercises-page-style {

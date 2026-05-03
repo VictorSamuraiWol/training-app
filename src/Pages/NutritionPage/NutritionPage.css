@@ -5,7 +5,7 @@
 }
 
 .banner-nutrition-page {
-  background-image: url(../../assets//images/image-nutrition-neon.png);
+  background-image: url(../../assets/images/image-nutrition-neon.png);
   background-position: center;
   background-size: contain;
   width: 100%;
@@ -21,6 +21,7 @@
   flex: 1;
   padding: 16px;
   background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-position: center;
   background-size: cover;
   color: var(--border-green);
   text-shadow: 4px 2px 3px var(--border);
@@ -73,6 +74,7 @@
 
   .cards-info-nutrition {
     padding: 6px;
+    background-size: contain;
   }
 
   .cards-info-nutrition-title {
@@ -102,6 +104,7 @@
 
   .cards-info-nutrition {
     padding: 8px;
+    background-size: cover;
   }
 
   .cards-info-nutrition-title {
