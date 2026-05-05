@@ -19,6 +19,8 @@ function ExercisesPage() {
 
   const { staticUsersContents, dinamicUsersContents, typeTrain, loginValidate, nameUser } = useContext(DataContext)
 
+  const { isOnToggleTimersExercises } = useOutletContext()
+
   const { compactUserName } = useOutletContext()
 
   const [isRunningAllTime, setIsRunningAllTime] = useState(false)
@@ -52,7 +54,9 @@ function ExercisesPage() {
         <main className='exercises-page-style-cards' key={user.id}>
           <div className='exercises-page-style-cards-timer-title-music'>
             <div className='title-timer'>
-              <p className='title-timer-text'>Total Time:</p>
+              {isOnToggleTimersExercises && <p className='title-timer-text'>Total Time:</p>}
+              {!isOnToggleTimersExercises && <p className='title-timer-text'>Time:</p>}
+
               <Timer
                 key='0'
                 isRunning={isRunningAllTime}
@@ -465,7 +469,9 @@ function ExercisesPage() {
           <main className='exercises-page-style-cards' key={user.id}>
             <div className='exercises-page-style-cards-timer-title-music'>
               <div className='title-timer'>
-                <p className='title-timer-text'>Total Time:</p>
+                {isOnToggleTimersExercises && <p className='title-timer-text'>Total Time:</p>}
+                {!isOnToggleTimersExercises && <p className='title-timer-text'>Time:</p>}
+                
                 <Timer
                   key='0'
                   isRunning={isRunningAllTime}
