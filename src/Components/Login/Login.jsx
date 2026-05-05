@@ -13,7 +13,7 @@ function Login({ setActivateNavigateDefault }) {
   const [passwordUser, setPasswordUser] = useState('')
   const [alertLoginMessage, setAlertLoginMessage] = useState('')
 
-  const { usersContents, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
+  const { staticUsersContents, dinamicUsersContents, setLoginValidate, nameUser, setNameUser  } = useContext(DataContext)
 
   const onLoginValidate = (e) => {
     e.preventDefault()
@@ -22,15 +22,15 @@ function Login({ setActivateNavigateDefault }) {
     let matchedStatic;
     let matchedDinamic;
 
-    matchedStatic = (
-      // Victor Static - Static User 1
-      (nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase()) && passwordUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() ||
-      // Leimar - Static User 2
-      (nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase()) && passwordUser.toLowerCase().trim() === 'Leimar'.toLowerCase()
-    ) 
+    {/* Static Content */}
+    matchedStatic = staticUsersContents && staticUsersContents.filter(user => 
+      (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
+      (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
 
-    matchedDinamic = usersContents && usersContents.filter(user => 
-      (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
+    {/* Dinamic Content */}
+    matchedDinamic = dinamicUsersContents && dinamicUsersContents.filter(user => 
+      (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
+      (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
 
     if (matchedStatic || matchedDinamic) {
       setLoginValidate(true)
@@ -38,8 +38,8 @@ function Login({ setActivateNavigateDefault }) {
 
     } else {
       setLoginValidate(false)
-      usersContents && setAlertLoginMessage('Invalid user')
-      !usersContents && setAlertLoginMessage('Invalid static user')
+      dinamicUsersContents && setAlertLoginMessage('Invalid user')
+      !dinamicUsersContents && setAlertLoginMessage('Invalid static user')
       errorMessage.classList.add('alert-login-message-able')
       errorMessage.classList.remove('alert-login-message-disable')
 

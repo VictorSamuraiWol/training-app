@@ -10,7 +10,7 @@ import { DataContext } from '../DataContext/DataContext';
 
 function Header({ compactUserName }) {
 
-  const { nameUser, setNameUser, setLoginValidate, usersContents } = useContext(DataContext)
+  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dinamicUsersContents } = useContext(DataContext)
 
   const [imagesDescriptions] = useState({
     example: example,
@@ -35,18 +35,23 @@ function Header({ compactUserName }) {
       </Link>
 
       <h1 className='header-title'>NEONFIT APP</h1>
-
+      
       {/* Static Content */}
-      {/* Victor Static - Static User 1 */}
-      {nameUser.toLowerCase().trim() === 'Victor Static'.toLowerCase() && <div className='container-login-signin'>
+      {staticUsersContents && staticUsersContents
+        .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+        .map(user => (
+      <div
+        key={user.name}
+        className='container-login-signin'
+      >
         <div className='container-login-signin-image-name'>
-          <img 
-            src={imagesDescriptions["profileVictor"]} 
+          {user.imageProfile && <img 
+            src={imagesDescriptions[user.imageProfile]}
             className='container-login-signin-image-name-img' 
-          />
+          />}
 
-          <p className='container-login-signin-image-name-short-text'>{compactUserName('Victor Static', 8)}</p>
-          <p className='container-login-signin-image-name-long-text'>{compactUserName('Victor Static', 15)}</p>
+          {<p className='container-login-signin-image-name-short-text'>{compactUserName(user.name, 8)}</p>}
+          {<p className='container-login-signin-image-name-long-text'>{compactUserName(user.name, 15)}</p>}
 
         </div>
 
@@ -60,35 +65,10 @@ function Header({ compactUserName }) {
           </div>
         </Link>
 
-      </div>}
-
-      {/* Leimar - Static User 2 */}
-      {nameUser.toLowerCase().trim() === 'Leimar'.toLowerCase() && <div className='container-login-signin'>
-        <div className='container-login-signin-image-name'>
-          <img 
-            src={imagesDescriptions["profileLeimar"]} 
-            className='container-login-signin-image-name-img' 
-          />
-
-          <p className='container-login-signin-image-name-short-text'>{compactUserName('Leimar', 8)}</p>
-          <p className='container-login-signin-image-name-long-text'>{compactUserName('Leimar', 15)}</p>
-
-        </div>
-
-        <Link className='link-container-button-signout' to='/'>
-          <div className='container-button-signout'>
-            <ButtonDefault
-              onClick={signOut}
-              nameButton='SIGN OUT'
-              specificStylesButton='specificStylesSignoutButton'
-            />
-          </div>
-        </Link>
-
-      </div>}
+      </div>))}
 
       {/* Dinamic Content */}
-      {usersContents && usersContents
+      {dinamicUsersContents && dinamicUsersContents
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => (
       <div

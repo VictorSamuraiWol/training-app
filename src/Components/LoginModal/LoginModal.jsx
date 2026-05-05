@@ -10,7 +10,7 @@ Modal.setAppElement('#root')
 
 function ModalLogin() {
 
-  const { usersContents } = useContext(DataContext)
+  const { staticUsersContents, dinamicUsersContents } = useContext(DataContext)
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -59,26 +59,22 @@ function ModalLogin() {
         <div className='login-users-passwords'>
           <div className='static-dinamic-content'>
             {/* Static Content */}
-            {/* static user 1 */}
-            <div className='login-users-passwords-users'>
-              <div className='login-users-passwords-user'>
-                <p className='login-users-passwords-user-name'>Name: Victor Static</p>
-                <p className='login-users-passwords-password'>Password: Victor Static</p>
+            {staticUsersContents && staticUsersContents.map(user => (
+              <div 
+                key={user.id}
+                className='login-users-passwords-users'
+              >
+                <div className='login-users-passwords-user'>
+                  <p className='login-users-passwords-user-name'>Name: {user.name}</p>
+                  <p className='login-users-passwords-password'>Password: {user.password}</p>
+                  <p></p>
+                </div>
+
               </div>
-
-            </div>
-
-            {/* static user 2 */}
-            <div className='login-users-passwords-users'>
-              <div className='login-users-passwords-user'>
-                <p className='login-users-passwords-user-name'>Name: Leimar</p>
-                <p className='login-users-passwords-password'>Password: Leimar</p>
-              </div>
-
-            </div>
+            ))}
 
             {/* Dinamic Content */}
-            {usersContents && usersContents.map(user => (
+            {dinamicUsersContents && dinamicUsersContents.map(user => (
               <div 
                 key={user.id}
                 className='login-users-passwords-users'
