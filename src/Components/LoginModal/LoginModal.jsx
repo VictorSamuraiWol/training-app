@@ -1,6 +1,7 @@
 import './LoginModal.css'
 import Modal from 'react-modal'
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
+import soundButton from '../../assets/audios/click-sound.mp3';
 import { useContext, useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 import { GiClick } from "react-icons/gi";
@@ -14,6 +15,8 @@ function ModalLogin() {
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
+  const clickSoundButton = new Audio(soundButton)
+
   function openModal() {
     setModalIsOpen(true)
 
@@ -21,6 +24,7 @@ function ModalLogin() {
 
   function closeModal() {
     setModalIsOpen(false)
+    clickSoundButton.play()
 
   }
 

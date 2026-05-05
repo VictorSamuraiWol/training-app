@@ -4,6 +4,7 @@ import LabelDefault from '../LabelDefault/LabelDefault';
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
 import LoginModal from '../LoginModal/LoginModal';
 import logo from '../../assets/images/logo-neonfit.png';
+import soundButton from '../../assets/audios/click-sound.mp3';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
 import { Link } from 'react-router-dom';
@@ -12,6 +13,8 @@ function Login({ setActivateNavigateDefault }) {
   
   const [passwordUser, setPasswordUser] = useState('')
   const [alertLoginMessage, setAlertLoginMessage] = useState('')
+
+  const clickSoundButton = new Audio(soundButton)
 
   const { staticUsersContents, dinamicUsersContents, setLoginValidate, nameUser, setNameUser  } = useContext(DataContext)
 
@@ -67,6 +70,7 @@ function Login({ setActivateNavigateDefault }) {
     <div className='login'>
       <Link className='link-img' to='/'>
         <img 
+          onClick={() => clickSoundButton.play()}
           className='link-img-logo-login'
           src={logo} 
         />

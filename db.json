@@ -1,7 +1,7 @@
 {
   "clients": [
     {
-      "name" : "Example",
+      "name" : "Example Dinamic",
       "weight": "Example",
       "height": "Example",
       "exercise1": [["A", "Example"], ["B", "Example"], ["C", "Example"], ["D", "Example"], ["E", "Example"], ["F", "Example"], ["G", "Example"], ["H", "Example"], ["I", "Example"], ["J", "Example"]],
@@ -36,7 +36,7 @@
       "exercise15Gif": [["A", "waitingTheExercise"], ["B", "waitingTheExercise"], ["C", "waitingTheExercise"], ["D", "waitingTheExercise"], ["E", "waitingTheExercise"], ["F", "waitingTheExercise"], ["G", "waitingTheExercise"], ["H", "waitingTheExercise"], ["I", "waitingTheExercise"], ["J", "waitingTheExercise"]],
       "nutrition": [["Supplements:", "Example"], ["Breakfast:", "Example"], ["Snack:", "Example"], ["Lunch:", "Example"], ["Snack:", "Example"], ["Dinner:", "Example"], ["Late-night Snack:", "Example"]],
       "notes": ["Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example"],
-      "password": "Example",
+      "password": "Example Dinamic",
       "imageProfile": "example",
       "audio": "Example",
       "id": "Example"
