@@ -1,16 +1,4 @@
-.styleTextToggle {
+.styleToggle {
   position: absolute;
   color: var(--border-green);
-  padding: 0 2px;
-  border: 1px solid var(--border-green);
-  border-radius: 4px;
-}
-
-.styleTextToggle-text {
-  cursor: default;
-}
-
-.toggle-on, .toggle-off {
-  width: 1.5rem;
-  height: 1.5rem;
 }

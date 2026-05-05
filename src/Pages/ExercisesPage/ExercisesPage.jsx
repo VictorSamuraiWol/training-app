@@ -74,8 +74,8 @@ function ExercisesPage() {
             />
 
             <ToggleDefault 
-              specificStyleTitleToggle='toggle-default-timer-title-music' 
-              specificStyleTitleToggleText='toggle-default-timer-title-music-text' 
+              specificsStylesToggles='toggle-default-timer-title-music'
+              specificStyleToggle='toggle-default-timer-title-music-toggle-on-toggle-off'
             />
 
           </div>
@@ -487,8 +487,8 @@ function ExercisesPage() {
               />
 
               <ToggleDefault 
-                specificStyleTitleToggle='toggle-default-timer-title-music' 
-                specificStyleTitleToggleText='toggle-default-timer-title-music-text' 
+                specificsStylesToggles='toggle-default-timer-title-music'
+                specificStyleToggle='toggle-default-timer-title-music-toggle-on-toggle-off'
               />
 
             </div>

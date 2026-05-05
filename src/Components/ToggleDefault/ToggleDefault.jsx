@@ -2,8 +2,10 @@ import './ToggleDefault.css';
 import { MdToggleOff } from "react-icons/md";
 import { MdToggleOn } from "react-icons/md";
 import { useOutletContext } from 'react-router-dom';
+import { BsClockFill } from "react-icons/bs";
+import { BsClock } from "react-icons/bs";
 
-function ToggleDefault({ specificStyleTitleToggle, specificStyleTitleToggleText, specificStyleToggle }) {
+function ToggleDefault({ specificsStylesToggles, specificStyleToggle }) {
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises } = useOutletContext()
 
@@ -13,24 +15,23 @@ function ToggleDefault({ specificStyleTitleToggle, specificStyleTitleToggleText,
   }
 
   return(
-    <div className={`styleTextToggle ${specificStyleTitleToggle}`}>
-      <span className={`styleTextToggle-text ${specificStyleTitleToggleText}`}>Timers</span>
-
+    <div className={`styleToggle ${specificsStylesToggles}`}>
       {isOnToggleTimersExercises ?
-        <MdToggleOn 
+        <BsClockFill 
           onClick={toggle}
-          className={`toggle-on ${specificStyleToggle}`} 
+          className={`toggle-on ${specificStyleToggle}`}
         /> 
         :
-        <MdToggleOff 
+        <BsClock 
           onClick={toggle}
-          className={`toggle-off ${specificStyleToggle}`} 
+          className={`toggle-off ${specificStyleToggle}`}
         />
       }
 
     </div>
 
   )
+
 }
 
 export default ToggleDefault;
