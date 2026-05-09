@@ -2,7 +2,7 @@ import './Login.css';
 import InputDefault from '../InputDefault/InputDefault';
 import LabelDefault from '../LabelDefault/LabelDefault';
 import ButtonDefault from '../ButtonDefault/ButtonDefault';
-import LoginModal from '../LoginModal/LoginModal';
+import LoginModal from '../Modal/LoginModal/LoginModal';
 import logo from '../../assets/images/logo-neonfit.png';
 import soundButton from '../../assets/audios/click-sound.mp3';
 import { useContext, useState } from 'react';

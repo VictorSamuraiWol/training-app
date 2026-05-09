@@ -12,13 +12,14 @@
   font: 18px/145% var(--bebas);
   letter-spacing: 0.18px;
   color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
+  background: var(--text);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  
+  /* color: var(--text); */
+  /* background: var(--bg); */
   /* --text-h: #08060d; */
   /* --code-bg: #f4f3ec; */
   /* --accent: #aa3bff; */

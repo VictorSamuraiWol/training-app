@@ -5,7 +5,9 @@
   align-items: center;
   gap: 48px;
   height: 100vh;
-  background-image: url(../../assets/images/bg-header-footer.png);
+  background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-position: center;
+  background-size: cover;
 }
 
 .page-not-found-text404-title {

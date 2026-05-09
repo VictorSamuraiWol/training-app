@@ -1,9 +1,16 @@
 import './LabelDefault.css';
 
-function LabelDefault({ htmlFor, nameLabel }) {
+function LabelDefault({ onClick, specificStyleLabel, htmlFor, nameLabel }) {
 
   return(
-    <label htmlFor={htmlFor}>{nameLabel}</label>
+    <label
+      onClick={onClick}
+      className={specificStyleLabel}
+      htmlFor={htmlFor}
+    >
+      {nameLabel}
+    </label>
+
   )
 
 }

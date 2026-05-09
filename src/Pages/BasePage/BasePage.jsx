@@ -16,7 +16,11 @@ function BasePage() {
 
   const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
 
-  
+  const [selectIdVideoModal, setSelectIdVideoModal] = useState('')
+
+  const [initialPosVideo, setInitialPosVideo] = useState({ x: 0, y: 0 })
+  const [visibleVideoYT, setVisibleVideoYT] = useState(false)
+  const [selectContainerVideoYTPosition, setSelectContainerVideoYTPosition] = useState('select-video-iframe-top-left-position')
 
   const compactUserName = (name, numLength) => {
     let editUserName;
@@ -34,7 +38,7 @@ function BasePage() {
   }
 
   return (
-    <div className='base-page-styles'>
+      <div className='base-page-styles'>
       {!loginValidate && <Login setActivateNavigateDefault={setActivateNavigateDefault} />}
 
       {!loginValidate && <ErrorLogin />}
@@ -42,7 +46,8 @@ function BasePage() {
       {loginValidate && <Header compactUserName={compactUserName} />}
 
       {loginValidate && <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, 
-        setIsOnToggleTimersExercises}} 
+        setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, 
+        initialPosVideo, setInitialPosVideo, selectContainerVideoYTPosition, setSelectContainerVideoYTPosition }} 
       />}
 
       <NavigateDefault 
@@ -53,6 +58,7 @@ function BasePage() {
       <Footer />
       
     </div>
+
   )
 }
 

@@ -1,15 +1,15 @@
 import './LoginModal.css'
 import Modal from 'react-modal'
-import ButtonDefault from '../ButtonDefault/ButtonDefault';
-import soundButton from '../../assets/audios/click-sound.mp3';
+import ButtonDefault from '../../ButtonDefault/ButtonDefault';
+import soundButton from '../../../assets/audios/click-sound.mp3';
 import { useContext, useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 import { GiClick } from "react-icons/gi";
-import { DataContext } from '../DataContext/DataContext';
+import { DataContext } from '../../DataContext/DataContext';
 
 Modal.setAppElement('#root')
 
-function ModalLogin() {
+function LoginModal() {
 
   const { staticUsersContents, dinamicUsersContents } = useContext(DataContext)
   
@@ -104,4 +104,4 @@ function ModalLogin() {
 
 }
 
-export default ModalLogin;
+export default LoginModal;

@@ -59,10 +59,10 @@ export default function DataProvider({ children }) {
       "name" : "Victor Static",
       "weight": "80 kgs",
       "height": "1.69 cm",
-      "exercise1": [["A", "Warm-up: HIIT - 10-12 min"], ["B", "Warm-up: HIIT - 10-12 min"], ["C", "Warm-up: HIIT - 10-12 min"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
-      "exercise2": [["A", "Biceps: 1x 12-14 (6kg - dumbbell) + (up) 3x 7-9 (8kg - dumbbell)"], ["B", "Squat: 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"], ["C", "Triceps: 1x 12-14 (6kg - dumbbell) + 2x 7-9 (8kg - dumbbell)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
-      "exercise3": [["A", "Dumbbell Reverse Curl: (up) 3x 12-14 (6kg - dumbbell) (already warmed up)"], ["B", "Stiff (Romanian Deadlift): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"], ["C", "Front Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
-      "exercise4": [["A", "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 1x 7-9 (5kg - plates)"], ["B", "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"], ["C", "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 2x 7-9 (5kg - plates)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
+      "exercise1": [["A", "Warm-up: HIIT - 10-15 min"], ["B", "Warm-up: HIIT - 10-15 min"], ["C", "Warm-up: HIIT - 10-15 min"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
+      "exercise2": [["A", "Biceps: 1x 12-14 (6kg - dumbbell) + 3x 7-9 (7kg - dumbbell)"], ["B", "Squat: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"], ["C", "Triceps: 1x 12-14 (6kg - dumbbell) + 2x 7-9 (8kg - dumbbell)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
+      "exercise3": [["A", "Dumbbell Reverse Curl: 3x 7-9 (6kg - dumbbell) (already warmed up)"], ["B", "Stiff (Romanian Deadlift): 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"], ["C", "Front Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
+      "exercise4": [["A", "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 2x 7-9 (5kg - plates)"], ["B", "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"], ["C", "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 2x 7-9 (5kg - plates)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise5": [["A", "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"], ["B", "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"], ["C", "Incline Push-up: 1x 16-20 + 2x 12-14 (bodyweight)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise6": [["A", "Trapezius: 1x 16-20 (10kg - dumbbell) + 3x 12-14 (12kg - dumbbell)"], ["B", "Plank: 1x (35 seconds)"], ["C", "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise7": [["A", "Wrist Curl: 2x 12-14 (12kg - dumbbell) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
@@ -94,6 +94,7 @@ export default function DataProvider({ children }) {
       "password": "Victor Static",
       "imageProfile": "profileVictor",
       "audio": "audio1",
+      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}],
       "id": "1"
     },
     {
@@ -135,6 +136,7 @@ export default function DataProvider({ children }) {
       "password": "Leimar",
       "imageProfile": "profileLeimar",
       "audio": "audio2",
+      "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok | Tomorrowland Winter 2026", "id": "uIsIyjcLkco?si=X-MDTVpAwQ9tzyE1"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
       "id": "2"
     }
 

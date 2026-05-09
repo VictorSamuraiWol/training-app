@@ -2,3 +2,7 @@
   position: absolute;
   color: var(--border-green);
 }
+
+.toggle-on, .toggle-off {
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 import './InputDefault.css';
 
-function InputDefault({ onChange, onClick, value, inputId, required, name, typeInput, specificStylesInput }) {
+function InputDefault({ onChange, onClick, value, inputId, required, name, typeInput, specificStylesInput, checked }) {
 
   return(
     <input
@@ -13,6 +13,7 @@ function InputDefault({ onChange, onClick, value, inputId, required, name, typeI
       name={name}
       type={typeInput}
       className={specificStylesInput}
+      checked={checked}
     />
   )
 

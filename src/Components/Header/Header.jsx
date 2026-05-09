@@ -25,6 +25,7 @@ function Header({ compactUserName }) {
   function signOut() {
     setLoginValidate(false)
     setNameUser('')
+    window.location.reload();
 
   }
 
@@ -37,8 +38,6 @@ function Header({ compactUserName }) {
           src={logo} 
         />
       </Link>
-
-      <h1 className='header-title'>NEONFIT APP</h1>
 
       {/* Static Content */}
       {staticUsersContents && staticUsersContents

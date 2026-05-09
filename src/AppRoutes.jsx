@@ -6,20 +6,12 @@ import TrainingPage from './Pages/TrainingPage/TrainingPage';
 import NotesPage from './Pages/NotesPage/NotesPage';
 import PageNotFound from './Pages/NotFoundPage/NotFoundPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import DragTest from './Components/PlayerVideoYT/PlayerVideoYT';
 
 function AppRoutes() {
   return ( 
     <DataProvider>
       <BrowserRouter>
-        {/* <Routes>
-          <Route path='/' element={<TrainingPage />} />
-          <Route path='/exercises-page' element={<ExercisesPage />} />
-          <Route path='/nutrition-page' element={<NutritionPage />} />
-          <Route path='/notes-page' element={<NotesPage />} />
-          <Route path='*' element={<PageNotFound />} />
-
-        </Routes> */}
-
         <Routes>
           <Route path='/' element={<BasePage />} >
             <Route index element={<TrainingPage />} />

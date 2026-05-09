@@ -45,7 +45,7 @@
   border-radius: 8px;
   box-shadow: 5px 5px 5px var(--border-yellow), 10px 10px 10px var(--border-yellow);
   transition: all 0.3s ease-in-out;
-  background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-image: url(../../../assets/images/bg-header-main-footer.png);
   background-position: center;
   background-size: cover; 
 }
