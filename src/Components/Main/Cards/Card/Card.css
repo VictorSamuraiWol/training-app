@@ -86,10 +86,23 @@
   text-shadow: 2px 2px 3px var(--border);
 }
 
+.new-specificStyleTimerDisplayExercises {
+  font-size: 1.7rem;
+  color: var(--border-green);
+  text-shadow: 2px 2px 3px var(--border);
+}
+
 .specificStyleTimerButtonExercises {
   color: var(--text);
   box-shadow: 2px 2px 3px var(--border);
   background-color: var(--border-yellow);
+  padding: 4px 16px;
+}
+
+.new-specificStyleTimerButtonExercises {
+  color: var(--text);
+  box-shadow: 2px 2px 3px var(--border);
+  background-color: var(--border-green);
   padding: 4px 16px;
 }
 
@@ -160,7 +173,15 @@
     font-size: 1.25rem;
   }
 
+  .new-specificStyleTimerDisplayExercises {
+    font-size: 1.25rem;
+  }
+
   .specificStyleTimerButtonExercises {
+    font-size: 0.7rem;
+  }
+
+  .new-specificStyleTimerButtonExercises {
     font-size: 0.7rem;
   }
 
@@ -211,7 +232,15 @@
     font-size: 1.25rem;
   }
 
+  .new-specificStyleTimerDisplayExercises {
+    font-size: 1.25rem;
+  }
+
   .specificStyleTimerButtonExercises {
+    font-size: 0.7rem;
+  }
+
+  .new-specificStyleTimerButtonExercises {
     font-size: 0.7rem;
   }
 
@@ -258,7 +287,15 @@
     font-size: 1.30rem;
   }
 
+  .new-specificStyleTimerDisplayExercises {
+    font-size: 1.30rem;
+  }
+
   .specificStyleTimerButtonExercises {
+    font-size: 0.75rem;
+  }
+
+  .new-specificStyleTimerButtonExercises {
     font-size: 0.75rem;
   }
 
@@ -294,7 +331,15 @@
     font-size: 1.35rem;
   }
 
+  .new-specificStyleTimerDisplayExercises {
+    font-size: 1.35rem;
+  }
+
   .specificStyleTimerButtonExercises {
+    font-size: 0.8rem;
+  }
+
+  .new-specificStyleTimerButtonExercises {
     font-size: 0.8rem;
   }
 
@@ -326,7 +371,15 @@
     font-size: 1.40rem;
   }
 
+  .new-specificStyleTimerDisplayExercises {
+    font-size: 1.40rem;
+  }
+
   .specificStyleTimerButtonExercises {
+    font-size: 0.85rem;
+  }
+
+  .new-specificStyleTimerButtonExercises {
     font-size: 0.85rem;
   }
 
@@ -350,7 +403,15 @@
     font-size: 1.45rem;
   }
 
+  .new-specificStyleTimerDisplayExercises {
+    font-size: 1.45rem;
+  }
+
   .specificStyleTimerButtonExercises {
+    font-size: 0.9rem;
+  }
+
+  .new-specificStyleTimerButtonExercises {
     font-size: 0.9rem;
   }
 

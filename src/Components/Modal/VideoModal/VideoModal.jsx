@@ -6,14 +6,14 @@ import bgVideoModal from '../../../assets/images/bg-video-modal.png';
 import LabelDefault from '../../LabelDefault/LabelDefault';
 import InputDefault from '../../InputDefault/InputDefault';
 import { useContext, useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import { TiDeleteOutline } from "react-icons/ti"
 import { GiClick } from "react-icons/gi";
 import { DataContext } from '../../DataContext/DataContext';
 import { AiFillYoutube } from "react-icons/ai";
 import { FaCheck } from "react-icons/fa";
 import { MdCancel } from "react-icons/md";
-import { IoTriangle } from "react-icons/io5";
-import { useOutletContext } from 'react-router-dom';
+import { TbTriangleInvertedFilled } from "react-icons/tb";
 
 Modal.setAppElement('#root')
 
@@ -261,7 +261,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
         </div>
 
         <div className='videos-selects'>
-          <IoTriangle className={`videos-selects-icon ${openVideoModal ? "videos-selects-icon-animation" : ""}`} />
+          <TbTriangleInvertedFilled className={`videos-selects-icon ${openVideoModal ? "videos-selects-icon-animation" : ""}`} />
 
           <select 
             value={selectIdVideoModal}

@@ -128,7 +128,7 @@
   font-size: 0.9rem;
   color: var(--border-green);
   right: 8px;
-  top: 50%;
+  top: 46%;
   transform: translateY(-50%) rotate(0deg);
   transition: all 0.3s ease;
   pointer-events: none;
@@ -271,7 +271,7 @@
     gap: 24px;
     height: 47%;
     width: 83%;
-    padding: 8px;
+    padding: 16px 8px;
   }
 
   .container-video-modal-delete {
@@ -339,7 +339,7 @@
     gap: 28px;
     height: 55%;
     width: 85%;
-    padding: 12px;
+    padding: 18px 12px;
   }
 
   .container-video-modal-delete {
@@ -407,7 +407,7 @@
     gap: 40px;
     height: 65%;
     width: 85%;
-    padding: 16px;
+    padding: 28px 16px;
   }
 
   .container-video-modal-delete {

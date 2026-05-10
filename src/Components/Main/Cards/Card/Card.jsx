@@ -551,9 +551,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='1'
             isRunning={isRunning1}
             setIsRunning={setIsRunning1} 
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText1 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText1 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='1'
             setPlayPauseId={setPlayPauseId}
@@ -591,8 +595,12 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             isRunning={isRunning2}
             setIsRunning={setIsRunning2} 
             specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimerDisplay={activeStyleText2 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText2 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='2'
             setPlayPauseId={setPlayPauseId}
@@ -629,9 +637,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='3'
             isRunning={isRunning3}
             setIsRunning={setIsRunning3}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText3 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText3 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='3' 
             setPlayPauseId={setPlayPauseId}
@@ -667,9 +679,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='4'
             isRunning={isRunning4}
             setIsRunning={setIsRunning4} 
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText4 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText4 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='4'
             setPlayPauseId={setPlayPauseId}
@@ -705,9 +721,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='5'
             isRunning={isRunning5}
             setIsRunning={setIsRunning5}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText5 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText5 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='5'
             setPlayPauseId={setPlayPauseId}
@@ -743,9 +763,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='6'
             isRunning={isRunning6}
             setIsRunning={setIsRunning6} 
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText6 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText6 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='6'
             setPlayPauseId={setPlayPauseId}
@@ -781,9 +805,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='7'
             isRunning={isRunning7}
             setIsRunning={setIsRunning7}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText7 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText7 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='7'
             setPlayPauseId={setPlayPauseId}
@@ -819,9 +847,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='8'
             isRunning={isRunning8}
             setIsRunning={setIsRunning8} 
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText8 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText8 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='8'
             setPlayPauseId={setPlayPauseId}
@@ -857,9 +889,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='9'
             isRunning={isRunning9}
             setIsRunning={setIsRunning9}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText9 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText9 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='9'
             setPlayPauseId={setPlayPauseId}
@@ -895,9 +931,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='10'
             isRunning={isRunning10}
             setIsRunning={setIsRunning10}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText10 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText10 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='10'
             setPlayPauseId={setPlayPauseId}
@@ -933,9 +973,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='11'
             isRunning={isRunning11}
             setIsRunning={setIsRunning11}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText11 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText11 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='11'
             setPlayPauseId={setPlayPauseId}
@@ -971,9 +1015,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='12'
             isRunning={isRunning12}
             setIsRunning={setIsRunning12}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText12 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText12 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='12'
             setPlayPauseId={setPlayPauseId}
@@ -1009,9 +1057,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='13'
             isRunning={isRunning13}
             setIsRunning={setIsRunning13}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText13 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText13 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='13'
             setPlayPauseId={setPlayPauseId}
@@ -1047,9 +1099,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='14'
             isRunning={isRunning14}
             setIsRunning={setIsRunning14}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText14 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText14 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='14'
             setPlayPauseId={setPlayPauseId}
@@ -1085,9 +1141,13 @@ function Card({ exercise1, exercise2, exercise3, exercise4, exercise5,
             key='15'
             isRunning={isRunning15}
             setIsRunning={setIsRunning15}  
-            specificStyleTimer='specificStyleTimerExercises' 
-            specificStyleTimerDisplay='specificStyleTimerDisplayExercises' 
-            specificStyleTimerButton='specificStyleTimerButtonExercises'
+            specificStyleTimer='specificStyleTimerExercises'
+            specificStyleTimerDisplay={activeStyleText15 ?
+            'new-specificStyleTimerDisplayExercises' :
+            'specificStyleTimerDisplayExercises'}
+            specificStyleTimerButton={activeStyleText15 ?
+            'new-specificStyleTimerButtonExercises' :
+            'specificStyleTimerButtonExercises'}
             pauseOthersExercisesTimers={pauseOthersExercisesTimers}
             buttonPlayPauseId='15'
             setPlayPauseId={setPlayPauseId}
