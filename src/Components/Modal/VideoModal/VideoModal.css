@@ -418,11 +418,6 @@
     font-size: 1.5rem;
   }
 
-  .container-radios-inputs {
-    display: flex;
-    top: 37%;
-  }
-
   .videos-selects-select {
     font-size: 1rem;
     width: 100%;
@@ -430,7 +425,7 @@
 
   .videos-target {
     width: 70%;
-    padding-right: 170px;
+    padding-right: 0;
     height: 52%;
   }
 
@@ -457,6 +452,11 @@
   .modalVideoContent {
     height: 70%;
     width: 75%;
+  }
+
+  .container-radios-inputs {
+    display: flex;
+    top: 37%;
   }
 
   .videos-target {

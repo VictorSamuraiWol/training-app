@@ -75,6 +75,7 @@ function ExercisesPage() {
                 specificStyleTimerButton='specificStyleTimerButton'
                 buttonPlayPauseId='0'
               />
+
             </div>
 
             <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>
@@ -498,6 +499,7 @@ function ExercisesPage() {
                   specificStyleTimerButton='specificStyleTimerButton'
                   buttonPlayPauseId='0'
                 />
+                
               </div>
 
               <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>

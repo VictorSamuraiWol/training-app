@@ -1,7 +1,6 @@
 /* ── Player Video wrapper ─────────────────────────────── */
 .playerVideo {
   position: fixed;
-  height: 41%;
   width: 32%;
   border-radius: 14px;
   background-image: url(../../assets/images/bg-header-main-footer.png);
@@ -128,13 +127,16 @@
 /* Responsiveness */
 @media (max-width: 480px) {
   .playerVideo {
-    height: 30.7%;
-    width: 90%;
+    width: 77%;
     box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg);
   }
 
   .playerVideo:hover {
     box-shadow: 0 0 5px var(--border), 0 0 10px var(--border);
+  }
+
+  .playerVideo__icon--drag {
+    display: none;
   }
 
   .playerVideo__title {
@@ -147,7 +149,7 @@
 
   .select-video-iframe-top-left-position {
     top: 0;
-    left: 5%;
+    left: 11%;
   }
 
   .playerVideo__icon--resize {
@@ -158,8 +160,11 @@
 
 @media (min-width: 481px) {
   .playerVideo {
-    height: 40%;
-    width: 90%;
+    width: 53%;
+  }
+
+  .playerVideo__icon--drag {
+    display: none;
   }
 
   .playerVideo__title {
@@ -172,7 +177,7 @@
 
   .select-video-iframe-top-left-position {
     top: 0;
-    left: 6%;
+    right: 0;
   }
 
   .playerVideo__icon--resize {
@@ -183,8 +188,7 @@
 
 @media (min-width: 768px) {
   .playerVideo {
-    height: 36%;
-    width: 50%;
+    width: 53.5%;
   }
 
   .playerVideo__title {
@@ -193,36 +197,6 @@
 
   .playerVideo__icon {
     font-size: 1.4rem;
-  }
-  
-  .select-video-iframe-top-left-position {
-    top: 0;
-    left: 0;
-  }
-
-  .select-video-iframe-top-center-position {
-    top: 0;
-    left: 25%;
-  }
-
-  .select-video-iframe-top-right-position {
-    top: 0;
-    right: 0;
-  }
-
-  .select-video-iframe-bottom-left-position {
-    bottom: 0;
-    left: 0;
-  }
-
-  .select-video-iframe-bottom-center-position {
-    bottom: 0;
-    left: 25%;
-  }
-
-  .select-video-iframe-bottom-right-position {
-    bottom: 0;
-    right: 0;
   }
 
   .playerVideo__icon--resize {
@@ -233,8 +207,11 @@
 
 @media (min-width: 1024px) {
   .playerVideo {
-    height: 42%;
     width: 45%;
+  }
+
+  .playerVideo__icon--drag {
+    display: flex;
   }
 
   .playerVideo__title {
@@ -279,7 +256,6 @@
 
 @media (min-width: 1280px) {
   .playerVideo {
-    height: 45%;
     width: 40%;
   }
 
@@ -321,7 +297,6 @@
 
 @media (min-width: 1440px) {
   .playerVideo {
-    height: 41%;
     width: 32%;
   }
 
