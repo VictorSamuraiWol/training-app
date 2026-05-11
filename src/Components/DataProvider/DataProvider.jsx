@@ -162,13 +162,18 @@ export default function DataProvider({ children }) {
         }
               
       } catch (error) {
-          console.error(error)
+        console.error(error)
   
       }
           
     }
     
     fetchDataTraining()
+
+  }, [])
+
+  useEffect(() => {
+    staticUsersContents && staticUsersContents.length > 0 && setLoader(false)
 
   }, [])
   

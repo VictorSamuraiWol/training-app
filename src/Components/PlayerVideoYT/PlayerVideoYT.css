@@ -147,7 +147,7 @@
     font-size: 1.3rem;
   }
 
-  .select-video-iframe-top-left-position {
+  .select-video-iframe-initial-left-center-right-position {
     top: 0;
     left: 11%;
   }
@@ -175,7 +175,7 @@
     font-size: 1.3rem;
   }
 
-  .select-video-iframe-top-left-position {
+  .select-video-iframe-initial-left-center-right-position {
     top: 0;
     right: 0;
   }
@@ -222,14 +222,14 @@
     font-size: 1.5rem;
   }
 
-  .select-video-iframe-top-left-position {
+  .select-video-iframe-initial-left-center-right-position {
     top: 0;
     left: 0;
   }
 
   .select-video-iframe-top-center-position {
     top: 0;
-    left: 26%;
+    left: 27%;
   }
 
   .select-video-iframe-top-right-position {
@@ -238,17 +238,17 @@
   }
 
   .select-video-iframe-bottom-left-position {
-    bottom: 0;
+    top: 53.1vh;
     left: 0;
   }
 
   .select-video-iframe-bottom-center-position {
-    bottom: 0;
-    left: 26%;
+    top: 53.1vh;
+    left: 27%;
   }
 
   .select-video-iframe-bottom-right-position {
-    bottom: 0;
+    top: 53.1vh;
     right: 0;
   }
 
@@ -263,14 +263,14 @@
     font-size: 1.6rem;
   }
   
-  .select-video-iframe-top-left-position {
+  .select-video-iframe-initial-left-center-right-position {
     top: 0;
     left: 0;
   }
 
   .select-video-iframe-top-center-position {
     top: 0;
-    left: 29%;
+    left: 30%;
   }
 
   .select-video-iframe-top-right-position {
@@ -279,17 +279,17 @@
   }
 
   .select-video-iframe-bottom-left-position {
-    bottom: 0;
+    top: 48.4vh;
     left: 0;
   }
 
   .select-video-iframe-bottom-center-position {
-    bottom: 0;
-    left: 29%;
+    top: 48.4vh;
+    left: 30%;
   }
 
   .select-video-iframe-bottom-right-position {
-    bottom: 0;
+    top: 48.4vh;
     right: 0;
   }
 
@@ -304,14 +304,14 @@
     font-size: 1.7rem;
   }
 
-  .select-video-iframe-top-left-position {
+  .select-video-iframe-initial-left-center-right-position {
     top: 0;
     left: 0;
   }
 
   .select-video-iframe-top-center-position {
     top: 0;
-    left: 32%;
+    left: 33%;
   }
 
   .select-video-iframe-top-right-position {
@@ -320,17 +320,17 @@
   }
 
   .select-video-iframe-bottom-left-position {
-    bottom: 0;
+    top: 58.2vh;
     left: 0;
   }
 
   .select-video-iframe-bottom-center-position {
-    bottom: 0;
-    left: 32%;
+    top: 58.2vh;
+    left: 33%;
   }
 
   .select-video-iframe-bottom-right-position {
-    bottom: 0;
+    top: 58.2vh;
     right: 0;
   }
 

@@ -18,9 +18,11 @@ function BasePage() {
 
   const [selectIdVideoModal, setSelectIdVideoModal] = useState('')
 
-  const [initialPosVideo, setInitialPosVideo] = useState({ x: 0, y: 0 })
+  const [initialPosVideo, setInitialPosVideo] = useState('')
+
   const [visibleVideoYT, setVisibleVideoYT] = useState(false)
-  const [selectContainerVideoYTPosition, setSelectContainerVideoYTPosition] = useState('select-video-iframe-top-left-position')
+  
+  const [selectContainerVideoYTPosition, setSelectContainerVideoYTPosition] = useState('select-video-iframe-initial-left-center-right-position')
 
   const compactUserName = (name, numLength) => {
     let editUserName;

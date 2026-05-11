@@ -15,7 +15,6 @@ function ExercisesGif({ setAbleExercisesGif, exercise1Gif, exercise2Gif, exercis
   return(
     <div 
       onClick={closeGif}
-      // onRequestClose={closeGif}
       className='exercises-gif'
     >
       <TiDeleteOutline

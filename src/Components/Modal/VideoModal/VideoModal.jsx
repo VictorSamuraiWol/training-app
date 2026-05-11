@@ -74,7 +74,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
 
   function captureValueRadioInput(e, id) {
     if (id === 1) {
-      setSelectContainerVideoYTPosition('select-video-iframe-top-left-position')
+      setSelectContainerVideoYTPosition('select-video-iframe-initial-left-center-right-position')
       setRadioCheckedInput1(true)
       setRadioCheckedInput2(false)
       setRadioCheckedInput3(false)

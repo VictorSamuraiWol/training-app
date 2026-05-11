@@ -77,6 +77,10 @@
     height: 73.2vh;
   }
 
+  .image-loading-workout {
+    width: 45%;
+  }
+
   .error-login-styles-short-title {
     display: none;
   }
@@ -90,7 +94,7 @@
 
 @media (min-width: 1024px) {
   .image-loading-workout {
-    width: 40%;
+    width: 35%;
   }
 
   .error-login-styles-long-title {
@@ -102,6 +106,10 @@
 @media (min-width: 1280px) {
   .error-login-styles {
     height: 73.3vh;
+  }
+
+  .image-loading-workout {
+    width: 30%;
   }
 
   .error-login-styles-long-title {
