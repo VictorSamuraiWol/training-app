@@ -4,8 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function DataProvider({ children }) {
 
-  // const [usersContents, setUsersContents] = useState('')
-  const [dinamicUsersContents, setDinamicUsersContents] = useState('')
+  const [dynamicUsersContents, setDynamicUsersContents] = useState('')
   const [userId, setUserId] = useState('')
   const [typeTrain, setTypeTrain] = useState('')
   const [loader, setLoader] = useState(false)
@@ -53,7 +52,7 @@ export default function DataProvider({ children }) {
       "password": "Example Static",
       "imageProfile": "example",
       "audio": "Example",
-      "id": "Example"
+      "id": "Example Static"
     },
     {
       "name" : "Victor Static",
@@ -65,7 +64,7 @@ export default function DataProvider({ children }) {
       "exercise4": [["A", "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 2x 7-9 (5kg - plates)"], ["B", "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"], ["C", "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 2x 7-9 (5kg - plates)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise5": [["A", "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"], ["B", "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"], ["C", "Incline Push-up: 1x 16-20 + 2x 12-14 (bodyweight)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise6": [["A", "Trapezius: 1x 16-20 (10kg - dumbbell) + 3x 12-14 (12kg - dumbbell)"], ["B", "Plank: 1x (35 seconds)"], ["C", "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
-      "exercise7": [["A", "Wrist Curl: 2x 12-14 (12kg - dumbbell) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
+      "exercise7": [["A", "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise8": [["A", "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"], ["B", ""], ["C", "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise9": [["A", "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"], ["B", ""], ["C", "Plank: 1x (35 seconds)"], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise10": [["A", "Plank: 1x (35 seconds)"], ["B", ""], ["C", ""], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
@@ -95,7 +94,7 @@ export default function DataProvider({ children }) {
       "imageProfile": "profileVictor",
       "audio": "audio1",
       "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}],
-      "id": "1"
+      "id": "Victor Static"
     },
     {
       "name" : "Leimar",
@@ -132,12 +131,12 @@ export default function DataProvider({ children }) {
       "exercise14Gif": [["A", ""], ["B", ""], ["C", ""], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "exercise15Gif": [["A", ""], ["B", ""], ["C", ""], ["D", ""], ["E", ""], ["F", ""], ["G", ""], ["H", ""], ["I", ""], ["J", ""]],
       "nutrition": [["Suplementos:", "Whey", "Creatina", "Dextrose"], ["Café da Manhã:", "Café", "Ovos", "Manteiga", "Abacate"], ["Lanche:", "", "", "", "", ""], ["Almoço:", "Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"], ["Lanche:", "Vitamina de Banana", "Pão", "Ovos"], ["Jantar:", "Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"], ["Ceia:", "Chá", "Castanha", "Amendoim"]],
-      "notes": ["Start date: 8 January 2026", "Rest between reps: 1 min", "Rest between sets: 1-3 min"],
+      "notes": ["Rest between reps: 1 min", "Rest between sets: 1-3 min"],
       "password": "Leimar",
       "imageProfile": "profileLeimar",
       "audio": "audio2",
       "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok | Tomorrowland Winter 2026", "id": "uIsIyjcLkco?si=X-MDTVpAwQ9tzyE1"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
-      "id": "2"
+      "id": "Leimar"
     }
 
   ]
@@ -155,8 +154,7 @@ export default function DataProvider({ children }) {
           throw new Error("Dados inválidos")
   
         } else {
-          // setUsersContents(data)
-          setDinamicUsersContents(data)
+          setDynamicUsersContents(data)
           setLoader(false)
   
         }
@@ -178,8 +176,8 @@ export default function DataProvider({ children }) {
   }, [])
   
   const value = {
-    dinamicUsersContents, 
-    setDinamicUsersContents,
+    dynamicUsersContents, 
+    setDynamicUsersContents,
     staticUsersContents, 
     userId, 
     setUserId,

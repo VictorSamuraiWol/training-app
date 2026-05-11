@@ -6,7 +6,7 @@ import { GiMuscleUp } from "react-icons/gi";
 
 function NotesPage() {
 
-  const { staticUsersContents, dinamicUsersContents, loginValidate, nameUser } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
 
@@ -14,8 +14,7 @@ function NotesPage() {
     <div className='notes-page-styles'>
       {loginValidate && <div className='banner-notes-page'></div>}
 
-      {/* Static Content */}
-      {loginValidate && staticUsersContents && staticUsersContents
+      {/* {loginValidate && staticUsersContents && staticUsersContents
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => (
         <div
@@ -46,8 +45,41 @@ function NotesPage() {
 
         </div>))}
 
-      {/* Dinamic Content */}
-      {loginValidate && dinamicUsersContents && dinamicUsersContents
+      {loginValidate && dynamicUsersContents && dynamicUsersContents
+      .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+      .map(user => (
+        <div
+          key={user.id}
+          className='cards-info-notes'
+        >
+          <h2 className='cards-info-notes-title'>Notes - {compactUserName(nameUser, 15)}</h2>
+
+          <div className='cards-info-notes-itens'>
+            {user.notes.map((note, indice) =>
+              note && <div 
+                key={indice}
+                className='cards-info-notes-itens-icon-item'
+              >
+                <GiMuscleUp className='iconMuscleNotes' />
+
+                <p 
+                  key={indice}
+                  className='cards-info-notes-item' 
+                >
+                  {note}
+                </p>
+                
+              </div>)}
+            
+          </div>
+
+        </div>))} */}
+      {/* -------------------------------------------------------------- */}
+
+
+
+      {/* Static and Dynamic User Contents */}
+      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => (
         <div

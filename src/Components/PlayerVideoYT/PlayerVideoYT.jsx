@@ -5,7 +5,6 @@ import { MdDragIndicator } from "react-icons/md";
 import { TiDeleteOutline } from "react-icons/ti";
 import { SlSizeFullscreen } from "react-icons/sl";
 
-/* ── Drag hook ──────────────────────────────────────────────────────────── */
 function useDrag(pos, setPos) {
   const isDragging = useRef(false)
   const offset = useRef({ x: 0, y: 0 })
@@ -58,7 +57,6 @@ function useDrag(pos, setPos) {
 
 }
 
-/* ── VideoPlayer ────────────────────────────────────────────────────────── */
 function PlayerVideoYT({ videoSelected }) {
 
   const { visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
@@ -108,18 +106,14 @@ function PlayerVideoYT({ videoSelected }) {
       style={{ left: initialPosVideo.x, top: initialPosVideo.y }}
 
     >
-      {/* ── Toolbar ── */}
       <div className="playerVideo__toolbar">
-        {/* Drag handle */}
         <MdDragIndicator
           onPointerDown={onPointerDown} 
           className="playerVideo__icon playerVideo__icon--drag"
         />
 
-        {/* Title */}
         <span className="playerVideo__title">{videoSelected.title}</span>
 
-        {/* Close */}
         <TiDeleteOutline
           onClick={() => setVisibleVideoYT(false)}
           className="playerVideo__icon playerVideo__icon--close"
@@ -127,7 +121,6 @@ function PlayerVideoYT({ videoSelected }) {
 
       </div>
 
-      {/* ── iFrame ── */}
       <div className="playerVideo__iframe-wrap">
         <iframe
           src={videoSelected.src}

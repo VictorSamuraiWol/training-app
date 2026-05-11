@@ -16,7 +16,6 @@ function NavigateDefault({ isLogged, setActivateNavigateDefault }) {
 
   }, [isLogged, navigate, setActivateNavigateDefault])
 
-  // return <div>Loading...</div>;
 }
 
 export default NavigateDefault;

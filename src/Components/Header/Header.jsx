@@ -11,7 +11,7 @@ import { DataContext } from '../DataContext/DataContext';
 
 function Header({ compactUserName }) {
 
-  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dinamicUsersContents } = useContext(DataContext)
+  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate } = useContext(DataContext)
 
   const clickSoundButton = new Audio(soundButton)
 
@@ -39,8 +39,7 @@ function Header({ compactUserName }) {
         />
       </Link>
 
-      {/* Static Content */}
-      {staticUsersContents && staticUsersContents
+      {/* {staticUsersContents && staticUsersContents
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => (
       <div
@@ -70,8 +69,41 @@ function Header({ compactUserName }) {
 
       </div>))}
 
-      {/* Dinamic Content */}
-      {dinamicUsersContents && dinamicUsersContents
+      {dynamicUsersContents && dynamicUsersContents
+        .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+        .map(user => (
+      <div
+        key={user.name}
+        className='container-login-signin'
+      >
+        <div className='container-login-signin-image-name'>
+          {user.imageProfile && <img 
+            src={imagesDescriptions[user.imageProfile]}
+            className='container-login-signin-image-name-img' 
+          />}
+
+          {<p className='container-login-signin-image-name-short-text'>{compactUserName(user.name, 8)}</p>}
+          {<p className='container-login-signin-image-name-long-text'>{compactUserName(user.name, 15)}</p>}
+
+        </div>
+
+        <Link className='link-container-button-signout' to='/'>
+          <div className='container-button-signout'>
+            <ButtonDefault
+              onClick={signOut}
+              nameButton='SIGN OUT'
+              specificStylesButton='specificStylesSignoutButton'
+            />
+          </div>
+        </Link>
+
+      </div>))} */}
+      {/* ----------------------------------------------------------------------- */}
+
+
+
+      {/* Static and Dynamic User Contents */}
+      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => (
       <div

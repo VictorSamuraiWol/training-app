@@ -19,7 +19,7 @@ Modal.setAppElement('#root')
 
 function VideoModal({ specificsStylesTogglesVideoModal }) {
 
-  const { staticUsersContents, dinamicUsersContents, nameUser, loginValidate } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, nameUser, loginValidate } = useContext(DataContext)
 
   const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition
   } = useOutletContext()
@@ -276,8 +276,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
               className='videos-selects-select-option'>select video
             </option>
 
-            {/* Static Content */}
-            {staticUsersContents && loginValidate && staticUsersContents
+            {/* {staticUsersContents && loginValidate && staticUsersContents
             .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
             .map(user => (
               user.videoYT && user.videoYT.map((video, indice) => 
@@ -291,8 +290,25 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
                 </option>)
             ))}
 
-            {/* Dinamic Content */}
-            {dinamicUsersContents && loginValidate && dinamicUsersContents
+            {dynamicUsersContents && loginValidate && dynamicUsersContents
+            .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+            .map(user => (
+              user.videoYT && user.videoYT.map((video, indice) => 
+                video && <option
+                key={indice}
+                value={video.id}
+                className='videos-selects-select-option'
+                >
+                  {compactUserName(video.name, 60)}
+
+                </option>)
+            ))} */}
+            {/* --------------------------------------------------------------- */}
+
+
+
+            {/* Static and Dynamic User Contents */}
+            {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
             .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
             .map(user => (
               user.videoYT && user.videoYT.map((video, indice) => 

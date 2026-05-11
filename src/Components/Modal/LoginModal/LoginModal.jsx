@@ -11,7 +11,7 @@ Modal.setAppElement('#root')
 
 function LoginModal() {
 
-  const { staticUsersContents, dinamicUsersContents } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents } = useContext(DataContext)
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -60,9 +60,11 @@ function LoginModal() {
           /> 
         </div>
 
-        <div className='login-users-passwords'>
+
+
+        {/* ---------------------------------------------------------------------------- */}
+        {/* <div className='login-users-passwords'>
           <div className='static-dinamic-content'>
-            {/* Static Content */}
             {staticUsersContents && staticUsersContents.map(user => (
               <div 
                 key={user.id}
@@ -77,8 +79,7 @@ function LoginModal() {
               </div>
             ))}
 
-            {/* Dinamic Content */}
-            {dinamicUsersContents && dinamicUsersContents.map(user => (
+            {dynamicUsersContents && dynamicUsersContents.map(user => (
               <div 
                 key={user.id}
                 className='login-users-passwords-users'
@@ -94,7 +95,32 @@ function LoginModal() {
 
           </div>
 
-      </div>
+        </div> */}
+      {/* ----------------------------------------------------------------------------- */}
+
+
+
+        <div className='login-users-passwords'>
+          <div className='static-dinamic-content'>
+            {/* Static and Dynamic User Contents */}
+            {(staticUsersContents || dynamicUsersContents) && [...(staticUsersContents), ...(dynamicUsersContents)]
+            .map(user => (
+              <div 
+                key={user.id} 
+                className='login-users-passwords-users'
+              >
+                <div className='login-users-passwords-user'>
+                  <p className='login-users-passwords-user-name'>Name: {user.name}</p>
+                  <p className='login-users-passwords-password'>Password: {user.password}</p>
+
+                </div>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
 
       </Modal>
 

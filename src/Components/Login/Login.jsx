@@ -16,33 +16,63 @@ function Login({ setActivateNavigateDefault }) {
 
   const clickSoundButton = new Audio(soundButton)
 
-  const { staticUsersContents, dinamicUsersContents, setLoginValidate, nameUser, setNameUser  } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
 
   const onLoginValidate = (e) => {
     e.preventDefault()
     const errorMessage = document.querySelector('#alert-login-message')
 
-    let matchedStatic;
-    let matchedDinamic;
 
-    {/* Static Content */}
-    matchedStatic = staticUsersContents && staticUsersContents.filter(user => 
+
+    // ------------------------------------------------------------------------
+    // let matchedStatic;
+    // let matchedDinamic;
+    
+    // matchedStatic = staticUsersContents && staticUsersContents.filter(user => 
+      //   (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
+      //   (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
+      
+    // matchedDinamic = dynamicUsersContents && dynamicUsersContents.filter(user => 
+      //   (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
+      //   (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
+        
+    // if (matchedStatic || matchedDinamic) {
+    //   setLoginValidate(true)
+    //   setActivateNavigateDefault(true)
+
+    // } else {
+    //   setLoginValidate(false)
+    //   dynamicUsersContents && setAlertLoginMessage('Invalid user')
+    //   !dynamicUsersContents && setAlertLoginMessage('Invalid static user')
+    //   errorMessage.classList.add('alert-login-message-able')
+    //   errorMessage.classList.remove('alert-login-message-disable')
+
+    //   setTimeout(() => {
+    //     errorMessage.classList.add('alert-login-message-disable')
+    //     errorMessage.classList.remove('alert-login-message-able')
+
+    //   } , 3000)
+
+    // }
+    // -------------------------------------------------------------------
+
+
+
+    let matchedUsersContents;
+
+    {/* Static and Dynamic User Contents */}
+    matchedUsersContents = (staticUsersContents || dynamicUsersContents) && [...(staticUsersContents), ...(dynamicUsersContents)].filter(user => 
       (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
       (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
 
-    {/* Dinamic Content */}
-    matchedDinamic = dinamicUsersContents && dinamicUsersContents.filter(user => 
-      (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
-      (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
-
-    if (matchedStatic || matchedDinamic) {
+    if (matchedUsersContents) {
       setLoginValidate(true)
       setActivateNavigateDefault(true)
 
     } else {
       setLoginValidate(false)
-      dinamicUsersContents && setAlertLoginMessage('Invalid user')
-      !dinamicUsersContents && setAlertLoginMessage('Invalid static user')
+      dynamicUsersContents && setAlertLoginMessage('Invalid user')
+      !dynamicUsersContents && setAlertLoginMessage('Invalid static user')
       errorMessage.classList.add('alert-login-message-able')
       errorMessage.classList.remove('alert-login-message-disable')
 
