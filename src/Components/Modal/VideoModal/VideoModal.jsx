@@ -276,37 +276,6 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
               className='videos-selects-select-option'>select video
             </option>
 
-            {/* {staticUsersContents && loginValidate && staticUsersContents
-            .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-            .map(user => (
-              user.videoYT && user.videoYT.map((video, indice) => 
-                video && <option
-                key={indice}
-                value={video.id}
-                className='videos-selects-select-option'
-                >
-                  {compactUserName(video.name, 60)}
-
-                </option>)
-            ))}
-
-            {dynamicUsersContents && loginValidate && dynamicUsersContents
-            .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-            .map(user => (
-              user.videoYT && user.videoYT.map((video, indice) => 
-                video && <option
-                key={indice}
-                value={video.id}
-                className='videos-selects-select-option'
-                >
-                  {compactUserName(video.name, 60)}
-
-                </option>)
-            ))} */}
-            {/* --------------------------------------------------------------- */}
-
-
-
             {/* Static and Dynamic User Contents */}
             {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
             .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())

@@ -22,42 +22,6 @@ function Login({ setActivateNavigateDefault }) {
     e.preventDefault()
     const errorMessage = document.querySelector('#alert-login-message')
 
-
-
-    // ------------------------------------------------------------------------
-    // let matchedStatic;
-    // let matchedDinamic;
-    
-    // matchedStatic = staticUsersContents && staticUsersContents.filter(user => 
-      //   (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
-      //   (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
-      
-    // matchedDinamic = dynamicUsersContents && dynamicUsersContents.filter(user => 
-      //   (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
-      //   (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
-        
-    // if (matchedStatic || matchedDinamic) {
-    //   setLoginValidate(true)
-    //   setActivateNavigateDefault(true)
-
-    // } else {
-    //   setLoginValidate(false)
-    //   dynamicUsersContents && setAlertLoginMessage('Invalid user')
-    //   !dynamicUsersContents && setAlertLoginMessage('Invalid static user')
-    //   errorMessage.classList.add('alert-login-message-able')
-    //   errorMessage.classList.remove('alert-login-message-disable')
-
-    //   setTimeout(() => {
-    //     errorMessage.classList.add('alert-login-message-disable')
-    //     errorMessage.classList.remove('alert-login-message-able')
-
-    //   } , 3000)
-
-    // }
-    // -------------------------------------------------------------------
-
-
-
     let matchedUsersContents;
 
     {/* Static and Dynamic User Contents */}

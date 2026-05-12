@@ -60,46 +60,6 @@ function LoginModal() {
           /> 
         </div>
 
-
-
-        {/* ---------------------------------------------------------------------------- */}
-        {/* <div className='login-users-passwords'>
-          <div className='static-dinamic-content'>
-            {staticUsersContents && staticUsersContents.map(user => (
-              <div 
-                key={user.id}
-                className='login-users-passwords-users'
-              >
-                <div className='login-users-passwords-user'>
-                  <p className='login-users-passwords-user-name'>Name: {user.name}</p>
-                  <p className='login-users-passwords-password'>Password: {user.password}</p>
-                  <p></p>
-                </div>
-
-              </div>
-            ))}
-
-            {dynamicUsersContents && dynamicUsersContents.map(user => (
-              <div 
-                key={user.id}
-                className='login-users-passwords-users'
-              >
-                <div className='login-users-passwords-user'>
-                  <p className='login-users-passwords-user-name'>Name: {user.name}</p>
-                  <p className='login-users-passwords-password'>Password: {user.password}</p>
-                  <p></p>
-                </div>
-
-              </div>
-            ))}
-
-          </div>
-
-        </div> */}
-      {/* ----------------------------------------------------------------------------- */}
-
-
-
         <div className='login-users-passwords'>
           <div className='static-dinamic-content'>
             {/* Static and Dynamic User Contents */}
