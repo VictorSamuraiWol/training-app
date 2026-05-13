@@ -1,16 +1,30 @@
 import './ExercisesGif.css';
+import waitingTheExercise from '../../assets/images/exercises-gif/waiting-the-exercise-gif.gif'
+import hiit from '../../assets/images/exercises-gif/hiit-gif.gif'
+import barbellBenchPress from '../../assets/images/exercises-gif/barbell-bench-press-gif.gif'
+import concentrationCurl from '../../assets/images/exercises-gif/concentration-curl-gif.gif'
+import dumbbellReverseCurl from '../../assets/images/exercises-gif/dumbbell-reverse-curl-gif.gif'
+import plank from '../../assets/images/exercises-gif/plank-gif.gif'
+import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
-function ExercisesGif({ setAbleExercisesGif, exercise1Gif, exercise2Gif, exercise3Gif, exercise4Gif, 
-  exercise5Gif, exercise6Gif, exercise7Gif, exercise8Gif, exercise9Gif, exercise10Gif,
-  exercise11Gif, exercise12Gif, exercise13Gif, exercise14Gif, exercise15Gif
-
-}) {
+function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
 
   function closeGif() {
     setAbleExercisesGif(false)
 
   }
+
+  // exercises gifs
+  const [exercisesGifs] = useState({
+    waitingTheExercise: waitingTheExercise,
+    hiit: hiit,
+    barbellBenchPress: barbellBenchPress,
+    concentrationCurl: concentrationCurl,
+    dumbbellReverseCurl: dumbbellReverseCurl,
+    plank: plank
+
+  })
 
   return(
     <div 
@@ -22,84 +36,15 @@ function ExercisesGif({ setAbleExercisesGif, exercise1Gif, exercise2Gif, exercis
         className='exercises-gif-delete-icon'
       />
 
-      {/* Workout */}
-      {exercise1Gif && <img
+      {exerciseGif && <img
         className='exercises-gif-img'
-        src={exercise1Gif}
-      />}
-
-      {exercise2Gif && <img
-        className='exercises-gif-img'
-        src={exercise2Gif}
-      />}
-
-      {exercise3Gif && <img
-        className='exercises-gif-img'
-        src={exercise3Gif}
-      />}
-
-      {exercise4Gif && <img
-        className='exercises-gif-img'
-        src={exercise4Gif}
-      />}
-
-      {exercise5Gif && <img
-        className='exercises-gif-img'
-        src={exercise5Gif}
-      />}
-
-      {exercise6Gif && <img
-        className='exercises-gif-img'
-        src={exercise6Gif}
-      />}
-
-      {exercise7Gif && <img
-        className='exercises-gif-img'
-        src={exercise7Gif}
-      />}
-
-      {exercise8Gif && <img
-        className='exercises-gif-img'
-        src={exercise8Gif}
-      />}
-
-      {exercise9Gif && <img
-        className='exercises-gif-img'
-        src={exercise9Gif}
-      />}
-
-      {exercise10Gif && <img
-        className='exercises-gif-img'
-        src={exercise10Gif}
-      />}
-
-      {exercise11Gif && <img
-        className='exercises-gif-img'
-        src={exercise11Gif}
-      />}
-
-      {exercise12Gif && <img
-        className='exercises-gif-img'
-        src={exercise12Gif}
-      />}
-
-      {exercise13Gif && <img
-        className='exercises-gif-img'
-        src={exercise13Gif}
-      />}
-
-      {exercise14Gif && <img
-        className='exercises-gif-img'
-        src={exercise14Gif}
-      />}
-
-      {exercise15Gif && <img
-        className='exercises-gif-img'
-        src={exercise15Gif}
+        src={exercisesGifs[exerciseGif]}
       />}
 
     </div>
+
   )
+
 }
 
 export default ExercisesGif;

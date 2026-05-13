@@ -15,8 +15,8 @@ function Cards() {
     <>
       {/* Static and Dynamic User Contents */}
       {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
-      .map(user => (
-        nameUser.toLowerCase().trim() === user.name.toLowerCase() && <div 
+      .map(user => (nameUser.toLowerCase().trim() === user.name.toLowerCase() && 
+        <div 
           className='cards' 
           key={user.id}
         >

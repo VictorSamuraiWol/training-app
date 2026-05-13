@@ -10,13 +10,11 @@
   left: 0;
   height: 100vh;
   width: 100vw;
-  z-index: 1;
+  z-index: 2;
 }
 
 .exercises-gif-delete-icon {
   position: absolute;
-  top: 21%;
-  right: 31%;
   color: var(--border-green);
   background-color: var(--text);
   border-radius: 50%;
@@ -28,9 +26,6 @@
 
 .exercises-gif-img {
   position: absolute;
-  top: 20%;
-  right: 30%;
-  width: 40%;
   border: 1px solid var(--border-green);
   border-radius: 16px;
   box-shadow: 0 0 5px var(--border), 0 0 10px var(--border), 0 0 20px var(--border);
@@ -56,15 +51,15 @@
 
 @media (min-width: 481px) {
   .exercises-gif-delete-icon {
-    top: 25.5%;
-    right: 21%;
+    left: 55%;
+    bottom: 41%;
     width: 20px;
     height: 20px;
   }
 
   .exercises-gif-img {
-    top: 25%;
-    right: 20%;
+    left: 0;
+    bottom: 0;
     width: 60%;
   }
 
@@ -72,15 +67,13 @@
 
 @media (min-width: 768px) {  
   .exercises-gif-delete-icon {
-    top: 25.5%;
-    right: 26%;
+    left: 41.5%;
+    bottom: 49%;  
     width: 25px;
     height: 25px;
   }
 
   .exercises-gif-img {
-    top: 25%;
-    right: 25%;
     width: 45%;
   }
 
@@ -89,14 +82,14 @@
 @media (min-width: 1024px) {
   .exercises-gif-delete-icon {
     top: 20.5%;
-    right: 30.5%;
+    left: 64%;
     width: 30px;
     height: 30px;
   }
 
   .exercises-gif-img {
     top: 20%;
-    right: 30%;
+    left: 27%;
     width: 40%;
   }
 
@@ -104,11 +97,13 @@
 
 @media (min-width: 1280px) {
   .exercises-gif-delete-icon {
-    right: 35.5%;
+    top: 15.3%;
+    left: 65.5%;
   }
 
   .exercises-gif-img {
-    right: 35%;
+    top: 15%;
+    left: 33%;
     width: 35%;
   }
 
@@ -116,11 +111,13 @@
 
 @media (min-width: 1440px) {
   .exercises-gif-delete-icon {
-    top: 15.5%;
+    top: 15.3%;
+    left: 65.2%;
   }
 
   .exercises-gif-img {
     top: 15%;
+    left: 32%;
   }
   
 }

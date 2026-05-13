@@ -5,13 +5,15 @@ import { FaStop } from "react-icons/fa";
 import { useState, useRef, useEffect } from "react";
 
 export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, 
-  specificStyleTimerButton, isRunning, setIsRunning, pauseOthersExercisesTimers, 
-  buttonPlayPauseId, setPlayPauseId
+  specificStyleTimerButton, isRunning, setIsRunning
 }) {
-  const [time, setTime] = useState(0) // tempo em ms
+  
+  const [time, setTime] = useState(0)
 
   const intervalRef = useRef(null)
+
   const startTimeRef = useRef(0)
+
   const elapsedBeforePause = useRef(0)
 
   useEffect(() => {
@@ -29,24 +31,11 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay,
 
   }, [isRunning, setTime])
 
-  useEffect(() => {
-    if (buttonPlayPauseId === '1' || buttonPlayPauseId === '2' || buttonPlayPauseId === '3' || buttonPlayPauseId === '4' || buttonPlayPauseId === '5' || buttonPlayPauseId === '6' || buttonPlayPauseId === '7' || buttonPlayPauseId === '8' || buttonPlayPauseId === '9' || buttonPlayPauseId === '10' || buttonPlayPauseId === '11' || buttonPlayPauseId === '12' || buttonPlayPauseId === '13' || buttonPlayPauseId === '14' || buttonPlayPauseId === '15') {
-      pauseOthersExercisesTimers()
-
-    }
-
-  }, [pauseOthersExercisesTimers, buttonPlayPauseId])
-
-  const toggleTimer = (buttonPlayPauseId) => {
+  const toggleTimer = () => {
     if (isRunning) {
       elapsedBeforePause.current = time
     }
     setIsRunning((prev) => !prev)
-
-    if (buttonPlayPauseId === '1' || buttonPlayPauseId === '2' || buttonPlayPauseId === '3' || buttonPlayPauseId === '4' || buttonPlayPauseId === '5' || buttonPlayPauseId === '6' || buttonPlayPauseId === '7' || buttonPlayPauseId === '8' || buttonPlayPauseId === '9' || buttonPlayPauseId === '10' || buttonPlayPauseId === '11' || buttonPlayPauseId === '12' || buttonPlayPauseId === '13' || buttonPlayPauseId === '14' || buttonPlayPauseId === '15') {
-      setPlayPauseId(buttonPlayPauseId)
-
-    }
 
   }
 
@@ -73,8 +62,7 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay,
 
       <div className="timer-buttons">
         <button
-          id={buttonPlayPauseId}
-          onClick={() => toggleTimer(buttonPlayPauseId)}
+          onClick={toggleTimer}
           className={`timer-button ${specificStyleTimerButton}`} 
         >
           {isRunning ? <FaPause /> : <FaPlay />}

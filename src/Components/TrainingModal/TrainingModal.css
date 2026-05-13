@@ -90,13 +90,13 @@
 
 .container-training-modal-trainings-users {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
   gap: 32px;
   flex-wrap: wrap;
   width: 100%;
-  height: 95%;
+  height: 100%;
   overflow-x: auto;
   overflow-y: hidden;
 }
@@ -119,57 +119,12 @@
   background: var(--border-yellow);
 }
 
-.link-workout-A {
+.link {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-.link-workout-B {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-C {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-D {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-E {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-F {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-G {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-H {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-I {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.link-workout-J {
-  text-decoration: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.specificStylesButtonA {
+.specificStylesButton1 {
   color: var(--bg);
   text-shadow: 1px 1px 2px var(--bg);
   background-color: var(--text);
@@ -177,14 +132,14 @@
   border: 0;
 }
 
-.specificStylesButtonA:hover {
+.specificStylesButton1:hover {
   color: var(--text);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--bg);
   box-shadow: 0 0 5px var(--text);
 }
 
-.specificStylesButtonB {
+.specificStylesButton2 {
   color: var(--border);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--bg);
@@ -192,14 +147,14 @@
   border: 0;
 }
 
-.specificStylesButtonB:hover {
+.specificStylesButton2:hover {
   color: var(--bg);
   text-shadow: 1px 1px 2px var(--bg);
   background-color: var(--border);
   box-shadow: 0 0 5px var(--border);
 }
 
-.specificStylesButtonC {
+.specificStylesButton3 {
   color: var(--border-green);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--border);
@@ -207,14 +162,14 @@
   border: 0;
 }
 
-.specificStylesButtonC:hover {
+.specificStylesButton3:hover {
   color: var(--border);
   text-shadow: 1px 1px 2px var(--border);
   background-color: var(--border-green);
   box-shadow: 0 0 5px var(--border);
 }
 
-.specificStylesButtonD {
+.specificStylesButton4 {
   color: var(--border-yellow);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--border-green);
@@ -222,14 +177,14 @@
   border: 0;
 }
 
-.specificStylesButtonD:hover {
+.specificStylesButton4:hover {
   color: var(--border-green);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--border-yellow);
   box-shadow: 0 0 5px var(--border-green);
 }
 
-.specificStylesButtonE {
+.specificStylesButton5 {
   color: var(--text);
   text-shadow: 1px 1px 2px var(--border);
   background-color: var(--border-yellow);
@@ -237,13 +192,13 @@
   border: 0;
 }
 
-.specificStylesButtonE:hover {
+.specificStylesButton5:hover {
   color: var(--border-yellow);
   text-shadow: 1px 1px 2px var(--border-yellow);
   background-color: var(--text);
   box-shadow: 0 0 5px var(--border-yellow);
 }
-.specificStylesButtonF {
+.specificStylesButton6 {
   color: var(--text);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--bg);
@@ -251,13 +206,13 @@
   border: 0;
 }
 
-.specificStylesButtonF:hover {
+.specificStylesButton6:hover {
   color: var(--bg);
   text-shadow: 1px 1px 2px var(--bg);
   background-color: var(--text);
   box-shadow: 0 0 5px var(--text);
 }
-.specificStylesButtonG {
+.specificStylesButton7 {
   color: var(--bg);
   text-shadow: 1px 1px 2px var(--bg);
   background-color: var(--border);
@@ -265,13 +220,13 @@
   border: 0;
 }
 
-.specificStylesButtonG:hover {
+.specificStylesButton7:hover {
   color: var(--border);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--bg);
   box-shadow: 0 0 5px var(--border);
 }
-.specificStylesButtonH {
+.specificStylesButton8 {
   color: var(--border);
   text-shadow: 1px 1px 2px var(--border);
   background-color: var(--border-green);
@@ -279,13 +234,13 @@
   border: 0;
 }
 
-.specificStylesButtonH:hover {
+.specificStylesButton8:hover {
   color: var(--border-green);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--border);
   box-shadow: 0 0 5px var(--border-green);
 }
-.specificStylesButtonI {
+.specificStylesButton9 {
   color: var(--border-green);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--border-yellow);
@@ -293,13 +248,14 @@
   border: 0;
 }
 
-.specificStylesButtonI:hover {
+.specificStylesButton9:hover {
   color: var(--border-yellow);
   text-shadow: 1px 1px 2px var(--text);
   background-color: var(--border-green);
   box-shadow: 0 0 5px var(--border-yellow);
 }
-.specificStylesButtonJ {
+
+.specificStylesButton10 {
   color: var(--border-yellow);
   text-shadow: 1px 1px 2px var(--border-yellow);
   background-color: var(--text);
@@ -307,7 +263,7 @@
   border: 0;
 }
 
-.specificStylesButtonJ:hover {
+.specificStylesButton10:hover {
   color: var(--text);
   text-shadow: 1px 1px 2px var(--border);
   background-color: var(--border-yellow);
@@ -317,7 +273,7 @@
 /* Responsiveness */
 @media (max-width: 480px) {
   .container-training-modal {
-    padding-top: 82px;
+    padding-top: 76px;
   }
 
   .container-training-modal-button {
@@ -325,8 +281,8 @@
   }
 
   .modalTrainingContent {
-    gap: 8px;
-    width: 60%;
+    gap: 24px;
+    width: 70%;
     padding: 8px;
   }
 
@@ -338,48 +294,73 @@
     font-size: 1.75rem;
   }
 
+  .container-training-modal-trainings-users {
+    gap: 24px;
+  }
+
   .container-training-modal-trainings-users::-webkit-scrollbar {
     height: 6px;
   }
 
-  .specificStylesButtonA {
+  .specificStylesButton1 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonB {
+  .specificStylesButton2 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonC {
+  .specificStylesButton3 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonD {
+  .specificStylesButton4 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonE {
+  .specificStylesButton5 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonF {
+  .specificStylesButton6 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonG {
+  .specificStylesButton7 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonH {
+  .specificStylesButton8 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonI {
+  .specificStylesButton9 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonJ {
+  .specificStylesButton10 {
     font-size: 0.95rem;
+    padding: 8px;
+    border-radius: 12px;
   }
 
 }
@@ -394,8 +375,8 @@
   }
 
   .modalTrainingContent {
-    gap: 8px;
-    width: 60%;
+    gap: 24px;
+    width: 70%;
     padding: 8px;
   }
 
@@ -407,48 +388,72 @@
     font-size: 2rem;
   }
 
+  .container-training-modal-trainings-users {
+    gap: 24px;
+  }
+
   .container-training-modal-trainings-users::-webkit-scrollbar {
     height: 6px;
   }
 
-  .specificStylesButtonA {
+  .specificStylesButton1 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonB {
+  .specificStylesButton2 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonC {
+  .specificStylesButton3 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonD {
+  .specificStylesButton4 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonE {
+  .specificStylesButton5 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonF {
+  .specificStylesButton6 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonG {
+  .specificStylesButton7 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonH {
+  .specificStylesButton8 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonI {
+  .specificStylesButton9 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
-  .specificStylesButtonJ {
+  .specificStylesButton10 {
     font-size: 1rem;
+    padding: 10px;
+    border-radius: 12px;
   }
 
 }
@@ -459,7 +464,6 @@
   }
 
   .modalTrainingContent {
-    gap: 16px;
     width: 50%;
     padding: 10px;
   }
@@ -470,10 +474,6 @@
 
   .container-training-modal-title-delete-text {
     font-size: 2.25rem;
-  }
-
-  .container-training-modal-trainings-users {
-    justify-content: start;
   }
 
   .container-training-modal-trainings-users::-webkit-scrollbar {
@@ -492,7 +492,6 @@
   }
 
   .modalTrainingContent {
-    gap: 24px;
     width: 40%;
     padding: 12px;
   }
@@ -505,44 +504,64 @@
     font-size: 2.5rem;
   }
 
-  .specificStylesButtonA {
+  .specificStylesButton1 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonB {
+  .specificStylesButton2 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonC {
+  .specificStylesButton3 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonD {
+  .specificStylesButton4 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonE {
+  .specificStylesButton5 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonF {
+  .specificStylesButton6 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonG {
+  .specificStylesButton7 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonH {
+  .specificStylesButton8 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonI {
+  .specificStylesButton9 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
-  .specificStylesButtonJ {
+  .specificStylesButton10 {
     font-size: 1.05rem;
+    padding: 12px;
+    border-radius: 14px;
   }
 
 }
@@ -557,7 +576,6 @@
   }
 
   .modalTrainingContent {
-    gap: 32px;
     width: 30%;
     padding: 14px;
   }
@@ -570,44 +588,64 @@
     font-size: 3rem;
   }
 
-  .specificStylesButtonA {
+  .specificStylesButton1 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonB {
+  .specificStylesButton2 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonC {
+  .specificStylesButton3 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonD {
+  .specificStylesButton4 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonE {
+  .specificStylesButton5 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonF {
+  .specificStylesButton6 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonG {
+  .specificStylesButton7 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonH {
+  .specificStylesButton8 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonI {
+  .specificStylesButton9 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
-  .specificStylesButtonJ {
+  .specificStylesButton10 {
     font-size: 1.1rem;
+    padding: 14px;
+    border-radius: 16px;
   }
 
 }
@@ -633,44 +671,54 @@
     font-size: 3.5rem;
   }
 
-  .specificStylesButtonA {
+  .specificStylesButton1 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonB {
+  .specificStylesButton2 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonC {
+  .specificStylesButton3 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonD {
+  .specificStylesButton4 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonE {
+  .specificStylesButton5 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonF {
+  .specificStylesButton6 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonG {
+  .specificStylesButton7 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonH {
+  .specificStylesButton8 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonI {
+  .specificStylesButton9 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
-  .specificStylesButtonJ {
+  .specificStylesButton10 {
     font-size: 1.125rem;
+    padding: 16px;
   }
 
 }
