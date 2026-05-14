@@ -42,7 +42,7 @@ export default function DataProvider({ children }) {
       "password": "Victor Static",
       "imageProfile": "profileVictor",
       "audio": "audio1",
-      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}],
+      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}, {"name": "Armin van Buuren live at Ushuaïa, Ibiza 2025", "id": "yIBQX-F_Jjw?si=es6mErCPcGn9_0tm"}, {"name": "Armin van Buuren live at A State of Trance, London 2025", "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"}],
       "id": "Victor Static"
     },
     {

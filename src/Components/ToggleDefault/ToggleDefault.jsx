@@ -1,5 +1,4 @@
 import './ToggleDefault.css';
-import soundButton from '../../assets/audios/click-sound.mp3';
 import { MdToggleOff } from "react-icons/md";
 import { MdToggleOn } from "react-icons/md";
 import { BsClockFill } from "react-icons/bs";
@@ -9,11 +8,8 @@ import { AiOutlineYoutube } from "react-icons/ai";
 
 function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesToggles, specificStyleToggle }) {
 
-  const clickSoundButton = new Audio(soundButton)
-
   function toggle() {
     setIsOnToggle(isOnToggle => !isOnToggle)
-    clickSoundButton.play()
 
   }
 

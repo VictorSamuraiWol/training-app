@@ -1,7 +1,6 @@
 import './VideoModal.css';
 import Modal from 'react-modal';
 import ButtonDefault from '../../ButtonDefault/ButtonDefault';
-import soundButton from '../../../assets/audios/click-sound.mp3';
 import bgVideoModal from '../../../assets/images/bg-video-modal.png';
 import LabelDefault from '../../LabelDefault/LabelDefault';
 import InputDefault from '../../InputDefault/InputDefault';
@@ -25,8 +24,6 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
   } = useOutletContext()
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
-
-  const clickSoundButton = new Audio(soundButton)
     
   const [openVideoModal, setOpenVideoModal] = useState(false)
 
@@ -42,14 +39,12 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
   function openModal() {
     setModalIsOpen(true)
     setVisibleVideoYT(false)
-    clickSoundButton.play()
 
   }
 
   function closeModal() {
     setModalIsOpen(false)
     setErrorMessageVideoModal('')
-    clickSoundButton.play()
 
   }
 

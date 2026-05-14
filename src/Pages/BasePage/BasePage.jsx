@@ -21,7 +21,7 @@ function BasePage() {
   const [initialPosVideo, setInitialPosVideo] = useState('')
 
   const [visibleVideoYT, setVisibleVideoYT] = useState(false)
-  
+
   const [selectContainerVideoYTPosition, setSelectContainerVideoYTPosition] = useState('select-video-iframe-initial-left-center-right-position')
 
   const compactUserName = (name, numLength) => {

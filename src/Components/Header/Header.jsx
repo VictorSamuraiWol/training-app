@@ -4,7 +4,6 @@ import ButtonDefault from '../ButtonDefault/ButtonDefault';
 import example from '../../assets/images/profiles/example.png';
 import profileVictor from '../../assets/images/profiles/profile-victor.png';
 import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
-import soundButton from '../../assets/audios/click-sound.mp3';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
@@ -12,8 +11,6 @@ import { DataContext } from '../DataContext/DataContext';
 function Header({ compactUserName }) {
 
   const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate } = useContext(DataContext)
-
-  const clickSoundButton = new Audio(soundButton)
 
   const [imagesDescriptions] = useState({
     example: example,
@@ -33,7 +30,6 @@ function Header({ compactUserName }) {
     <div className='header'>
       <Link className='link-img' to='/'>
         <img
-          onClick={() => clickSoundButton.play()}
           className='link-img-logo-header' 
           src={logo} 
         />

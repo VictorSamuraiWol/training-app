@@ -1,12 +1,9 @@
 import './ButtonDefault.css';
-import soundButton from '../../assets/audios/click-sound.mp3';
+import { DataContext } from '../DataContext/DataContext';
 
 function ButtonDefault({ onClick, specificStylesButton, nameButton, typeButton, imageReact }) {
 
-  const clickSoundButton = new Audio(soundButton)
-
   function multiFunctionsOnCLickAudio() {
-    clickSoundButton.play() 
     onClick && onClick()
 
   }
