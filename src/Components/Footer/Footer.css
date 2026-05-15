@@ -50,7 +50,7 @@
   border-top: 1px solid var(--border);
   border-right: 1px solid var(--bg);
   border-bottom: 1px solid var(--bg);
-  box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg);
+  box-shadow: 0 0 5px var(--bg);
   cursor: pointer;
   text-overflow: ellipsis;
 }

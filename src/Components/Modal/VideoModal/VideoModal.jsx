@@ -29,12 +29,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
 
   const [errorMessageVideoModal, setErrorMessageVideoModal] = useState('')
 
-  const [radioCheckedInput1, setRadioCheckedInput1] = useState(true)
-  const [radioCheckedInput2, setRadioCheckedInput2] = useState(false)
-  const [radioCheckedInput3, setRadioCheckedInput3] = useState(false)
-  const [radioCheckedInput4, setRadioCheckedInput4] = useState(false)
-  const [radioCheckedInput5, setRadioCheckedInput5] = useState(false)
-  const [radioCheckedInput6, setRadioCheckedInput6] = useState(false)
+  const [selectedRadio, setSelectedRadio] = useState(null)
 
   function openModal() {
     setModalIsOpen(true)
@@ -68,61 +63,14 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
   }
 
   function captureValueRadioInput(e, id) {
-    if (id === 1) {
-      setSelectContainerVideoYTPosition('select-video-iframe-initial-left-center-right-position')
-      setRadioCheckedInput1(true)
-      setRadioCheckedInput2(false)
-      setRadioCheckedInput3(false)
-      setRadioCheckedInput4(false)
-      setRadioCheckedInput5(false)
-      setRadioCheckedInput6(false)
+    setSelectedRadio(id)
 
-    } else if (id === 2) {
-      setSelectContainerVideoYTPosition('select-video-iframe-top-center-position')
-      setRadioCheckedInput1(false)
-      setRadioCheckedInput2(true)
-      setRadioCheckedInput3(false)
-      setRadioCheckedInput4(false)
-      setRadioCheckedInput5(false)
-      setRadioCheckedInput6(false)
-
-    } else if (id === 3) {
-      setSelectContainerVideoYTPosition('select-video-iframe-top-right-position')
-      setRadioCheckedInput1(false)
-      setRadioCheckedInput2(false)
-      setRadioCheckedInput3(true)
-      setRadioCheckedInput4(false)
-      setRadioCheckedInput5(false)
-      setRadioCheckedInput6(false)
-
-    } else if (id === 4) {
-      setSelectContainerVideoYTPosition('select-video-iframe-bottom-left-position')
-      setRadioCheckedInput1(false)
-      setRadioCheckedInput2(false)
-      setRadioCheckedInput3(false)
-      setRadioCheckedInput4(true)
-      setRadioCheckedInput5(false)
-      setRadioCheckedInput6(false)
-
-    } else if (id === 5) {
-      setSelectContainerVideoYTPosition('select-video-iframe-bottom-center-position')
-      setRadioCheckedInput1(false)
-      setRadioCheckedInput2(false)
-      setRadioCheckedInput3(false)
-      setRadioCheckedInput4(false)
-      setRadioCheckedInput5(true)
-      setRadioCheckedInput6(false)
-
-    } else if (id === 6) {
-      setSelectContainerVideoYTPosition('select-video-iframe-bottom-right-position')
-      setRadioCheckedInput1(false)
-      setRadioCheckedInput2(false)
-      setRadioCheckedInput3(false)
-      setRadioCheckedInput4(false)
-      setRadioCheckedInput5(false)
-      setRadioCheckedInput6(true)
-
-    }
+    id === 1 && setSelectContainerVideoYTPosition('select-video-iframe-initial-left-center-right-position')
+    id === 2 && setSelectContainerVideoYTPosition('select-video-iframe-top-center-position')
+    id === 3 && setSelectContainerVideoYTPosition('select-video-iframe-top-right-position')
+    id === 4 && setSelectContainerVideoYTPosition('select-video-iframe-bottom-left-position')
+    id === 5 && setSelectContainerVideoYTPosition('select-video-iframe-bottom-center-position')
+    id === 6 && setSelectContainerVideoYTPosition('select-video-iframe-bottom-right-position')
 
   }
 
@@ -154,16 +102,15 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
           <div className='container-radios-inputs-label-input'>
             <LabelDefault
               onClick={(e) => captureValueRadioInput(e, 1)}
-              specificStyleLabel={radioCheckedInput1 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
+              specificStyleLabel={selectedRadio === 1 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
               nameLabel='top-left position'
             />
 
             <InputDefault
-              onClick={(e) => captureValueRadioInput(e, 1)}
               typeInput='radio'
               specificStylesInput='container-radios-inputs-input'
-              onChange={(e) => setRadioCheckedInput1(e.target.checked)}
-              checked={radioCheckedInput1}
+              onChange={(e) => captureValueRadioInput(e, 1)}
+              checked={selectedRadio === 1}
             />
 
           </div>
@@ -171,16 +118,15 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
           <div className='container-radios-inputs-label-input'>
             <LabelDefault
               onClick={(e) => captureValueRadioInput(e, 2)} 
-              specificStyleLabel={radioCheckedInput2 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
+              specificStyleLabel={selectedRadio === 2 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
               nameLabel='top-center position' 
             />
 
             <InputDefault 
-              onClick={(e) => captureValueRadioInput(e, 2)}
               typeInput='radio'
               specificStylesInput='container-radios-inputs-input'
-              onChange={(e) => setRadioCheckedInput2(e.target.checked)}
-              checked={radioCheckedInput2}
+              onChange={(e) => captureValueRadioInput(e, 2)}
+              checked={selectedRadio === 2}
             />
 
           </div>
@@ -188,33 +134,31 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
           <div className='container-radios-inputs-label-input'>
             <LabelDefault
               onClick={(e) => captureValueRadioInput(e, 3)}
-              specificStyleLabel={radioCheckedInput3 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
+              specificStyleLabel={selectedRadio === 3 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
               nameLabel='top-right position' 
             />
 
             <InputDefault
-              onClick={(e) => captureValueRadioInput(e, 3)}
               typeInput='radio'
               specificStylesInput='container-radios-inputs-input'
-              onChange={(e) => setRadioCheckedInput3(e.target.checked)}
-              checked={radioCheckedInput3}
+              onChange={(e) => captureValueRadioInput(e, 3)}
+              checked={selectedRadio === 3}
             />
 
           </div>
 
           <div className='container-radios-inputs-label-input'>
             <LabelDefault
-              onClick={(e) => captureValueRadioInput(e, 4)} 
-              specificStyleLabel={radioCheckedInput4 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
+              onClick={(e) => captureValueRadioInput(e, 4)}
+              specificStyleLabel={selectedRadio === 4 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
               nameLabel='bottom-left position' 
             />
 
             <InputDefault
-              onClick={(e) => captureValueRadioInput(e, 4)} 
               typeInput='radio'
               specificStylesInput='container-radios-inputs-input'
-              onChange={(e) => setRadioCheckedInput4(e.target.checked)}
-              checked={radioCheckedInput4}
+              onChange={(e) => captureValueRadioInput(e, 4)}
+              checked={selectedRadio === 4}
             />
 
           </div>
@@ -222,16 +166,15 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
           <div className='container-radios-inputs-label-input'>
             <LabelDefault
               onClick={(e) => captureValueRadioInput(e, 5)} 
-              specificStyleLabel={radioCheckedInput5 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
+              specificStyleLabel={selectedRadio === 5 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
               nameLabel='bottom-center position' 
             />
 
             <InputDefault
-              onClick={(e) => captureValueRadioInput(e, 5)} 
               typeInput='radio'
               specificStylesInput='container-radios-inputs-input'
-              onChange={(e) => setRadioCheckedInput5(e.target.checked)}
-              checked={radioCheckedInput5}
+              onChange={(e) => captureValueRadioInput(e, 5)}
+              checked={selectedRadio === 5}
             />
 
           </div>
@@ -239,16 +182,15 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
           <div className='container-radios-inputs-label-input'>
             <LabelDefault
               onClick={(e) => captureValueRadioInput(e, 6)} 
-              specificStyleLabel={radioCheckedInput6 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
+              specificStyleLabel={selectedRadio === 6 ? 'selectSpecificStyleLabel' : 'specificStyleLabel'}
               nameLabel='bottom-right position' 
             />
 
-            <InputDefault
-              onClick={(e) => captureValueRadioInput(e, 6)} 
+            <InputDefault 
               typeInput='radio'
               specificStylesInput='container-radios-inputs-input'
-              onChange={(e) => setRadioCheckedInput6(e.target.checked)}
-              checked={radioCheckedInput6}
+              onChange={(e) => captureValueRadioInput(e, 6)}
+              checked={selectedRadio === 6}
             />
 
           </div>
