@@ -28,7 +28,7 @@
   padding: 6px;
   border: 1px solid var(--border-green);
   border-radius: 6px;
-  box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg);
+  box-shadow: 0 0 5px var(--border), 0 0 10px var(--border);
 }
 
 .new-title-timer {

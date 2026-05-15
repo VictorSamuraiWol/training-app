@@ -1,7 +1,7 @@
 {
   "clients": [
     {
-      "name" : "Example Dynamic",
+      "name" : "1",
       "weight": "Example",
       "height": "Example",
       "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}]]}],
@@ -9,12 +9,13 @@
                     [{"type": "C"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]]}]
                    ],
       "nutrition": [["Supplements:", "Example"], ["Breakfast:", "Example"], ["Snack:", "Example"], ["Lunch:", "Example"], ["Snack:", "Example"], ["Dinner:", "Example"], ["Late-night Snack:", "Example"]],
-      "notes": ["Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example"],
-      "password": "Example Dynamic",
+      "notes": ["Example", "Example"],
+      "password": "1",
       "imageProfile": "example",
-      "audio": "audio1",
-      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}],
-      "id": "Example Dynamic"
+      "audio": "audio2",
+      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}],
+      "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
+      "id": "1"
     },
     {
       "name" : "12345678900000;151515",
@@ -30,23 +31,8 @@
       "imageProfile": "example",
       "audio": "audio2",
       "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}],
+      "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
       "id": "12345678900000;151515"
-    },
-    {
-      "name" : "1",
-      "weight": "Example",
-      "height": "Example",
-      "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}]]}],
-                    [{"type": "B"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}]]}],
-                    [{"type": "C"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]]}]
-                   ],
-      "nutrition": [["Supplements:", "Example"], ["Breakfast:", "Example"], ["Snack:", "Example"], ["Lunch:", "Example"], ["Snack:", "Example"], ["Dinner:", "Example"], ["Late-night Snack:", "Example"]],
-      "notes": ["Example", "Example"],
-      "password": "1",
-      "imageProfile": "example",
-      "audio": "audio2",
-      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}],
-      "id": "1"
     }
   ] 
 }

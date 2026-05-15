@@ -17,7 +17,7 @@ export default function DataProvider({ children }) {
   {/* Static Users */}
   const staticUsersContents = [
     {
-      "name" : "Example Static",
+      "name" : "0",
       "weight": "Example",
       "height": "Example",
       "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}]]}],
@@ -26,11 +26,12 @@ export default function DataProvider({ children }) {
                    ],
       "nutrition": [["Supplements:", "Example"], ["Breakfast:", "Example"], ["Snack:", "Example"], ["Lunch:", "Example"], ["Snack:", "Example"], ["Dinner:", "Example"], ["Late-night Snack:", "Example"]],
       "notes": ["Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example"],
-      "password": "Example Static",
+      "password": "0",
       "imageProfile": "example",
-      "audio": "audio1",
+      "audio": "audio2",
       "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}],
-      "id": "Example Static"
+      "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
+      "id": "0"
     },
     {
       "name" : "Victor Static",
@@ -46,6 +47,7 @@ export default function DataProvider({ children }) {
       "imageProfile": "profileVictor",
       "audio": "audio1",
       "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}, {"name": "Armin van Buuren live at Ushuaïa, Ibiza 2025", "id": "yIBQX-F_Jjw?si=es6mErCPcGn9_0tm"}, {"name": "Armin van Buuren live at A State of Trance, London 2025", "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"}],
+      "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
       "id": "Victor Static"
     },
     {
@@ -65,23 +67,8 @@ export default function DataProvider({ children }) {
       "imageProfile": "profileLeimar",
       "audio": "audio2",
       "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok | Tomorrowland Winter 2026", "id": "uIsIyjcLkco?si=X-MDTVpAwQ9tzyE1"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
+      "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "D"}, {"path": "/exercises-page/D"}], [{"name": "E"}, {"path": "/exercises-page/E"}], [{"name": "F"}, {"path": "/exercises-page/F"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
       "id": "Leimar"
-    },
-    {
-      "name" : "0",
-      "weight": "Example",
-      "height": "Example",
-      "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}]]}],
-                    [{"type": "B"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}]]}],
-                    [{"type": "C"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]]}]
-                   ],
-      "nutrition": [["Supplements:", "Example"], ["Breakfast:", "Example"], ["Snack:", "Example"], ["Lunch:", "Example"], ["Snack:", "Example"], ["Dinner:", "Example"], ["Late-night Snack:", "Example"]],
-      "notes": ["Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example"],
-      "password": "0",
-      "imageProfile": "example",
-      "audio": "audio2",
-      "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok presents Something Else | Tomorrowland Winter 2026", "id": "kttWNVHJKDo?si=TKUDzRhYRc7MIcIg"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
-      "id": "0"
     }
 
   ]

@@ -16,22 +16,21 @@ function Footer() {
   const [openQuickAccess, setOpenQuickAccess] = useState(false)
   
   const handleNavigate = (e) => {
-    const type = e.target.value
-    let path
+    const path = e.target.value
+    let letterTypeTrain;
 
-    if (type.length === 1) {
-      path = `/exercises-page/${type}`
-      
-    } else {
-      path = type
+    if (path.includes('/exercises-page/')) {
+      letterTypeTrain = path.split('/').pop()
       
     }
-    
-    setTypeTrain(type)
+
+    setTypeTrain(letterTypeTrain)
 
     if (path) navigate(path)
 
   }
+
+  const [disabledSelectNamesQuickAccess, setDisabledSelectNamesQuickAccess] = useState(false)
 
   return(
     <div className='footer'>
@@ -43,15 +42,17 @@ function Footer() {
         />
 
         <select
+          onClick={() => setDisabledSelectNamesQuickAccess(true)} 
           onChange={(e) => {handleNavigate(e); setOpenQuickAccess(false)}}
           onFocus={() => setOpenQuickAccess(true)}
+          onBlur={() => {setOpenQuickAccess(false); setDisabledSelectNamesQuickAccess(false)}}
           onMouseDown={() => setOpenQuickAccess(true)}
-          onBlur={() => setOpenQuickAccess(false)}
           className='quick-access-selects-select'
         >
           <option
             value=''
-            className='quick-access-selects-select-option'
+            disabled={disabledSelectNamesQuickAccess}
+            className='quick-access-selects-select-option'       
           >
             Quick Access
           </option>
@@ -59,31 +60,20 @@ function Footer() {
           {/* Static and Dynamic User Contents */}
           {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
           .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-          .map(user => user.exercises)[0]
-          .map(exercises => exercises[0].type)
-          .map(type => (
+          .map(user => user.quickAccess && user.quickAccess)
+          .map(quickAccessList => quickAccessList)[0]
+          .map(quickAccess => (
             <option 
-              key={type}
-              value={type}
+              key={quickAccess[0].name}
+              value={quickAccess[1].path}
               className='quick-access-selects-select-option'
+              onClick={() => setDisabledSelectNamesQuickAccess(true)}
             >
-              {type}
+              {quickAccess[0].name}
             </option>
           ))}
 
-          <option 
-            value='/nutrition-page'
-            className='quick-access-selects-select-option'>
-              nutrition
-          </option>
-          
-          <option 
-            value='/notes-page'
-            className='quick-access-selects-select-option'>
-              notes
-          </option>
-
-        </select>        
+        </select>
 
       </div>}
 
