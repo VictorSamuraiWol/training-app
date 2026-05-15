@@ -1,6 +1,7 @@
 .exercises-page-style {
   display: flex;
   flex-direction: column;
+  flex: 1;
   min-height: 78vh;
   background-image: url(../../assets/images/bg-header-main-footer.png);
   background-position: center;
@@ -30,42 +31,6 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-}
-
-.title-timer {
-  position: absolute;
-  top: 3%;
-  right: 1%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 6px;
-  border: 1px solid var(--border-green);
-  border-radius: 6px;
-}
-
-.title-timer-text {
-  color: var(--border-green);
-  text-shadow: 2px 2px 3px var(--border);
-  cursor: default;
-}
-
-.specificStyleTimer{
-  flex-direction: column;
-}
-
-.specificStyleTimerDisplay {
-  font-size: 2rem;
-  color: var(--border-green);
-  text-shadow: 2px 2px 3px var(--border);
-}
-
-.specificStyleTimerButton {
-  color: var(--text);
-  box-shadow: 2px 2px 3px var(--border);
-  background-color: var(--border-green);
-  padding: 6px 24px;
 }
 
 .exercises-page-style-cards-timer-title-music-long-text {
@@ -98,6 +63,7 @@
 }
 
 .exercises-page-style-cards-title-short-text {
+  font-size: 1.5rem;
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
   margin: 0;
@@ -121,28 +87,12 @@
   }
 
   .exercises-page-style-cards {
-    gap: 12px;
-    padding: 12px;
+    gap: 16px;
+    padding: 8px;
   }
 
   .banner-exercises-page {
     height: 80px;
-  }
-
-  .title-timer {
-    position: static;
-  }
-
-  .title-timer-text {
-    display: none;
-  }
-
-  .specificStyleTimerDisplay {
-    font-size: 1.25rem;
-  }
-
-  .specificStyleTimerButton {
-    font-size: 0.7rem;
   }
 
   .exercises-page-style-cards-timer-title-music {
@@ -156,15 +106,16 @@
 
   .music-player {
     position: static;
-    padding-bottom: 36px;
-  }
-
-  .specificStyleMusicButton {
     font-size: 0.7rem;
   }
 
+  .specificStyleMusicButton {
+    font-size: 0.4rem;
+    padding: 4px 20px;
+  }
+
   .exercises-page-style-cards-timer-title-music-toggle-video-modal {
-    top: 50%;
+    top: 0;
     right: 1%;
     width: 30px;
     height: 50px;
@@ -187,10 +138,6 @@
     height: 23px;
   }
 
-  .exercises-page-style-cards-title-short-text {
-    font-size: 1.5rem;
-  }
-
   .exercises-page-style-cards-title-long-text {
     display: none;
   }
@@ -208,24 +155,16 @@
   }
 
   .exercises-page-style-cards {
-    gap: 12px;
-    padding: 12px;
+    gap: 16px;
+    padding: 8px;
   }
 
   .banner-exercises-page {
     height: 70px;
   }
 
-  .title-timer {
-    position: static;
-  }
-
-  .specificStyleTimerDisplay {
-    font-size: 1.25rem;
-  }
-
-  .specificStyleTimerButton {
-    font-size: 0.7rem;
+  .exercises-page-style-cards-timer-title-music {
+    justify-content: center;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {
@@ -233,15 +172,15 @@
   }
 
   .exercises-page-style-cards-timer-title-music-toggle-video-modal {
-    right: 0;
-    bottom: -35%;
-    width: 60px;
-    height: 30px;
+    top: 0;
+    right: 1%;
+    width: 30px;
+    height: 50px;
   }
 
   .toggle-default-timer-title-music {
+    top: 0;
     right: 0;
-    bottom: -10%;
   }
 
   .toggle-default-timer-title-music-toggle-on-toggle-off {
@@ -250,7 +189,7 @@
   }
 
   .specificsStylesTogglesVideoModal {
-    right: 50%;
+    right: -1%;
     bottom: 10%;
     width: 23px;
     height: 23px;
@@ -258,10 +197,12 @@
 
   .music-player {
     position: static;
+    font-size: 0.7rem;
   }
 
   .specificStyleMusicButton {
-    font-size: 0.7rem;
+    font-size: 0.4rem;
+    padding: 4px 20px;
   }
 
   .exercises-page-style-cards-title-short-text {
@@ -270,7 +211,7 @@
 
 
   .exercises-page-style-cards-title-long-text {
-    font-size: 1.6rem;
+    display: none;
   }
 
 }
@@ -286,19 +227,15 @@
 
   .exercises-page-style-cards {
     gap: 32px;
-    padding: 16px;
+    padding: 12px 12px 12px;
   }
 
   .banner-exercises-page {
     height: 120px;
   }
 
-  .specificStyleTimerDisplay {
-    font-size: 1.30rem;
-  }
-
-  .specificStyleTimerButton {
-    font-size: 0.75rem;
+  .exercises-page-style-cards-timer-title-music {
+    justify-content: space-between;
   }
   
   .exercises-page-style-cards-timer-title-music-long-text {
@@ -308,6 +245,7 @@
 
   .specificStyleMusicButton {
     font-size: 0.75rem;
+    padding: 4px 24px;
   }
 
   .exercises-page-style-cards-title {
@@ -315,12 +253,15 @@
   }
 
   .exercises-page-style-cards-timer-title-music-toggle-video-modal {
-    bottom: -23%;
+    top: 103%;
+    right: 1%;
+    width: 30px;
+    height: 50px;
   }
    
   .toggle-default-timer-title-music {
-    right: 0;
-    bottom: -30%;
+    right: -26%;
+    bottom: -10%;
   }
 
   .toggle-default-timer-title-music-toggle-on-toggle-off {
@@ -329,8 +270,8 @@
   }
 
   .specificsStylesTogglesVideoModal {
-    right: 60%;
-    bottom: -3%;
+    right: 80%;
+    bottom: 50%;
     width: 25px;
     height: 25px;
   }
@@ -346,20 +287,13 @@
     height: 140px;
   }
 
-  .specificStyleTimerDisplay {
-    font-size: 1.35rem;
-  }
-
-  .specificStyleTimerButton {
-    font-size: 0.8rem;
-  }
-
   .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 1.8rem;
   }
 
   .specificStyleMusicButton {
     font-size: 0.8rem;
+    padding: 6px 24px;
   }
 
 }
@@ -367,14 +301,6 @@
 @media (min-width: 1280px) {
   .exercises-page-style-cards {
     padding: 24px;
-  }
-
-  .specificStyleTimerDisplay {
-    font-size: 1.40rem;
-  }
-
-  .specificStyleTimerButton {
-    font-size: 0.85rem;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {
@@ -394,14 +320,6 @@
 
   .exercises-page-style-cards {
     padding: 28px;
-  }
-
-  .specificStyleTimerDisplay {
-    font-size: 1.45rem;
-  }
-
-  .specificStyleTimerButton {
-    font-size: 0.9rem;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {

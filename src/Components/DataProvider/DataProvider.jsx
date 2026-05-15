@@ -10,6 +10,9 @@ export default function DataProvider({ children }) {
   const [loader, setLoader] = useState(false)
   const [loginValidate, setLoginValidate] = useState(false)
   const [nameUser, setNameUser] = useState('')
+  const [ableExercisesPage, setAbleExercisesPage] = useState(false)
+  const [ableNutritionPage, setAbleNutritionPage] = useState(false)
+  const [ableNotesPage, setAbleNotesPage] = useState(false)
 
   {/* Static Users */}
   const staticUsersContents = [
@@ -77,7 +80,7 @@ export default function DataProvider({ children }) {
       "password": "0",
       "imageProfile": "example",
       "audio": "audio2",
-      "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok | Tomorrowland Winter 2026", "id": "uIsIyjcLkco?si=X-MDTVpAwQ9tzyE1"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
+      "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok presents Something Else | Tomorrowland Winter 2026", "id": "kttWNVHJKDo?si=TKUDzRhYRc7MIcIg"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
       "id": "0"
     }
 
@@ -129,7 +132,13 @@ export default function DataProvider({ children }) {
     loginValidate, 
     setLoginValidate,
     nameUser, 
-    setNameUser
+    setNameUser,
+    ableExercisesPage, 
+    setAbleExercisesPage,
+    ableNutritionPage, 
+    setAbleNutritionPage,
+    ableNotesPage, 
+    setAbleNotesPage
 
   }
 

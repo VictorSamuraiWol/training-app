@@ -1,14 +1,23 @@
 import './NutritionPage.css';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { useOutletContext } from 'react-router-dom';
 import { GiMuscleUp } from "react-icons/gi";
 
 function NutritionPage() {
 
-  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser, setAbleNutritionPage } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
+
+  useEffect(() => {
+    setAbleNutritionPage(true)
+
+    return () => {
+      setAbleNutritionPage(false) // runs on component unmount
+    } 
+
+  }, [])
 
   return (
     <div className='nutrition-page-styles'>

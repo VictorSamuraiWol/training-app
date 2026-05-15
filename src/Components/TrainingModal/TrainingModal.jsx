@@ -73,7 +73,7 @@ function TrainingModal() {
             <Link
               key={type}
               className={`link link-workout-${type}`}
-              to='/exercises-page'
+              to={`/exercises-page/${type}`}
             >
               <ButtonDefault
                 onClick={() => {clickButton(type); setUserId(nameUser)}}

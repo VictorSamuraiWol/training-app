@@ -15,7 +15,8 @@ function AppRoutes() {
         <Routes>
           <Route path='/' element={<BasePage />} >
             <Route index element={<TrainingPage />} />
-            <Route path='/exercises-page' element={<ExercisesPage />} />
+            {/* <Route path='/exercises-page' element={<ExercisesPage />} /> */}
+            <Route path={`/exercises-page/:id`} element={<ExercisesPage />} />
             <Route path='/nutrition-page' element={<NutritionPage />} />
             <Route path='/notes-page' element={<NotesPage />} />
 

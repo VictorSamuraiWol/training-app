@@ -256,7 +256,9 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
         </div>
 
         <div className='videos-selects'>
-          <TbTriangleInvertedFilled className={`videos-selects-icon ${openVideoModal ? "videos-selects-icon-animation" : ""}`} />
+          <TbTriangleInvertedFilled className={`videos-selects-icon ${openVideoModal ? 
+            "videos-selects-icon-animation" : ""}`} 
+          />
 
           <select 
             value={selectIdVideoModal}
@@ -267,8 +269,10 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
             className='videos-selects-select'
           >
             <option 
-              value='' 
-              className='videos-selects-select-option'>select video
+              value=''
+              disabled
+              className='videos-selects-select-option'>
+                select video
             </option>
 
             {/* Static and Dynamic User Contents */}

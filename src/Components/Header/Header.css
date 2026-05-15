@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,31 +17,53 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.link-img-logo-header {
-  width: 7rem;
-  box-shadow: 0 0 5px var(--border), 0 0 10px var(--border), 0 0 20px var(--border);
-  border-radius: 50%;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
+.title-timer {
+  position: absolute;
+  top: 209%;
+  left: 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6px;
+  border: 1px solid var(--border-green);
+  border-radius: 6px;
+  box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg);
 }
 
-.link-img-logo-header:hover {
-  box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg), 0 0 20px var(--bg);
+.new-title-timer {
+  visibility: hidden;
 }
 
-.header-title {
-  font-size: 3rem;
-  font-family: var(--orbitron);
+.title-timer-text {
   color: var(--border-green);
-  text-shadow: 5px 5px 5px var(--border), 10px 10px 10px var(--border), 15px 15px 20px var(--border);
-  margin: 0;
-  transition: all 0.3s ease-in-out;
+  text-shadow: 2px 2px 3px var(--border);
   cursor: default;
 }
 
-.header-title:hover {
-  color: var(--border-yellow);
-  text-shadow: -5px 5px 5px var(--bg), -10px 10px 10px var(--bg), -15px 15px 20px var(--bg);
+.specificStyleTimer{
+  flex-direction: column;
+}
+
+.specificStyleTimerDisplay {
+  font-size: 2rem;
+  color: var(--border-green);
+  text-shadow: 2px 2px 3px var(--border);
+}
+
+.specificStyleTimerButton {
+  color: var(--text);
+  box-shadow: 2px 2px 3px var(--border);
+  background-color: var(--border-green);
+  padding: 6px 24px;
+}
+
+.link-img-logo-header {
+  width: 7rem;
+  box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg);
+  border-radius: 50%;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .container-login-signin {
@@ -57,7 +80,7 @@
   border: 1px solid var(--border-green);
   border-radius: 8px;
   box-shadow: 5px 5px 5px var(--border);
-  transition: all 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .container-login-signin-image-name {
@@ -133,8 +156,24 @@
     width: 70px;
   }
 
-  .header-title {
+  .title-timer {
+    top: 10%;
+    left: 30%;
+    border: none;
+  }
+
+  .title-timer-text {
     display: none;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 0.7rem;
+    padding: 2px;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.4rem;
+    padding: 2px 12px;
   }
   
   .container-login-signin {
@@ -171,8 +210,24 @@
     width: 90px;
   }
 
-  .header-title {
+  .title-timer {
+    top: 10%;
+    left: 34%;
+    border: none;
+  }
+
+  .title-timer-text {
     display: none;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 0.8rem;
+    padding: 4px;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.5rem;
+    padding: 2px 12px;
   }
   
   .container-login-signin {
@@ -211,9 +266,24 @@
     width: 110px;
   }
 
-  .header-title {
+  .title-timer {
+    top: 5%;
+    left: 35%;
+    padding: 4px;
+    border: 1px solid var(--border-green);
+  }
+
+  .title-timer-text {
     display: flex;
-    font-size: 2.25rem;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.30rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.6rem;
+    padding: 4px 20px;
   }
   
   .container-login-signin {
@@ -240,8 +310,17 @@
     width: 130px;
   }
 
-  .header-title {
-    font-size: 2.5rem;
+  .title-timer {
+    top: 10%;
+    left: 38%;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.35rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.8rem;
   }
 
   .container-login-signin {
@@ -270,8 +349,16 @@
     padding: 0 16px;
   }
 
-  .header-title {
-    font-size: 3rem;
+  .title-timer {
+    left: 42%;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.40rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.85rem;
   }
 
   .container-login-signin {
@@ -286,8 +373,16 @@
 }
 
 @media (min-width: 1440px) {
-  .header-title {
-    font-size: 3.5rem;
+  .title-timer {
+    left: 40%;
+  }
+
+  .specificStyleTimerDisplay {
+    font-size: 1.45rem;
+  }
+
+  .specificStyleTimerButton {
+    font-size: 0.9rem;
   }
 
   .container-login-signin {

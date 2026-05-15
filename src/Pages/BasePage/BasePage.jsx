@@ -7,6 +7,7 @@ import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
 import { Outlet } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
+import Timer from '../../Components/Timer/Timer';
 
 function BasePage() {
 
@@ -39,17 +40,36 @@ function BasePage() {
 
   }
 
+  const [isRunningAllTime, setIsRunningAllTime] = useState(false)
+
+  const [checkedInputs, setCheckedInputs] = useState([])
+
+  function toggleChecked(_key, checked) {
+    setCheckedInputs(prev =>
+      checked ? [...prev, _key] : prev.filter(k => k !== _key)
+    )
+
+  }
+
   return (
       <div className='base-page-styles'>
       {!loginValidate && <Login setActivateNavigateDefault={setActivateNavigateDefault} />}
 
       {!loginValidate && <ErrorLogin />}
         
-      {loginValidate && <Header compactUserName={compactUserName} />}
+      {loginValidate && 
+      <Header 
+        compactUserName={compactUserName} 
+        isOnToggleTimersExercises={isOnToggleTimersExercises}
+        setIsOnToggleTimersExercises={setIsOnToggleTimersExercises}
+        isRunningAllTime={isRunningAllTime}
+        setIsRunningAllTime={setIsRunningAllTime}
+      />}
 
       {loginValidate && <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, 
         setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, 
-        initialPosVideo, setInitialPosVideo, selectContainerVideoYTPosition, setSelectContainerVideoYTPosition }} 
+        initialPosVideo, setInitialPosVideo, selectContainerVideoYTPosition, setSelectContainerVideoYTPosition,
+        checkedInputs, setCheckedInputs, toggleChecked, isRunningAllTime, setIsRunningAllTime }} 
       />}
 
       <NavigateDefault 

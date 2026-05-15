@@ -5,18 +5,22 @@ import ExercisesGif from '../../../../ExercisesGif/ExercisesGif';
 import { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
-function Exercise({ exerciseName, exerciseGif }) {
+function Exercise({ exerciseName, exerciseGif, _key }) {
 
-  const { isOnToggleTimersExercises } = useOutletContext()
-
-  const [activeStyleText, setActiveStyleText] = useState(false)
+  const { isOnToggleTimersExercises, checkedInputs, toggleChecked } = useOutletContext()
 
   const [isRunning, setIsRunning] = useState(false)
 
   const [ableExercisesGif, setAbleExercisesGif] = useState(false)
 
-  function checkedInput() {  
-    setActiveStyleText(!activeStyleText)
+  function checkedInput(_key) {
+    let active;
+    if (checkedInputs.includes(_key)) {
+      active = _key
+
+    }
+
+    return active
 
   }
 
@@ -34,14 +38,16 @@ function Exercise({ exerciseName, exerciseGif }) {
           exerciseGif={exerciseGif}
       />}
 
-      <div 
-        className={activeStyleText ?
+      <div
+        className={
+        checkedInput(_key) === _key ?
         'new-cards-training-exercises-timer' :
         'cards-training-exercises-timer'}
       >
         <p 
           onClick={clickExercisesGif}
-          className={activeStyleText ? 
+          className={
+          checkedInput(_key) === _key ?
           'new-cards-training-exercises' : 
           'cards-training-exercises'}
         >
@@ -53,10 +59,12 @@ function Exercise({ exerciseName, exerciseGif }) {
           isRunning={isRunning}
           setIsRunning={setIsRunning}
           specificStyleTimer='specificStyleTimerExercises'
-          specificStyleTimerDisplay={activeStyleText ?
+          specificStyleTimerDisplay={
+          checkedInput(_key) === _key ?
           'new-specificStyleTimerDisplayExercises' :
           'specificStyleTimerDisplayExercises'}
-          specificStyleTimerButton={activeStyleText ?
+          specificStyleTimerButton={
+          checkedInput(_key) === _key ?
           'new-specificStyleTimerButtonExercises' :
           'specificStyleTimerButtonExercises'}
         />}
@@ -64,9 +72,12 @@ function Exercise({ exerciseName, exerciseGif }) {
       </div>
 
       <InputDefault
-        onClick={() => checkedInput()}
-        typeInput='checkbox' 
-        specificStylesInput='specificStylesInput' 
+        key={_key}
+        onClick={() => checkedInput(_key)}
+        onChange={(e) => toggleChecked(_key, e.target.checked)} 
+        checked={checkedInputs.includes(_key)}
+        typeInput='checkbox'
+        specificStylesInput='specificStylesInput'
       />
       
     </div>

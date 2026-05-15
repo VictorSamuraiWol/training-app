@@ -7,10 +7,13 @@ import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
+import Timer from '../Timer/Timer';
 
-function Header({ compactUserName }) {
+function Header({ compactUserName, isOnToggleTimersExercises, isRunningAllTime, setIsRunningAllTime }) {
 
-  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate } = useContext(DataContext)
+  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate,
+    ableExercisesPage
+   } = useContext(DataContext)
 
   const [imagesDescriptions] = useState({
     example: example,
@@ -22,7 +25,7 @@ function Header({ compactUserName }) {
   function signOut() {
     setLoginValidate(false)
     setNameUser('')
-    window.location.reload();
+    window.location.reload()
 
   }
 
@@ -34,6 +37,25 @@ function Header({ compactUserName }) {
           src={logo} 
         />
       </Link>
+
+      <div className={ableExercisesPage ? 
+        'title-timer' :
+        'new-title-timer'}
+      >
+      {isOnToggleTimersExercises && <p className='title-timer-text'>Total Time:</p>}
+      {!isOnToggleTimersExercises && <p className='title-timer-text'>Time:</p>}
+      
+      <Timer
+        key='0'
+        isRunning={isRunningAllTime}
+        setIsRunning={setIsRunningAllTime} 
+        specificStyleTimer='specificStyleTimer' 
+        specificStyleTimerDisplay='specificStyleTimerDisplay' 
+        specificStyleTimerButton='specificStyleTimerButton'
+        buttonPlayPauseId='0'
+      />
+            
+      </div>
 
       {/* Static and Dynamic User Contents */}
       {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]

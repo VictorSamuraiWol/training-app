@@ -7,6 +7,6 @@ button {
   padding: 16px;
   border-radius: 16px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
   -webkit-tap-highlight-color: transparent;
 }

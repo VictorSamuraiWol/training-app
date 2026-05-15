@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 250px;
   text-align: center;
   padding: 6px;
   border: 1px solid var(--border-green);
   border-radius: 6px;
+  box-shadow: 0 0 5px var(--border), 0 0 10px var(--border);
 }
 
 .player-title {
@@ -27,7 +27,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 6px 24px;
   border: none;
   border-radius: 6px;
   color: var(--text);
@@ -56,7 +55,7 @@
 .progress input[type="range"] {
   -webkit-appearance: none;
   width: 100%;
-  height: 6px;
+  height: 4px;
   border-radius: 10px;
   background: #444; /* cor da trilha */
   outline: none;
@@ -102,6 +101,21 @@
 @media (max-width: 480px) {
   .player-title {
     display: none;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .player-title {
+    display: none;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .player-title {
+    display: flex;
+    justify-content: center;
   }
 
 }

@@ -1,14 +1,23 @@
 import './NotesPage.css';
 import { DataContext } from '../../Components/DataContext/DataContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { GiMuscleUp } from "react-icons/gi";
 
 function NotesPage() {
 
-  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser, setAbleNotesPage } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
+
+  useEffect(() => {
+    setAbleNotesPage(true)
+
+    return () => {
+      setAbleNotesPage(false) // runs on component unmount
+    } 
+
+  }, [])
 
   return(
     <div className='notes-page-styles'>
