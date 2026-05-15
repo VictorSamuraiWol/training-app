@@ -66,7 +66,7 @@ export default function DataProvider({ children }) {
       "password": "Leimar",
       "imageProfile": "profileLeimar",
       "audio": "audio2",
-      "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "Alok | Tomorrowland Winter 2026", "id": "uIsIyjcLkco?si=X-MDTVpAwQ9tzyE1"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
+      "videoYT": [{"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}, {"name": "ALOK @ TOMORROWLAND WINTER 2026", "id": "iP-t3nMX9wQ?si=wTt5XpDiE69IFWwx"}, {"name": "Alok | Tomorrowland Brasil 2025", "id": "hbXhiCyGYx0?si=dUklTTgtlr6SgrbM"}, {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}],
       "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "D"}, {"path": "/exercises-page/D"}], [{"name": "E"}, {"path": "/exercises-page/E"}], [{"name": "F"}, {"path": "/exercises-page/F"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
       "id": "Leimar"
     }
