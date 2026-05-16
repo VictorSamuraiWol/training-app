@@ -20,7 +20,7 @@ export default function DataProvider({ children }) {
       "name" : "0",
       "weight": "Example",
       "height": "Example",
-      "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}]]}],
+      "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise5"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise6"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise7"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise8"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise9"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise10"}, {"gif": "waitingTheExercise"}]]}],
                     [{"type": "B"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}]]}],
                     [{"type": "C"}, {"exercises": [[{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]]}]
                    ],

@@ -167,13 +167,13 @@
   }
 
   .specificStyleTimerDisplay {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     padding: 2px;
   }
 
   .specificStyleTimerButton {
     font-size: 0.4rem;
-    padding: 2px 12px;
+    padding: 2px 16px;
   }
   
   .container-login-signin {
@@ -221,13 +221,13 @@
   }
 
   .specificStyleTimerDisplay {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding: 4px;
   }
 
   .specificStyleTimerButton {
     font-size: 0.5rem;
-    padding: 2px 12px;
+    padding: 2px 16px;
   }
   
   .container-login-signin {

@@ -142,7 +142,7 @@
 @media (max-width: 480px) {
   .cards-training {
     gap: 14px;
-    height: calc(78.2vh - 186px);
+    height: calc(78.2vh - 201px);
     overflow-y: auto;
   }
 
@@ -201,7 +201,7 @@
 @media (min-width: 481px) {
   .cards-training {
     gap: 16px;
-    height: calc(78.2vh - 154px);
+    height: calc(78.2vh - 197px);
     overflow-y: auto;
   }
 

@@ -147,7 +147,7 @@
 @media (min-width: 481px) {
   .exercises-page-style {
     min-height: 77.9vh;
-    background-size: cover;
+    background-size: contain;
   }
 
   .exercises-page-style {
@@ -314,6 +314,11 @@
 }
 
 @media (min-width: 1440px) {
+  .exercises-page-style {
+    min-height: 77.9vh;
+    background-size: cover;
+  }
+
   .exercises-page-style {
     min-height: 75.3vh;
   }
