@@ -12,7 +12,7 @@ Modal.setAppElement('#root')
 function FinishWorkoutModal({ performanceEndWorkout, numPerformanceEndWorkout, totalEndWorkout, doneEndWorkout, 
   missedEndWorkout, setCheckedInputs }) {
 
-  const { setAbleTimer } = useOutletContext()
+  const { setAbleTimer, setSelectIdVideoModal } = useOutletContext()
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -79,7 +79,7 @@ function FinishWorkoutModal({ performanceEndWorkout, numPerformanceEndWorkout, t
         <div className='container-modal-finish-button'>
           <Link className='link-modal-finish-button' to='/'>
             <ButtonDefault
-              onClick={() => {closeModal(); setCheckedInputs([]); setAbleTimer(false)}}
+              onClick={() => {closeModal(); setCheckedInputs([]); setAbleTimer(false); setSelectIdVideoModal('')}}
               nameButton='FINISH'
               specificStylesButton='modal-finish-button' 
             />

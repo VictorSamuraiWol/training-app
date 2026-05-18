@@ -17,6 +17,33 @@
   height: 150px;
 }
 
+.container-iframe-delete {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.videos-target-banner-iframe {
+  width: 100%;
+}
+
+.videos-target-banner-iframe-delete-icon {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 1.3rem;
+  color: var(--border-green);
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.videos-target-banner-iframe-delete-icon:hover {
+  color: var(--text);
+  transform: scale(0.94);
+}
+
 .exercises-page-style-cards {
   position: relative;
   display: flex;
@@ -93,7 +120,15 @@
   }
 
   .banner-exercises-page {
-    height: 80px;
+    height: 132px;
+  }
+
+  .videos-target-banner-iframe {
+    height: 132px;
+  }
+
+  .videos-target-banner-iframe-delete-icon {
+    top: 0;
   }
 
   .exercises-page-style-cards-timer-title-music {
@@ -161,7 +196,11 @@
   }
 
   .banner-exercises-page {
-    height: 70px;
+    height: 132px;
+  }
+
+  .videos-target-banner-iframe {
+    height: 132px;
   }
 
   .exercises-page-style-cards-timer-title-music {
@@ -232,7 +271,7 @@
   }
 
   .banner-exercises-page {
-    height: 120px;
+    height: 132px;
   }
 
   .exercises-page-style-cards-timer-title-music {
@@ -292,6 +331,10 @@
     height: 140px;
   }
 
+  .videos-target-banner-iframe {
+    height: 140px;
+  }
+
   .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 1.8rem;
   }
@@ -306,6 +349,14 @@
 @media (min-width: 1280px) {
   .exercises-page-style-cards {
     padding: 24px;
+  }
+
+  .banner-exercises-page {
+    height: 150px;
+  }
+
+  .videos-target-banner-iframe {
+    height: 150px;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {

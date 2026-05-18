@@ -12,12 +12,13 @@ import { DataContext } from '../../Components/DataContext/DataContext';
 import { Link, useOutletContext, useParams } from 'react-router-dom';
 import { BsClockFill } from "react-icons/bs";
 import { BsClock } from "react-icons/bs";
+import { TiDeleteOutline } from "react-icons/ti"
 
 function ExercisesPage() {
 
   const { staticUsersContents, dynamicUsersContents, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
 
-  const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName
+  const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, compactUserName
   } = useOutletContext()
 
   const { id } = useParams()
@@ -42,13 +43,30 @@ function ExercisesPage() {
 
   return(
     <div className='exercises-page-style'>
-      {loginValidate && <div className='banner-exercises-page'></div>}
+      {loginValidate && !selectIdVideoModal && <div className='banner-exercises-page'></div>}
 
-      <PlayerVideoYT videoSelected = {{
+      {loginValidate && selectIdVideoModal &&
+      <div className='container-iframe-delete'>
+        <iframe
+          className='videos-target-banner-iframe'
+          src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
+          title="YouTube video player"
+          frameBorder="0"
+          allowFullScreen
+        />
+
+        <TiDeleteOutline
+          onClick={() => setSelectIdVideoModal('')}
+          className='videos-target-banner-iframe-delete-icon'
+        /> 
+
+      </div>}
+
+      {loginValidate && selectIdVideoModal && <PlayerVideoYT videoSelected = {{
           src : `https://www.youtube.com/embed/${selectIdVideoModal}?autoplay=1`,
           title : "Youtube Video Player"
         }}
-      />
+      />}
 
       {/* Static and Dynamic User Contents */}
       {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]

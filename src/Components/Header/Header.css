@@ -267,10 +267,15 @@
   }
 
   .title-timer {
-    top: 5%;
+    position: fixed;
+    top: 1%;
     left: 35%;
     padding: 4px;
     border: 1px solid var(--border-green);
+    background-image: url(../../assets/images/bg-header-main-footer.png);
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
   }
 
   .title-timer-text {
@@ -311,7 +316,6 @@
   }
 
   .title-timer {
-    top: 10%;
     left: 38%;
   }
 
@@ -374,7 +378,7 @@
 
 @media (min-width: 1440px) {
   .title-timer {
-    left: 40%;
+    left: 41%;
   }
 
   .specificStyleTimerDisplay {
