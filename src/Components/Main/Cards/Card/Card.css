@@ -138,6 +138,10 @@
   transform: translate(-50%, -50%);
 }
 
+.finish-workout-button-modal {
+  
+}
+
 /* Responsiveness */
 @media (max-width: 480px) {
   .cards-training {

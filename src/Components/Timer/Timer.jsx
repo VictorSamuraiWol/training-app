@@ -4,9 +4,9 @@ import { FaPause } from "react-icons/fa";
 import { FaStop } from "react-icons/fa";
 import { useState, useRef, useEffect } from "react";
 
-export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, 
-  specificStyleTimerButton, isRunning, setIsRunning
-}) {
+export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, specificStyleTimerButton }) {
+
+  const [isRunning, setIsRunning] = useState(false)
   
   const [time, setTime] = useState(0)
 

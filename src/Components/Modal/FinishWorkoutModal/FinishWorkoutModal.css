@@ -1,0 +1,294 @@
+.finish-workout-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--text);
+  padding: 8px 16px;
+  border: 1px solid var(--border-yellow);
+  border-radius: 8px;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.finish-workout-button:hover {
+  color: var(--text);
+  background-color: var(--border-yellow);
+  border: 1px solid var(--text);
+}
+
+.modalFinishWorkoutOverlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.modalFinishWorkoutContent {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  background: var(--bg);
+  color: var(--border-green);
+  text-shadow: 3px 2px 3px var(--border);
+  width: 50%;
+  padding: 16px;
+  border: 1px solid var(--border-green);
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px var(--border-yellow), 10px 10px 10px var(--border-yellow);
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-image: url(../../../assets/images/bg-header-main-footer.png);
+  background-size: contain;
+}
+
+.modalFinishWorkoutContent:focus {
+  outline: none;
+}
+
+.modalFinishWorkoutContent:hover {
+  border: 1px solid var(--border-yellow);
+  box-shadow: -5px 5px 5px var(--border-green), -10px 10px 10px var(--border-green);
+}
+
+.container-finish-workout-modal-delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.container-finish-workout-modal-delete-text {
+  margin: 0;
+  cursor: default;
+}
+
+.container-finish-workout-modal-delete-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.container-image-texts {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.container-image-text-img {
+  border: 1px solid var(--border-green);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.container-texts {
+  position: absolute;
+  top: 18%;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.5rem;
+}
+
+.container-texts-text-performance {
+  font-size: 3rem;
+}
+
+.container-modal-finish-button {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+
+.link-modal-finish-button {
+  text-decoration: none;
+}
+
+.modal-finish-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-yellow);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--text);
+  padding: 8px 16px;
+  border: 1px solid var(--border-yellow);
+  border-radius: 8px;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.modal-finish-button:hover {
+  color: var(--text);
+  background-color: var(--border-yellow);
+  border: 1px solid var(--text);
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .modalFinishWorkoutContent {
+    width: 285px;
+  }
+
+  .finish-workout-button {
+    font-size: 0.7rem;
+    width: 90px;
+    padding: 2px;
+  }
+
+  .container-finish-workout-modal-delete-text {
+    font-size: 1.75rem;
+  }
+
+  .container-image-texts {
+    width: 100%;
+  }
+
+  .container-texts {
+    top: 13%;
+    font-size: 0.7rem;
+    gap: 4px;
+  }
+
+  .modal-finish-button {
+    font-size: 0.7rem;
+    width: 90px;
+    padding: 2px;   
+  }
+
+}
+
+@media (min-width: 481px) {
+  .modalFinishWorkoutContent {
+    width: 400px;
+  }
+
+  .finish-workout-button {
+    font-size: 0.8rem;
+    width: 120px;
+    padding: 2px;
+  }
+
+  .container-finish-workout-modal-delete-text {
+    font-size: 2rem;
+  }
+
+  .container-image-texts {
+    width: 100%;
+  }
+
+  .container-texts {
+    top: 14%;
+    right: 7%;
+    font-size: 1rem;
+    gap: 16px;
+  }
+
+  .modal-finish-button {
+    font-size: 0.8rem;
+    width: 120px;
+    padding: 2px;  
+  }
+
+}
+
+@media (min-width: 768px) {
+  .finish-workout-button {
+    font-size: 0.9rem;
+    width: auto;
+    padding: 4px;
+  }
+
+  .container-finish-workout-modal-delete-text {
+    font-size: 2.25rem;
+  }
+    
+  .container-texts {
+    top: 15%;
+    font-size: 1rem;
+    gap: 16px;
+  }
+
+  .modal-finish-button {
+    font-size: 0.9rem;
+    width: auto;
+    padding: 4px;  
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .modalFinishWorkoutContent {
+    padding: 18px;
+  }
+
+  .finish-workout-button {
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .container-finish-workout-modal-delete-text {
+    font-size: 2.5rem;
+  }
+
+  .container-texts {
+    right: 8%;
+  }
+
+  .modal-finish-button {
+    font-size: 1rem;
+    padding: 6px;  
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .modalFinishWorkoutContent {
+    padding: 22px;
+  }
+
+  .finish-workout-button {
+    font-size: 1.1rem;
+    padding: 8px;
+  }
+
+  .container-finish-workout-modal-delete-text {
+    font-size: 3rem;
+  }
+
+  .modal-finish-button {
+    font-size: 1.1rem;
+    padding: 8px; 
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .modalFinishWorkoutContent {
+    padding: 24px;
+  }
+
+  .finish-workout-button {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .container-finish-workout-modal-delete-text {
+    font-size: 3.5rem;
+  }
+
+  .modal-finish-button {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+}

@@ -5,7 +5,7 @@ import { useContext, useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 import { GiClick } from "react-icons/gi";
 import { DataContext } from '../DataContext/DataContext';
-import { Link } from 'react-router-dom';
+import { Link, useOutletContext } from 'react-router-dom';
 
 Modal.setAppElement('#root')
 
@@ -14,6 +14,8 @@ function TrainingModal() {
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
   const { setUserId, setTypeTrain, loginValidate, nameUser, staticUsersContents, dynamicUsersContents } = useContext(DataContext)
+
+  const { setAbleTimer } = useOutletContext()
 
   function openModal() {
     setModalIsOpen(true)
@@ -71,6 +73,7 @@ function TrainingModal() {
             .map(exercise => exercise[0].type)
             .map(type => (
             <Link
+              onClick={() => setAbleTimer(true)}
               key={type}
               className={`link link-workout-${type}`}
               to={`/exercises-page/${type}`}

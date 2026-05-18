@@ -25,6 +25,10 @@ function BasePage() {
 
   const [selectContainerVideoYTPosition, setSelectContainerVideoYTPosition] = useState('select-video-iframe-initial-left-center-right-position')
 
+  const [ableTimer, setAbleTimer] = useState(true)
+
+  const [checkedInputs, setCheckedInputs] = useState([])
+
   const compactUserName = (name, numLength) => {
     let editUserName;
     
@@ -39,10 +43,6 @@ function BasePage() {
     return editUserName
 
   }
-
-  const [isRunningAllTime, setIsRunningAllTime] = useState(false)
-
-  const [checkedInputs, setCheckedInputs] = useState([])
 
   function toggleChecked(_key, checked) {
     setCheckedInputs(prev =>
@@ -62,14 +62,15 @@ function BasePage() {
         compactUserName={compactUserName} 
         isOnToggleTimersExercises={isOnToggleTimersExercises}
         setIsOnToggleTimersExercises={setIsOnToggleTimersExercises}
-        isRunningAllTime={isRunningAllTime}
-        setIsRunningAllTime={setIsRunningAllTime}
+        ableTimer={ableTimer}
       />}
 
-      {loginValidate && <Outlet context={{ setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, 
-        setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, 
-        initialPosVideo, setInitialPosVideo, selectContainerVideoYTPosition, setSelectContainerVideoYTPosition,
-        checkedInputs, setCheckedInputs, toggleChecked, isRunningAllTime, setIsRunningAllTime }} 
+      {loginValidate && <Outlet context={{ 
+        setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, setIsOnToggleTimersExercises, 
+        selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
+        selectContainerVideoYTPosition, setSelectContainerVideoYTPosition, checkedInputs, setCheckedInputs, toggleChecked, 
+        setAbleTimer
+      }} 
       />}
 
       <NavigateDefault 

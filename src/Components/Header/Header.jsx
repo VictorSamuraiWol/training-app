@@ -4,12 +4,12 @@ import ButtonDefault from '../ButtonDefault/ButtonDefault';
 import example from '../../assets/images/profiles/example.png';
 import profileVictor from '../../assets/images/profiles/profile-victor.png';
 import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
+import Timer from '../Timer/Timer';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
-import Timer from '../Timer/Timer';
 
-function Header({ compactUserName, isOnToggleTimersExercises, isRunningAllTime, setIsRunningAllTime }) {
+function Header({ compactUserName, isOnToggleTimersExercises, ableTimer }) {
 
   const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate,
     ableExercisesPage
@@ -38,6 +38,7 @@ function Header({ compactUserName, isOnToggleTimersExercises, isRunningAllTime, 
         />
       </Link>
 
+      {ableTimer &&
       <div className={ableExercisesPage ? 
         'title-timer' :
         'new-title-timer'}
@@ -47,15 +48,13 @@ function Header({ compactUserName, isOnToggleTimersExercises, isRunningAllTime, 
       
       <Timer
         key='0'
-        isRunning={isRunningAllTime}
-        setIsRunning={setIsRunningAllTime} 
         specificStyleTimer='specificStyleTimer' 
         specificStyleTimerDisplay='specificStyleTimerDisplay' 
         specificStyleTimerButton='specificStyleTimerButton'
-        buttonPlayPauseId='0'
+        buttonPlayPauseId='0' 
       />
             
-      </div>
+      </div>}
 
       {/* Static and Dynamic User Contents */}
       {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
