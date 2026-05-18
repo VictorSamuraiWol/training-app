@@ -31,6 +31,21 @@
   box-shadow: 0 0 5px var(--border), 0 0 10px var(--border);
 }
 
+.timer-delete-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: var(--border-green);
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.timer-delete-icon:hover {
+  color: var(--text);
+  transform: scale(0.94);
+}
+
 .new-title-timer {
   visibility: hidden;
 }

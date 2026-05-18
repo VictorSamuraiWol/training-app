@@ -8,8 +8,9 @@ import Timer from '../Timer/Timer';
 import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
+import { TiDeleteOutline } from "react-icons/ti";
 
-function Header({ compactUserName, isOnToggleTimersExercises, ableTimer }) {
+function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer }) {
 
   const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate,
     ableExercisesPage
@@ -43,6 +44,11 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer }) {
         'title-timer' :
         'new-title-timer'}
       >
+      <TiDeleteOutline
+        onClick={() => setAbleTimer(false)}
+        className='timer-delete-icon'
+      /> 
+
       {isOnToggleTimersExercises && <p className='title-timer-text'>Total Time:</p>}
       {!isOnToggleTimersExercises && <p className='title-timer-text'>Time:</p>}
       

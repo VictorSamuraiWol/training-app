@@ -32,7 +32,7 @@
 .videos-target-banner-iframe-delete-icon {
   position: absolute;
   right: 0;
-  bottom: 0;
+  top: 0;
   font-size: 1.3rem;
   color: var(--border-green);
   cursor: pointer;
@@ -66,6 +66,21 @@
   text-shadow: 3px 2px 3px var(--border);
   margin: 0;
   cursor: default;
+}
+
+.music-delete-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: var(--border-green);
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.music-delete-icon:hover {
+  color: var(--text);
+  transform: scale(0.94);
 }
 
 .music-player {
@@ -125,10 +140,6 @@
 
   .videos-target-banner-iframe {
     height: 132px;
-  }
-
-  .videos-target-banner-iframe-delete-icon {
-    top: 0;
   }
 
   .exercises-page-style-cards-timer-title-music {

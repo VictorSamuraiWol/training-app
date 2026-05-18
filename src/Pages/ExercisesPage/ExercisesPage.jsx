@@ -12,13 +12,14 @@ import { DataContext } from '../../Components/DataContext/DataContext';
 import { Link, useOutletContext, useParams } from 'react-router-dom';
 import { BsClockFill } from "react-icons/bs";
 import { BsClock } from "react-icons/bs";
-import { TiDeleteOutline } from "react-icons/ti"
+import { TiDeleteOutline } from "react-icons/ti";
 
 function ExercisesPage() {
 
   const { staticUsersContents, dynamicUsersContents, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
 
-  const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, compactUserName
+  const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, compactUserName,
+    ableMusic, setAbleMusic, setAbleTimer
   } = useOutletContext()
 
   const { id } = useParams()
@@ -39,6 +40,12 @@ function ExercisesPage() {
       setAbleExercisesPage(false) // runs on component unmount
     } 
 
+  }, [])
+
+  useEffect(() => {
+    setAbleTimer(true)
+    setAbleMusic(true)
+    
   }, [])
 
   return(
@@ -81,12 +88,22 @@ function ExercisesPage() {
 
           <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>
 
-          <MusicPlayer
-            key='0'
-            src={audiosDescriptions[id_audio_exercises.audio]}
-            specificStylePlayer='music-player'
-            specificStyleMusicButton='specificStyleMusicButton' 
-          />
+          {ableMusic && 
+          <div
+          className='container-delete-icon-music-player'>
+            <TiDeleteOutline
+              onClick={() => setAbleMusic(false)}
+              className='music-delete-icon'
+            />
+            
+            <MusicPlayer
+              key='0'
+              src={audiosDescriptions[id_audio_exercises.audio]}
+              specificStylePlayer='music-player'
+              specificStyleMusicButton='specificStyleMusicButton' 
+            />
+          </div>
+          }
 
           <div className='exercises-page-style-cards-timer-title-music-toggle-video-modal'>
             <ToggleDefault 

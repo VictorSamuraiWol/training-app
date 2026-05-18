@@ -27,6 +27,8 @@ function BasePage() {
 
   const [ableTimer, setAbleTimer] = useState(true)
 
+  const [ableMusic, setAbleMusic] = useState(true)
+
   const [checkedInputs, setCheckedInputs] = useState([])
 
   const compactUserName = (name, numLength) => {
@@ -63,13 +65,14 @@ function BasePage() {
         isOnToggleTimersExercises={isOnToggleTimersExercises}
         setIsOnToggleTimersExercises={setIsOnToggleTimersExercises}
         ableTimer={ableTimer}
+        setAbleTimer={setAbleTimer}
       />}
 
       {loginValidate && <Outlet context={{ 
         setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, setIsOnToggleTimersExercises, 
         selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
         selectContainerVideoYTPosition, setSelectContainerVideoYTPosition, checkedInputs, setCheckedInputs, toggleChecked, 
-        setAbleTimer
+        setAbleTimer, ableMusic, setAbleMusic
       }} 
       />}
 
