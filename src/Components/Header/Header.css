@@ -177,6 +177,10 @@
     border: none;
   }
 
+  .timer-delete-icon {
+    font-size: 0.6rem;
+  }
+
   .title-timer-text {
     display: none;
   }
@@ -228,7 +232,12 @@
   .title-timer {
     top: 10%;
     left: 34%;
+    padding: 8px;
     border: none;
+  }
+
+  .timer-delete-icon {
+    font-size: 0.6rem;
   }
 
   .title-timer-text {
@@ -293,6 +302,10 @@
     z-index: 1;
   }
 
+  .timer-delete-icon {
+    font-size: 0.9rem;
+  }
+
   .title-timer-text {
     display: flex;
   }
@@ -332,6 +345,10 @@
 
   .title-timer {
     left: 38%;
+  }
+
+  .timer-delete-icon {
+    font-size: 1rem;
   }
 
   .specificStyleTimerDisplay {
@@ -394,6 +411,10 @@
 @media (min-width: 1440px) {
   .title-timer {
     left: 41%;
+  }
+
+  .timer-delete-icon {
+    font-size: 1.1rem;
   }
 
   .specificStyleTimerDisplay {

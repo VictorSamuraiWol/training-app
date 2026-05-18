@@ -68,6 +68,10 @@
   cursor: default;
 }
 
+.container-delete-icon-music-player {
+  position: relative;
+}
+
 .music-delete-icon {
   position: absolute;
   right: 0;
@@ -149,6 +153,10 @@
 
   .exercises-page-style-cards-timer-title-music-long-text {
     display: none;
+  }
+
+  .music-delete-icon {
+    font-size: 0.8rem;
   }
 
   .music-player {
@@ -246,6 +254,10 @@
     height: 23px;
   }
 
+  .music-delete-icon {
+    font-size: 0.9rem;
+  }
+
   .music-player {
     position: static;
     font-size: 0.7rem;
@@ -327,6 +339,10 @@
     height: 25px;
   }
 
+  .music-delete-icon {
+    font-size: 1rem;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -353,6 +369,10 @@
   .specificStyleMusicButton {
     font-size: 0.8rem;
     padding: 6px 24px;
+  }
+
+  .music-delete-icon {
+    font-size: 1.1rem;
   }
 
 }
