@@ -98,6 +98,19 @@ function ExercisesPage() {
         className='exercises-page-style-cards'
         key={id_audio_exercises.id}
       >
+        <div className={ableMusic ? 'exercises-page-style-cards-timer-title-music-toggle-video-modal' : 'new-exercises-page-style-cards-timer-title-music-toggle-video-modal'}>
+          <ToggleDefault 
+            idToggle='timers'
+            specificsStylesToggles={ableMusic ? 'toggle-default-timer-title-music' : 'new-toggle-default-timer-title-music'}
+            specificStyleToggle='toggle-default-timer-title-music-toggle-on-toggle-off'
+            isOnToggle={isOnToggleTimersExercises}
+            setIsOnToggle={setIsOnToggleTimersExercises}
+          />
+
+          <VideoModal specificsStylesTogglesVideoModal={ableMusic ? 'specificsStylesTogglesVideoModal' : 'new-specificsStylesTogglesVideoModal'} />
+
+        </div>
+
         <div className='exercises-page-style-cards-timer-title-music'>
 
           <h1 className='exercises-page-style-cards-timer-title-music-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>
@@ -117,19 +130,6 @@ function ExercisesPage() {
               specificStyleMusicButton='specificStyleMusicButton' 
             />
           </div>}
-
-          <div className={ableMusic ? 'exercises-page-style-cards-timer-title-music-toggle-video-modal' : 'new-exercises-page-style-cards-timer-title-music-toggle-video-modal'}>
-            <ToggleDefault 
-              idToggle='timers'
-              specificsStylesToggles={ableMusic ? 'toggle-default-timer-title-music' : 'new-toggle-default-timer-title-music'}
-              specificStyleToggle='toggle-default-timer-title-music-toggle-on-toggle-off'
-              isOnToggle={isOnToggleTimersExercises}
-              setIsOnToggle={setIsOnToggleTimersExercises}
-            />
-
-            <VideoModal specificsStylesTogglesVideoModal={ableMusic ? 'specificsStylesTogglesVideoModal' : 'new-specificsStylesTogglesVideoModal'} />
-
-          </div>
 
         </div>
 

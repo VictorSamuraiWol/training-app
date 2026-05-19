@@ -12,7 +12,7 @@ function Card({ exercises, _key }) {
 
   const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser, typeTrain } = useContext(DataContext)
 
-  const { checkedInputs, setCheckedInputs, ableMusic, ableBanner, ableVideoBanner } = useOutletContext()
+  const { checkedInputs, setCheckedInputs } = useOutletContext()
 
   function performanceEndWorkout(exercisesLength) {
     const checkedInputsFilter = checkedInputs.length > 0 && 
@@ -35,15 +35,7 @@ function Card({ exercises, _key }) {
   }
 
   return (
-      <div 
-      className={(ableMusic && ableBanner && !ableVideoBanner && 'cards-training') || 
-        (!ableMusic && ableBanner && !ableVideoBanner && 'new-cards-training') ||
-        (ableMusic && !ableBanner && !ableVideoBanner && 'new-new-cards-training') ||
-        (!ableMusic && !ableBanner && !ableVideoBanner && 'new-new-new-cards-training') ||
-        (ableMusic && !ableBanner && ableVideoBanner && 'cards-training') ||
-        (!ableMusic && !ableBanner && ableVideoBanner && 'new-cards-training')
-      }
-      >      
+      <div className='cards-training'>      
         {exercises
         .map((exercise, index) => (
           <Exercise

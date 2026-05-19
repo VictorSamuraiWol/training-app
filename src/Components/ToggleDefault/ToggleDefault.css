@@ -1,5 +1,7 @@
 .styleToggle {
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
   color: var(--border-green);
 }
 

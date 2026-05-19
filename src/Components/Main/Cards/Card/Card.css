@@ -9,125 +9,6 @@
   padding: 0 8px;
   transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: default;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.cards-training::-webkit-scrollbar {
-  width: 8px;
-}
-
-.cards-training::-webkit-scrollbar-track {
-  background: var(--text);
-  border-radius: 10px;
-}
-
-.cards-training::-webkit-scrollbar-thumb {
-  background: var(--border-green);
-  border-radius: 10px;
-}
-
-.cards-training::-webkit-scrollbar-thumb:hover {
-  background: var(--border-yellow);
-}
-
-.new-cards-training {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 24px;
-  width: auto;
-  padding: 0 8px;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
-  cursor: default;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.new-cards-training::-webkit-scrollbar {
-  width: 8px;
-}
-
-.new-cards-training::-webkit-scrollbar-track {
-  background: var(--text);
-  border-radius: 10px;
-}
-
-.new-cards-training::-webkit-scrollbar-thumb {
-  background: var(--border-green);
-  border-radius: 10px;
-}
-
-.new-cards-training::-webkit-scrollbar-thumb:hover {
-  background: var(--border-yellow);
-}
-
-.new-new-cards-training {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 24px;
-  width: auto;
-  padding: 0 8px;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
-  cursor: default;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.new-new-cards-training::-webkit-scrollbar {
-  width: 8px;
-}
-
-.new-new-cards-training::-webkit-scrollbar-track {
-  background: var(--text);
-  border-radius: 10px;
-}
-
-.new-new-cards-training::-webkit-scrollbar-thumb {
-  background: var(--border-green);
-  border-radius: 10px;
-}
-
-.new-new-cards-training::-webkit-scrollbar-thumb:hover {
-  background: var(--border-yellow);
-}
-
-.new-new-new-cards-training {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 24px;
-  width: auto;
-  padding: 0 8px;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
-  cursor: default;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.new-new-new-cards-training::-webkit-scrollbar {
-  width: 8px;
-}
-
-.new-new-new-cards-training::-webkit-scrollbar-track {
-  background: var(--text);
-  border-radius: 10px;
-}
-
-.new-new-new-cards-training::-webkit-scrollbar-thumb {
-  background: var(--border-green);
-  border-radius: 10px;
-}
-
-.new-new-new-cards-training::-webkit-scrollbar-thumb:hover {
-  background: var(--border-yellow);
 }
 
 .cards-training-exercises-timer-checkbox {
@@ -241,42 +122,6 @@
 @media (max-width: 480px) {
   .cards-training {
     gap: 8px;
-    height: 225px;
-    overflow-y: auto;
-  }
-
-  .cards-training::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .new-cards-training {
-    gap: 8px;
-    height: 287px;
-    overflow-y: auto;
-  }
-
-  .new-cards-training::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .new-new-cards-training {
-    gap: 8px;
-    height: 395px;
-    overflow-y: auto;
-  }
-
-  .new-new-cards-training::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .new-new-new-cards-training {
-    gap: 8px;
-    height: 455px;
-    overflow-y: auto;
-  }
-
-  .new-new-new-cards-training::-webkit-scrollbar {
-    width: 4px;
   }
 
   .cards-training-exercises-timer-checkbox {
@@ -330,42 +175,6 @@
 @media (min-width: 481px) {
   .cards-training {
     gap: 8px;
-    height: 225px;
-    overflow-y: auto;
-  }
-
-  .cards-training::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .new-cards-training {
-    gap: 8px;
-    height: 290px;
-    overflow-y: auto;
-  }
-
-  .new-cards-training::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .new-new-cards-training {
-    gap: 8px;
-    height: 395px;
-    overflow-y: auto;
-  }
-
-  .new-new-cards-training::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .new-new-new-cards-training {
-    gap: 8px;
-    height: 455px;
-    overflow-y: auto;
-  }
-
-  .new-new-new-cards-training::-webkit-scrollbar {
-    width: 4px;
   }
 
   .cards-training-exercises-timer-checkbox {
@@ -419,26 +228,6 @@
 @media (min-width: 768px) {
   .cards-training {
     gap: 20px;
-    height: auto;
-    overflow-y: hidden;
-  }
-
-  .new-cards-training {
-    gap: 20px;
-    height: auto;
-    overflow-y: auto;
-  }
-
-  .new-new-cards-training {
-    gap: 20px;
-    height: auto;
-    overflow-y: auto;
-  }
-
-  .new-new-new-cards-training {
-    gap: 20px;
-    height: auto;
-    overflow-y: auto;
   }
 
   .cards-training-exercises-timer-checkbox {
@@ -494,18 +283,6 @@
     gap: 22px;
   }
 
-  .new-cards-training {
-    gap: 22px;
-  }
-
-  .new-new-cards-training {
-    gap: 22px;
-  }
-
-  .new-new-new-cards-training {
-    gap: 22px;
-  }
-
   .cards-training-exercises-timer-checkbox {
     gap: 16px;
   }
@@ -547,18 +324,6 @@
 
 @media (min-width: 1280px) {
   .cards-training {
-    gap: 24px;
-  }
-
-  .new-cards-training {
-    gap: 24px;
-  }
-
-  .new-new-cards-training {
-    gap: 24px;
-  }
-
-  .new-new-new-cards-training {
     gap: 24px;
   }
 

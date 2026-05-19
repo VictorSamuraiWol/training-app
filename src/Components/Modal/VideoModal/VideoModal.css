@@ -1,5 +1,7 @@
 .image-react-video-modal {
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
   color: var(--border-green);
   cursor: pointer;
   z-index: 1;

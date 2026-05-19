@@ -21,7 +21,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
   const { staticUsersContents, dynamicUsersContents, nameUser, loginValidate } = useContext(DataContext)
 
   const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition,
-    setAbleVideoBanner
+    setAbleVideoBanner, setAbleBanner
   } = useOutletContext()
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -57,6 +57,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
       setVisibleVideoYT(true)
       setModalIsOpen(false)
       setAbleVideoBanner(true)
+      setAbleBanner(false)
 
     } else {
       setErrorMessageVideoModal('select a video')
