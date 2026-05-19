@@ -201,7 +201,7 @@
 @media (min-width: 481px) {
   .cards-training {
     gap: 16px;
-    height: calc(78.2vh - 259px);
+    height: calc(78.2vh - 227px);
     overflow-y: auto;
   }
 

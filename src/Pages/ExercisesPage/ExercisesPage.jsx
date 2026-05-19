@@ -102,8 +102,7 @@ function ExercisesPage() {
               specificStylePlayer='music-player'
               specificStyleMusicButton='specificStyleMusicButton' 
             />
-          </div>
-          }
+          </div>}
 
           <div className='exercises-page-style-cards-timer-title-music-toggle-video-modal'>
             <ToggleDefault 
