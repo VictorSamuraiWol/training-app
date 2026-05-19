@@ -18,8 +18,8 @@ function ExercisesPage() {
 
   const { staticUsersContents, dynamicUsersContents, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
 
-  const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, setSelectIdVideoModal, compactUserName,
-    ableMusic, setAbleMusic, setAbleTimer
+  const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
+    ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner
   } = useOutletContext()
 
   const { id } = useParams()
@@ -45,29 +45,43 @@ function ExercisesPage() {
   useEffect(() => {
     setAbleTimer(true)
     setAbleMusic(true)
+    setAbleBanner(true)
+    setAbleVideoBanner(false)
     
   }, [])
 
   return(
     <div className='exercises-page-style'>
-      {loginValidate && !selectIdVideoModal && <div className='banner-exercises-page'></div>}
+      <div className='container-banner-iframe-delete-icons'>
+        {loginValidate && !ableVideoBanner && ableBanner &&
+        <div className='container-delete-button-banner'>
+          <TiDeleteOutline
+            onClick={() => setAbleBanner(false)}
+            className='delete-icon-banner-exercises-page'
+          /> 
 
-      {loginValidate && selectIdVideoModal &&
-      <div className='container-iframe-delete'>
-        <iframe
-          className='videos-target-banner-iframe'
-          src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
-          title="YouTube video player"
-          frameBorder="0"
-          allowFullScreen
-        />
+          <div className='banner-exercises-page'></div>
 
-        <TiDeleteOutline
-          onClick={() => setSelectIdVideoModal('')}
-          className='videos-target-banner-iframe-delete-icon'
-        /> 
+        </div>}
 
-      </div>}
+        {loginValidate && ableVideoBanner &&
+        <div className='container-iframe-delete'>
+          <TiDeleteOutline
+            onClick={() => setAbleVideoBanner(false)} 
+            className='videos-target-banner-iframe-delete-icon'
+          /> 
+
+          <iframe
+            className='videos-target-banner-iframe'
+            src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
+            title="YouTube video player"
+            frameBorder="0"
+            allowFullScreen
+          />
+
+        </div>}
+
+      </div>
 
       {loginValidate && selectIdVideoModal && <PlayerVideoYT videoSelected = {{
           src : `https://www.youtube.com/embed/${selectIdVideoModal}?autoplay=1`,
@@ -104,16 +118,16 @@ function ExercisesPage() {
             />
           </div>}
 
-          <div className='exercises-page-style-cards-timer-title-music-toggle-video-modal'>
+          <div className={ableMusic ? 'exercises-page-style-cards-timer-title-music-toggle-video-modal' : 'new-exercises-page-style-cards-timer-title-music-toggle-video-modal'}>
             <ToggleDefault 
               idToggle='timers'
-              specificsStylesToggles='toggle-default-timer-title-music'
+              specificsStylesToggles={ableMusic ? 'toggle-default-timer-title-music' : 'new-toggle-default-timer-title-music'}
               specificStyleToggle='toggle-default-timer-title-music-toggle-on-toggle-off'
               isOnToggle={isOnToggleTimersExercises}
               setIsOnToggle={setIsOnToggleTimersExercises}
             />
 
-            <VideoModal specificsStylesTogglesVideoModal='specificsStylesTogglesVideoModal' />
+            <VideoModal specificsStylesTogglesVideoModal={ableMusic ? 'specificsStylesTogglesVideoModal' : 'new-specificsStylesTogglesVideoModal'} />
 
           </div>
 
@@ -122,7 +136,6 @@ function ExercisesPage() {
         <div className='container-exercises-page-style-cards-title'>
           <div className='exercises-page-style-cards-title'>
             <h1 className='exercises-page-style-cards-title-short-text'>Workout {typeTrain} - {compactUserName(nameUser, 8)}</h1>
-            <h1 className='exercises-page-style-cards-title-long-text'>Workout {typeTrain} - {compactUserName(nameUser, 15)}</h1>
 
           </div >
 

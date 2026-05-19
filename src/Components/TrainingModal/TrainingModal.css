@@ -43,7 +43,7 @@
   color: var(--border-green);
   text-shadow: 3px 2px 3px var(--border);
   width: 30%;
-  height: 55%;
+  height: 60%;
   padding: 16px;
   border: 1px solid var(--border-green);
   border-radius: 8px;
@@ -52,6 +52,7 @@
   background-image: url(../../assets/images/bg-header-main-footer.png);
   background-position: center;
   background-size: contain;
+  box-sizing: border-box;
 }
 
 .modalTrainingContent:focus {
@@ -96,7 +97,7 @@
   gap: 32px;
   flex-wrap: wrap;
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow-x: auto;
   overflow-y: hidden;
 }

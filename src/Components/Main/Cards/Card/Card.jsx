@@ -12,7 +12,7 @@ function Card({ exercises, _key }) {
 
   const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser, typeTrain } = useContext(DataContext)
 
-  const { checkedInputs, setCheckedInputs } = useOutletContext()
+  const { checkedInputs, setCheckedInputs, ableMusic, ableBanner, ableVideoBanner } = useOutletContext()
 
   function performanceEndWorkout(exercisesLength) {
     const checkedInputsFilter = checkedInputs.length > 0 && 
@@ -35,38 +35,46 @@ function Card({ exercises, _key }) {
   }
 
   return (
-    <div className='cards-training'>      
-      {exercises
-      .map((exercise, index) => (
-        <Exercise
-          key={`${_key}${index}`}
-          _key={`${_key}${index}`} 
-          exerciseName={exercise[0] && exercise[0].exercise}
-          exerciseGif={exercise[1] && exercise[1].gif}
-        />
+      <div 
+      className={(ableMusic && ableBanner && !ableVideoBanner && 'cards-training') || 
+        (!ableMusic && ableBanner && !ableVideoBanner && 'new-cards-training') ||
+        (ableMusic && !ableBanner && !ableVideoBanner && 'new-new-cards-training') ||
+        (!ableMusic && !ableBanner && !ableVideoBanner && 'new-new-new-cards-training') ||
+        (ableMusic && !ableBanner && ableVideoBanner && 'cards-training') ||
+        (!ableMusic && !ableBanner && ableVideoBanner && 'new-cards-training')
+      }
+      >      
+        {exercises
+        .map((exercise, index) => (
+          <Exercise
+            key={`${_key}${index}`}
+            _key={`${_key}${index}`} 
+            exerciseName={exercise[0] && exercise[0].exercise}
+            exerciseGif={exercise[1] && exercise[1].gif}
+          />
 
-      ))}
-
-      {/* Static and Dynamic User Contents */}
-      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
-      .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-      .map(user => user.exercises)[0]
-      .filter(exercises => exercises[0].type === typeTrain)
-      .map(exercises => exercises[1].exercises)
-      .map((exercises) => (
-        <FinishWorkoutModal
-          className='finish-workout-button-modal'
-          key={typeTrain}
-          performanceEndWorkout={performanceEndWorkout(exercises.length).performance}
-          numPerformanceEndWorkout={performanceEndWorkout(exercises.length).numPerformance}
-          totalEndWorkout={performanceEndWorkout(exercises.length).totalExercises}
-          doneEndWorkout={performanceEndWorkout(exercises.length).doneExercises}
-          missedEndWorkout={performanceEndWorkout(exercises.length).missedExercises}
-          setCheckedInputs={setCheckedInputs}
-        />
         ))}
 
-    </div>
+        {/* Static and Dynamic User Contents */}
+        {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+        .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+        .map(user => user.exercises)[0]
+        .filter(exercises => exercises[0].type === typeTrain)
+        .map(exercises => exercises[1].exercises)
+        .map((exercises) => (
+          <FinishWorkoutModal
+            className='finish-workout-button-modal'
+            key={typeTrain}
+            performanceEndWorkout={performanceEndWorkout(exercises.length).performance}
+            numPerformanceEndWorkout={performanceEndWorkout(exercises.length).numPerformance}
+            totalEndWorkout={performanceEndWorkout(exercises.length).totalExercises}
+            doneEndWorkout={performanceEndWorkout(exercises.length).doneExercises}
+            missedEndWorkout={performanceEndWorkout(exercises.length).missedExercises}
+            setCheckedInputs={setCheckedInputs}
+          />
+          ))}
+
+      </div>
 
   )
 

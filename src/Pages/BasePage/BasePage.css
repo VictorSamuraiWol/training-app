@@ -5,3 +5,25 @@
   width: auto;
   background: var(--text);
 }
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .base-page-styles {
+    height: 100vh;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .base-page-styles {
+    height: 100vh;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .base-page-styles {
+    height: max-content;
+  }
+
+}

@@ -20,7 +20,8 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
 
   const { staticUsersContents, dynamicUsersContents, nameUser, loginValidate } = useContext(DataContext)
 
-  const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition
+  const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition,
+    setAbleVideoBanner
   } = useOutletContext()
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -34,6 +35,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
   function openModal() {
     setModalIsOpen(true)
     setVisibleVideoYT(false)
+    selectedRadio === null && captureValueRadioInput('', 1)
 
   }
 
@@ -54,6 +56,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
     if (selectIdVideoModal !== '') {
       setVisibleVideoYT(true)
       setModalIsOpen(false)
+      setAbleVideoBanner(true)
 
     } else {
       setErrorMessageVideoModal('select a video')

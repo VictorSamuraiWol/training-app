@@ -27,6 +27,10 @@ function BasePage() {
 
   const [ableTimer, setAbleTimer] = useState(true)
 
+  const [ableBanner, setAbleBanner] = useState(true)
+
+  const [ableVideoBanner, setAbleVideoBanner] = useState(false)
+
   const [ableMusic, setAbleMusic] = useState(true)
 
   const [checkedInputs, setCheckedInputs] = useState([])
@@ -72,7 +76,7 @@ function BasePage() {
         setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, setIsOnToggleTimersExercises, 
         selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
         selectContainerVideoYTPosition, setSelectContainerVideoYTPosition, checkedInputs, setCheckedInputs, toggleChecked, 
-        setAbleTimer, ableMusic, setAbleMusic
+        setAbleTimer, ableMusic, setAbleMusic, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner
       }} 
       />}
 
