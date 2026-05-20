@@ -203,19 +203,14 @@
 .videos-target-iframe {
   height: 100%;
   width: 100%;
-  border-left: 1px solid var(--bg);
-  border-top: 1px solid var(--bg);
-  border-right: 1px solid var(--border);
-  border-bottom: 2px solid var(--border);
+  border: none;
+  border-radius: 16px;
   box-shadow: 5px 5px 5px var(--bg), 10px 10px 10px var(--bg), 20px 20px 20px var(--bg);
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .videos-target-iframe:hover {
-  border-left: 1px solid var(--border);
-  border-top: 1px solid var(--border);
-  border-right: 1px solid var(--bg);
-  border-bottom: 2px solid var(--bg);
+  border: none;
   box-shadow: -5px 5px 5px var(--border), -10px 10px 10px var(--border), -20px 20px 20px var(--border);
 }
 
