@@ -45,7 +45,7 @@
   font-size: 1.1rem;
   color: var(--border-green);
   cursor: pointer;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .timer-fixed-icon:hover {
@@ -60,7 +60,7 @@
   font-size: 1.1rem;
   color: var(--border-green);
   cursor: pointer;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .timer-delete-icon:hover {
@@ -95,8 +95,12 @@
   width: 7rem;
   box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg);
   border-radius: 50%;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.link-img-logo-header:hover {
+  transform: scale(0.94);
 }
 
 .container-login-signin {
@@ -106,6 +110,7 @@
   align-items: center;
   gap: 12px;
   width: 15%;
+  color: var(--border-yellow);
   background-image: url(../../assets/images/image-login-logout.png);
   background-position: top;
   background-size: cover;
@@ -113,7 +118,15 @@
   border: 1px solid var(--border-green);
   border-radius: 8px;
   box-shadow: 5px 5px 5px var(--border);
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container-login-signin:hover {
+  color: var(--border-green);
+}
+
+.container-login-signin:hover .container-login-signin-image-name-img {
+  box-shadow: 5px 3px 3px var(--border-green);
 }
 
 .container-login-signin-image-name {
@@ -124,28 +137,27 @@
   width: 100%;
 }
 
-.container-login-signin-image-name-long-text {
-  font-size: 1.3rem;
-  color: var(--border-yellow);
-  text-shadow: 2px 2px 3px var(--border);
-  overflow-wrap: break-word;
-  cursor: default;
-}
-
-.container-login-signin-image-name-short-text {
-  font-size: 1.3rem;
-  color: var(--border-yellow);
-  text-shadow: 2px 2px 3px var(--border);
-  overflow-wrap: break-word;
-  cursor: default;
-}
-
 .container-login-signin-image-name-img {
   width: 50px;
   border-radius: 50%;
   box-shadow: 0;
   text-shadow: 0;
   box-shadow: 5px 3px 3px var(--border-yellow);
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container-login-signin-image-name-short-text {
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 3px var(--border);
+  overflow-wrap: break-word;
+  cursor: default;
+}
+
+.container-login-signin-image-name-long-text {
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 3px var(--border);
+  overflow-wrap: break-word;
+  cursor: default;
 }
 
 .link-container-button-signout {

@@ -8,7 +8,7 @@
   background-size: contain;
   overflow: hidden;
   user-select: none;
-  transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg), 0 0 20px var(--bg);
   z-index: 2;
 }
@@ -56,7 +56,7 @@
   border-radius: 8px;
   border: none;
   flex-shrink: 0;
-  transition: background 0.15s, color 0.15s;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
 }
 

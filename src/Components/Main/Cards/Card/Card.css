@@ -7,7 +7,7 @@
   gap: 24px;
   width: auto;
   padding: 0 8px;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: default;
 }
 
@@ -26,7 +26,7 @@
   padding: 8px;
   border-bottom: 2px solid var(--border-green);
   border-radius: 8px;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .new-cards-training-exercises-timer {
@@ -45,7 +45,7 @@
   text-shadow: 2px 2px 3px var(--border);
   overflow-wrap: break-word;
   cursor: pointer;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   -webkit-tap-highlight-color: transparent;
  }
 
@@ -97,7 +97,7 @@
   background-color: transparent;
   border: 2px solid var(--border-yellow);
   border-radius: 25%;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin: 0;
   cursor: pointer;
   

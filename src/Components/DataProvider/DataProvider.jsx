@@ -62,7 +62,7 @@ export default function DataProvider({ children }) {
                     [{"type": "F"}, {"exercises": [[{"exercise": "Rosca Direta: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Biceps Concentrado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Biceps Alternado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Rosca Punho: 3x12-14 (10kgs cada)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Rosca Punho Invertida: 3x12-14 (10kgs cada)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}]]}]
                    ],
       "nutrition": [["Suplementos:", "Whey", "Creatina", "Dextrose"], ["Café da Manhã:", "Café", "Ovos", "Manteiga", "Abacate"], ["Lanche:", "", "", "", "", ""], ["Almoço:", "Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"], ["Lanche:", "Vitamina de Banana", "Pão", "Ovos"], ["Jantar:", "Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"], ["Ceia:", "Chá", "Castanha", "Amendoim"]],
-      "notes": ["Rest between reps: 1 min", "Rest between sets: 1-3 min"],
+      "notes": ["Descanso entre repetições: 1 min", "Descanso entre séries: 1-3 min"],
       "password": "Leimar",
       "imageProfile": "profileLeimar",
       "audio": "audio2",

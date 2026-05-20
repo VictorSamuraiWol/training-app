@@ -3,7 +3,12 @@
   align-items: center;
   color: var(--border-green);
   cursor: pointer;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   z-index: 1;
+}
+
+.image-react-video-modal:hover {
+  transform: scale(0.94);
 }
 
 .modalVideoOverlay {
@@ -35,7 +40,7 @@
   border: 1px solid var(--border-green);
   border-radius: 8px;
   box-shadow: 5px 5px 5px var(--border-yellow), 10px 10px 10px var(--border-yellow);
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   background-image: url(../../../assets/images/bg-header-main-footer.png);
   background-position: center;
   background-size: cover;
@@ -99,7 +104,7 @@
   background-color: transparent;
   border: 1px solid var(--border);
   border-radius: 50%;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin: 0;
   cursor: pointer;
 }
@@ -131,7 +136,7 @@
   right: 8px;
   top: 46%;
   transform: translateY(-50%) rotate(0deg);
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   pointer-events: none;
 }
 
@@ -179,7 +184,7 @@
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   box-shadow: 5px 5px 5px var(--bg), 10px 10px 10px var(--bg), 20px 20px 20px var(--bg);
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .bg-video-modal-style:hover {
@@ -203,7 +208,7 @@
   border-right: 1px solid var(--border);
   border-bottom: 2px solid var(--border);
   box-shadow: 5px 5px 5px var(--bg), 10px 10px 10px var(--bg), 20px 20px 20px var(--bg);
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .videos-target-iframe:hover {
@@ -236,7 +241,7 @@
   border-right: 1px solid var(--bg);
   border-bottom: 1px solid var(--bg);
   border-radius: 8px;
-  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .container-video-modal-button:hover {
