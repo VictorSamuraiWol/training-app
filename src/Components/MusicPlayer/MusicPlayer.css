@@ -3,6 +3,9 @@
   flex-direction: column;
   gap: 6px;
   text-align: center;
+  background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-position: center;
+  background-size: cover;
   padding: 6px;
   border: 1px solid var(--border-green);
   border-radius: 6px;

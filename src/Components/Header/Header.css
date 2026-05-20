@@ -25,10 +25,32 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(../../assets/images/bg-header-main-footer.png);
+  background-position: center;
+  background-size: contain;
   padding: 6px;
   border: 1px solid var(--border-green);
   border-radius: 6px;
   box-shadow: 0 0 5px var(--border), 0 0 10px var(--border);
+}
+
+.new-title-timer {
+  position: fixed;
+}
+
+.timer-fixed-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: var(--border-green);
+  cursor: pointer;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.timer-fixed-icon:hover {
+  color: var(--text);
+  transform: scale(0.94);
 }
 
 .timer-delete-icon {
@@ -44,10 +66,6 @@
 .timer-delete-icon:hover {
   color: var(--text);
   transform: scale(0.94);
-}
-
-.new-title-timer {
-  visibility: hidden;
 }
 
 .title-timer-text {
@@ -174,11 +192,16 @@
   .title-timer {
     top: 10%;
     left: 30%;
+    padding: 12px 6px;
     border: none;
   }
 
+  .timer-fixed-icon {
+    display: none;
+  }
+
   .timer-delete-icon {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .title-timer-text {
@@ -192,7 +215,7 @@
 
   .specificStyleTimerButton {
     font-size: 0.4rem;
-    padding: 2px 16px;
+    padding: 4px 16px;
   }
   
   .container-login-signin {
@@ -230,14 +253,18 @@
   }
 
   .title-timer {
-    top: 10%;
+    top: 5%;
     left: 34%;
-    padding: 8px;
+    padding: 12px 8px;
     border: none;
   }
 
+  .timer-fixed-icon {
+    display: none;
+  }
+
   .timer-delete-icon {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .title-timer-text {
@@ -251,7 +278,7 @@
 
   .specificStyleTimerButton {
     font-size: 0.5rem;
-    padding: 2px 16px;
+    padding: 4px 16px;
   }
   
   .container-login-signin {
@@ -291,15 +318,16 @@
   }
 
   .title-timer {
-    position: fixed;
-    top: 1%;
+    top: 5%;
     left: 35%;
     padding: 4px;
     border: 1px solid var(--border-green);
-    background-image: url(../../assets/images/bg-header-main-footer.png);
-    background-position: center;
-    background-size: contain;
     z-index: 1;
+  }
+
+  .timer-fixed-icon {
+    display: flex;
+    font-size: 1rem;
   }
 
   .timer-delete-icon {
@@ -411,6 +439,10 @@
 @media (min-width: 1440px) {
   .title-timer {
     left: 41%;
+  }
+
+  .timer-fixed-icon {
+    font-size: 1.1rem;
   }
 
   .timer-delete-icon {

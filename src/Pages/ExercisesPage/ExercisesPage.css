@@ -14,13 +14,16 @@
   right: 0;
   top: 0;
   font-size: 1.3rem;
-  color: var(--border-green);
+  color: var(--border);
+  background-color: var(--border-yellow);
+  border-radius: 50%;
   cursor: pointer;
   transition: border 0.3s ease-in-out, background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .delete-icon-banner-exercises-page:hover {
-  color: var(--text);
+  color: var(--border-yellow);
+  background-color: var(--border);
   transform: scale(0.94);
 }
 

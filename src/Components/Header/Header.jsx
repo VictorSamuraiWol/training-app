@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
 import { TiDeleteOutline } from "react-icons/ti";
+import { AiFillPushpin, AiOutlinePushpin } from "react-icons/ai";
 
 function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer }) {
 
@@ -22,6 +23,8 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
     profileLeimar: profileLeimar
 
   })
+
+  const [isPinned, setIsPinned] = useState(false)
 
   function signOut() {
     setLoginValidate(false)
@@ -39,11 +42,20 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
         />
       </Link>
 
-      {ableTimer &&
-      <div className={ableExercisesPage ? 
-        'title-timer' :
-        'new-title-timer'}
+      {ableTimer && ableExercisesPage &&
+      <div 
+        className={`title-timer ${isPinned && 'new-title-timer'}`}
       >
+      {isPinned ? 
+      <AiFillPushpin 
+        onClick={() => setIsPinned(false)}
+        className='timer-fixed-icon' 
+      /> : 
+      <AiOutlinePushpin 
+        onClick={() => setIsPinned(true)}
+        className='timer-fixed-icon' 
+      />}
+
       <TiDeleteOutline
         onClick={() => setAbleTimer(false)}
         className='timer-delete-icon'
