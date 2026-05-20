@@ -127,7 +127,7 @@
 .exercises-page-style-cards-timer-title-music-toggle-video-modal {
   display: flex;
   justify-content: end;
-  align-items: start;
+  align-items: center;
   gap: 6px;
   width: 100%;
   height: 20px;
@@ -136,7 +136,7 @@
 .new-exercises-page-style-cards-timer-title-music-toggle-video-modal {
   display: flex;
   justify-content: end;
-  align-items: start;
+  align-items: center;
   gap: 6px;
   width: 100%;
 }
