@@ -19,7 +19,7 @@ function Card({ exercises, _key }) {
     checkedInputs.filter(inputs => inputs.includes(`${typeTrain}`))
     
     const performance = checkedInputs.length === 0 ? '0%' :
-      `${(checkedInputsFilter.length / exercisesLength) * 100}%`
+      `${(checkedInputsFilter.length / exercisesLength).toFixed(2) * 100}%`
 
     const numPerformance = checkedInputs.length === 0 ? 0 :
       (checkedInputsFilter.length / exercisesLength)
