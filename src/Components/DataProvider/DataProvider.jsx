@@ -29,7 +29,7 @@ export default function DataProvider({ children }) {
       "password": "0",
       "imageProfile": "example",
       "audio": "audio2",
-      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}],
+      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}],
       "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
       "id": "0"
     },
@@ -46,7 +46,7 @@ export default function DataProvider({ children }) {
       "password": "Victor Static",
       "imageProfile": "profileVictor",
       "audio": "audio1",
-      "videoYT": [{"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}, {"name": "Armin van Buuren live at Ushuaïa, Ibiza 2025", "id": "yIBQX-F_Jjw?si=es6mErCPcGn9_0tm"}, {"name": "Armin van Buuren live at A State of Trance, London 2025", "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"}, {"name": "ALOK @ TOMORROWLAND WINTER 2026", "id": "iP-t3nMX9wQ?si=VTtnRXXn5du8TmMO"}],
+      "videoYT": [{"name": "Armin van Buuren live at EDC Las Vegas 2026", "id": "n-MhD_TdzN4?si=T8ruZ0Ogr4taVYqW"}, {"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}, {"name": "Armin van Buuren live at Ushuaïa, Ibiza 2025", "id": "yIBQX-F_Jjw?si=es6mErCPcGn9_0tm"}, {"name": "Armin van Buuren live at A State of Trance, London 2025", "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"}, {"name": "ALOK @ TOMORROWLAND WINTER 2026", "id": "iP-t3nMX9wQ?si=VTtnRXXn5du8TmMO"}],
       "quickAccess": [[{"name": "A"}, {"path": "/exercises-page/A"}], [{"name": "B"}, {"path": "/exercises-page/B"}], [{"name": "C"}, {"path": "/exercises-page/C"}], [{"name": "nutrition"}, {"path": "/nutrition-page"}], [{"name": "notes"}, {"path": "/notes-page"}]],
       "id": "Victor Static"
     },
@@ -54,7 +54,7 @@ export default function DataProvider({ children }) {
       "name" : "Leimar",
       "weight": "87 kgs",
       "height": "1,75 cm",
-      "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "Supino Horizontal: 1x16-20 (60% da carga) + 5x12-14 (20kgs cada)"}, {"gif": "barbellBenchPress"}], [{"exercise": "Voador: 5x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Elevação Frontal: 4x7-9 (3 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Elevação Lateral: 4x7-9 (3 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Remada Alta: 4x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}]]}], 
+      "exercises": [[{"type": "A"}, {"exercises": [[{"exercise": "Supino Horizontal: 1x16-20 (60% da carga) + 5x12-14 (20kgs cada)"}, {"gif": "barbellBenchPress"}], [{"exercise": "Voador: 5x12-14 (5 barras)"}, {"gif": "peckdeck"}], [{"exercise": "Elevação Frontal: 4x7-9 (3 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Elevação Lateral: 4x7-9 (3 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Remada Alta: 4x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}]]}], 
                     [{"type": "B"}, {"exercises": [[{"exercise": "Leg Press: 1x16-20 (60% da carga) + 3x12-14 (30kgs cada)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Stiff: 1x16-20 (60% da carga) + 3x12-14 (barra)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Cadeira Flexora: 3x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Cadeira Extensora: 3x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Abdominal supra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Prancha: 30s"}, {"gif": "plank"}]]}],
                     [{"type": "C"}, {"exercises": [[{"exercise": "Remada na máquina: 1x16-20 (60% da carga) + 5x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Puxador: 5x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Remada Alta: 4x12-14 (5 barras)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Rosca Punho: 3x12-14 (20kgs)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Rosca Punho Invertida: 3x12-14 (20kgs)"}, {"gif": "waitingTheExercise"}]]}],
                     [{"type": "D"}, {"exercises": [[{"exercise": "HIIT (burpess, polichinelo, pular corda, etc): 10-15 min"}, {"gif": "hiit"}], [{"exercise": "Abdominal supra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], [{"exercise": "Prancha: 30s"}, {"gif": "plank"}]]}],

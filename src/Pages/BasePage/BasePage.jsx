@@ -17,6 +17,8 @@ function BasePage() {
 
   const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
 
+  const [selectNameVideoModal, setSelectNameVideoModal] = useState('')
+
   const [selectIdVideoModal, setSelectIdVideoModal] = useState('')
 
   const [initialPosVideo, setInitialPosVideo] = useState('')
@@ -76,7 +78,8 @@ function BasePage() {
         setActivateNavigateDefault, compactUserName, isOnToggleTimersExercises, setIsOnToggleTimersExercises, 
         selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
         selectContainerVideoYTPosition, setSelectContainerVideoYTPosition, checkedInputs, setCheckedInputs, toggleChecked, 
-        setAbleTimer, ableMusic, setAbleMusic, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner
+        setAbleTimer, ableMusic, setAbleMusic, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
+        selectNameVideoModal, setSelectNameVideoModal
       }} 
       />}
 

@@ -21,7 +21,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
   const { staticUsersContents, dynamicUsersContents, nameUser, loginValidate } = useContext(DataContext)
 
   const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition,
-    setAbleVideoBanner, setAbleBanner
+    setAbleVideoBanner, setAbleBanner, selectNameVideoModal, setSelectNameVideoModal
   } = useOutletContext()
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -58,6 +58,13 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
       setModalIsOpen(false)
       setAbleVideoBanner(true)
       setAbleBanner(false)
+
+      const nameVideo = (staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+        .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+        .map(user => user.videoYT)[0]
+        .filter(video => video.id === selectIdVideoModal)[0].name
+
+      setSelectNameVideoModal(nameVideo)
 
     } else {
       setErrorMessageVideoModal('select a video')
@@ -206,7 +213,7 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
             "videos-selects-icon-animation" : ""}`} 
           />
 
-          <select 
+          <select
             value={selectIdVideoModal}
             onFocus={() => setOpenVideoModal(true)}
             onMouseDown={() => setOpenVideoModal(true)}
@@ -226,14 +233,16 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
             .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
             .map(user => (
               user.videoYT && user.videoYT.map((video, indice) => 
-                video && <option
-                key={indice}
-                value={video.id}
-                className='videos-selects-select-option'
+                video && 
+                <option
+                  key={indice}
+                  value={video.id}
+                  className='videos-selects-select-option'
                 >
                   {compactUserName(video.name, 60)}
 
                 </option>)
+
             ))}
 
           </select>
@@ -248,10 +257,11 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
             alt='img-bg-video-modal'
           />}
 
-          {selectIdVideoModal && <iframe
+          {selectIdVideoModal && 
+          <iframe
             className='videos-target-iframe'
             src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
-            title="YouTube video player"
+            title={selectNameVideoModal}
             allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen

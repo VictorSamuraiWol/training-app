@@ -19,7 +19,8 @@ function ExercisesPage() {
   const { staticUsersContents, dynamicUsersContents, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
-    ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner
+    ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
+    selectNameVideoModal
   } = useOutletContext()
 
   const { id } = useParams()
@@ -74,7 +75,7 @@ function ExercisesPage() {
           <iframe
             className='videos-target-banner-iframe'
             src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
-            title="YouTube video player"
+            title={selectNameVideoModal}
             allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -86,7 +87,7 @@ function ExercisesPage() {
 
       {loginValidate && selectIdVideoModal && <PlayerVideoYT videoSelected = {{
           src : `https://www.youtube.com/embed/${selectIdVideoModal}?autoplay=1`,
-          title : "Youtube Video Player"
+          title: `${selectNameVideoModal}`
         }}
       />}
 

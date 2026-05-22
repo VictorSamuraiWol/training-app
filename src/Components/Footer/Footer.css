@@ -67,6 +67,10 @@
   color: var(--border-yellow);
 }
 
+.quick-access-selects-select-option-select {
+  color: var(--border-yellow);
+}
+
 .footer-img {
   width: 40px;
 }

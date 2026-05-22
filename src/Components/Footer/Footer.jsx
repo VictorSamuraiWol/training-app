@@ -8,12 +8,14 @@ import { TbTriangleInvertedFilled } from "react-icons/tb";
 
 function Footer() {
 
-  const { staticUsersContents, dynamicUsersContents, loader, loginValidate, nameUser, setTypeTrain, 
+  const { staticUsersContents, dynamicUsersContents, loader, loginValidate, nameUser, typeTrain, setTypeTrain, 
     ableExercisesPage, ableNutritionPage, ableNotesPage } = useContext(DataContext)
 
   const navigate = useNavigate()
 
   const [openQuickAccess, setOpenQuickAccess] = useState(false)
+
+  const [disabledSelectNamesQuickAccess, setDisabledSelectNamesQuickAccess] = useState(false)
   
   const handleNavigate = (e) => {
     const path = e.target.value
@@ -28,13 +30,24 @@ function Footer() {
 
     if (path) navigate(path)
 
+    return letterTypeTrain
+
   }
 
-  const [disabledSelectNamesQuickAccess, setDisabledSelectNamesQuickAccess] = useState(false)
+  function optionSelect(optionSelect) {
+    let select;
+
+    if (optionSelect.includes(typeTrain)) {
+      select = 'true'
+      
+    }    
+
+    return select
+
+  }
 
   return(
     <div className='footer'>
-
       {(ableExercisesPage || ableNutritionPage || ableNotesPage) && 
       <div className='quick-access-selects'>        
         <TbTriangleInvertedFilled className={`quick-access-selects-icon ${openQuickAccess ? 
@@ -66,8 +79,10 @@ function Footer() {
             <option 
               key={quickAccess[0].name}
               value={quickAccess[1].path}
-              className='quick-access-selects-select-option'
+              className={`'quick-access-selects-select-option' 
+                ${optionSelect(quickAccess[1].path) === 'true' && 'quick-access-selects-select-option-select'}`}
               onClick={() => setDisabledSelectNamesQuickAccess(true)}
+              path={optionSelect(quickAccess[1].path)}
             >
               {quickAccess[0].name}
             </option>
