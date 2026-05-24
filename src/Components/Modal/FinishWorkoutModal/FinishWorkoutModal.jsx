@@ -2,7 +2,7 @@ import './FinishWorkoutModal.css';
 import Modal from 'react-modal';
 import ButtonDefault from '../../ButtonDefault/ButtonDefault';
 import endWorkoutGoodImage from '../../../assets/images/exercises-gif/end-workout-50-100-gif.gif';
-import endWorkoutBadImage from '../../../assets/images/exercises-gif/end-workout-0-50-gif.gif';
+import endWorkoutBadImage from '../../../assets/images/exercises-gif/end-workout-0-49-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti";
 import { Link, useOutletContext } from 'react-router-dom';

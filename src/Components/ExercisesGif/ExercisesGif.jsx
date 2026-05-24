@@ -6,6 +6,9 @@ import concentrationCurl from '../../assets/images/exercises-gif/concentration-c
 import dumbbellReverseCurl from '../../assets/images/exercises-gif/dumbbell-reverse-curl-gif.gif';
 import plank from '../../assets/images/exercises-gif/plank-gif.gif';
 import peckdeck from '../../assets/images/exercises-gif/peck-deck-gif.gif';
+import dumbbellFrontRaise from '../../assets/images/exercises-gif/dumbbell-front-raise-gif.gif';
+import dumbbellLateralRaise from '../../assets/images/exercises-gif/dumbbell-lateral-raise-gif.gif';
+import barbellUprightRow from '../../assets/images/exercises-gif/barbell-upright-row-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -24,7 +27,10 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     concentrationCurl: concentrationCurl,
     dumbbellReverseCurl: dumbbellReverseCurl,
     plank: plank,
-    peckdeck: peckdeck
+    peckdeck: peckdeck,
+    dumbbellFrontRaise: dumbbellFrontRaise,
+    dumbbellLateralRaise: dumbbellLateralRaise,
+    barbellUprightRow: barbellUprightRow
 
   })
 
