@@ -9,6 +9,8 @@ import peckdeck from '../../assets/images/exercises-gif/peck-deck-gif.gif';
 import dumbbellFrontRaise from '../../assets/images/exercises-gif/dumbbell-front-raise-gif.gif';
 import dumbbellLateralRaise from '../../assets/images/exercises-gif/dumbbell-lateral-raise-gif.gif';
 import barbellUprightRow from '../../assets/images/exercises-gif/barbell-upright-row-gif.gif';
+import legPress from '../../assets/images/exercises-gif/leg-press-gif.gif';
+import stiff from '../../assets/images/exercises-gif/stiff-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -30,7 +32,9 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     peckdeck: peckdeck,
     dumbbellFrontRaise: dumbbellFrontRaise,
     dumbbellLateralRaise: dumbbellLateralRaise,
-    barbellUprightRow: barbellUprightRow
+    barbellUprightRow: barbellUprightRow,
+    legPress: legPress,
+    stiff: stiff
 
   })
 
