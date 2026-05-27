@@ -11,6 +11,8 @@ import dumbbellLateralRaise from '../../assets/images/exercises-gif/dumbbell-lat
 import barbellUprightRow from '../../assets/images/exercises-gif/barbell-upright-row-gif.gif';
 import legPress from '../../assets/images/exercises-gif/leg-press-gif.gif';
 import stiff from '../../assets/images/exercises-gif/stiff-gif.gif';
+import legCurlMachine from '../../assets/images/exercises-gif/leg-curl-machine-gif.gif';
+import legExtensionMachine from '../../assets/images/exercises-gif/leg-extension-machine-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -34,7 +36,9 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     dumbbellLateralRaise: dumbbellLateralRaise,
     barbellUprightRow: barbellUprightRow,
     legPress: legPress,
-    stiff: stiff
+    stiff: stiff,
+    legCurlMachine: legCurlMachine,
+    legExtensionMachine: legExtensionMachine
 
   })
 
