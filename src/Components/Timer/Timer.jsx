@@ -4,7 +4,9 @@ import { FaPause } from "react-icons/fa";
 import { FaStop } from "react-icons/fa";
 import { useState, useRef, useEffect } from "react";
 
-export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, specificStyleTimerButton }) {
+export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, specificStyleTimerButton,
+  _key, keyInput, setKeyInput, checkedInputs, ableOnClickButton
+}) {
 
   const [isRunning, setIsRunning] = useState(false)
   
@@ -46,6 +48,18 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, s
 
   }
 
+  useEffect(() => {
+    if (checkedInputs?.includes(_key) && _key === keyInput) {
+      setKeyInput(`${_key}+${Math.floor(Math.random() * 100)}`)
+
+    } else if (!checkedInputs?.includes(_key)) {
+      setKeyInput && setKeyInput(_key)
+
+    }
+
+  }, [checkedInputs, _key, setKeyInput, keyInput])
+
+
   const formatTime = () => {
     const ms = String(Math.floor((time % 1000) / 10)).padStart(2, "0")
     const seconds = String(Math.floor((time / 1000) % 60)).padStart(2, "0")
@@ -62,7 +76,7 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, s
 
       <div className="timer-buttons">
         <button
-          onClick={toggleTimer}
+          onClick={ableOnClickButton ? toggleTimer : null}
           className={`timer-button ${specificStyleTimerButton}`} 
         >
           {isRunning ? <FaPause /> : <FaPlay />}

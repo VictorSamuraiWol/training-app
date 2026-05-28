@@ -55,6 +55,7 @@ function BasePage() {
   function toggleChecked(_key, checked) {
     setCheckedInputs(prev =>
       checked ? [...prev, _key] : prev.filter(k => k !== _key)
+
     )
 
   }

@@ -69,7 +69,7 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
         specificStyleTimer='specificStyleTimer' 
         specificStyleTimerDisplay='specificStyleTimerDisplay' 
         specificStyleTimerButton='specificStyleTimerButton'
-        buttonPlayPauseId='0' 
+        buttonPlayPauseId='0'
       />
             
       </div>}

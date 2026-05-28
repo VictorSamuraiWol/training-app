@@ -10,7 +10,7 @@ import { Link, useOutletContext } from 'react-router-dom';
 Modal.setAppElement('#root')
 
 function FinishWorkoutModal({ performanceEndWorkout, numPerformanceEndWorkout, totalEndWorkout, doneEndWorkout, 
-  missedEndWorkout, setCheckedInputs }) {
+  missedEndWorkout, setCheckedInputs, ableFinishWorkoutButton }) {
 
   const { setAbleTimer, setSelectIdVideoModal } = useOutletContext()
   
@@ -29,9 +29,10 @@ function FinishWorkoutModal({ performanceEndWorkout, numPerformanceEndWorkout, t
   return (
     <div className='container-finish-workout'>
       <ButtonDefault 
-        onClick={openModal} 
+        onClick={ableFinishWorkoutButton() ? openModal : null} 
         nameButton='FINISH WORKOUT'
-        specificStylesButton='finish-workout-button'
+        specificStylesButton={ableFinishWorkoutButton() ? 
+          'finish-workout-button' : 'finish-workout-button-inactive'}
       />
 
       <Modal

@@ -7,14 +7,15 @@ import { useOutletContext } from 'react-router-dom';
 
 function Exercise({ exerciseName, exerciseGif, _key }) {
 
-  const { isOnToggleTimersExercises, checkedInputs, toggleChecked } = useOutletContext()
-
-  const [isRunning, setIsRunning] = useState(false)
+  const { isOnToggleTimersExercises, checkedInputs, toggleChecked} = useOutletContext()
 
   const [ableExercisesGif, setAbleExercisesGif] = useState(false)
 
+  const [keyInput, setKeyInput] = useState(_key)
+
   function checkedInput(_key) {
-    let active;
+    let active
+
     if (checkedInputs.includes(_key)) {
       active = _key
 
@@ -56,8 +57,12 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
 
         {isOnToggleTimersExercises && 
         <Timer
-          isRunning={isRunning}
-          setIsRunning={setIsRunning}
+          key={keyInput}
+          _key={_key}
+          keyInput={keyInput}
+          setKeyInput={setKeyInput}
+          checkedInputs={checkedInputs}
+          ableOnClickButton={!checkedInputs.includes(_key)}
           specificStyleTimer='specificStyleTimerExercises'
           specificStyleTimerDisplay={
           checkedInput(_key) === _key ?

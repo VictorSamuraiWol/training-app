@@ -19,7 +19,9 @@ function Card({ exercises, _key }) {
     checkedInputs.filter(inputs => inputs.includes(`${typeTrain}`))
     
     const performance = checkedInputs.length === 0 ? '0%' :
-      `${(checkedInputsFilter.length / exercisesLength).toFixed(2) * 100}%`
+      Number.isInteger(checkedInputsFilter.length / exercisesLength * 100) ?
+        `${((checkedInputsFilter.length / exercisesLength) * 100)}%` :
+        `${((checkedInputsFilter.length / exercisesLength) * 100).toFixed(2)}%`
 
     const numPerformance = checkedInputs.length === 0 ? 0 :
       (checkedInputsFilter.length / exercisesLength)
@@ -32,6 +34,21 @@ function Card({ exercises, _key }) {
 
     return {performance, numPerformance, totalExercises, doneExercises, missedExercises}
 
+  }
+  
+  function ableFinishWorkoutButton() {
+    let able = false
+    
+    const checkedInputsFilter = checkedInputs.length > 0 && 
+    checkedInputs.filter(inputs => inputs.includes(`${typeTrain}`))
+    
+    if (checkedInputsFilter.length > 0) {
+      able = true
+      
+    }
+    
+    return able
+    
   }
 
   return (
@@ -57,6 +74,7 @@ function Card({ exercises, _key }) {
           <FinishWorkoutModal
             className='finish-workout-button-modal'
             key={typeTrain}
+            ableFinishWorkoutButton={ableFinishWorkoutButton}
             performanceEndWorkout={performanceEndWorkout(exercises.length).performance}
             numPerformanceEndWorkout={performanceEndWorkout(exercises.length).numPerformance}
             totalEndWorkout={performanceEndWorkout(exercises.length).totalExercises}

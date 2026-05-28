@@ -17,6 +17,19 @@
   border: 1px solid var(--text);
 }
 
+.finish-workout-button-inactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-inactive);
+  text-shadow: 1px 1px 2px var(--text-inactive);
+  background-color: var(--bg-inactive);
+  padding: 8px 16px;
+  border: 1px solid var(--text-inactive);
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
 .modalFinishWorkoutOverlay {
   display: flex;
   justify-content: center;
@@ -150,6 +163,12 @@
     border-radius: 6px;
   }
 
+  .finish-workout-button-inactive {
+    font-size: 1.1rem;
+    padding: 0 2px;
+    border-radius: 6px;
+  }
+
   .container-finish-workout-modal-delete-text {
     font-size: 1.75rem;
   }
@@ -178,6 +197,12 @@
   }
 
   .finish-workout-button {
+    font-size: 1.2rem;
+    padding: 0 2px;
+    border-radius: 6px;
+  }
+
+  .finish-workout-button-inactive {
     font-size: 1.2rem;
     padding: 0 2px;
     border-radius: 6px;
@@ -212,6 +237,11 @@
     padding: 0 4px;
   }
 
+  .finish-workout-button-inactive {
+    font-size: 1.3rem;
+    padding: 0 4px;
+  }
+
   .container-finish-workout-modal-delete-text {
     font-size: 2.25rem;
   }
@@ -236,6 +266,11 @@
   }
 
   .finish-workout-button {
+    font-size: 1.4rem;
+    padding: 0 6px;
+  }
+
+  .finish-workout-button-inactive {
     font-size: 1.4rem;
     padding: 0 6px;
   }
@@ -265,6 +300,11 @@
     padding: 0 8px;
   }
 
+  .finish-workout-button-inactive {
+    font-size: 1.5rem;
+    padding: 0 8px;
+  }
+
   .container-finish-workout-modal-delete-text {
     font-size: 3rem;
   }
@@ -282,6 +322,11 @@
   }
 
   .finish-workout-button {
+    font-size: 1.6rem;
+    padding: 0 8px;
+  }
+
+  .finish-workout-button-inactive {
     font-size: 1.6rem;
     padding: 0 8px;
   }
