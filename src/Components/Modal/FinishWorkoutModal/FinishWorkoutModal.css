@@ -183,6 +183,10 @@
     gap: 4px;
   }
 
+  .container-texts-text-performance {
+    font-size: 2rem;
+  }
+
   .modal-finish-button {
     font-size: 0.7rem;
     width: 90px;
@@ -221,6 +225,10 @@
     right: 7%;
     font-size: 1rem;
     gap: 16px;
+  }
+
+  .container-texts-text-performance {
+    font-size: 3rem;
   }
 
   .modal-finish-button {
