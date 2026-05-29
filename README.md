@@ -44,6 +44,7 @@
 - [Microsoft Designer](https://designer.microsoft.com/)
 - [Github](https://github.com/)
 - [Vercel](https://vercel.com/)
+- [Supabase](https://supabase.com/)
 
 ## <img src="src/assets/images/icone-wolverine-sem-fundo.png" width="50" /> AWS and Oracle Certified in Cloud Computing, Front-End Student 
 <br>

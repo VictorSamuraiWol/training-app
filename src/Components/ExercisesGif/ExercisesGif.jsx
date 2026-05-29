@@ -13,6 +13,9 @@ import legPress from '../../assets/images/exercises-gif/leg-press-gif.gif';
 import stiff from '../../assets/images/exercises-gif/stiff-gif.gif';
 import legCurlMachine from '../../assets/images/exercises-gif/leg-curl-machine-gif.gif';
 import legExtensionMachine from '../../assets/images/exercises-gif/leg-extension-machine-gif.gif';
+import abdominalCrunch from '../../assets/images/exercises-gif/abdominal-crunch-gif.gif';
+import latPulldown from '../../assets/images/exercises-gif/lat-pulldown-gif.gif';
+import seatedRowMachine from '../../assets/images/exercises-gif/seated-row-machine-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -38,7 +41,10 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     legPress: legPress,
     stiff: stiff,
     legCurlMachine: legCurlMachine,
-    legExtensionMachine: legExtensionMachine
+    legExtensionMachine: legExtensionMachine,
+    abdominalCrunch: abdominalCrunch,
+    latPulldown: latPulldown,
+    seatedRowMachine: seatedRowMachine
 
   })
 
