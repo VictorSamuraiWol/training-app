@@ -66,7 +66,7 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
         
         <Timer
           key='0'
-          _key='0'
+          _key='timer0'
           specificStyleTimer='specificStyleTimer' 
           specificStyleTimerDisplay='specificStyleTimerDisplay' 
           specificStyleTimerButton='specificStyleTimerButton'

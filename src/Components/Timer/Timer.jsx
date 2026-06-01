@@ -77,7 +77,7 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, s
 
       <div className="timer-buttons">
         <button
-          onClick={_key === '0' ? toggleTimer : ableOnClickButton ? toggleTimer : null}
+          onClick={_key === 'timer0' ? toggleTimer : ableOnClickButton ? toggleTimer : null}
           className={`timer-button ${specificStyleTimerButton}`} 
         >
           {isRunning ? <FaPause /> : <FaPlay />}
