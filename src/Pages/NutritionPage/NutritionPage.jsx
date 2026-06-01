@@ -6,7 +6,7 @@ import { GiMuscleUp } from "react-icons/gi";
 
 function NutritionPage() {
 
-  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser, setAbleNutritionPage } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, dbUsers, loginValidate, nameUser, setAbleNutritionPage } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
 
@@ -24,62 +24,31 @@ function NutritionPage() {
       {loginValidate && <div className='banner-nutrition-page'></div>}
 
       {/* Static and Dynamic User Contents */}
-      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
-      .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim()) 
-      .map(user => (
+      {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+      .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+        .map(user => ({id: user.id, name: user.name, nutrition: user.nutrition}))
+        .map(idNameNutrition => (
         <div
-          key={user.id}
+          key={idNameNutrition.id}
           className='cards-info-nutrition'
         >
-          <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName(user.name, 15)}</h2>
+          <h2 className='cards-info-nutrition-title'>Nutrition - {compactUserName(idNameNutrition.name, 15)}</h2>
 
           <div className='cards-info-nutrition-itens'>
-            {user.nutrition[0][1] && <div className='cards-info-nutrition-itens-icon-item'>
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[0][0]} {user.nutrition[0].slice(1).join(", ")}</p>
 
-            </div>}
+            {idNameNutrition.nutrition.map((nutri, indice) => ( 
+              nutri[0] && nutri[1] && <div key={indice} className='cards-info-nutrition-itens-icon-item'>
+                <GiMuscleUp className='iconMuscleNutrition' />
+                <p className='cards-info-nutrition-item'>{nutri[0]} {nutri[1].join(", ")}</p>
 
-            {user.nutrition[1][1] && <div className='cards-info-nutrition-itens-icon-item'>
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[1][0]} {user.nutrition[1].slice(1).join(", ")}</p>
-
-            </div>}
-
-            {user.nutrition[2][1] && <div className='cards-info-nutrition-itens-icon-item'>
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[2][0]} {user.nutrition[2].slice(1).join(", ")}</p>
-
-            </div>}
-
-            {user.nutrition[3][1] && <div className='cards-info-nutrition-itens-icon-item'>
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[3][0]} {user.nutrition[3].slice(1).join(", ")}</p>
-
-            </div>}
-
-            {user.nutrition[4][1] && <div className='cards-info-nutrition-itens-icon-item'>
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[4][0]} {user.nutrition[4].slice(1).join(", ")}</p>
-
-            </div>}
-
-            {user.nutrition[5][1] && <div className='cards-info-nutrition-itens-icon-item'>
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[5][0]} {user.nutrition[5].slice(1).join(", ")}</p>
-
-            </div>}
-
-            {user.nutrition[6][1] && <div className='cards-info-nutrition-itens-icon-item'> 
-              <GiMuscleUp className='iconMuscleNutrition' />
-              <p className='cards-info-nutrition-item'>{user.nutrition[6][0]} {user.nutrition[6].slice(1).join(", ")}</p>
-
-            </div>}            
+              </div>
+            ))}
 
           </div>
 
-        </div>))}
-
+        </div>
+      ))}
+      
     </div>
   )
 

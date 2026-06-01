@@ -18,7 +18,7 @@ Modal.setAppElement('#root')
 
 function VideoModal({ specificsStylesTogglesVideoModal }) {
 
-  const { staticUsersContents, dynamicUsersContents, nameUser, loginValidate } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, dbUsers, nameUser, loginValidate } = useContext(DataContext)
 
   const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition,
     setAbleVideoBanner, setAbleBanner, selectNameVideoModal, setSelectNameVideoModal
@@ -59,9 +59,9 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
       setAbleVideoBanner(true)
       setAbleBanner(false)
 
-      const nameVideo = (staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+      const nameVideo = (staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-        .map(user => user.videoYT)[0]
+        .map(user => user.video_yt)[0]
         .filter(video => video.id === selectIdVideoModal)[0].name
 
       setSelectNameVideoModal(nameVideo)
@@ -229,10 +229,10 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
             </option>
 
             {/* Static and Dynamic User Contents */}
-            {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+            {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
             .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
             .map(user => (
-              user.videoYT && user.videoYT.map((video, indice) => 
+              user.video_yt && user.video_yt.map((video, indice) => 
                 video && 
                 <option
                   key={indice}
@@ -240,7 +240,6 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
                   className='videos-selects-select-option'
                 >
                   {compactUserName(video.name, 60)}
-
                 </option>)
 
             ))}

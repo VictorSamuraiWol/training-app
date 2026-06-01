@@ -17,7 +17,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 
 function ExercisesPage() {
 
-  const { staticUsersContents, dynamicUsersContents, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, dbUsers, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
     ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
@@ -27,8 +27,6 @@ function ExercisesPage() {
   const { id } = useParams()
 
   // const { clients } = useClients()
-
-  // console.log(clients, 31)
 
   // audios
   const [audiosDescriptions] = useState({
@@ -95,7 +93,7 @@ function ExercisesPage() {
       />}
 
       {/* Static and Dynamic User Contents */}
-      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+      {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => ({id: user.id, audio: user.audio, exercises: user.exercises}))
       .map((id_audio_exercises) => (

@@ -13,14 +13,14 @@ import { AiFillPushpin, AiOutlinePushpin } from "react-icons/ai";
 
 function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer }) {
 
-  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, loginValidate,
+  const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, dbUsers, loginValidate,
     ableExercisesPage
    } = useContext(DataContext)
 
   const [imagesDescriptions] = useState({
     example: example,
     profileVictor: profileVictor,
-    profileLeimar: profileLeimar
+    profileLeimar: profileLeimar,
 
   })
 
@@ -75,7 +75,7 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
       </div>}
 
       {/* Static and Dynamic User Contents */}
-      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+      {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => (
       <div
@@ -83,8 +83,8 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
         className='container-login-signin'
       >
         <div className='container-login-signin-image-name'>
-          {user.imageProfile && <img 
-            src={imagesDescriptions[user.imageProfile]}
+          {user.image_profile && <img 
+            src={imagesDescriptions[user.image_profile]}
             className='container-login-signin-image-name-img' 
           />}
 

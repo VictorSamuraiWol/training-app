@@ -14,7 +14,7 @@ function Login({ setActivateNavigateDefault }) {
 
   const [alertLoginMessage, setAlertLoginMessage] = useState('')
 
-  const { staticUsersContents, dynamicUsersContents, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, dbUsers, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
 
   const onLoginValidate = (e) => {
     e.preventDefault()
@@ -23,7 +23,7 @@ function Login({ setActivateNavigateDefault }) {
     let matchedUsersContents;
 
     {/* Static and Dynamic User Contents */}
-    matchedUsersContents = (staticUsersContents || dynamicUsersContents) && [...(staticUsersContents), ...(dynamicUsersContents)].filter(user => 
+    matchedUsersContents = (staticUsersContents || dynamicUsersContents || dbUsers) && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)].filter(user => 
       (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
       (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
 
@@ -90,6 +90,7 @@ function Login({ setActivateNavigateDefault }) {
               inputId='password'
               required={true}
               name='password'
+              typeInput='password'
             />
           </div>
 
@@ -101,6 +102,7 @@ function Login({ setActivateNavigateDefault }) {
               inputId='password'
               required={true}
               name='password'
+              typeInput='password'
             />
           </div>
 

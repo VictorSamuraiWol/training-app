@@ -6,7 +6,7 @@ import { GiMuscleUp } from "react-icons/gi";
 
 function NotesPage() {
 
-  const { staticUsersContents, dynamicUsersContents, loginValidate, nameUser, setAbleNotesPage } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, dbUsers, loginValidate, nameUser, setAbleNotesPage } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
 
@@ -24,7 +24,7 @@ function NotesPage() {
       {loginValidate && <div className='banner-notes-page'></div>}
 
       {/* Static and Dynamic User Contents */}
-      {(staticUsersContents || dynamicUsersContents) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents)]
+      {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => (
         <div
