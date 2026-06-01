@@ -1,5 +1,5 @@
 # ===========================
-#  Dependências
+#  Dependencies
 # ===========================
 node_modules/
 .pnp
@@ -14,7 +14,7 @@ build/
 out/
 
 # ===========================
-#  Variáveis de ambiente
+#  Environment variables
 # ===========================
 .env
 .env.local
@@ -44,7 +44,7 @@ lerna-debug.log*
 *.tsbuildinfo
 
 # ===========================
-#  Testes
+#  Tests
 # ===========================
 coverage/
 .nyc_output/
@@ -52,7 +52,7 @@ playwright-report/
 test-results/
 
 # ===========================
-#  IDEs e editores
+#  IDEs and editors
 # ===========================
 .vscode/*
 !.vscode/extensions.json
@@ -67,7 +67,7 @@ test-results/
 *.sublime-workspace
 
 # ===========================
-#  Sistema operacional
+#  Operating System
 # ===========================
 # macOS
 .DS_Store

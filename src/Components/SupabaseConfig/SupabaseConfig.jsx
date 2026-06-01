@@ -8,8 +8,8 @@ if (!supabaseUrl || !supabaseKey) {
 }
 
 const supabase = createClient(
-  supabaseUrl,  // URL do seu projeto
-  supabaseKey // chave anon/public
+  supabaseUrl,  // URL your project
+  supabaseKey // key anon/public
 )
 
 export default supabase

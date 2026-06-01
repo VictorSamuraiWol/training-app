@@ -37,6 +37,7 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, s
     if (isRunning) {
       elapsedBeforePause.current = time
     }
+
     setIsRunning((prev) => !prev)
 
   }
@@ -76,7 +77,7 @@ export default function Timer({ specificStyleTimer, specificStyleTimerDisplay, s
 
       <div className="timer-buttons">
         <button
-          onClick={ableOnClickButton ? toggleTimer : null}
+          onClick={_key === '0' ? toggleTimer : ableOnClickButton ? toggleTimer : null}
           className={`timer-button ${specificStyleTimerButton}`} 
         >
           {isRunning ? <FaPause /> : <FaPlay />}

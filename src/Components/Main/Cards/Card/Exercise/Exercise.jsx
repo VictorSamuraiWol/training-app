@@ -61,6 +61,7 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
           _key={_key}
           keyInput={keyInput}
           setKeyInput={setKeyInput}
+          onClickButton={}
           checkedInputs={checkedInputs}
           ableOnClickButton={!checkedInputs.includes(_key)}
           specificStyleTimer='specificStyleTimerExercises'

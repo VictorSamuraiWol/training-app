@@ -16,6 +16,7 @@ import legExtensionMachine from '../../assets/images/exercises-gif/leg-extension
 import abdominalCrunch from '../../assets/images/exercises-gif/abdominal-crunch-gif.gif';
 import latPulldown from '../../assets/images/exercises-gif/lat-pulldown-gif.gif';
 import seatedRowMachine from '../../assets/images/exercises-gif/seated-row-machine-gif.gif';
+import barbellWristCurl from '../../assets/images/exercises-gif/barbell-wrist-curl-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -44,7 +45,8 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     legExtensionMachine: legExtensionMachine,
     abdominalCrunch: abdominalCrunch,
     latPulldown: latPulldown,
-    seatedRowMachine: seatedRowMachine
+    seatedRowMachine: seatedRowMachine,
+    barbellWristCurl: barbellWristCurl
 
   })
 

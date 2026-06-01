@@ -86,7 +86,7 @@ const clientsData = [
                                   [{exercise: 'Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)'}, {gif: 'waitingTheExercise'}], 
-                                  [{exercise: 'Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'}, {gif: 'waitingTheExercise'}], 
+                                  [{exercise: 'Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'}, {gif: 'barbellWristCurl'}], 
                                   [{exercise: 'Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'}, {gif: 'abdominalCrunch'}], 
                                   [{exercise: 'Plank: 1x (35 seconds)'}, {gif: 'plank'}]
@@ -105,7 +105,7 @@ const clientsData = [
                                   [{exercise: 'Front Raise: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)'}, {gif: 'dumbbellFrontRaise'}], 
                                   [{exercise: 'Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)'}, {gif: 'dumbbellLateralRaise'}], 
                                   [{exercise: 'Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)'}, {gif: 'waitingTheExercise'}], 
-                                  [{exercise: 'Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'}, {gif: 'waitingTheExercise'}], 
+                                  [{exercise: 'Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'}, {gif: 'barbellWristCurl'}], 
                                   [{exercise: 'Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'}, {gif: 'abdominalCrunch'}], 
                                   [{exercise: 'Plank: 1x (35 seconds)'}, {gif: 'plank'}]
@@ -383,7 +383,7 @@ useEffect(() => {
                                                     [{"exercise": "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
                                                     [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
@@ -402,7 +402,7 @@ useEffect(() => {
                                                     [{"exercise": "Front Raise: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)"}, {"gif": "dumbbellFrontRaise"}], 
                                                     [{"exercise": "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"}, {"gif": "dumbbellLateralRaise"}], 
                                                     [{"exercise": "Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
                                                     [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
@@ -463,7 +463,7 @@ useEffect(() => {
                                                     [{"exercise": "Remada na máquina: 1x16-20 (60% da carga) + 5x12-14 (5 barras)"}, {"gif": "seatedRowMachine"}], 
                                                     [{"exercise": "Puxador: 5x12-14 (5 barras)"}, {"gif": "latPulldown"}], 
                                                     [{"exercise": "Remada Alta: 4x12-14 (5 barras)"}, {"gif": "barbellUprightRow"}], 
-                                                    [{"exercise": "Rosca Punho: 3x12-14 (20kgs)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Rosca Punho: 3x12-14 (20kgs)"}, {"gif": "barbellWristCurl"}], 
                                                     [{"exercise": "Rosca Punho Invertida: 3x12-14 (20kgs)"}, {"gif": "waitingTheExercise"}]
                                                   ]}],
                     [{"type": "D"}, {"exercises": [
@@ -486,7 +486,7 @@ useEffect(() => {
                                                     [{"exercise": "Rosca Direta: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Biceps Concentrado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Biceps Alternado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Rosca Punho: 3x12-14 (10kgs cada)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Rosca Punho: 3x12-14 (10kgs cada)"}, {"gif": "barbellWristCurl"}], 
                                                     [{"exercise": "Rosca Punho Invertida: 3x12-14 (10kgs cada)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}]

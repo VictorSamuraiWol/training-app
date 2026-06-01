@@ -13,7 +13,6 @@ import { Link, useOutletContext, useParams } from 'react-router-dom';
 import { BsClockFill } from "react-icons/bs";
 import { BsClock } from "react-icons/bs";
 import { TiDeleteOutline } from "react-icons/ti";
-// import { useClients } from '../../Components/Supabase/SupabaseClients/SupabaseClients';
 
 function ExercisesPage() {
 
@@ -25,8 +24,6 @@ function ExercisesPage() {
   } = useOutletContext()
 
   const { id } = useParams()
-
-  // const { clients } = useClients()
 
   // audios
   const [audiosDescriptions] = useState({

@@ -46,31 +46,32 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
       <div 
         className={`title-timer ${isPinned && 'new-title-timer'}`}
       >
-      {isPinned ? 
-      <AiFillPushpin 
-        onClick={() => setIsPinned(false)}
-        className='timer-fixed-icon' 
-      /> : 
-      <AiOutlinePushpin 
-        onClick={() => setIsPinned(true)}
-        className='timer-fixed-icon' 
-      />}
+        {isPinned ? 
+        <AiFillPushpin 
+          onClick={() => setIsPinned(false)}
+          className='timer-fixed-icon' 
+        /> : 
+        <AiOutlinePushpin 
+          onClick={() => setIsPinned(true)}
+          className='timer-fixed-icon' 
+        />}
 
-      <TiDeleteOutline
-        onClick={() => setAbleTimer(false)}
-        className='timer-delete-icon'
-      /> 
+        <TiDeleteOutline
+          onClick={() => setAbleTimer(false)}
+          className='timer-delete-icon'
+        /> 
 
-      {isOnToggleTimersExercises && <p className='title-timer-text'>Total Time:</p>}
-      {!isOnToggleTimersExercises && <p className='title-timer-text'>Time:</p>}
-      
-      <Timer
-        key='0'
-        specificStyleTimer='specificStyleTimer' 
-        specificStyleTimerDisplay='specificStyleTimerDisplay' 
-        specificStyleTimerButton='specificStyleTimerButton'
-        buttonPlayPauseId='0'
-      />
+        {isOnToggleTimersExercises && <p className='title-timer-text'>Total Time:</p>}
+        {!isOnToggleTimersExercises && <p className='title-timer-text'>Time:</p>}
+        
+        <Timer
+          key='0'
+          _key='0'
+          specificStyleTimer='specificStyleTimer' 
+          specificStyleTimerDisplay='specificStyleTimerDisplay' 
+          specificStyleTimerButton='specificStyleTimerButton'
+          buttonPlayPauseId='0'
+        />
             
       </div>}
 
