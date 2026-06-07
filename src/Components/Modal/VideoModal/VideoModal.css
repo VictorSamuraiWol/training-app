@@ -1,3 +1,10 @@
+.container-video-modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .image-react-video-modal {
   display: flex;
   align-items: center;

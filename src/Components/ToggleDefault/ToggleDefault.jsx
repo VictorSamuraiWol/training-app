@@ -15,7 +15,7 @@ function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesTog
   }
 
   return(
-    <>
+    <div className='container-description-toogle'>
       {ableDescriptionIconsMenu && descriptionIconName === 'Timer' &&
         <span
           className='descriptionIconsMenu'
@@ -31,15 +31,6 @@ function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesTog
         onMouseLeave={onMouseLeave}
         className={`styleToggle ${specificsStylesToggles}`}
       >
-
-        {/* {ableDescriptionIconsMenu && descriptionIconName === 'Timer' &&
-          <span
-            className='descriptionIconsMenu'
-          >
-            {descriptionIconName}
-          </span>
-        } */}
-
         {isOnToggle ?
         <BsClockFill
           onClick={toggle}
@@ -53,7 +44,7 @@ function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesTog
 
       </div>}
 
-    </>
+    </div>
 
   )
 

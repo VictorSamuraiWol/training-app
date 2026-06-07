@@ -1,7 +1,7 @@
 import './DataProvider.css';
+import supabase from '../SupabaseConfig/SupabaseConfig';
 import { DataContext } from '../DataContext/DataContext';
 import { useEffect, useState } from 'react';
-import supabase from '../SupabaseConfig/SupabaseConfig';
 
 export default function DataProvider({ children }) {
 
@@ -15,6 +15,7 @@ export default function DataProvider({ children }) {
   const [ableNutritionPage, setAbleNutritionPage] = useState(false)
   const [ableNotesPage, setAbleNotesPage] = useState(false)
   const [dbUsers, setDbUsers] = useState([])
+  const [insertError, setInsertError] = useState(null);
 
 // ===========================
 //  Clients List INSERT in Supabase
@@ -143,6 +144,56 @@ const clientsData = [
       [{name: 'nutrition'}, {path: '/nutrition-page'}],
       [{name: 'notes'}, {path: '/notes-page'}]
     ],
+  },
+  {
+    "name" : "100",
+    "weight": "Example",
+    "height": "Example",
+    "exercises": [[{"type": "A"}, {"exercises": [
+                                                  [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise5"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise6"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise7"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise8"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise9"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise10"}, {"gif": "waitingTheExercise"}]
+                                                ]}],
+                  [{"type": "B"}, {"exercises": [
+                                                  [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
+                                                  [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}]
+                                                ]}],
+                  [{"type": "C"}, {"exercises": [
+                                                  [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]
+                                                ]}]
+                  ],
+    "nutrition":  [
+                    ["Supplements:", ["Example"]], 
+                    ["Breakfast:", ["Example"]], 
+                    ["Snack:", ["Example"]], 
+                    ["Lunch:", ["Example"]], 
+                    ["Snack:", ["Example"]], 
+                    ["Dinner:", ["Example"]], 
+                    ["Late-night Snack:", ["Example"]]
+                  ],
+    "notes": ["Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example"],
+    "password": "100",
+    "image_profile": "example",
+    "audio": "audio2",
+    "video_yt": [
+                  {"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, 
+                  {"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}
+                ],
+    "quick_access": [
+                      [{"name": "A"}, {"path": "/exercises-page/A"}], 
+                      [{"name": "B"}, {"path": "/exercises-page/B"}], 
+                      [{"name": "C"}, {"path": "/exercises-page/C"}], 
+                      [{"name": "nutrition"}, {"path": "/nutrition-page"}], 
+                      [{"name": "notes"}, {"path": "/notes-page"}]
+                    ],
+    "id": "100"
   }
 ]
 
@@ -199,27 +250,30 @@ async function insertAllClients(clients = clientsData) {
     .from('clients')
     .upsert(rows, { onConflict: 'id' }) // 👈 if id already exist, update
 
+
   if (error) {
     console.error('Error inserting clients:', error.message)
+
+    if (error.code === '42501' || error.message?.includes('row-level security')) {
+      setInsertError('Unauthorized access')
+      setTimeout(() => setInsertError(null), 3000)
+
+    } else {
+      setInsertError('Error inserting clients.')
+
+    }
 
     return false
 
   }
 
+  setInsertError(null)
   console.log(`${rows.length} clients successfully added/updated!`)
 
   return true
 
 }
 
-// insert all clients
-useEffect(() => {
-  if (loginValidate && nameUser.toLowerCase() === 'Victor Supabase'.toLowerCase()) {
-    insertAllClients()
-
-  }
-
-}, [loginValidate, nameUser])
 
 // ===========================
 //  SELECT — search client by id
@@ -580,6 +634,10 @@ useEffect(() => {
     ableNotesPage, 
     setAbleNotesPage,
     dbUsers,
+    clientsData,
+    insertAllClients,
+    insertError, 
+    setInsertError
 
   }
 

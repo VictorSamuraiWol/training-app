@@ -87,7 +87,7 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
   }
 
   return (
-    <div className={`container-video-modal`}>
+    <div className={'container-video-modal'}>
       {ableDescriptionIconsMenu && descriptionIconName === 'YouTube' && 
         <span
           className='descriptionIconsMenu'

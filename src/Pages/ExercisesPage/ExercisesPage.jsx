@@ -7,6 +7,7 @@ import audio2 from '../../assets/audios/workout-music-2025.mp3'
 import ToggleDefault from '../../Components/ToggleDefault/ToggleDefault';
 import VideoModal from '../../Components/Modal/VideoModal/VideoModal';
 import PlayerVideoYT from '../../Components/PlayerVideoYT/PlayerVideoYT';
+import CreateAllClientsDB from '../../Components/CreateAllClientsDB/CreateAllClientsDB';
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { Link, useOutletContext, useParams } from 'react-router-dom';
@@ -16,7 +17,8 @@ import { TiDeleteOutline } from "react-icons/ti";
 
 function ExercisesPage() {
 
-  const { staticUsersContents, dynamicUsersContents, dbUsers, typeTrain, loginValidate, nameUser, setAbleExercisesPage } = useContext(DataContext)
+  const { staticUsersContents, dynamicUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
+    setAbleExercisesPage, clientsData, insertAllClients, insertError } = useContext(DataContext)
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
     ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
@@ -103,10 +105,20 @@ function ExercisesPage() {
         key={id_audio_exercises.id}
       >
         <div
-          id='menu-exercises-page'
           className={ableMusic ? 'menu-exercises-page-style-cards-timer-title-music-toggle-video-modal' : 
             'new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal'}
         >
+          {loginValidate && nameUser.toLowerCase() === 'Victor Supabase'.toLowerCase() && 
+            <CreateAllClientsDB
+              onClick={() => insertAllClients(clientsData)}
+              onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Create All Clients')}}
+              onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
+              ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+              descriptionIconName={descriptionIconName}
+              insertError={insertError}
+            />
+          }
+
           <VideoModal
             onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('YouTube')}}
             onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
