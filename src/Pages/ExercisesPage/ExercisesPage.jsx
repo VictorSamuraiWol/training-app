@@ -25,6 +25,8 @@ function ExercisesPage() {
 
   const { id } = useParams()
 
+  const [ableDescriptionIconsMenu, setAbleDescriptionIconsMenu] = useState(false)
+
   // audios
   const [audiosDescriptions] = useState({
       audio1: audio1,
@@ -48,6 +50,8 @@ function ExercisesPage() {
     setAbleVideoBanner(false)
     
   }, [])
+
+  const [descriptionIconName, setDescriptionIconName] = useState('')
 
   return(
     <div className='exercises-page-style'>
@@ -98,16 +102,31 @@ function ExercisesPage() {
         className='exercises-page-style-cards'
         key={id_audio_exercises.id}
       >
-        <div className={ableMusic ? 'exercises-page-style-cards-timer-title-music-toggle-video-modal' : 'new-exercises-page-style-cards-timer-title-music-toggle-video-modal'}>
-          <ToggleDefault 
+        <div
+          id='menu-exercises-page'
+          className={ableMusic ? 'menu-exercises-page-style-cards-timer-title-music-toggle-video-modal' : 
+            'new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal'}
+        >
+          <VideoModal
+            onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('YouTube')}}
+            onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
+            ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+            descriptionIconName={descriptionIconName}
+            specificsStylesTogglesVideoModal={ableMusic ? 'specificsStylesTogglesVideoModal' : 
+            'new-specificsStylesTogglesVideoModal'} 
+          />
+
+          <ToggleDefault
+            onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Timer')}}
+            onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
+            ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+            descriptionIconName={descriptionIconName}
             idToggle='timers'
             specificsStylesToggles={ableMusic ? 'toggle-default-timer-title-music' : 'new-toggle-default-timer-title-music'}
             specificStyleToggle='toggle-default-timer-title-music-toggle-on-toggle-off'
             isOnToggle={isOnToggleTimersExercises}
             setIsOnToggle={setIsOnToggleTimersExercises}
           />
-
-          <VideoModal specificsStylesTogglesVideoModal={ableMusic ? 'specificsStylesTogglesVideoModal' : 'new-specificsStylesTogglesVideoModal'} />
 
         </div>
 

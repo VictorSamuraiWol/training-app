@@ -6,7 +6,8 @@ import { BsClock } from "react-icons/bs";
 import { AiFillYoutube } from "react-icons/ai";
 import { AiOutlineYoutube } from "react-icons/ai";
 
-function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesToggles, specificStyleToggle }) {
+function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesToggles, 
+  specificStyleToggle, onMouseOver, onMouseLeave, ableDescriptionIconsMenu, descriptionIconName }) {
 
   function toggle() {
     setIsOnToggle(isOnToggle => !isOnToggle)
@@ -15,11 +16,32 @@ function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesTog
 
   return(
     <>
+      {ableDescriptionIconsMenu && descriptionIconName === 'Timer' &&
+        <span
+          className='descriptionIconsMenu'
+        >
+          {descriptionIconName}
+        </span>
+      }
+
       {/* timers */}
       {idToggle === 'timers' &&
-      <div className={`styleToggle ${specificsStylesToggles}`}>
+      <div 
+        onMouseOver={onMouseOver}
+        onMouseLeave={onMouseLeave}
+        className={`styleToggle ${specificsStylesToggles}`}
+      >
+
+        {/* {ableDescriptionIconsMenu && descriptionIconName === 'Timer' &&
+          <span
+            className='descriptionIconsMenu'
+          >
+            {descriptionIconName}
+          </span>
+        } */}
+
         {isOnToggle ?
-        <BsClockFill 
+        <BsClockFill
           onClick={toggle}
           className={`toggle-on ${specificStyleToggle}`}
         /> 
@@ -28,6 +50,7 @@ function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesTog
           onClick={toggle}
           className={`toggle-off ${specificStyleToggle}`}
         />}
+
       </div>}
 
     </>

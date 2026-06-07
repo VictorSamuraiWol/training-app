@@ -125,21 +125,29 @@
   transform: scale(0.94);
 }
 
-.exercises-page-style-cards-timer-title-music-toggle-video-modal {
+.menu-exercises-page-style-cards-timer-title-music-toggle-video-modal {
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 6px;
   width: 100%;
-  height: 20px;
+  min-height: 30px;
 }
 
-.new-exercises-page-style-cards-timer-title-music-toggle-video-modal {
+.new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal {
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 6px;
   width: 100%;
+  min-height: 30px;
+}
+
+.descriptionIconsMenu {
+  position: absolute;
+  top: -1px;
+  color: var(--border-green);
+  cursor: default;
 }
 
 .toggle-default-timer-title-music {
@@ -215,6 +223,10 @@
     padding: 4px 20px;
   }
 
+  .descriptionIconsMenu {
+    display: none;
+  }
+
   .toggle-default-timer-title-music-toggle-on-toggle-off {
     width: 20px;
     height: 20px;
@@ -264,6 +276,10 @@
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {
+    display: none;
+  }
+
+  .descriptionIconsMenu {
     display: none;
   }
 
@@ -333,16 +349,6 @@
   .exercises-page-style-cards-title {
     display: none;
   }
-   
-  .toggle-default-timer-title-music {
-    right: -26%;
-    bottom: -10%;
-  }
-
-  .new-toggle-default-timer-title-music {
-    right: -26%;
-    bottom: -10%;
-  }
 
   .toggle-default-timer-title-music-toggle-on-toggle-off {
     width: 25px;
@@ -350,15 +356,11 @@
   }
 
   .specificsStylesTogglesVideoModal {
-    right: 80%;
-    bottom: 50%;
     width: 25px;
     height: 25px;
   }
 
   .new-specificsStylesTogglesVideoModal {
-    right: 80%;
-    top: -10%;
     width: 25px;
     height: 25px;
   }
@@ -384,6 +386,12 @@
 
   .videos-target-banner-iframe {
     height: 170px;
+  }
+
+  .descriptionIconsMenu {
+    display: flex;
+    top: -2px;
+    font-size: 0.7rem;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {
@@ -412,6 +420,11 @@
 
   .videos-target-banner-iframe {
     height: 190px;
+  }
+
+  .descriptionIconsMenu {
+    top: -1px;
+    font-size: 0.8rem;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {
@@ -445,20 +458,17 @@
     height: 210px;
   }
 
+  .descriptionIconsMenu {
+    top: 0;
+    font-size: 0.9rem;
+  }
+
   .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 2rem;
   }
 
   .specificStyleMusicButton {
     font-size: 0.9rem;
-  }
-
-  .specificsStylesTogglesVideoModal {
-    right: 90%;
-  }
-
-  .new-specificsStylesTogglesVideoModal {
-    right: 90%;
   }
 
 }

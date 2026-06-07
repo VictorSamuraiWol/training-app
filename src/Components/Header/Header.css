@@ -18,9 +18,7 @@
 }
 
 .title-timer {
-  position: absolute;
-  top: 209%;
-  left: 42%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,8 +200,6 @@
   }
 
   .title-timer {
-    top: 10%;
-    left: 30%;
     padding: 12px 6px;
     border: none;
   }
@@ -265,8 +261,6 @@
   }
 
   .title-timer {
-    top: 5%;
-    left: 34%;
     padding: 12px 8px;
     border: none;
   }
@@ -330,8 +324,6 @@
   }
 
   .title-timer {
-    top: 5%;
-    left: 35%;
     padding: 4px;
     border: 1px solid var(--border-green);
     z-index: 1;
@@ -383,10 +375,6 @@
     width: 130px;
   }
 
-  .title-timer {
-    left: 38%;
-  }
-
   .timer-delete-icon {
     font-size: 1rem;
   }
@@ -425,10 +413,6 @@
     padding: 0 16px;
   }
 
-  .title-timer {
-    left: 42%;
-  }
-
   .specificStyleTimerDisplay {
     font-size: 1.40rem;
   }
@@ -449,10 +433,6 @@
 }
 
 @media (min-width: 1440px) {
-  .title-timer {
-    left: 41%;
-  }
-
   .timer-fixed-icon {
     font-size: 1.1rem;
   }

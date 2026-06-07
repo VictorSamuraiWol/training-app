@@ -8,6 +8,7 @@
 }
 
 .image-react-video-modal:hover {
+  color: var(--border);
   transform: scale(0.94);
 }
 

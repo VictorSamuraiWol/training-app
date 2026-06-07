@@ -16,7 +16,8 @@ import { TbTriangleInvertedFilled } from "react-icons/tb";
 
 Modal.setAppElement('#root')
 
-function VideoModal({ specificsStylesTogglesVideoModal }) {
+function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeave, 
+  ableDescriptionIconsMenu, descriptionIconName }) {
 
   const { staticUsersContents, dynamicUsersContents, dbUsers, nameUser, loginValidate } = useContext(DataContext)
 
@@ -87,8 +88,18 @@ function VideoModal({ specificsStylesTogglesVideoModal }) {
 
   return (
     <div className={`container-video-modal`}>
+      {ableDescriptionIconsMenu && descriptionIconName === 'YouTube' && 
+        <span
+          className='descriptionIconsMenu'
+        >
+          {descriptionIconName}
+        </span>
+      }
+
       <AiFillYoutube
         onClick={openModal}
+        onMouseOver={onMouseOver}
+        onMouseLeave={onMouseLeave}
         className={`image-react-video-modal ${specificsStylesTogglesVideoModal}`}
       />
 

@@ -82,9 +82,6 @@
 }
 
 .new-specificStyleTimerButtonExercises {
-  /* color: var(--text);
-  box-shadow: 2px 2px 3px var(--border);
-  background-color: var(--border-green); */
   color: var(--text-inactive);
   box-shadow: 2px 2px 3px var(--text-inactive);
   background-color: var(--bg-inactive);
