@@ -88,7 +88,7 @@ const clientsData = [
                                   [{exercise: 'Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'}, {gif: 'barbellWristCurl'}], 
-                                  [{exercise: 'Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'}, {gif: 'waitingTheExercise'}], 
+                                  [{exercise: 'Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'}, {gif: 'barbellReverseWristCurl'}], 
                                   [{exercise: 'Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'}, {gif: 'abdominalCrunch'}], 
                                   [{exercise: 'Plank: 1x (35 seconds)'}, {gif: 'plank'}]
                                 ]}],
@@ -107,7 +107,7 @@ const clientsData = [
                                   [{exercise: 'Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)'}, {gif: 'dumbbellLateralRaise'}], 
                                   [{exercise: 'Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)'}, {gif: 'waitingTheExercise'}], 
                                   [{exercise: 'Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)'}, {gif: 'barbellWristCurl'}], 
-                                  [{exercise: 'Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'}, {gif: 'waitingTheExercise'}], 
+                                  [{exercise: 'Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)'}, {gif: 'barbellReverseWristCurl'}], 
                                   [{exercise: 'Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)'}, {gif: 'abdominalCrunch'}], 
                                   [{exercise: 'Plank: 1x (35 seconds)'}, {gif: 'plank'}]
                                 ]}],
@@ -144,56 +144,6 @@ const clientsData = [
       [{name: 'nutrition'}, {path: '/nutrition-page'}],
       [{name: 'notes'}, {path: '/notes-page'}]
     ],
-  },
-  {
-    "name" : "100",
-    "weight": "Example",
-    "height": "Example",
-    "exercises": [[{"type": "A"}, {"exercises": [
-                                                  [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise5"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise6"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise7"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise8"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise9"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise10"}, {"gif": "waitingTheExercise"}]
-                                                ]}],
-                  [{"type": "B"}, {"exercises": [
-                                                  [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
-                                                  [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}]
-                                                ]}],
-                  [{"type": "C"}, {"exercises": [
-                                                  [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]
-                                                ]}]
-                  ],
-    "nutrition":  [
-                    ["Supplements:", ["Example"]], 
-                    ["Breakfast:", ["Example"]], 
-                    ["Snack:", ["Example"]], 
-                    ["Lunch:", ["Example"]], 
-                    ["Snack:", ["Example"]], 
-                    ["Dinner:", ["Example"]], 
-                    ["Late-night Snack:", ["Example"]]
-                  ],
-    "notes": ["Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example", "Example"],
-    "password": "100",
-    "image_profile": "example",
-    "audio": "audio2",
-    "video_yt": [
-                  {"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, 
-                  {"name": "ALOK MIX 2025 - MELHORES MÚSICAS ELETRÔNICAS DE 2025 - ALIVE", "id": "QBC0KZ7ZQro?si=aVtIHWXTDMghcWaR"}
-                ],
-    "quick_access": [
-                      [{"name": "A"}, {"path": "/exercises-page/A"}], 
-                      [{"name": "B"}, {"path": "/exercises-page/B"}], 
-                      [{"name": "C"}, {"path": "/exercises-page/C"}], 
-                      [{"name": "nutrition"}, {"path": "/nutrition-page"}], 
-                      [{"name": "notes"}, {"path": "/notes-page"}]
-                    ],
-    "id": "100"
   }
 ]
 
@@ -438,7 +388,7 @@ useEffect(() => {
                                                     [{"exercise": "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "barbellReverseWristCurl"}], 
                                                     [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
                                                   ]}],
@@ -457,7 +407,7 @@ useEffect(() => {
                                                     [{"exercise": "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"}, {"gif": "dumbbellLateralRaise"}], 
                                                     [{"exercise": "Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "barbellReverseWristCurl"}], 
                                                     [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
                                                   ]}]
@@ -518,12 +468,12 @@ useEffect(() => {
                                                     [{"exercise": "Puxador: 5x12-14 (5 barras)"}, {"gif": "latPulldown"}], 
                                                     [{"exercise": "Remada Alta: 4x12-14 (5 barras)"}, {"gif": "barbellUprightRow"}], 
                                                     [{"exercise": "Rosca Punho: 3x12-14 (20kgs)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Rosca Punho Invertida: 3x12-14 (20kgs)"}, {"gif": "waitingTheExercise"}]
+                                                    [{"exercise": "Rosca Punho Invertida: 3x12-14 (20kgs)"}, {"gif": "barbellReverseWristCurl"}]
                                                   ]}],
                     [{"type": "D"}, {"exercises": [
                                                     [{"exercise": "HIIT (burpess, polichinelo, pular corda, etc): 10-15 min"}, {"gif": "hiit"}], 
                                                     [{"exercise": "Abdominal supra: 3x12-14 (peso do corpo)"}, {"gif": "abdominalCrunch"}], 
-                                                    [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "obliqueCrunch"}], 
                                                     [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Prancha: 30s"}, {"gif": "plank"}]
                                                   ]}],
@@ -541,8 +491,8 @@ useEffect(() => {
                                                     [{"exercise": "Biceps Concentrado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Biceps Alternado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Rosca Punho: 3x12-14 (10kgs cada)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Rosca Punho Invertida: 3x12-14 (10kgs cada)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Rosca Punho Invertida: 3x12-14 (10kgs cada)"}, {"gif": "barbellReverseWristCurl"}], 
+                                                    [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "obliqueCrunch"}], 
                                                     [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}]
                                                   ]}]
                    ],

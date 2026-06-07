@@ -17,6 +17,8 @@ import abdominalCrunch from '../../assets/images/exercises-gif/abdominal-crunch-
 import latPulldown from '../../assets/images/exercises-gif/lat-pulldown-gif.gif';
 import seatedRowMachine from '../../assets/images/exercises-gif/seated-row-machine-gif.gif';
 import barbellWristCurl from '../../assets/images/exercises-gif/barbell-wrist-curl-gif.gif';
+import barbellReverseWristCurl from '../../assets/images/exercises-gif/barbell-reverse-wrist-curl-gif.gif';
+import obliqueCrunch from '../../assets/images/exercises-gif/oblique-crunch-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -46,7 +48,9 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     abdominalCrunch: abdominalCrunch,
     latPulldown: latPulldown,
     seatedRowMachine: seatedRowMachine,
-    barbellWristCurl: barbellWristCurl
+    barbellWristCurl: barbellWristCurl,
+    barbellReverseWristCurl: barbellReverseWristCurl,
+    obliqueCrunch: obliqueCrunch
 
   })
 

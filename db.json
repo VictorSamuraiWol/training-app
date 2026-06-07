@@ -54,7 +54,7 @@
                                                     [{"exercise": "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "barbellReverseWristCurl"}], 
                                                     [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
                                                   ]}],
@@ -73,7 +73,7 @@
                                                     [{"exercise": "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"}, {"gif": "dumbbellLateralRaise"}], 
                                                     [{"exercise": "Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "barbellReverseWristCurl"}], 
                                                     [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
                                                   ]}]
