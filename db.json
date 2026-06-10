@@ -11,10 +11,17 @@
                                                   ]}],
                     [{"type": "B"}, {"exercises": [
                                                     [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}]
+                                                    [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}],
+                                                    [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}],
+                                                    [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}]
                                                   ]}],
                     [{"type": "C"}, {"exercises": [
-                                                    [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}]
+                                                    [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}],
+                                                    [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}],
+                                                    [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}],
+                                                    [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}],
+                                                    [{"exercise": "exercise5"}, {"gif": "waitingTheExercise"}]
+
                                                   ]}]
                    ],
       "nutrition":  [
@@ -43,7 +50,7 @@
       "id": "1"
     },
     {
-      "name" : "Victor Dynamic",
+      "name" : "Victor",
       "weight": "80 kgs",
       "height": "1.69 cm",
       "exercises": [[{"type": "A"}, {"exercises": [
@@ -88,7 +95,7 @@
                       ["Late-night Snack:", ["Tea", "Nut", "Apple"]]
                     ],
       "notes": ["Start date: 8 January 2026", "Rest between reps: 1 min", "Rest between sets: 1-3 min", "UP technique"],
-      "password": "Victor Dynamic",
+      "password": "Victor",
       "image_profile": "profileVictor",
       "audio": "audio1",
       "video_yt": [
@@ -108,7 +115,7 @@
                         [{"name": "nutrition"}, {"path": "/nutrition-page"}], 
                         [{"name": "notes"}, {"path": "/notes-page"}]
                       ],
-      "id": "Victor Dynamic"
+      "id": "Victor"
     }
   ] 
 }

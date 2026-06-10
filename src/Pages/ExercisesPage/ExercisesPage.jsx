@@ -14,11 +14,16 @@ import { Link, useOutletContext, useParams } from 'react-router-dom';
 import { BsClockFill } from "react-icons/bs";
 import { BsClock } from "react-icons/bs";
 import { TiDeleteOutline } from "react-icons/ti";
+import { insertAllClients } from '../../Components/Supabase/supabaseRequests/supabaseRequests';
 
 function ExercisesPage() {
 
-  const { staticUsersContents, dynamicUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
-    setAbleExercisesPage, clientsData, insertAllClients, insertError } = useContext(DataContext)
+  // const { staticUsersContents, dynamicUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
+  //   setAbleExercisesPage, insertError, setInsertError, clientsDataJson
+  // } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
+    setAbleExercisesPage, insertError, setInsertError, clientsDataJson
+  } = useContext(DataContext)
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
     ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
@@ -96,7 +101,8 @@ function ExercisesPage() {
       />}
 
       {/* Static and Dynamic User Contents */}
-      {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+      {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
+      {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => ({id: user.id, audio: user.audio, exercises: user.exercises}))
       .map((id_audio_exercises) => (
@@ -108,9 +114,9 @@ function ExercisesPage() {
           className={ableMusic ? 'menu-exercises-page-style-cards-timer-title-music-toggle-video-modal' : 
             'new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal'}
         >
-          {loginValidate && nameUser.toLowerCase() === 'Victor Supabase'.toLowerCase() && 
+          {loginValidate && nameUser.toLowerCase() === 'Victor'.toLowerCase() && 
             <CreateAllClientsDB
-              onClick={() => insertAllClients(clientsData)}
+              onClick={() => insertAllClients(clientsDataJson, setInsertError)}
               onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Create All Clients')}}
               onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
               ableDescriptionIconsMenu={ableDescriptionIconsMenu}

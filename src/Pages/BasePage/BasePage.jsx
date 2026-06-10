@@ -4,10 +4,10 @@ import Header from '../../Components/Header/Header';
 import Login from '../../Components/Login/Login';
 import NavigateDefault from '../../Components/NavigateDefault/NavigateDefault';
 import ErrorLogin from '../../Components/ErrorLogin/ErrorLogin';
+import Timer from '../../Components/Timer/Timer';
 import { Outlet } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
-import Timer from '../../Components/Timer/Timer';
 
 function BasePage() {
 

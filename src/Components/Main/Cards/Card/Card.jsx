@@ -10,7 +10,8 @@ import { useOutletContext } from 'react-router-dom';
 
 function Card({ exercises, _key }) {
 
-  const { staticUsersContents, dynamicUsersContents, dbUsers, loginValidate, nameUser, typeTrain } = useContext(DataContext)
+  // const { staticUsersContents, dynamicUsersContents, dbUsers, loginValidate, nameUser, typeTrain } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, loginValidate, nameUser, typeTrain } = useContext(DataContext)
 
   const { checkedInputs, setCheckedInputs } = useOutletContext()
 
@@ -65,7 +66,8 @@ function Card({ exercises, _key }) {
         ))}
 
         {/* Static and Dynamic User Contents */}
-        {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+        {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
+        {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => user.exercises)[0]
         .filter(exercises => exercises[0].type === typeTrain)

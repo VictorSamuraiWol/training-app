@@ -8,7 +8,9 @@ import { TbTriangleInvertedFilled } from "react-icons/tb";
 
 function Footer() {
 
-  const { staticUsersContents, dynamicUsersContents, dbUsers, loader, loginValidate, nameUser, typeTrain, setTypeTrain, 
+  // const { staticUsersContents, dynamicUsersContents, dbUsers, loader, loginValidate, nameUser, typeTrain, setTypeTrain, 
+  //   ableExercisesPage, ableNutritionPage, ableNotesPage } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, loader, loginValidate, nameUser, typeTrain, setTypeTrain, 
     ableExercisesPage, ableNutritionPage, ableNotesPage } = useContext(DataContext)
 
   const navigate = useNavigate()
@@ -71,7 +73,8 @@ function Footer() {
           </option>
 
           {/* Static and Dynamic User Contents */}
-          {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+          {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
+          {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
           .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
           .map(user => user.quick_access && user.quick_access)
           .map(quickAccessList => quickAccessList)[0]

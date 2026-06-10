@@ -14,7 +14,8 @@ function Login({ setActivateNavigateDefault }) {
 
   const [alertLoginMessage, setAlertLoginMessage] = useState('')
 
-  const { staticUsersContents, dynamicUsersContents, dbUsers, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
+  // const { staticUsersContents, dynamicUsersContents, dbUsers, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
 
   const onLoginValidate = (e) => {
     e.preventDefault()
@@ -23,7 +24,8 @@ function Login({ setActivateNavigateDefault }) {
     let matchedUsersContents;
 
     {/* Static and Dynamic User Contents */}
-    matchedUsersContents = (staticUsersContents || dynamicUsersContents || dbUsers) && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)].filter(user => 
+    // matchedUsersContents = (staticUsersContents || dynamicUsersContents || dbUsers) && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)].filter(user =>
+    matchedUsersContents = (staticUsersContents || dbUsers) && [...(staticUsersContents), ...(dbUsers)].filter(user =>
       (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
       (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
 
@@ -33,8 +35,7 @@ function Login({ setActivateNavigateDefault }) {
 
     } else {
       setLoginValidate(false)
-      dynamicUsersContents && setAlertLoginMessage('Invalid user')
-      !dynamicUsersContents && setAlertLoginMessage('Invalid static user')
+      setAlertLoginMessage('Invalid user')
       errorMessage.classList.add('alert-login-message-able')
       errorMessage.classList.remove('alert-login-message-disable')
 

@@ -19,7 +19,8 @@ Modal.setAppElement('#root')
 function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeave, 
   ableDescriptionIconsMenu, descriptionIconName }) {
 
-  const { staticUsersContents, dynamicUsersContents, dbUsers, nameUser, loginValidate } = useContext(DataContext)
+  // const { staticUsersContents, dynamicUsersContents, dbUsers, nameUser, loginValidate } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, nameUser, loginValidate } = useContext(DataContext)
 
   const { compactUserName, selectIdVideoModal, setSelectIdVideoModal, setVisibleVideoYT, setSelectContainerVideoYTPosition,
     setAbleVideoBanner, setAbleBanner, selectNameVideoModal, setSelectNameVideoModal
@@ -60,7 +61,8 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
       setAbleVideoBanner(true)
       setAbleBanner(false)
 
-      const nameVideo = (staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+      // const nameVideo = (staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+      const nameVideo = (staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => user.video_yt)[0]
         .filter(video => video.id === selectIdVideoModal)[0].name
@@ -240,7 +242,8 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
             </option>
 
             {/* Static and Dynamic User Contents */}
-            {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)]
+            {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
+            {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
             .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
             .map(user => (
               user.video_yt && user.video_yt.map((video, indice) => 
