@@ -6,7 +6,6 @@ import db from '../../../db.json'
 
 export default function DataProvider({ children }) {
 
-  // const [dynamicUsersContents, setDynamicUsersContents] = useState('')
   const [userId, setUserId] = useState('')
   const [typeTrain, setTypeTrain] = useState('')
   const [loader, setLoader] = useState(false)
@@ -128,43 +127,7 @@ export default function DataProvider({ children }) {
 
   ]
 
-  {/* Dinamic Content */}
-  // useEffect(() => {
-  //   // Functions that uses GET method to request users in the API
-  //   async function fetchDataTraining() {
-  //     try {
-  //       setLoader(true)
-  //       const res = await fetch("http://localhost:3001/clients")
-  //       const data = await res.json() 
-  
-  //       if (!data) {
-  //         throw new Error("Dados inválidos")
-  
-  //       } else {
-  //         setDynamicUsersContents(data)
-  //         setLoader(false)
-  
-  //       }
-              
-  //     } catch (error) {
-  //       console.error(error)
-  
-  //     }
-          
-  //   }
-    
-  //   fetchDataTraining()
-
-  // }, [])
-
-  // useEffect(() => {
-  //   staticUsersContents && staticUsersContents.length > 0 && setLoader(false)
-
-  // }, [])
-
   const value = {
-    // dynamicUsersContents, 
-    // setDynamicUsersContents,
     staticUsersContents, 
     userId, 
     setUserId,

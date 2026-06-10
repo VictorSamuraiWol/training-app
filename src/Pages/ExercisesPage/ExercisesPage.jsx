@@ -18,9 +18,6 @@ import { insertAllClients } from '../../Components/Supabase/supabaseRequests/sup
 
 function ExercisesPage() {
 
-  // const { staticUsersContents, dynamicUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
-  //   setAbleExercisesPage, insertError, setInsertError, clientsDataJson
-  // } = useContext(DataContext)
   const { staticUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
     setAbleExercisesPage, insertError, setInsertError, clientsDataJson
   } = useContext(DataContext)
@@ -101,7 +98,6 @@ function ExercisesPage() {
       />}
 
       {/* Static and Dynamic User Contents */}
-      {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
       {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
       .map(user => ({id: user.id, audio: user.audio, exercises: user.exercises}))

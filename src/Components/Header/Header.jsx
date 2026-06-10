@@ -13,9 +13,6 @@ import { AiFillPushpin, AiOutlinePushpin } from "react-icons/ai";
 
 function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer }) {
 
-  // const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dynamicUsersContents, dbUsers, loginValidate,
-  //   ableExercisesPage
-  //  } = useContext(DataContext)
   const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dbUsers, loginValidate,
     ableExercisesPage
    } = useContext(DataContext)
@@ -79,7 +76,6 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
       </div>}
 
       {/* Static and Dynamic User Contents */}
-      {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
       {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
         .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => (

@@ -10,7 +10,6 @@ Modal.setAppElement('#root')
 
 function LoginModal() {
 
-  // const { staticUsersContents, dynamicUsersContents, dbUsers } = useContext(DataContext)
   const { staticUsersContents, dbUsers } = useContext(DataContext)
   
   const [modalIsOpen, setModalIsOpen] = useState(false)
@@ -60,8 +59,7 @@ function LoginModal() {
         <div className='login-users-passwords'>
           <div className='static-dinamic-content'>
             {/* Static and Dynamic User Contents */}
-            {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
-            {(staticUsersContents || dbUsers) && [...(staticUsersContents), ...(dbUsers)]
+            {(staticUsersContents || dbUsers) && [...(dbUsers), ...(staticUsersContents)]
             .map(user => (
               <div 
                 key={user.id} 

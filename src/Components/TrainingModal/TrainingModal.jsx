@@ -13,7 +13,6 @@ function TrainingModal() {
  
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
-  // const { setUserId, setTypeTrain, loginValidate, nameUser, staticUsersContents, dynamicUsersContents, dbUsers } = useContext(DataContext)
   const { setUserId, setTypeTrain, loginValidate, nameUser, staticUsersContents, dbUsers } = useContext(DataContext)
 
   const { setAbleTimer } = useOutletContext()
@@ -62,7 +61,6 @@ function TrainingModal() {
 
         <div className='container-training-modal-trainings'>
           {/* Static and Dynamic User Contents */}
-          {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
           {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
           .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
           .map(user => ({id: user.id, exercises: user.exercises}))

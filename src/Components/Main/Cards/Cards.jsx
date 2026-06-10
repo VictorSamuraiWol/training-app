@@ -7,7 +7,6 @@ import { Link, useOutletContext } from 'react-router-dom';
 
 function Cards() {
 
-  // const { staticUsersContents, dynamicUsersContents, dbUsers, setUserId, nameUser, loginValidate } = useContext(DataContext)
   const { staticUsersContents, dbUsers, setUserId, nameUser, loginValidate } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
@@ -15,7 +14,6 @@ function Cards() {
   return (
     <>
       {/* Static and Dynamic User Contents */}
-      {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
       {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
       .map(user => (nameUser.toLowerCase().trim() === user.name.toLowerCase() && 
         <div 

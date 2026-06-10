@@ -6,7 +6,6 @@ import { GiMuscleUp } from "react-icons/gi";
 
 function NutritionPage() {
 
-  // const { staticUsersContents, dynamicUsersContents, dbUsers, loginValidate, nameUser, setAbleNutritionPage } = useContext(DataContext)
   const { staticUsersContents, dbUsers, loginValidate, nameUser, setAbleNutritionPage } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
@@ -25,7 +24,6 @@ function NutritionPage() {
       {loginValidate && <div className='banner-nutrition-page'></div>}
 
       {/* Static and Dynamic User Contents */}
-      {/* {(staticUsersContents || dynamicUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dynamicUsersContents), ...(dbUsers)] */}
       {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
       .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
         .map(user => ({id: user.id, name: user.name, nutrition: user.nutrition}))
