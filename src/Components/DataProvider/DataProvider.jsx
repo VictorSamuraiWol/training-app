@@ -71,11 +71,11 @@ export default function DataProvider({ children }) {
                                                     [{"exercise": "HIIT (burpess, polichinelo, pular corda, etc): 10-15 min"}, {"gif": "hiit"}], 
                                                     [{"exercise": "Abdominal supra: 3x12-14 (peso do corpo)"}, {"gif": "abdominalCrunch"}], 
                                                     [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "obliqueCrunch"}], 
-                                                    [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "lyingLegRaise"}], 
                                                     [{"exercise": "Prancha: 30s"}, {"gif": "plank"}]
                                                   ]}],
                     [{"type": "E"}, {"exercises": [
-                                                    [{"exercise": "Extensão de Triceps na Barra: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Triceps Testa com Barra: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)"}, {"gif": "barbellSkullCrusher"}], 
                                                     [{"exercise": "Triceps Francês: 3x7-9 (20kgs)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Triceps Corda: 3x7-9 (8 barras)"}, {"gif": "waitingTheExercise"}], 
                                                     [{"exercise": "Elevação Frontal: 4x7-9 (3 barras)"}, {"gif": "waitingTheExercise"}], 
