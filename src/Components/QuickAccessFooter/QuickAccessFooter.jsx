@@ -1,67 +1,51 @@
-import './Footer.css';
-import image from '../../assets/images/icone-wolverine-sem-fundo.png';
-import Loader from '../Loader/Loader';
-import QuickAccessFooter from '../QuickAccessFooter/QuickAccessFooter';
-import { DataContext } from '../DataContext/DataContext';
-import { TbTriangleInvertedFilled } from "react-icons/tb";
-import { Link, useNavigate } from 'react-router-dom';
+import './QuickAccessFooter.css';
 import { useContext, useState } from 'react';
+import { DataContext } from '../DataContext/DataContext';
+import { useNavigate } from 'react-router-dom';
+import { TbTriangleInvertedFilled } from "react-icons/tb";
 
-function Footer() {
+function QuickAccessFooter() {
 
-  const { loader, 
-    
+  const { staticUsersContents, dbUsers, loginValidate, nameUser, typeTrain, setTypeTrain, 
+    ableExercisesPage, ableNutritionPage, ableNotesPage } = useContext(DataContext)
 
-    
-    // staticUsersContents, dbUsers, loginValidate, nameUser, typeTrain, setTypeTrain, 
-    // ableExercisesPage, ableNutritionPage, ableNotesPage 
-  } = useContext(DataContext)
+  const navigate = useNavigate()
 
-  // const navigate = useNavigate()
+  const [openQuickAccess, setOpenQuickAccess] = useState(false)
 
-  // const [openQuickAccess, setOpenQuickAccess] = useState(false)
+  const [disabledSelectNamesQuickAccess, setDisabledSelectNamesQuickAccess] = useState(false)
 
-  // const [disabledSelectNamesQuickAccess, setDisabledSelectNamesQuickAccess] = useState(false)
-  
-  // const handleNavigate = (e) => {
-  //   const path = e.target.value
-  //   let letterTypeTrain
+  const handleNavigate = (e) => {
+    const path = e.target.value
+    let letterTypeTrain
 
-  //   if (path.includes('/exercises-page/')) {
-  //     letterTypeTrain = path.split('/').pop()
+    if (path.includes('/exercises-page/')) {
+      letterTypeTrain = path.split('/').pop()
       
-  //   }
+    }
 
-  //   setTypeTrain(letterTypeTrain)
+    setTypeTrain(letterTypeTrain)
 
-  //   if (path) navigate(path)
+    if (path) navigate(path)
 
-  //   return letterTypeTrain
+    return letterTypeTrain
 
-  // }
+  }
 
-  // function optionSelect(optionSelect) {
-  //   let select
+  function optionSelect(optionSelect) {
+    let select
 
-  //   if (optionSelect.includes(typeTrain)) {
-  //     select = 'true'
+    if (optionSelect.includes(typeTrain)) {
+      select = 'true'
       
-  //   }    
+    }    
 
-  //   return select
+    return select
 
-  // }
+  }
 
-  return(
-    <div className='footer'>
-
-
-
-      <QuickAccessFooter />
-
-
-
-      {/* {(ableExercisesPage || ableNutritionPage || ableNotesPage) && 
+  return (
+    (ableExercisesPage || ableNutritionPage || ableNotesPage) && 
       <div className='quick-access-selects'>        
         <TbTriangleInvertedFilled className={`quick-access-selects-icon ${openQuickAccess ? 
           "quick-access-selects-icon-animation" : ""}`} 
@@ -83,6 +67,7 @@ function Footer() {
             Quick Access
           </option>
 
+          {/* Static and Dynamic User Contents */}
           {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
           .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
           .map(user => user.quick_access && user.quick_access)
@@ -102,24 +87,9 @@ function Footer() {
 
         </select>
 
-      </div>} */}
-
-      <img 
-        className='footer-img' 
-        src={image} 
-        alt="icon wolverine" 
-      />
-
-      <p className='footer-text'>Created by Victor Cardoso. Feel free to connect on  
-          <Link className='footer-link' id='contactLink' to="https://www.linkedin.com/in/victor-cardoso-cloud-front/" target="_blank"> Linkedin.</Link>
-      </p>
-
-      {loader && <Loader />}
-
-    </div>
-
+      </div>
   )
 
 }
 
-export default Footer;
+export default QuickAccessFooter;

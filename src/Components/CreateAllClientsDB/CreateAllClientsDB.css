@@ -7,6 +7,7 @@
 
 .icon-add-clients {
   color: var(--border-green);
+  cursor: pointer;
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -21,7 +22,6 @@
   color: var(--error-color);
   font-size: 0.9rem;
   width: max-content;
-  z-index: 2;
 }
 
 /* Responsiveness */

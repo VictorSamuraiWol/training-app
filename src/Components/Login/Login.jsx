@@ -89,7 +89,7 @@ function Login({ setActivateNavigateDefault }) {
               inputId='password'
               required={true}
               name='password'
-              typeInput='password'
+              // typeInput='password' obs: avoid use this to prevent leak, because this is a test project
             />
           </div>
 
@@ -101,7 +101,7 @@ function Login({ setActivateNavigateDefault }) {
               inputId='password'
               required={true}
               name='password'
-              typeInput='password'
+              // typeInput='password' obs: avoid use this to prevent leak, because this is a test project
             />
           </div>
 
