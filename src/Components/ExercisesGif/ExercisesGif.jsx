@@ -21,6 +21,8 @@ import barbellReverseWristCurl from '../../assets/images/exercises-gif/barbell-r
 import obliqueCrunch from '../../assets/images/exercises-gif/oblique-crunch-gif.gif';
 import lyingLegRaise from '../../assets/images/exercises-gif/lying-Leg-raise-gif.gif';
 import barbellSkullCrusher from '../../assets/images/exercises-gif/barbell-skull-crusher-gif.gif';
+import overheadTricepsExtension from '../../assets/images/exercises-gif/overhead-triceps-extension-gif.gif';
+import tricepsRopePushdown from '../../assets/images/exercises-gif/triceps-rope-pushdown-gif.gif';
 import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 
@@ -54,7 +56,9 @@ function ExercisesGif({ setAbleExercisesGif, exerciseGif }) {
     barbellReverseWristCurl: barbellReverseWristCurl,
     obliqueCrunch: obliqueCrunch,
     lyingLegRaise: lyingLegRaise,
-    barbellSkullCrusher: barbellSkullCrusher
+    barbellSkullCrusher: barbellSkullCrusher,
+    overheadTricepsExtension: overheadTricepsExtension,
+    tricepsRopePushdown: tricepsRopePushdown
 
   })
 
