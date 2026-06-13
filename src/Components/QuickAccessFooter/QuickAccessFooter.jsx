@@ -6,8 +6,9 @@ import { TbTriangleInvertedFilled } from "react-icons/tb";
 
 function QuickAccessFooter() {
 
-  const { staticUsersContents, dbUsers, loginValidate, nameUser, typeTrain, setTypeTrain, 
-    ableExercisesPage, ableNutritionPage, ableNotesPage } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, loginValidate, nameUser, setTypeTrain, 
+    ableExercisesPage, ableNutritionPage, ableNotesPage, quickAccessTypeName 
+  } = useContext(DataContext)
 
   const navigate = useNavigate()
 
@@ -16,33 +17,44 @@ function QuickAccessFooter() {
   const [disabledSelectNamesQuickAccess, setDisabledSelectNamesQuickAccess] = useState(false)
 
   const handleNavigate = (e) => {
-    const path = e.target.value
-    let letterTypeTrain
+    const quickAccessType = e.target.value
 
-    if (path.includes('/exercises-page/')) {
-      letterTypeTrain = path.split('/').pop()
-      
+    if (quickAccessType.length === 1) {
+      setTypeTrain(quickAccessType)
+      navigate(`/exercises-page/${quickAccessType}`)
+    
+    } else {
+      navigate(`/${quickAccessType}-page`)
+
     }
 
-    setTypeTrain(letterTypeTrain)
-
-    if (path) navigate(path)
-
-    return letterTypeTrain
+    return quickAccessType
 
   }
 
-  function optionSelect(optionSelect) {
+  function optionSelect(selectOption) {
     let select
 
-    if (optionSelect.includes(typeTrain)) {
+    if (quickAccessTypeName === selectOption) {
       select = 'true'
       
-    }    
+    } else {
+      select = 'false'
+
+    }
 
     return select
 
   }
+
+  {/* Static and Dynamic User Contents */}
+  const exerNutriNotes = (staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
+    .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+    .map(user => [
+      user.exercises.map(exercise => exercise[0].type),
+      user.nutrition.length > 0 ? 'nutrition' :  null,
+      user.notes.length > 0 ? 'notes' :  null
+    ])[0]
 
   return (
     (ableExercisesPage || ableNutritionPage || ableNotesPage) && 
@@ -67,21 +79,16 @@ function QuickAccessFooter() {
             Quick Access
           </option>
 
-          {/* Static and Dynamic User Contents */}
-          {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
-          .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-          .map(user => user.quick_access && user.quick_access)
-          .map(quickAccessList => quickAccessList)[0]
-          .map(quickAccess => (
+          {exerNutriNotes.flat(1).map((quickAccess, indice) => (
             <option 
-              key={quickAccess[0].name}
-              value={quickAccess[1].path}
-              className={`'quick-access-selects-select-option' 
-                ${optionSelect(quickAccess[1].path) === 'true' && 'quick-access-selects-select-option-select'}`}
+              key={indice}
+              value={quickAccess}
+              className={`quick-access-selects-select-option 
+                ${optionSelect(quickAccess) === 'true' && 'quick-access-selects-select-option-select'}`}
               onClick={() => setDisabledSelectNamesQuickAccess(true)}
-              path={optionSelect(quickAccess[1].path)}
+              path={optionSelect(quickAccess)}
             >
-              {quickAccess[0].name}
+              {quickAccess}
             </option>
           ))}
 

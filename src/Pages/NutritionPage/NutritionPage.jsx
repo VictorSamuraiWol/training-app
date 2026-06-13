@@ -6,12 +6,14 @@ import { GiMuscleUp } from "react-icons/gi";
 
 function NutritionPage() {
 
-  const { staticUsersContents, dbUsers, loginValidate, nameUser, setAbleNutritionPage } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, loginValidate, nameUser, setAbleNutritionPage, setTypeTrain, setQuickAccessTypeName } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
 
   useEffect(() => {
     setAbleNutritionPage(true)
+    setTypeTrain('')
+    setQuickAccessTypeName('nutrition')
 
     return () => {
       setAbleNutritionPage(false) // runs on component unmount

@@ -19,7 +19,7 @@ import { insertAllClients } from '../../Components/Supabase/supabaseRequests/sup
 function ExercisesPage() {
 
   const { staticUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
-    setAbleExercisesPage, insertError, setInsertError, clientsDataJson
+    setAbleExercisesPage, insertError, setInsertError, clientsDataJson, setQuickAccessTypeName
   } = useContext(DataContext)
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
@@ -54,6 +54,11 @@ function ExercisesPage() {
     setAbleVideoBanner(false)
     
   }, [])
+
+  useEffect(() => {
+    setQuickAccessTypeName(typeTrain)
+
+  }, [setQuickAccessTypeName, typeTrain])
 
   const [descriptionIconName, setDescriptionIconName] = useState('')
 

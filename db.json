@@ -59,13 +59,6 @@
                     {"name": "Armin van Buuren live at A State of Trance, London 2025", "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"}, 
                     {"name": "ALOK @ TOMORROWLAND WINTER 2026", "id": "iP-t3nMX9wQ?si=VTtnRXXn5du8TmMO"}
                   ],
-      "quick_access": [
-                        [{"name": "A"}, {"path": "/exercises-page/A"}], 
-                        [{"name": "B"}, {"path": "/exercises-page/B"}], 
-                        [{"name": "C"}, {"path": "/exercises-page/C"}], 
-                        [{"name": "nutrition"}, {"path": "/nutrition-page"}], 
-                        [{"name": "notes"}, {"path": "/notes-page"}]
-                      ],
       "id": "Victor"
     },
     {
@@ -108,13 +101,6 @@
       "video_yt": [
                     {"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}
                   ],
-      "quick_access": [
-                        [{"name": "A"}, {"path": "/exercises-page/A"}], 
-                        [{"name": "B"}, {"path": "/exercises-page/B"}], 
-                        [{"name": "C"}, {"path": "/exercises-page/C"}], 
-                        [{"name": "nutrition"}, {"path": "/nutrition-page"}], 
-                        [{"name": "notes"}, {"path": "/notes-page"}]
-                     ],
       "id": "1"
     }
   ] 

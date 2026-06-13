@@ -6,12 +6,14 @@ import { GiMuscleUp } from "react-icons/gi";
 
 function NotesPage() {
 
-  const { staticUsersContents, dbUsers, loginValidate, nameUser, setAbleNotesPage } = useContext(DataContext)
+  const { staticUsersContents, dbUsers, loginValidate, nameUser, setAbleNotesPage, setTypeTrain, setQuickAccessTypeName } = useContext(DataContext)
 
   const { compactUserName } = useOutletContext()
 
   useEffect(() => {
     setAbleNotesPage(true)
+    setTypeTrain('')
+    setQuickAccessTypeName('notes')
 
     return () => {
       setAbleNotesPage(false) // runs on component unmount

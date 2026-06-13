@@ -15,7 +15,8 @@ export default function DataProvider({ children }) {
   const [ableNutritionPage, setAbleNutritionPage] = useState(false)
   const [ableNotesPage, setAbleNotesPage] = useState(false)
   const [dbUsers, setDbUsers] = useState([])
-  const [insertError, setInsertError] = useState(null);
+  const [insertError, setInsertError] = useState(null)
+  const [quickAccessTypeName, setQuickAccessTypeName] = useState('')
 
   // clients List Json
   const clientsDataJson = db.clients
@@ -112,16 +113,6 @@ export default function DataProvider({ children }) {
                     {"name": "Alok | Tomorrowland Brasil 2024", "id": "0MZQtSQG4Ec?si=txCOfZMuUvh6PDMz"}, 
                     {"name": "Alok | Tomorrowland 2023", "id": "YFwzvjJp0q4?si=S7zguMbezUpNNXNE"}
                  ],
-      "quick_access": [
-                        [{"name": "A"}, {"path": "/exercises-page/A"}], 
-                        [{"name": "B"}, {"path": "/exercises-page/B"}], 
-                        [{"name": "C"}, {"path": "/exercises-page/C"}], 
-                        [{"name": "D"}, {"path": "/exercises-page/D"}], 
-                        [{"name": "E"}, {"path": "/exercises-page/E"}], 
-                        [{"name": "F"}, {"path": "/exercises-page/F"}], 
-                        [{"name": "nutrition"}, {"path": "/nutrition-page"}], 
-                        [{"name": "notes"}, {"path": "/notes-page"}]
-                      ],
       "id": "Leimar"
     }
 
@@ -147,7 +138,9 @@ export default function DataProvider({ children }) {
     dbUsers,
     insertError, 
     setInsertError,
-    clientsDataJson
+    clientsDataJson,
+    quickAccessTypeName, 
+    setQuickAccessTypeName
   }
 
   return (        
