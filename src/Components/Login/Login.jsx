@@ -68,7 +68,10 @@ function Login({ setActivateNavigateDefault }) {
 
       <LoginModal />
 
-      <form onSubmit={onLoginValidate}>
+      <form 
+        onSubmit={onLoginValidate}
+        className='form-login' 
+      >
         <div className='form-labels-inputs'>
           <div className='form-label-input'>
             <LabelDefault htmlFor='name' nameLabel='Name:' />

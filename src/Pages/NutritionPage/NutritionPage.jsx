@@ -39,9 +39,13 @@ function NutritionPage() {
           <div className='cards-info-nutrition-itens'>
 
             {idNameNutrition.nutrition.map((nutri, indice) => ( 
-              nutri[0] && nutri[1] && <div key={indice} className='cards-info-nutrition-itens-icon-item'>
+              nutri[0] && nutri[1] && 
+              <div 
+                key={indice} 
+                className='cards-info-nutrition-itens-icon-item'
+              >
                 <GiMuscleUp className='iconMuscleNutrition' />
-                <p className='cards-info-nutrition-item'>{nutri[0]} {nutri[1].join(", ")}</p>
+                <p className='cards-info-nutrition-item'>{nutri[0]}: {nutri[1].join(", ")}</p>
 
               </div>
             ))}

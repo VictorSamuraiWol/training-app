@@ -14,28 +14,20 @@ function BasePage() {
   const { loginValidate } = useContext(DataContext)
 
   const [activateNavigateDefault, setActivateNavigateDefault] = useState(false)
-
   const [isOnToggleTimersExercises, setIsOnToggleTimersExercises] = useState(false)
-
   const [selectNameVideoModal, setSelectNameVideoModal] = useState('')
-
   const [selectIdVideoModal, setSelectIdVideoModal] = useState('')
-
   const [initialPosVideo, setInitialPosVideo] = useState('')
-
   const [visibleVideoYT, setVisibleVideoYT] = useState(false)
-
   const [selectContainerVideoYTPosition, setSelectContainerVideoYTPosition] = useState('select-video-iframe-initial-left-center-right-position')
-
   const [ableTimer, setAbleTimer] = useState(true)
-
   const [ableBanner, setAbleBanner] = useState(true)
-
   const [ableVideoBanner, setAbleVideoBanner] = useState(false)
-
   const [ableMusic, setAbleMusic] = useState(true)
-
   const [checkedInputs, setCheckedInputs] = useState([])
+  const [numImagesProfiles, setNumImagesProfiles] = useState('')
+  const [numAudios, setNumAudios] = useState('')
+  const [numGifs, setNumGifs] = useState('')
 
   const compactUserName = (name, numLength) => {
     let editUserName;
@@ -73,6 +65,7 @@ function BasePage() {
         setIsOnToggleTimersExercises={setIsOnToggleTimersExercises}
         ableTimer={ableTimer}
         setAbleTimer={setAbleTimer}
+        setNumImagesProfiles={setNumImagesProfiles}
       />}
 
       {loginValidate && <Outlet context={{ 
@@ -80,7 +73,7 @@ function BasePage() {
         selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
         selectContainerVideoYTPosition, setSelectContainerVideoYTPosition, checkedInputs, setCheckedInputs, toggleChecked, 
         setAbleTimer, ableMusic, setAbleMusic, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
-        selectNameVideoModal, setSelectNameVideoModal
+        selectNameVideoModal, setSelectNameVideoModal, numImagesProfiles, numAudios, setNumAudios, numGifs, setNumGifs
       }} 
       />}
 

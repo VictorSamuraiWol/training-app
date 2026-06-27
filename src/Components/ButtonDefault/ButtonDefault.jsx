@@ -3,14 +3,9 @@ import { DataContext } from '../DataContext/DataContext';
 
 function ButtonDefault({ onClick, specificStylesButton, nameButton, typeButton, imageReact }) {
 
-  function multiFunctionsOnCLickAudio() {
-    onClick && onClick()
-
-  }
-
   return (
     <button
-      onClick={multiFunctionsOnCLickAudio}
+      onClick={onClick}
       className={specificStylesButton}
       type={typeButton}
     >

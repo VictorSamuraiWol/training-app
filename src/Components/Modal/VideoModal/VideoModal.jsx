@@ -4,6 +4,7 @@ import ButtonDefault from '../../ButtonDefault/ButtonDefault';
 import bgVideoModal from '../../../assets/images/bg-video-modal.png';
 import LabelDefault from '../../LabelDefault/LabelDefault';
 import InputDefault from '../../InputDefault/InputDefault';
+import DescriptionIconsMenu from '../../DescriptionIconsMenu/DescriptionIconsMenu';
 import { useContext, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { TiDeleteOutline } from "react-icons/ti"
@@ -25,12 +26,9 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
     setAbleVideoBanner, setAbleBanner, selectNameVideoModal, setSelectNameVideoModal
   } = useOutletContext()
   
-  const [modalIsOpen, setModalIsOpen] = useState(false)
-    
+  const [modalIsOpen, setModalIsOpen] = useState(false)    
   const [openVideoModal, setOpenVideoModal] = useState(false)
-
   const [errorMessageVideoModal, setErrorMessageVideoModal] = useState('')
-
   const [selectedRadio, setSelectedRadio] = useState(null)
 
   function openModal() {
@@ -48,8 +46,12 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
 
   function onChangeSelectVideoModal(e) {
     setSelectIdVideoModal(e.target.value)
-    setOpenVideoModal(false)
     setErrorMessageVideoModal('')
+
+  }
+
+  function onClickSelectVideoModal() {
+    setOpenVideoModal(prev => !prev)
 
   }
 
@@ -88,13 +90,11 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
 
   return (
     <div className={'container-video-modal'}>
-      {ableDescriptionIconsMenu && descriptionIconName === 'YouTube' && 
-        <span
-          className='descriptionIconsMenu'
-        >
-          {descriptionIconName}
-        </span>
-      }
+      <DescriptionIconsMenu 
+        ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+        descriptionIconName={descriptionIconName}
+        name='YouTube' 
+      />
 
       <AiFillYoutube
         onClick={openModal}
@@ -226,16 +226,15 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
 
           <select
             value={selectIdVideoModal}
-            onFocus={() => setOpenVideoModal(true)}
-            onMouseDown={() => setOpenVideoModal(true)}
-            onBlur={() => setOpenVideoModal(false)}
             onChange={onChangeSelectVideoModal}
+            onClick={onClickSelectVideoModal}
+            onBlur={() => setOpenVideoModal(false)}
             className='videos-selects-select'
           >
             <option 
               value=''
               disabled
-              className='videos-selects-select-option'>
+              className='videos-selects-select-option-default'>
                 select video
             </option>
 

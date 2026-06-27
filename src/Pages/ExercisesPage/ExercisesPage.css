@@ -143,14 +143,6 @@
   min-height: 30px;
 }
 
-.descriptionIconsMenu {
-  position: absolute;
-  top: -25px;
-  color: var(--border-green);
-  width: max-content;
-  cursor: default;
-}
-
 .toggle-default-timer-title-music {
   z-index: 1;
 }
@@ -232,10 +224,6 @@
     gap: 8px;
   }
 
-  .descriptionIconsMenu {
-    display: none;
-  }
-
   .toggle-default-timer-title-music-toggle-on-toggle-off {
     width: 20px;
     height: 20px;
@@ -294,10 +282,6 @@
 
   .new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal {
     gap: 8px;
-  }
-
-  .descriptionIconsMenu {
-    display: none;
   }
 
   .toggle-default-timer-title-music-toggle-on-toggle-off {
@@ -421,12 +405,6 @@
     gap: 12px;
   }
 
-  .descriptionIconsMenu {
-    display: flex;
-    top: -23px;
-    font-size: 0.7rem;
-  }
-
   .exercises-page-style-cards-timer-title-music-long-text {
     font-size: 1.8rem;
   }
@@ -453,10 +431,6 @@
 
   .videos-target-banner-iframe {
     height: 190px;
-  }
-
-  .descriptionIconsMenu {
-    font-size: 0.8rem;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {
@@ -488,10 +462,6 @@
 
   .videos-target-banner-iframe {
     height: 210px;
-  }
-
-  .descriptionIconsMenu {
-    font-size: 0.9rem;
   }
 
   .exercises-page-style-cards-timer-title-music-long-text {

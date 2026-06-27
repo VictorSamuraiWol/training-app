@@ -1,4 +1,5 @@
 import './CreateAllClientsDB.css';
+import DescriptionIconsMenu from '../../DescriptionIconsMenu/DescriptionIconsMenu';
 import { MdGroupAdd } from 'react-icons/md';
 
 function CreateAllClientsDB({ onClick, onMouseOver, onMouseLeave, ableDescriptionIconsMenu, 
@@ -8,13 +9,11 @@ function CreateAllClientsDB({ onClick, onMouseOver, onMouseLeave, ableDescriptio
     <div 
       className='container-decription-add-clients'
     >
-      {ableDescriptionIconsMenu && descriptionIconName === 'Create All Clients' &&
-        <span
-          className='descriptionIconsMenu'
-        >
-          {descriptionIconName}
-        </span>
-      }
+      <DescriptionIconsMenu 
+        ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+        descriptionIconName={descriptionIconName}
+        name='Create All Clients'
+      />
 
       {insertError &&
         <div 

@@ -6,12 +6,12 @@ import profileVictor from '../../assets/images/profiles/profile-victor.png';
 import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
 import Timer from '../Timer/Timer';
 import { Link } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../DataContext/DataContext';
 import { TiDeleteOutline } from "react-icons/ti";
 import { AiFillPushpin, AiOutlinePushpin } from "react-icons/ai";
 
-function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer }) {
+function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer, setNumImagesProfiles }) {
 
   const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dbUsers, loginValidate,
     ableExercisesPage
@@ -32,6 +32,11 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
     window.location.reload()
 
   }
+
+  useEffect(() => {
+    setNumImagesProfiles(Object.keys(imagesDescriptions))
+
+  },[setNumImagesProfiles, imagesDescriptions])
 
   return (
     <div className='header'>

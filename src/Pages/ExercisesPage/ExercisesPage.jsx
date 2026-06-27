@@ -7,7 +7,8 @@ import audio2 from '../../assets/audios/workout-music-2025.mp3'
 import ToggleDefault from '../../Components/ToggleDefault/ToggleDefault';
 import VideoModal from '../../Components/Modal/VideoModal/VideoModal';
 import PlayerVideoYT from '../../Components/PlayerVideoYT/PlayerVideoYT';
-import CreateAllClientsDB from '../../Components/CreateAllClientsDB/CreateAllClientsDB';
+import CreateAllClientsDB from '../../Components/ComponentsDB/CreateAllClientsDB/CreateAllClientsDB';
+import InsertClientDBModal from '../../Components/ComponentsDB/InsertClientDB/InsertClientDB';
 import { useContext, useEffect, useState } from 'react';
 import { DataContext } from '../../Components/DataContext/DataContext';
 import { Link, useOutletContext, useParams } from 'react-router-dom';
@@ -24,12 +25,14 @@ function ExercisesPage() {
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
     ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
-    selectNameVideoModal
+    selectNameVideoModal, setNumAudios
   } = useOutletContext()
 
   const { id } = useParams()
 
   const [ableDescriptionIconsMenu, setAbleDescriptionIconsMenu] = useState(false)
+
+  const [descriptionIconName, setDescriptionIconName] = useState('')
 
   // audios
   const [audiosDescriptions] = useState({
@@ -60,7 +63,10 @@ function ExercisesPage() {
 
   }, [setQuickAccessTypeName, typeTrain])
 
-  const [descriptionIconName, setDescriptionIconName] = useState('')
+  useEffect(() => {
+    setNumAudios(Object.keys(audiosDescriptions))
+
+  }, [setNumAudios, audiosDescriptions])
 
   return(
     <div className='exercises-page-style'>
@@ -115,15 +121,25 @@ function ExercisesPage() {
           className={ableMusic ? 'menu-exercises-page-style-cards-timer-title-music-toggle-video-modal' : 
             'new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal'}
         >
-          {loginValidate && nameUser.toLowerCase() === 'Victor'.toLowerCase() && 
-            <CreateAllClientsDB
-              onClick={() => insertAllClients(clientsDataJson, setInsertError)}
-              onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Create All Clients')}}
-              onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
-              ableDescriptionIconsMenu={ableDescriptionIconsMenu}
-              descriptionIconName={descriptionIconName}
-              insertError={insertError}
-            />
+          {loginValidate && nameUser.toLowerCase() === 'Victor'.toLowerCase() &&
+            <>
+              <InsertClientDBModal
+                onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Insert Client')}}
+                onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
+                ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+                descriptionIconName={descriptionIconName}
+              />
+
+              <CreateAllClientsDB
+                onClick={() => insertAllClients(clientsDataJson, setInsertError)}
+                onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Create All Clients')}}
+                onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
+                ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+                descriptionIconName={descriptionIconName}
+                insertError={insertError}
+              />
+              
+            </> 
           }
 
           <VideoModal

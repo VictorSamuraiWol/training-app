@@ -157,6 +157,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  font-family: var(--bebas);
   font-size: 16px;
   color: var(--border-green);
   background-color: var(--text);

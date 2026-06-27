@@ -1,0 +1,46 @@
+.descriptionIconsMenu {
+  position: absolute;
+  top: -25px;
+  color: var(--border-green);
+  width: max-content;
+  cursor: default;
+}
+
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .descriptionIconsMenu {
+    display: none;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .descriptionIconsMenu {
+    display: none;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .descriptionIconsMenu {
+    display: flex;
+    top: -23px;
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .descriptionIconsMenu {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .descriptionIconsMenu {
+    font-size: 0.9rem;
+  }
+
+}

@@ -30,7 +30,7 @@
   box-shadow: 0 0 5px var(--bg), 0 0 10px var(--bg), 0 0 20px var(--bg);
 }
 
-form {
+.form-login {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -106,7 +106,7 @@ form {
     width: 70px;
   }
 
-  form {
+  .form-login {
     font-size: 0.95rem;
     width: 35%;
     padding: 2px;
@@ -137,7 +137,7 @@ form {
     width: 90px;
   }
 
-  form {
+  .form-login {
     font-size: 1rem;
     width: 35%;
     padding: 2px;
@@ -168,7 +168,7 @@ form {
     width: 110px;
   }
 
-  form {
+  .form-login {
     width: 30%;
     padding: 4px;
   }
@@ -201,7 +201,7 @@ form {
     width: 130px;
   }
 
-  form {
+  .form-login {
     font-size: 1.05rem;
     width: 25%;
   }
@@ -222,7 +222,7 @@ form {
     padding: 0 16px;
   }
 
-  form {
+  .form-login {
     font-size: 1.1rem;
     width: 20%;
   }
@@ -234,7 +234,7 @@ form {
 }
 
 @media (min-width: 1440px) {
-  form {
+  .form-login {
     font-size: 1.125rem;
   }
 

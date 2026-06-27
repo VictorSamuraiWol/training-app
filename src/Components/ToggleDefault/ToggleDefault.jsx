@@ -1,4 +1,5 @@
 import './ToggleDefault.css';
+import DescriptionIconsMenu from '../DescriptionIconsMenu/DescriptionIconsMenu';
 import { MdToggleOff } from "react-icons/md";
 import { MdToggleOn } from "react-icons/md";
 import { BsClockFill } from "react-icons/bs";
@@ -16,13 +17,11 @@ function ToggleDefault({ idToggle, isOnToggle, setIsOnToggle, specificsStylesTog
 
   return(
     <div className='container-description-toogle'>
-      {ableDescriptionIconsMenu && descriptionIconName === 'Timer' &&
-        <span
-          className='descriptionIconsMenu'
-        >
-          {descriptionIconName}
-        </span>
-      }
+      <DescriptionIconsMenu 
+        ableDescriptionIconsMenu={ableDescriptionIconsMenu}
+        descriptionIconName={descriptionIconName}
+        name='Timer'
+      />
 
       {/* timers */}
       {idToggle === 'timers' &&

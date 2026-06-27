@@ -1,107 +1,634 @@
 {
   "clients": [
     {
-      "name" : "Victor",
+      "name": "Victor",
       "weight": "80 kgs",
       "height": "1.69 cm",
-      "exercises": [[{"type": "A"}, {"exercises": [
-                                                    [{"exercise": "Warm-up: HIIT - 10-15 min"}, {"gif": "hiit"}], 
-                                                    [{"exercise": "Biceps: 1x 12-14 (6kg - dumbbell) + (up) 4x 7-9 (7kg - dumbbell)"}, {"gif": "concentrationCurl"}], 
-                                                    [{"exercise": "Dumbbell Reverse Curl: (up) 4x 7-9 (6kg - dumbbell) (already warmed up)"}, {"gif": "dumbbellReverseCurl"}], 
-                                                    [{"exercise": "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "barbellReverseWristCurl"}], 
-                                                    [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
-                                                    [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
-                                                  ]}],
-                    [{"type": "B"}, {"exercises": [
-                                                    [{"exercise": "Warm-up: HIIT - 10-15 min"}, {"gif": "hiit"}], 
-                                                    [{"exercise": "Squat: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Stiff (Romanian Deadlift): 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"}, {"gif": "stiff"}], 
-                                                    [{"exercise": "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
-                                                    [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
-                                                  ]}],
-                    [{"type": "C"}, {"exercises": [
-                                                    [{"exercise": "Warm-up: HIIT - 10-15 min"}, {"gif": "hiit"}], 
-                                                    [{"exercise": "Triceps: 1x 12-14 (6kg - dumbbell) + 3x 7-9 (8kg - dumbbell)"}, {"gif": "overheadTricepsExtension"}], 
-                                                    [{"exercise": "Front Raise: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)"}, {"gif": "dumbbellFrontRaise"}], 
-                                                    [{"exercise": "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"}, {"gif": "dumbbellLateralRaise"}], 
-                                                    [{"exercise": "Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"}, {"gif": "barbellWristCurl"}], 
-                                                    [{"exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"}, {"gif": "barbellReverseWristCurl"}], 
-                                                    [{"exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"}, {"gif": "abdominalCrunch"}], 
-                                                    [{"exercise": "Plank: 1x (35 seconds)"}, {"gif": "plank"}]
-                                                  ]}]
-                   ],
-      "nutrition":  [
-                      ["Supplements:", ["Whey", "Creatina", "Dextrose"]], 
-                      ["Breakfast:", ["Coffee", "Whole Wheat Bread", "Eggs", "Avocado", "Mustard", "Onion"]], 
-                      ["Snack:", ["Yogurt", "Banana", "Oat", "Papaya", "Pineapple"]], 
-                      ["Lunch:", ["Grape Juice", "Chicken", "Rice", "Beans", "Cassava", "Beetroot", "Carrot"]], 
-                      ["Snack:", ["Coffee", "Low-carb Cake"]], 
-                      ["Dinner:", ["Grape Juice", "Meat", "Rice", "Pasta", "Sweet Potato", "Beetroot", "Carrot"]], 
-                      ["Late-night Snack:", ["Tea", "Nut", "Apple"]]
-                    ],
-      "notes": ["Start date: 8 January 2026", "Rest between reps: 1 min", "Rest between sets: 1-3 min", "UP technique"],
+      "exercises": [
+        [
+          {
+            "type": "A"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "Warm-up: HIIT - 10-15 min"
+                },
+                {
+                  "gif": "hiit"
+                }
+              ],
+              [
+                {
+                  "exercise": "Biceps: 1x 12-14 (6kg - dumbbell) + (up) 4x 7-9 (7kg - dumbbell)"
+                },
+                {
+                  "gif": "concentrationCurl"
+                }
+              ],
+              [
+                {
+                  "exercise": "Dumbbell Reverse Curl: (up) 4x 7-9 (6kg - dumbbell) (already warmed up)"
+                },
+                {
+                  "gif": "dumbbellReverseCurl"
+                }
+              ],
+              [
+                {
+                  "exercise": "Dumbbell Shoulder Extension: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Back: 1x 16-20 (8kg - dumbbell) + 2x 12-14 (10kg - dumbbell)"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Trapezius: 1x 16-20 (10kg - dumbbell) + (up) 4x 12-14 (12kg - dumbbell)"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"
+                },
+                {
+                  "gif": "barbellWristCurl"
+                }
+              ],
+              [
+                {
+                  "exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"
+                },
+                {
+                  "gif": "barbellReverseWristCurl"
+                }
+              ],
+              [
+                {
+                  "exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "abdominalCrunch"
+                }
+              ],
+              [
+                {
+                  "exercise": "Plank: 1x (35 seconds)"
+                },
+                {
+                  "gif": "plank"
+                }
+              ]
+            ]
+          }
+        ],
+        [
+          {
+            "type": "B"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "Warm-up: HIIT - 10-15 min"
+                },
+                {
+                  "gif": "hiit"
+                }
+              ],
+              [
+                {
+                  "exercise": "Squat: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Stiff (Romanian Deadlift): 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "stiff"
+                }
+              ],
+              [
+                {
+                  "exercise": "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "abdominalCrunch"
+                }
+              ],
+              [
+                {
+                  "exercise": "Plank: 1x (35 seconds)"
+                },
+                {
+                  "gif": "plank"
+                }
+              ]
+            ]
+          }
+        ],
+        [
+          {
+            "type": "C"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "Warm-up: HIIT - 10-15 min"
+                },
+                {
+                  "gif": "hiit"
+                }
+              ],
+              [
+                {
+                  "exercise": "Triceps: 1x 12-14 (6kg - dumbbell) + 3x 7-9 (8kg - dumbbell)"
+                },
+                {
+                  "gif": "overheadTricepsExtension"
+                }
+              ],
+              [
+                {
+                  "exercise": "Front Raise: 1x 12-14 (4kg - plates) + 3x 7-9 (5kg - plates)"
+                },
+                {
+                  "gif": "dumbbellFrontRaise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Lateral Raise: 1x 12-14 (4kg - plates) + (up) 3x 7-9 (5kg - plates)"
+                },
+                {
+                  "gif": "dumbbellLateralRaise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "Wrist Curl: 2x 12-14 (10kg - dumbbell) (already warmed up, no rest between reps)"
+                },
+                {
+                  "gif": "barbellWristCurl"
+                }
+              ],
+              [
+                {
+                  "exercise": "Wrist Extension: 2x 12-14 (5kg - plate) (already warmed up, no rest between reps)"
+                },
+                {
+                  "gif": "barbellReverseWristCurl"
+                }
+              ],
+              [
+                {
+                  "exercise": "Crunch (Abs): 1x 16-20 (bodyweight) + (up) 3x 12-14 (bodyweight)"
+                },
+                {
+                  "gif": "abdominalCrunch"
+                }
+              ],
+              [
+                {
+                  "exercise": "Plank: 1x (35 seconds)"
+                },
+                {
+                  "gif": "plank"
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "nutrition": [
+        [
+          "Supplements",
+          [
+            "Whey",
+            "Creatina",
+            "Dextrose"
+          ]
+        ],
+        [
+          "Breakfast",
+          [
+            "Coffee",
+            "Whole Wheat Bread",
+            "Eggs",
+            "Avocado",
+            "Mustard",
+            "Onion"
+          ]
+        ],
+        [
+          "Snack",
+          [
+            "Yogurt",
+            "Banana",
+            "Oat",
+            "Papaya",
+            "Pineapple"
+          ]
+        ],
+        [
+          "Lunch",
+          [
+            "Grape Juice",
+            "Chicken",
+            "Rice",
+            "Beans",
+            "Cassava",
+            "Beetroot",
+            "Carrot"
+          ]
+        ],
+        [
+          "Snack",
+          [
+            "Coffee",
+            "Low-carb Cake"
+          ]
+        ],
+        [
+          "Dinner",
+          [
+            "Grape Juice",
+            "Meat",
+            "Rice",
+            "Pasta",
+            "Sweet Potato",
+            "Beetroot",
+            "Carrot"
+          ]
+        ],
+        [
+          "Late-night Snack",
+          [
+            "Tea",
+            "Nut",
+            "Apple"
+          ]
+        ]
+      ],
+      "notes": [
+        "Start date: 8 January 2026",
+        "Rest between reps: 1 min",
+        "Rest between sets: 1-3 min",
+        "UP technique"
+      ],
       "password": "Victor",
       "image_profile": "profileVictor",
       "audio": "audio1",
       "video_yt": [
-                    {"name": "Alok | Portal do Amanhã", "id": "GgdnY3yIuIE?si=h-5Q60VtePrIWxaS"}, 
-                    {"name": "Armin van Buuren live at EDC Las Vegas 2026", "id": "n-MhD_TdzN4?si=T8ruZ0Ogr4taVYqW"}, 
-                    {"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}, 
-                    {"name": "Armin van Buuren live at A State of Trance 2026", "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"}, 
-                    {"name": "Armin van Buuren live at UNTOLD Festival 2025", "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"}, 
-                    {"name": "Armin van Buuren live at Ushuaïa, Ibiza 2025", "id": "yIBQX-F_Jjw?si=es6mErCPcGn9_0tm"}, 
-                    {"name": "Armin van Buuren live at A State of Trance, London 2025", "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"}, 
-                    {"name": "ALOK @ TOMORROWLAND WINTER 2026", "id": "iP-t3nMX9wQ?si=VTtnRXXn5du8TmMO"}
-                  ],
+        {
+          "name": "Alok | Portal do Amanhã",
+          "id": "GgdnY3yIuIE?si=h-5Q60VtePrIWxaS"
+        },
+        {
+          "name": "Armin van Buuren live at EDC Las Vegas 2026",
+          "id": "n-MhD_TdzN4?si=T8ruZ0Ogr4taVYqW"
+        },
+        {
+          "name": "The Best of Armin Only",
+          "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"
+        },
+        {
+          "name": "Armin van Buuren live at A State of Trance 2026",
+          "id": "ifbfwHkhhFc?si=-UEuR13jwNsl_BgD"
+        },
+        {
+          "name": "Armin van Buuren live at UNTOLD Festival 2025",
+          "id": "-nNE8lDgJ4g?si=6_F4BVnaaUFps0ta"
+        },
+        {
+          "name": "Armin van Buuren live at Ushuaïa, Ibiza 2025",
+          "id": "yIBQX-F_Jjw?si=es6mErCPcGn9_0tm"
+        },
+        {
+          "name": "Armin van Buuren live at A State of Trance, London 2025",
+          "id": "lOq30ufGX-8?si=DVPoRkfTsvYFHpiq"
+        },
+        {
+          "name": "ALOK @ TOMORROWLAND WINTER 2026",
+          "id": "iP-t3nMX9wQ?si=VTtnRXXn5du8TmMO"
+        }
+      ],
       "id": "Victor"
     },
     {
-      "name" : "1",
+      "name": "1",
       "weight": "Example",
       "height": "Example",
-      "exercises": [[{"type": "A"}, {"exercises": [
-                                                    [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}]
-                                                  ]}],
-                    [{"type": "B"}, {"exercises": [
-                                                    [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}],
-                                                    [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}],
-                                                    [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}]
-                                                  ]}],
-                    [{"type": "C"}, {"exercises": [
-                                                    [{"exercise": "exercise1"}, {"gif": "waitingTheExercise"}],
-                                                    [{"exercise": "exercise2"}, {"gif": "waitingTheExercise"}],
-                                                    [{"exercise": "exercise3"}, {"gif": "waitingTheExercise"}],
-                                                    [{"exercise": "exercise4"}, {"gif": "waitingTheExercise"}],
-                                                    [{"exercise": "exercise5"}, {"gif": "waitingTheExercise"}]
-
-                                                  ]}]
-                   ],
-      "nutrition":  [
-                      ["Supplements:", ["Example"]], 
-                      ["Breakfast:", ["Example"]], 
-                      ["Snack:", ["Example"]], 
-                      ["Lunch:", ["Example"]], 
-                      ["Snack:", ["Example"]], 
-                      ["Dinner:", ["Example"]], 
-                      ["Late-night Snack:", ["Example"]]
-                    ],
-      "notes": ["Example", "Example"],
+      "exercises": [
+        [
+          {
+            "type": "A"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "exercise1"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise2"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise3"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ]
+            ]
+          }
+        ],
+        [
+          {
+            "type": "B"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "exercise1"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise2"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise3"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise4"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ]
+            ]
+          }
+        ],
+        [
+          {
+            "type": "C"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "exercise1"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise2"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise3"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise4"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ],
+              [
+                {
+                  "exercise": "exercise5"
+                },
+                {
+                  "gif": "waitingTheExercise"
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "nutrition": [
+        [
+          "Supplements",
+          [
+            "Example"
+          ]
+        ],
+        [
+          "Breakfast",
+          [
+            "Example"
+          ]
+        ],
+        [
+          "Snack",
+          [
+            "Example"
+          ]
+        ],
+        [
+          "Lunch",
+          [
+            "Example"
+          ]
+        ],
+        [
+          "Snack",
+          [
+            "Example"
+          ]
+        ],
+        [
+          "Dinner",
+          [
+            "Example"
+          ]
+        ],
+        [
+          "Late-night Snack",
+          [
+            "Example"
+          ]
+        ]
+      ],
+      "notes": [
+        "Example",
+        "Example"
+      ],
       "password": "1",
       "image_profile": "example",
       "audio": "audio2",
       "video_yt": [
-                    {"name": "The Best of Armin Only", "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"}
-                  ],
+        {
+          "name": "The Best of Armin Only",
+          "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"
+        }
+      ],
       "id": "1"
+    },
+    {
+      "name": "test",
+      "weight": "a",
+      "height": "b",
+      "exercises": [
+        [
+          {
+            "type": "A"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "c"
+                },
+                {
+                  "gif": "hiit"
+                }
+              ],
+              [
+                {
+                  "exercise": "d"
+                },
+                {
+                  "gif": "plank"
+                }
+              ]
+            ]
+          }
+        ],
+        [
+          {
+            "type": "B"
+          },
+          {
+            "exercises": [
+              [
+                {
+                  "exercise": "e"
+                },
+                {
+                  "gif": "legPress"
+                }
+              ],
+              [
+                {
+                  "exercise": "f"
+                },
+                {
+                  "gif": "stiff"
+                }
+              ]
+            ]
+          }
+        ]
+      ],
+      "nutrition": [
+        [
+          "g",
+          [
+            "h"
+          ]
+        ],
+        [
+          "i",
+          [
+            "j"
+          ]
+        ]
+      ],
+      "notes": [
+        [
+          "k"
+        ],
+        [
+          "l"
+        ]
+      ],
+      "password": "test",
+      "image_profile": "example",
+      "audio": "audio1",
+      "video_yt": [
+        {
+          "name": "Alok | Portal do Amanhã",
+          "id": "GgdnY3yIuIE?si=h-5Q60VtePrIWxaS"
+        },
+        {
+          "name": "The Best of Armin Only",
+          "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"
+        }
+      ],
+      "id": "w7sE2e85I5Y"
     }
-  ] 
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

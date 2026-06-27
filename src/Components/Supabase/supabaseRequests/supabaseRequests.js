@@ -22,16 +22,30 @@ export async function getAllClients() {
 // }
 
 // ─── INSERT / UPSERT ─────────────────────────────────────
-// export async function insertClient(client) {
-//   const { data, error } = await supabase
-//     .from('clients')
-//     .upsert(client, { onConflict: 'id' })
-//     .select()
-//     .single();
-//   if (error) throw error;
-//   return data;
-// }
+// create a client
+export async function insertClient(client) {
+  const { id, ...clientData } = client
 
+  const payload = id ? { id, ...clientData } : clientData
+
+  const { data, error } = await supabase
+    .from('clients')
+    .upsert(payload, { onConflict: 'id' })
+    .select()
+    .single()
+
+  if (error) {
+    console.error('Error inserting client:', error)
+    throw error
+    
+  } 
+  
+  console.log('Client successfully created:', data)
+  return data
+
+}
+
+//create all client
 export async function insertAllClients(clients, setInsertError) {
   const { data, error } = await supabase
     .from('clients')

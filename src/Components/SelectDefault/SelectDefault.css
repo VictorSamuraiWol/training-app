@@ -1,0 +1,50 @@
+.container-select {
+  position: relative;
+}
+
+.select-triangle-icon {
+  position: absolute;
+  font-size: 0.9rem;
+  color: var(--border-green);
+  right: 8px;
+  top: 46%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.select-triangle-icon-animation {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  font-family: var(--bebas);
+  font-size: 16px;
+  color: var(--border-green);
+  background-color: var(--text);
+  width: 100%;
+  padding: 7px 30px 7px 10px;
+  border-radius: 8px;
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--bg);
+  border-bottom: 1px solid var(--bg);
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+
+.select:focus {
+  border-left: 1px solid var(--bg);
+  border-top: 1px solid var(--bg);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  outline: none;
+}
+
+.select-option:checked {
+  color: var(--border-yellow);
+}

@@ -1,8 +1,8 @@
 import './DataProvider.css';
+import db from '../../../db.json'
 import { DataContext } from '../DataContext/DataContext';
 import { useEffect, useState } from 'react';
 import { getAllClients } from '../Supabase/supabaseRequests/supabaseRequests'
-import db from '../../../db.json'
 
 export default function DataProvider({ children }) {
 
@@ -41,7 +41,7 @@ export default function DataProvider({ children }) {
   }, [])
 
   {/* Static Users */}
-  const staticUsersContents = [
+  const [staticUsersContents, setStaticUsersContents] = useState([
     {
       "name" : "Leimar",
       "weight": "87 kgs",
@@ -81,26 +81,26 @@ export default function DataProvider({ children }) {
                                                     [{"exercise": "Triceps Corda: 3x7-9 (8 barras)"}, {"gif": "tricepsRopePushdown"}], 
                                                     [{"exercise": "Elevação Frontal: 4x7-9 (3 barras)"}, {"gif": "dumbbellFrontRaise"}], 
                                                     [{"exercise": "Elevação Lateral: 4x7-9 (3 barras)"}, {"gif": "dumbbellLateralRaise"}], 
-                                                    [{"exercise": "Panturrilha em pé: 1x16-20 (60% da carga) + 3x12-14 (20kgs cada)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Panturrilha sentado: 3x12-14 (20kgs cada)"}, {"gif": "waitingTheExercise"}]
+                                                    [{"exercise": "Panturrilha em pé: 1x16-20 (60% da carga) + 3x12-14 (20kgs cada)"}, {"gif": "standingCalfRaise"}], 
+                                                    [{"exercise": "Panturrilha sentado: 3x12-14 (20kgs cada)"}, {"gif": "seatedCalfRaise"}]
                                                   ]}],
                     [{"type": "F"}, {"exercises": [
-                                                    [{"exercise": "Rosca Direta: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Biceps Concentrado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], 
-                                                    [{"exercise": "Biceps Alternado: 3x7-9 (10kgs)"}, {"gif": "waitingTheExercise"}], 
+                                                    [{"exercise": "Rosca Direta: 1x12-14 (60% da carga) + 3x7-9 (15kgs cada)"}, {"gif": "barbellCurl"}], 
+                                                    [{"exercise": "Biceps Concentrado: 3x7-9 (10kgs)"}, {"gif": "concentrationCurl"}], 
+                                                    [{"exercise": "Biceps Alternado: 3x7-9 (10kgs)"}, {"gif": "alternatingDumbbellCurl"}], 
                                                     [{"exercise": "Rosca Punho: 3x12-14 (10kgs cada)"}, {"gif": "barbellWristCurl"}], 
                                                     [{"exercise": "Rosca Punho Invertida: 3x12-14 (10kgs cada)"}, {"gif": "barbellReverseWristCurl"}], 
                                                     [{"exercise": "Abdominal oblíquo: 3x12-14 (peso do corpo)"}, {"gif": "obliqueCrunch"}], 
-                                                    [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "waitingTheExercise"}]
+                                                    [{"exercise": "Abdominal infra: 3x12-14 (peso do corpo)"}, {"gif": "lyingLegRaise"}]
                                                   ]}]
                    ],
       "nutrition":  [
-                      ["Suplementos:", ["Whey", "Creatina", "Dextrose"]], 
-                      ["Café da Manhã:", ["Café", "Ovos", "Manteiga", "Abacate"]],
-                      ["Almoço:", ["Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"]], 
-                      ["Lanche:", ["Vitamina de Banana", "Pão", "Ovos"]], 
-                      ["Jantar:", ["Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"]], 
-                      ["Ceia:", ["Chá", "Castanha", "Amendoim"]]
+                      ["Suplementos", ["Whey", "Creatina", "Dextrose"]], 
+                      ["Café da Manhã", ["Café", "Ovos", "Manteiga", "Abacate"]],
+                      ["Almoço", ["Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"]], 
+                      ["Lanche", ["Vitamina de Banana", "Pão", "Ovos"]], 
+                      ["Jantar", ["Carne", "Frango", "Arroz", "Feijão", "Batata Doce", "Mandioca"]], 
+                      ["Ceia", ["Chá", "Castanha", "Amendoim"]]
                     ],
       "notes": ["Descanso entre repetições: 1 min", "Descanso entre séries: 1-3 min"],
       "password": "Leimar",
@@ -116,10 +116,11 @@ export default function DataProvider({ children }) {
       "id": "Leimar"
     }
 
-  ]
+  ])
 
   const value = {
-    staticUsersContents, 
+    staticUsersContents,
+    setStaticUsersContents, 
     userId, 
     setUserId,
     typeTrain, 
