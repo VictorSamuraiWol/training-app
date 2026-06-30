@@ -23,7 +23,7 @@ export async function getAllClients() {
 
 // ─── INSERT / UPSERT ─────────────────────────────────────
 // create a client
-export async function insertClient(client) {
+export async function insertClient(client, errorMessage) {
   const { id, ...clientData } = client
 
   const payload = id ? { id, ...clientData } : clientData
@@ -35,6 +35,9 @@ export async function insertClient(client) {
     .single()
 
   if (error) {
+    errorMessage('Unauthorized access')
+    setTimeout(() => errorMessage(null), 3000)
+    
     console.error('Error inserting client:', error)
     throw error
     
@@ -46,7 +49,7 @@ export async function insertClient(client) {
 }
 
 //create all client
-export async function insertAllClients(clients, setInsertError) {
+export async function insertAllClients(clients, errorMessage) {
   const { data, error } = await supabase
     .from('clients')
     .upsert(clients, { onConflict: 'id' })
@@ -54,11 +57,11 @@ export async function insertAllClients(clients, setInsertError) {
 
   if (error) {
     if (error.code === '42501' || error.message?.includes('row-level security')) {
-      setInsertError('Unauthorized access')
-      setTimeout(() => setInsertError(null), 3000)
+      errorMessage('Unauthorized access')
+      setTimeout(() => errorMessage(null), 3000)
 
     } else {
-      setInsertError('Error inserting clients.')
+      errorMessage('Error inserting clients.')
 
     }
 
@@ -66,7 +69,7 @@ export async function insertAllClients(clients, setInsertError) {
 
   }
 
-  setInsertError(null)
+  errorMessage(null)
   console.log(`${clients.length} clients successfully added/updated!`)
 
   return data

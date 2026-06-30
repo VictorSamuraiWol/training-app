@@ -20,12 +20,12 @@ import { insertAllClients } from '../../Components/Supabase/supabaseRequests/sup
 function ExercisesPage() {
 
   const { staticUsersContents, dbUsers, typeTrain, loginValidate, nameUser, 
-    setAbleExercisesPage, insertError, setInsertError, clientsDataJson, setQuickAccessTypeName
+    setAbleExercisesPage, clientsDataJson, setQuickAccessTypeName
   } = useContext(DataContext)
 
   const { isOnToggleTimersExercises, setIsOnToggleTimersExercises, selectIdVideoModal, compactUserName,
     ableMusic, setAbleMusic, setAbleTimer, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
-    selectNameVideoModal, setNumAudios
+    selectNameVideoModal, setAudiosList
   } = useOutletContext()
 
   const { id } = useParams()
@@ -33,6 +33,8 @@ function ExercisesPage() {
   const [ableDescriptionIconsMenu, setAbleDescriptionIconsMenu] = useState(false)
 
   const [descriptionIconName, setDescriptionIconName] = useState('')
+
+  const [errorMessageCreateAllClients, setErrorMessageCreateAllClients] = useState(null)
 
   // audios
   const [audiosDescriptions] = useState({
@@ -64,9 +66,9 @@ function ExercisesPage() {
   }, [setQuickAccessTypeName, typeTrain])
 
   useEffect(() => {
-    setNumAudios(Object.keys(audiosDescriptions))
+    setAudiosList(Object.keys(audiosDescriptions))
 
-  }, [setNumAudios, audiosDescriptions])
+  }, [setAudiosList, audiosDescriptions])
 
   return(
     <div className='exercises-page-style'>
@@ -131,12 +133,12 @@ function ExercisesPage() {
               />
 
               <CreateAllClientsDB
-                onClick={() => insertAllClients(clientsDataJson, setInsertError)}
+                onClick={() => insertAllClients(clientsDataJson, setErrorMessageCreateAllClients)}
                 onMouseOver={() => {setAbleDescriptionIconsMenu(true); setDescriptionIconName('Create All Clients')}}
                 onMouseLeave={() => {setAbleDescriptionIconsMenu(false); setDescriptionIconName('')}}
                 ableDescriptionIconsMenu={ableDescriptionIconsMenu}
                 descriptionIconName={descriptionIconName}
-                insertError={insertError}
+                errorMessageCreateAllClients={errorMessageCreateAllClients}
               />
               
             </> 

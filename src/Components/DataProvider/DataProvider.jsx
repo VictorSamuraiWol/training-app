@@ -15,7 +15,6 @@ export default function DataProvider({ children }) {
   const [ableNutritionPage, setAbleNutritionPage] = useState(false)
   const [ableNotesPage, setAbleNotesPage] = useState(false)
   const [dbUsers, setDbUsers] = useState([])
-  const [insertError, setInsertError] = useState(null)
   const [quickAccessTypeName, setQuickAccessTypeName] = useState('')
 
   // clients List Json
@@ -137,8 +136,6 @@ export default function DataProvider({ children }) {
     ableNotesPage, 
     setAbleNotesPage,
     dbUsers,
-    insertError, 
-    setInsertError,
     clientsDataJson,
     quickAccessTypeName, 
     setQuickAccessTypeName

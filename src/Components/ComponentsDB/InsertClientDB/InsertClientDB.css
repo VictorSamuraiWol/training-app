@@ -37,7 +37,7 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
   position: absolute;
   background: var(--bg);
   color: var(--border-green);
@@ -90,7 +90,7 @@
 .form-insert-client {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -107,6 +107,10 @@
   display: flex;
   align-items: center;
   gap: 6px
+}
+
+.border-error-input {
+  border: 1px solid var(--error-color);
 }
 
 .container-form-insert-client-more-info {
@@ -296,13 +300,47 @@
   gap: 6px;
 }
 
+.radioInput {    
+  position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.1s ease-in-out;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radioInput:checked::after {    
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--border-green);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radioInputBorder {
+  border: 1px solid var(--border-green);
+}
 
 .container-insert-client-buttons {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 64px;
   width: 100%;
+}
+
+.insert-client-buttons-spans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .insert-client-button {
@@ -328,4 +366,12 @@
   border-top: 1px solid var(--bg);
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+.errorMessageInsertClient {
+  position: absolute;
+  bottom: -80%;
+  color: var(--error-color);
+  text-shadow: none;
+  font-size: 0.9rem;
 }

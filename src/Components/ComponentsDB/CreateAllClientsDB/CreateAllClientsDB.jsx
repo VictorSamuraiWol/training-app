@@ -3,7 +3,7 @@ import DescriptionIconsMenu from '../../DescriptionIconsMenu/DescriptionIconsMen
 import { MdGroupAdd } from 'react-icons/md';
 
 function CreateAllClientsDB({ onClick, onMouseOver, onMouseLeave, ableDescriptionIconsMenu, 
-  descriptionIconName, insertError }) {
+  descriptionIconName, errorMessageCreateAllClients }) {
 
   return (
     <div 
@@ -15,12 +15,12 @@ function CreateAllClientsDB({ onClick, onMouseOver, onMouseLeave, ableDescriptio
         name='Create All Clients'
       />
 
-      {insertError &&
-        <div 
+      {errorMessageCreateAllClients &&
+        <span 
           className="error-msg-add-clients"
         >
-          {insertError}
-        </div>
+          {errorMessageCreateAllClients}
+        </span>
       }
 
       <MdGroupAdd 

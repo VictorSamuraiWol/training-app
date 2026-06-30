@@ -5,7 +5,7 @@ import LabelDefault from '../../LabelDefault/LabelDefault';
 import InputDefault from '../../InputDefault/InputDefault';
 import SelectDefault from '../../SelectDefault/SelectDefault';
 import DescriptionIconsMenu from '../../DescriptionIconsMenu/DescriptionIconsMenu';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { TiDeleteOutline } from "react-icons/ti"
 import { IoIosCreate } from "react-icons/io";
 import { CiCirclePlus } from "react-icons/ci";
@@ -19,7 +19,7 @@ Modal.setAppElement('#root')
 
 function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMenu, descriptionIconName }) {
 
-  const { numImagesProfiles, numAudios, numGifs } = useOutletContext()
+  const { imagesProfilesList, audiosList, gifsList } = useOutletContext()
   
   const [newNameClient, setNewNameClient] = useState('')
   const [newWeightClient, setNewWeightClient] = useState('')
@@ -27,32 +27,41 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
   const [newPasswordClient, setNewPasswordClient] = useState('')
   const [newImageProfileClient, setNewImageProfileClient] = useState('')
   const [newAudioClient, setNewAudioClient] = useState('')
-  const [newYoutubeTitleClient, setNewYoutubeTitleClient] = useState('')
-  const [newYoutubeIDClient, setNewYoutubeIDClient] = useState('')
-  const [newExerciseClient, setNewExerciseClient] = useState('')
-  const [newGifClient, setNewGifClient] = useState('')
-  const [newTitleNutritionClient, setNewTitleNutritionClient] = useState('')
-  const [newTextNutritionClient, setNewTextNutritionClient] = useState('')
-  const [newNotesClient, setNewNotesClient] = useState('')
   const [newTypeClient, setNewTypeClient] = useState('')
-
+  const [videosList, setVideosList] = useState([{id: 0, value1: '', value2: ''}])
+  const [exercisesList, setExercisesList] = useState([{id: 0, letter: 'A'}])
+  const [exerciseList, setExerciseList] = useState([{id: 0, value1: '', value2: '', position: 'A0'}])
+  const [nutritionList, setNutritionList] = useState([{id: 0, value1: '', value2: ''}])
+  const [notesList, setNotesList] = useState([{id: 0, value1: ''}])
+  const [errorMessageInsertClient, setErrorMessageInsertClient] = useState('')
   const [modalIsOpen, setModalIsOpen] = useState(false)
-  const [fieldsExercises, setFieldsExercises] = useState([{id: 0, letter: 'A'}])
-  const [fieldsExercise, setFieldsExercise] = useState([{id: 0, value1: '', value2: '', position: 'A0'}])
-  const [fieldsVideos, setFieldsVideos] = useState([{id: 0, value1: '', value2: ''}])
-  const [fieldsNutrition, setFieldsNutrition] = useState([{id: 0, value1: '', value2: ''}])
-  const [fieldsNotes, setFieldsNotes] = useState([{id: 0, value1: '', value2: null}])
 
-  useEffect(() => {
-    setNewYoutubeTitleClient(fieldsVideos.value1)
-    setNewYoutubeIDClient(fieldsVideos.value2)
-    setNewExerciseClient(fieldsExercise.value1)
-    setNewGifClient(fieldsExercise.value2)
-    setNewTitleNutritionClient(fieldsNutrition.value1)
-    setNewTextNutritionClient(fieldsNutrition.value2)
-    setNewNotesClient(fieldsNotes.value1)
+  const [voidField, setVoidField] = useState({
+    newName: false,
+    newPassword: false,
+    newWeight: false,
+    newHeight: false,
+    newExercise: false,
+    newGif: false,
+    newType: false
+  })
 
-  }, [fieldsVideos, fieldsExercise, fieldsNutrition, fieldsNotes])
+  function validateField() {
+    const newVoidField = {
+      newName: newNameClient?.trim() === '',
+      newPassword: newPasswordClient?.trim() === '',
+      newWeight: newWeightClient?.trim() === '',
+      newHeight: newHeightClient?.trim() === '',
+      newExercise: exerciseList[0].value1?.trim() === '',
+      newGif: exerciseList[0].value2?.trim() === '',
+      newType: newTypeClient?.trim() === ''
+    }
+
+    setVoidField(newVoidField)
+
+    return !Object.values(newVoidField).some(Boolean)
+
+  }
 
   function openModal() {
     setModalIsOpen(true)
@@ -81,19 +90,19 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
   // input field in each exercise
   function addFieldExercise(setFields, field, e, letter) {
-    const nextIndex = fieldsExercise.filter(field => field.position.includes(letter)).length
+    const nextIndex = exerciseList.filter(field => field.position.includes(letter)).length
 
     setFields([...field, {id: nextIndex, value: '', position: `${letter}${nextIndex}`}])
 
   }
 
   // remove last field and also specific all inputs fields the type training
-  function removeLastField(setFields, removeAllInputs, fieldsExercise) {
-    const lastTypeTarget = fieldsExercises.at(-1).value
+  function removeLastField(setFields, removeAllInputs, exerciseList) {
+    const lastTypeTarget = exercisesList.at(-1).value
 
     setFields(prevFields => prevFields.slice(0, -1))
 
-    fieldsExercise && removeAllInputs(fieldsExercise.filter(field => !field.position?.includes(lastTypeTarget)))
+    exerciseList && removeAllInputs(exerciseList.filter(field => !field.position?.includes(lastTypeTarget)))
 
   }
 
@@ -109,109 +118,125 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
   async function onSaveNewClient(e) {
     e.preventDefault()
 
-    // data new client
-    const newClient = {
-      name : newNameClient,
-      weight: newWeightClient,
-      height: newHeightClient,
-      exercises: // array fieldsExercises
-                fieldsExercises.map(field => (
-                [{type: field.letter}, {exercises:
-                                          // array fieldsExercise
-                                          fieldsExercise.filter(exercise => exercise.position.includes(field.letter))
-                                          .map(exercise => (
-                                          [{exercise: exercise.value1}, {gif: exercise.value2}]
-                                          ))
-                                        }
-                ])),
-      nutrition:  // array fieldsNutrition
-                  fieldsNutrition.map(nutri => (
-                  [nutri.value1, [nutri.value2]]
-                  )),
-      notes:  // array fieldsNotes
-              fieldsNotes.map(note => (
-              [note.value1]
-              )),
-      password: newPasswordClient,
-      image_profile: newImageProfileClient,
-      audio: newAudioClient,
-      video_yt: // array fieldsVideos
-                fieldsVideos.map(video => (
-                {name: video.value1, id: video.value2}
-                ))    
-    }
+    const isValid = validateField()
 
-    if (newTypeClient === 'json') {
-      try {
-        const response = await fetch('http://localhost:3001/clients', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(newClient)
+    if (!isValid) {
+      setErrorMessageInsertClient("Please fill in all required fields.")
+      setTimeout(() => setErrorMessageInsertClient(null), 3000)
 
-        })
-
-        if (!response.ok) {
-          throw new Error('Failed to create client')
-
-        } else {
-          console.log('Create client', 'client: ', newClient)
-
+    } else {
+      // data new client
+      const newClient = {
+        name : newNameClient,
+        weight: newWeightClient,
+        height: newHeightClient,
+        exercises: // array exercisesList
+                  exercisesList.map(field => (
+                  [{type: field.letter}, {exercises:
+                                            // array exerciseList
+                                            exerciseList.filter(exercise => exercise.position.includes(field.letter))
+                                            .map(exercise => (
+                                            [{exercise: exercise.value1}, {gif: exercise.value2}]
+                                            ))
+                                          }
+                  ])),
+        nutrition:  // array nutritionList
+                    nutritionList.map(nutri => (
+                    [nutri.value1, [nutri.value2]]
+                    )),
+        notes:  // array notesList
+                notesList.map(note => (
+                [note.value1]
+                )),
+        password: newPasswordClient,
+        image_profile: newImageProfileClient,
+        audio: newAudioClient,
+        video_yt: // array videosList
+                  videosList.map(video => (
+                  {name: video.value1, id: video.value2}
+                  ))    
+      }
+  
+      if (newTypeClient === 'json') {
+        try {
+          const response = await fetch('http://localhost:3001/clients', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newClient)
+  
+          })
+  
+          if (!response.ok) {
+            throw Error
+  
+          } else {
+            console.log('Create client', 'client: ', newClient)
+  
+          }
+  
+        } catch (error) {
+          setErrorMessageInsertClient('Error inserting client into Json.')
+          setTimeout(() => setErrorMessageInsertClient(null), 3000)
+          console.error(error)
+  
         }
-
-      } catch (error) {
-        console.error(error)
-
+  
+      } else if (newTypeClient === 'db') {
+        insertClient(newClient, setErrorMessageInsertClient)
+  
       }
 
-    } else if (newTypeClient === 'db') {
-      insertClient(newClient)
-
     }
+
 
   }
 
   // get values and put in new array of objects
   function onChangeArray(id, setArray, newValue1, newValue2, position) {
-    if (newValue1) {
-      !position && setArray(prev =>
-        prev.map(field =>
-          field.id === id
-          ? {id: id, value1: newValue1, value2: field.value2 !== undefined ? field.value2 : null}
-          : field
-  
+    if (newValue1 !== null && newValue1 !== undefined) {
+      if (!position) {
+        setArray(prev =>
+          prev.map(field =>
+            field.id === id
+              ? { id: id, value1: newValue1, value2: field.value2 !== undefined ? field.value2 : null }
+              : field
+          )
         )
-      )
 
-      position && setArray(prev =>
-        prev.map(field =>
-          field.position === position
-          ? {id: id, value1: newValue1, value2: field.value2, position: position ? position : null}
-          : field
-  
+      } else {
+        setArray(prev =>
+          prev.map(field =>
+            field.position === position
+              ? { id: id, value1: newValue1, value2: field.value2, position: position }
+              : field
+          )
         )
-      )
 
-    } else if (newValue2) {
-      !position && setArray(prev =>
-        prev.map(field =>
-          field.id === id
-          ? {id: id, value1: field.value1, value2: newValue2}
-          : field
-  
-        )
-      )
+      }
 
-      position && setArray(prev =>
-        prev.map(field =>
-          field.position === position
-          ? {id: id, value1: field.value1, value2: newValue2, position: position ? position : null}
-          : field
-  
+    } else if (newValue2 !== null && newValue2 !== undefined) {
+      if (!position) {
+        setArray(prev =>
+          prev.map(field =>
+            field.id === id
+              ? { id: id, value1: field.value1, value2: newValue2 }
+              : field
+          )
         )
-      )
-      
+
+      } else {
+        setArray(prev =>
+          prev.map(field =>
+            field.position === position
+              ? { id: id, value1: field.value1, value2: newValue2, position: position }
+              : field
+          )
+        )
+
+      }
+
     }
 
   }
@@ -255,38 +280,42 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
           {/* info */}
           <div className='container-form-insert-client-info'>
             <div className='form-insert-client-info-name'>
-              <LabelDefault nameLabel='Name:' />
+              <LabelDefault nameLabel='Name:*' />
               <InputDefault
                 value={newNameClient}
                 onChange={(e) => setNewNameClient(e.target.value)}
+                specificStylesInput={voidField.newName ? 'border-error-input' : null}
               />
 
             </div>
 
             <div className='container-form-insert-client-more-info'>
               <div className='form-insert-client-info-pass'>
-                <LabelDefault nameLabel='Password:' />
+                <LabelDefault nameLabel='Password:*' />
                 <InputDefault 
                   value={newPasswordClient}
                   onChange={(e) => setNewPasswordClient(e.target.value)}
+                  specificStylesInput={voidField.newPassword ? 'border-error-input' : null}
                 />
 
               </div>
 
               <div className='form-insert-client-info-weight'>
-                <LabelDefault nameLabel='Weight:' />
+                <LabelDefault nameLabel='Weight:*' />
                 <InputDefault 
                   value={newWeightClient}
                   onChange={(e) => setNewWeightClient(e.target.value)}
+                  specificStylesInput={voidField.newWeight ? 'border-error-input' : null}
                 />
               
               </div>
 
               <div className='form-insert-client-info-height'>
-                <LabelDefault nameLabel='Height:' />
+                <LabelDefault nameLabel='Height:*' />
                 <InputDefault 
                   value={newHeightClient}
                   onChange={(e) => setNewHeightClient(e.target.value)}
+                  specificStylesInput={voidField.newHeight ? 'border-error-input' : null}
                 />
 
               </div>
@@ -297,7 +326,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                   selectValue={newImageProfileClient}
                   setSelectValue={setNewImageProfileClient}
                   optionDisabledName='Select Image' 
-                  specificArray={numImagesProfiles} 
+                  specificArray={imagesProfilesList} 
                 />
 
               </div>
@@ -308,7 +337,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                   selectValue={newAudioClient}
                   setSelectValue={setNewAudioClient}
                   optionDisabledName='Select Audio' 
-                  specificArray={numAudios} 
+                  specificArray={audiosList} 
                 />
 
               </div>
@@ -319,12 +348,12 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
                   <div className='form-insert-client-info-youtube-plus-minus-icons'>
                     <CiCirclePlus
-                      onClick={() => addField(setFieldsVideos, fieldsVideos)}
+                      onClick={() => addField(setVideosList, videosList)}
                       className='insert-client-icons'
                     />
 
                     <CiCircleMinus
-                      onClick={() => removeLastField(setFieldsVideos)}
+                      onClick={() => removeLastField(setVideosList)}
                       className='insert-client-icons'
                     />
 
@@ -332,7 +361,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
                 </div>
 
-                {fieldsVideos.map(field => (
+                {videosList.map(field => (
                   <div
                     key={field.id} 
                     className='form-insert-client-info-youtube-title-id'
@@ -341,8 +370,8 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                       <LabelDefault nameLabel='Title Youtube:' />
                       <InputDefault 
                         key={field.id}
-                        value={newYoutubeTitleClient}
-                        onChange={(e) => onChangeArray(field.id, setFieldsVideos, e.target.value, null)}
+                        value={field.value1}
+                        onChange={(e) => onChangeArray(field.id, setVideosList, e.target.value, null)}
                       />
 
                     </div>
@@ -351,8 +380,8 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                       <LabelDefault nameLabel='ID Emded Youtube:' />
                       <InputDefault
                         key={field.id}
-                        value={newYoutubeIDClient}
-                        onChange={(e) => onChangeArray(field.id, setFieldsVideos, null, e.target.value)}
+                        value={field.value2}
+                        onChange={(e) => onChangeArray(field.id, setVideosList, null, e.target.value)}
                       />
 
                     </div>
@@ -375,12 +404,12 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
               <div className='form-insert-client-exercises-label-plus-minus-icons'>
                 <CiCirclePlus
-                  onClick={() => addField(setFieldsExercises, fieldsExercises)}
+                  onClick={() => addField(setExercisesList, exercisesList)}
                   className='insert-client-icons'
                 />
 
                 <CiCircleMinus
-                  onClick={() => removeLastField(setFieldsExercises, setFieldsExercise, fieldsExercise)}
+                  onClick={() => removeLastField(setExercisesList, setExerciseList, exerciseList)}
                   className='insert-client-icons'
                 />
 
@@ -388,7 +417,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
               
             </div>
 
-            {fieldsExercises.map(field => (
+            {exercisesList.map(field => (
             <div
               key={field.id}
               className='container-form-insert-client-efieldercises-type-exercise'
@@ -401,16 +430,16 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 </div>
 
                 <div className='container-form-insert-client-exercises-exercise-icons'>
-                  <LabelDefault nameLabel='Exercise:' />
+                  <LabelDefault nameLabel='Exercise:*' />
 
                   <div className='container-form-insert-client-exercise-input-plus-minus-icons'>
                     <CiCirclePlus
-                      onClick={(e) => addFieldExercise(setFieldsExercise, fieldsExercise, e, field.letter)}
+                      onClick={(e) => addFieldExercise(setExerciseList, exerciseList, e, field.letter)}
                       className='insert-client-icons'
                     />
 
                     <CiCircleMinus
-                      onClick={(e) => removeLastFieldExercise(setFieldsExercise, fieldsExercise, e)}
+                      onClick={(e) => removeLastFieldExercise(setExerciseList, exerciseList, e)}
                       className='insert-client-icons'
                     />
 
@@ -418,25 +447,27 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
                 </div>
 
-                {fieldsExercise.filter(exercise => exercise.position.includes(field.letter))
+                {/* exercise */}
+                {exerciseList.filter(exercise => exercise.position.includes(field.letter))
                 .map(exercise => (
                   <div
                     key={exercise.id}
                     className='container-insert-client-input-exercise-gif'
                   >
                     <InputDefault
-                      value={newExerciseClient}
-                      onChange={(e) => onChangeArray(exercise.id, setFieldsExercise, e.target.value, null, `${field.letter}${exercise.id}`)}
+                      value={exercise.value1}
+                      onChange={(e) => onChangeArray(exercise.id, setExerciseList, e.target.value, null, `${field.letter}${exercise.id}`)}
+                      specificStylesInput={voidField.newExercise ? 'border-error-input' : null}
                     />
 
                     <div className='insert-client-input-gif'>
-                      <LabelDefault nameLabel='Gif:' />
+                      <LabelDefault nameLabel='Gif:*' />
                       <SelectDefault
-                        selectValue={newGifClient}
-                        setSelectValue={setNewGifClient}
-                        onChangeOut={(e) => onChangeArray(exercise.id, setFieldsExercise, null, e.target.value, `${field.letter}${exercise.id}`)}
+                        selectValue={exercise.value2}
+                        onChangeOut={(e) => onChangeArray(exercise.id, setExerciseList, null, e.target.value, `${field.letter}${exercise.id}`)}
                         optionDisabledName='Select Gif' 
-                        specificArray={numGifs} 
+                        specificArray={gifsList}
+                        specificStylesSelect={voidField.newGif ? 'border-error-input' : null}
                       />
 
                     </div>
@@ -458,12 +489,12 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
               <div className='form-insert-client-nutrition-label-plus-minus-icons'>
                 <CiCirclePlus
-                  onClick={() => addField(setFieldsNutrition, fieldsNutrition, '', '')}
+                  onClick={() => addField(setNutritionList, nutritionList, '', '')}
                   className='insert-client-icons'
                 />
 
                 <CiCircleMinus
-                  onClick={() => removeLastField(setFieldsNutrition)}
+                  onClick={() => removeLastField(setNutritionList)}
                   className='insert-client-icons'
                 />
 
@@ -471,7 +502,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
             </div>
 
-            {fieldsNutrition.map(field => (
+            {nutritionList.map(field => (
               <div
                 key={field.id} 
                 className='container-form-insert-client-nutrition-type-nutri'
@@ -479,17 +510,17 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 <div className='form-insert-client-nutrition-type-text'>
                   <LabelDefault nameLabel='Type:' />
                   <InputDefault
-                    value={newTitleNutritionClient}
-                    onChange={(e) => onChangeArray(field.id, setFieldsNutrition, e.target.value, null)}
+                    value={field.value1}
+                    onChange={(e) => onChangeArray(field.id, setNutritionList, e.target.value, null)}
                   />
 
                 </div>
 
                 <div className='form-insert-client-nutrition-nutri-text'>
                   <LabelDefault nameLabel='Nutri:' />
-                  <InputDefault 
-                    value={newTextNutritionClient}
-                    onChange={(e) => onChangeArray(field.id, setFieldsNutrition, null, e.target.value)}
+                  <InputDefault
+                    value={field.value2}
+                    onChange={(e) => onChangeArray(field.id, setNutritionList, null, e.target.value)}
                   />
 
                 </div>
@@ -507,12 +538,12 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
               <div className='form-insert-client-notes-label-plus-minus-icons'>
                 <CiCirclePlus
-                  onClick={() => addField(setFieldsNotes, fieldsNotes, '', null)}
+                  onClick={() => addField(setNotesList, notesList, '', null)}
                   className='insert-client-icons'
                 />
 
                 <CiCircleMinus
-                  onClick={() => removeLastField(setFieldsNotes)}
+                  onClick={() => removeLastField(setNotesList)}
                   className='insert-client-icons'
                 />
 
@@ -520,14 +551,14 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
             </div>
 
-            {fieldsNotes.map(field => (
+            {notesList.map(field => (
               <div
                 key={field.id}
                 className='container-insert-client-input-exercise-gif'
               >
-                <InputDefault 
-                  value={newNotesClient}
-                  onChange={(e) => onChangeArray(field.id, setFieldsNotes, e.target.value, null)}
+                <InputDefault
+                  value={field.value1}
+                  onChange={(e) => onChangeArray(field.id, setNotesList, e.target.value, null)}
                 />
 
               </div>
@@ -537,7 +568,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
           {/* client type */}
           <div className='container-client-type'>
-            <LabelDefault nameLabel='Client Type:' />
+            <LabelDefault nameLabel='Client Type:*' />
 
             <div className='container-client-type-json'>
               <InputDefault
@@ -545,7 +576,9 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 onChange={(e) => setNewTypeClient(e.target.value)}
                 name='typeClient'
                 typeInput='radio'
+                specificStylesInput={`radioInput ${voidField.newType ? 'border-error-input' : 'radioInputBorder'}`}
               />
+
               <LabelDefault nameLabel='Json' />
 
             </div>
@@ -555,8 +588,10 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 value='db'
                 onChange={(e) => setNewTypeClient(e.target.value)}
                 name='typeClient'
-                typeInput='radio' 
+                typeInput='radio'
+                specificStylesInput={`radioInput ${voidField.newType ? 'border-error-input' : 'radioInputBorder'}`}
               />
+
               <LabelDefault nameLabel='DB' />
 
             </div>
@@ -564,11 +599,17 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
           </div>
 
           <div className='container-insert-client-buttons'>
-            <ButtonDefault 
-              specificStylesButton='insert-client-button' 
-              imageReact={<FaCheck />} 
-              typeButton='submit'
-            />
+            <div className='insert-client-buttons-spans'>
+              <ButtonDefault 
+                specificStylesButton='insert-client-button' 
+                imageReact={<FaCheck />} 
+                typeButton='submit'
+              />
+
+              <span className='errorMessageInsertClient'>{errorMessageInsertClient}</span>
+
+            </div>
+
             <ButtonDefault
               onClick={closeModal}
               specificStylesButton='insert-client-button' 

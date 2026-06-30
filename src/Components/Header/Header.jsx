@@ -11,7 +11,7 @@ import { DataContext } from '../DataContext/DataContext';
 import { TiDeleteOutline } from "react-icons/ti";
 import { AiFillPushpin, AiOutlinePushpin } from "react-icons/ai";
 
-function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer, setNumImagesProfiles }) {
+function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAbleTimer, setImagesProfilesList }) {
 
   const { nameUser, setNameUser, setLoginValidate, staticUsersContents, dbUsers, loginValidate,
     ableExercisesPage
@@ -34,9 +34,9 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
   }
 
   useEffect(() => {
-    setNumImagesProfiles(Object.keys(imagesDescriptions))
+    setImagesProfilesList(Object.keys(imagesDescriptions))
 
-  },[setNumImagesProfiles, imagesDescriptions])
+  },[setImagesProfilesList, imagesDescriptions])
 
   return (
     <div className='header'>

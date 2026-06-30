@@ -37,7 +37,7 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
 
   const { isOnToggleTimersExercises, checkedInputs, toggleChecked} = useOutletContext()
 
-  const { setNumGifs } = useOutletContext()
+  const { setGifsList } = useOutletContext()
 
   const [ableExercisesGif, setAbleExercisesGif] = useState(false)
 
@@ -77,9 +77,9 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
   })
 
   useEffect(() => {
-    setNumGifs(Object.keys(exercisesGifs))
+    setGifsList(Object.keys(exercisesGifs))
 
-  }, [setNumGifs, exercisesGifs])
+  }, [setGifsList, exercisesGifs])
 
   function checkedInput(_key) {
     let active

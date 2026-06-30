@@ -4,8 +4,8 @@ function InputDefault({ onChange, onClick, value, inputId, required, name, typeI
 
   return(
     <input
-      onChange={onChange}
       onClick={onClick}
+      onChange={onChange}
       value={value}
       id={inputId}
       autoComplete='off'

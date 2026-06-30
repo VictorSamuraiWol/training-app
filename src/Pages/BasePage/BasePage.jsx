@@ -25,9 +25,9 @@ function BasePage() {
   const [ableVideoBanner, setAbleVideoBanner] = useState(false)
   const [ableMusic, setAbleMusic] = useState(true)
   const [checkedInputs, setCheckedInputs] = useState([])
-  const [numImagesProfiles, setNumImagesProfiles] = useState('')
-  const [numAudios, setNumAudios] = useState('')
-  const [numGifs, setNumGifs] = useState('')
+  const [imagesProfilesList, setImagesProfilesList] = useState('')
+  const [audiosList, setAudiosList] = useState('')
+  const [gifsList, setGifsList] = useState('')
 
   const compactUserName = (name, numLength) => {
     let editUserName;
@@ -65,7 +65,7 @@ function BasePage() {
         setIsOnToggleTimersExercises={setIsOnToggleTimersExercises}
         ableTimer={ableTimer}
         setAbleTimer={setAbleTimer}
-        setNumImagesProfiles={setNumImagesProfiles}
+        setImagesProfilesList={setImagesProfilesList}
       />}
 
       {loginValidate && <Outlet context={{ 
@@ -73,7 +73,7 @@ function BasePage() {
         selectIdVideoModal, setSelectIdVideoModal, visibleVideoYT, setVisibleVideoYT, initialPosVideo, setInitialPosVideo, 
         selectContainerVideoYTPosition, setSelectContainerVideoYTPosition, checkedInputs, setCheckedInputs, toggleChecked, 
         setAbleTimer, ableMusic, setAbleMusic, ableBanner, setAbleBanner, ableVideoBanner, setAbleVideoBanner,
-        selectNameVideoModal, setSelectNameVideoModal, numImagesProfiles, numAudios, setNumAudios, numGifs, setNumGifs
+        selectNameVideoModal, setSelectNameVideoModal, imagesProfilesList, audiosList, setAudiosList, gifsList, setGifsList
       }} 
       />}
 

@@ -17,7 +17,7 @@
   transform: translateY(-50%) rotate(180deg);
 }
 
-.select {
+select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -37,7 +37,7 @@
   text-overflow: ellipsis;
 }
 
-.select:focus {
+select:focus {
   border-left: 1px solid var(--bg);
   border-top: 1px solid var(--bg);
   border-right: 1px solid var(--border);

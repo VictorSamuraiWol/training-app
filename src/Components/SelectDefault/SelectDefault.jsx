@@ -2,7 +2,7 @@ import './SelectDefault.css';
 import { useState } from 'react';
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 
-function SelectDefault({ optionDisabledName, specificArray, selectValue, setSelectValue, onChangeOut }) {
+function SelectDefault({ optionDisabledName, specificArray, selectValue, setSelectValue, onChangeOut, specificStylesSelect }) {
 
   const [openSelect, setOpenSelect] = useState(false)
 
@@ -27,7 +27,7 @@ function SelectDefault({ optionDisabledName, specificArray, selectValue, setSele
         onChange={(e) => onChangeOut ? onChangeOut(e) : onChange(e)}
         onClick={onClick}
         onBlur={() => setOpenSelect(false)}
-        className='select'
+        className={specificStylesSelect}
       >
         <option
           value=''
