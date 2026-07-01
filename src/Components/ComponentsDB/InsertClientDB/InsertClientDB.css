@@ -113,6 +113,11 @@
   border: 1px solid var(--error-color);
 }
 
+.color-error-input {
+  color: var(--error-color);
+  text-shadow: none;
+}
+
 .container-form-insert-client-more-info {
   display: flex;
   justify-content: space-around;

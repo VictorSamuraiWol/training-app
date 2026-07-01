@@ -280,42 +280,54 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
           {/* info */}
           <div className='container-form-insert-client-info'>
             <div className='form-insert-client-info-name'>
-              <LabelDefault nameLabel='Name:*' />
+              <LabelDefault 
+                nameLabel='Name:*' 
+                specificStyleLabel={voidField.newName && newNameClient?.trim() === '' ? 'color-error-input' : null}
+              />
               <InputDefault
                 value={newNameClient}
                 onChange={(e) => setNewNameClient(e.target.value)}
-                specificStylesInput={voidField.newName ? 'border-error-input' : null}
+                specificStylesInput={voidField.newName && newNameClient?.trim() === '' ? 'border-error-input' : null}
               />
 
             </div>
 
             <div className='container-form-insert-client-more-info'>
               <div className='form-insert-client-info-pass'>
-                <LabelDefault nameLabel='Password:*' />
+                <LabelDefault 
+                  nameLabel='Password:*' 
+                  specificStyleLabel={voidField.newPassword && newPasswordClient?.trim() === '' ? 'color-error-input' : null}
+                />
                 <InputDefault 
                   value={newPasswordClient}
                   onChange={(e) => setNewPasswordClient(e.target.value)}
-                  specificStylesInput={voidField.newPassword ? 'border-error-input' : null}
+                  specificStylesInput={voidField.newPassword && newPasswordClient?.trim() === '' ? 'border-error-input' : null}
                 />
 
               </div>
 
               <div className='form-insert-client-info-weight'>
-                <LabelDefault nameLabel='Weight:*' />
+                <LabelDefault 
+                  nameLabel='Weight:*' 
+                  specificStyleLabel={voidField.newWeight && newWeightClient?.trim() === '' ? 'color-error-input' : null}
+                />
                 <InputDefault 
                   value={newWeightClient}
                   onChange={(e) => setNewWeightClient(e.target.value)}
-                  specificStylesInput={voidField.newWeight ? 'border-error-input' : null}
+                  specificStylesInput={voidField.newWeight && newWeightClient?.trim() === '' ? 'border-error-input' : null}
                 />
               
               </div>
 
               <div className='form-insert-client-info-height'>
-                <LabelDefault nameLabel='Height:*' />
+                <LabelDefault 
+                  nameLabel='Height:*' 
+                  specificStyleLabel={voidField.newHeight && newHeightClient?.trim() === '' ? 'color-error-input' : null}
+                />
                 <InputDefault 
                   value={newHeightClient}
                   onChange={(e) => setNewHeightClient(e.target.value)}
-                  specificStylesInput={voidField.newHeight ? 'border-error-input' : null}
+                  specificStylesInput={voidField.newHeight && newHeightClient?.trim() === '' ? 'border-error-input' : null}
                 />
 
               </div>
@@ -430,7 +442,10 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 </div>
 
                 <div className='container-form-insert-client-exercises-exercise-icons'>
-                  <LabelDefault nameLabel='Exercise:*' />
+                  <LabelDefault 
+                    nameLabel='Exercise:*'
+                    specificStyleLabel={voidField.newExercise && exerciseList[0].value1?.trim() === '' ? 'color-error-input' : null}
+                  />
 
                   <div className='container-form-insert-client-exercise-input-plus-minus-icons'>
                     <CiCirclePlus
@@ -457,17 +472,20 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                     <InputDefault
                       value={exercise.value1}
                       onChange={(e) => onChangeArray(exercise.id, setExerciseList, e.target.value, null, `${field.letter}${exercise.id}`)}
-                      specificStylesInput={voidField.newExercise ? 'border-error-input' : null}
+                      specificStylesInput={voidField.newExercise && exerciseList[0].value1?.trim() === '' ? 'border-error-input' : null}
                     />
 
                     <div className='insert-client-input-gif'>
-                      <LabelDefault nameLabel='Gif:*' />
+                      <LabelDefault 
+                        nameLabel='Gif:*' 
+                        specificStyleLabel={voidField.newExercise && exerciseList[0].value2?.trim() === '' ? 'color-error-input' : null}
+                      />
                       <SelectDefault
                         selectValue={exercise.value2}
                         onChangeOut={(e) => onChangeArray(exercise.id, setExerciseList, null, e.target.value, `${field.letter}${exercise.id}`)}
                         optionDisabledName='Select Gif' 
                         specificArray={gifsList}
-                        specificStylesSelect={voidField.newGif ? 'border-error-input' : null}
+                        specificStylesSelect={voidField.newGif && exerciseList[0].value2?.trim() === '' ? 'border-error-input' : null}
                       />
 
                     </div>
@@ -568,7 +586,10 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
           {/* client type */}
           <div className='container-client-type'>
-            <LabelDefault nameLabel='Client Type:*' />
+            <LabelDefault 
+              nameLabel='Client Type:*'
+              specificStyleLabel={voidField.newType && newTypeClient?.trim() === '' ? 'color-error-input' : null}
+            />
 
             <div className='container-client-type-json'>
               <InputDefault
@@ -576,7 +597,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 onChange={(e) => setNewTypeClient(e.target.value)}
                 name='typeClient'
                 typeInput='radio'
-                specificStylesInput={`radioInput ${voidField.newType ? 'border-error-input' : 'radioInputBorder'}`}
+                specificStylesInput={`radioInput ${voidField.newType && newTypeClient?.trim() === '' ? 'border-error-input' : 'radioInputBorder'}`}
               />
 
               <LabelDefault nameLabel='Json' />
@@ -589,7 +610,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 onChange={(e) => setNewTypeClient(e.target.value)}
                 name='typeClient'
                 typeInput='radio'
-                specificStylesInput={`radioInput ${voidField.newType ? 'border-error-input' : 'radioInputBorder'}`}
+                specificStylesInput={`radioInput ${voidField.newType && newTypeClient?.trim() === '' ? 'border-error-input' : 'radioInputBorder'}`}
               />
 
               <LabelDefault nameLabel='DB' />
