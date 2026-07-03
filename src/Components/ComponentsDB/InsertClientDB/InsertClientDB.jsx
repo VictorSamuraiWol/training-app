@@ -108,8 +108,8 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 [note.value1]
                 )),
         password: newPasswordClient,
-        image_profile: newImageProfileClient,
-        audio: newAudioClient,
+        image_profile: newImageProfileClient === '' ? 'none' : newImageProfileClient,
+        audio: newAudioClient === '' ? 'none' : newAudioClient,
         video_yt: // array videosList
                   videosList.map(video => (
                   {name: video.value1, id: video.value2}
@@ -145,7 +145,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         }
   
       } else if (newTypeClient === 'db') {
-        insertClient(newClient, setErrorMessageInsertClient, closeModal(), resetAllFields())
+        insertClient(newClient, setErrorMessageInsertClient, closeModal, resetAllFields)
   
       }
 

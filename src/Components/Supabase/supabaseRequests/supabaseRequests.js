@@ -44,8 +44,8 @@ export async function insertClient(client, errorMessage, closeModal, resetAllFie
   } 
   
   console.log('Client successfully created:', data)
-  closeModal
-  resetAllFields
+  closeModal()
+  resetAllFields()
 
   return data
 
