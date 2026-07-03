@@ -70,6 +70,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
   function closeModal() {
     setModalIsOpen(false)
+    resetAllFields()
 
   }
 
@@ -144,7 +145,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         }
   
       } else if (newTypeClient === 'db') {
-        insertClient(newClient, setErrorMessageInsertClient, closeModal())
+        insertClient(newClient, setErrorMessageInsertClient, closeModal(), resetAllFields())
   
       }
 
