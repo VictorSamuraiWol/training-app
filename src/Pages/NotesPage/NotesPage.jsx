@@ -37,7 +37,7 @@ function NotesPage() {
 
           <div className='cards-info-notes-itens'>
             {user.notes.map((note, indice) =>
-              note && <div 
+              note && note[0] !== '' && <div 
                 key={indice}
                 className='cards-info-notes-itens-icon-item'
               >

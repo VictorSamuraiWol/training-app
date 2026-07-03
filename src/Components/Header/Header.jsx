@@ -4,6 +4,7 @@ import ButtonDefault from '../ButtonDefault/ButtonDefault';
 import example from '../../assets/images/profiles/example.png';
 import profileVictor from '../../assets/images/profiles/profile-victor.png';
 import profileLeimar from '../../assets/images/profiles/profile-leimar.png';
+import none from '../../assets/images/profiles/none.png';
 import Timer from '../Timer/Timer';
 import { Link } from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
@@ -18,9 +19,10 @@ function Header({ compactUserName, isOnToggleTimersExercises, ableTimer, setAble
    } = useContext(DataContext)
 
   const [imagesDescriptions] = useState({
+    none: none,
     example: example,
     profileVictor: profileVictor,
-    profileLeimar: profileLeimar,
+    profileLeimar: profileLeimar
 
   })
 

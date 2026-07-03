@@ -26,15 +26,12 @@
   gap: 8px;
 }
 
-.controls button {
+.buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 6px;
-  color: var(--text);
-  box-shadow: 2px 2px 3px var(--border);
-  background-color: var(--border-green);
   cursor: pointer;
 }
 

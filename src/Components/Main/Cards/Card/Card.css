@@ -76,15 +76,15 @@
 
 .specificStyleTimerButtonExercises {
   color: var(--text);
-  box-shadow: 2px 2px 3px var(--border);
   background-color: var(--border-yellow);
+  box-shadow: 2px 2px 3px var(--border);
   padding: 4px 16px;
 }
 
 .new-specificStyleTimerButtonExercises {
   color: var(--text-inactive);
-  box-shadow: 2px 2px 3px var(--text-inactive);
   background-color: var(--bg-inactive);
+  box-shadow: 2px 2px 3px var(--text-inactive);
   padding: 4px 16px;
 }
 

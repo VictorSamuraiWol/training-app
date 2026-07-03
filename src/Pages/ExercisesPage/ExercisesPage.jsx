@@ -31,13 +31,12 @@ function ExercisesPage() {
   const { id } = useParams()
 
   const [ableDescriptionIconsMenu, setAbleDescriptionIconsMenu] = useState(false)
-
   const [descriptionIconName, setDescriptionIconName] = useState('')
-
   const [errorMessageCreateAllClients, setErrorMessageCreateAllClients] = useState(null)
 
   // audios
   const [audiosDescriptions] = useState({
+      none: null,
       audio1: audio1,
       audio2: audio2
 
@@ -123,6 +122,7 @@ function ExercisesPage() {
           className={ableMusic ? 'menu-exercises-page-style-cards-timer-title-music-toggle-video-modal' : 
             'new-menu-exercises-page-style-cards-timer-title-music-toggle-video-modal'}
         >
+          {/* admin */}
           {loginValidate && nameUser.toLowerCase() === 'Victor'.toLowerCase() &&
             <>
               <InsertClientDBModal
@@ -183,7 +183,8 @@ function ExercisesPage() {
               key='0'
               src={audiosDescriptions[id_audio_exercises.audio]}
               specificStylePlayer='music-player'
-              specificStyleMusicButton='specificStyleMusicButton' 
+              specificStyleMusicButton={id_audio_exercises.audio === 'none' ? 'disableSpecificStyleMusicButton' : 'specificStyleMusicButton'}
+              ableClick={id_audio_exercises.audio !== 'none'}
             />
           </div>}
 

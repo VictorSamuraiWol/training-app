@@ -23,7 +23,7 @@ export async function getAllClients() {
 
 // ─── INSERT / UPSERT ─────────────────────────────────────
 // create a client
-export async function insertClient(client, errorMessage) {
+export async function insertClient(client, errorMessage, close) {
   const { id, ...clientData } = client
 
   const payload = id ? { id, ...clientData } : clientData
@@ -44,6 +44,7 @@ export async function insertClient(client, errorMessage) {
   } 
   
   console.log('Client successfully created:', data)
+  close
   return data
 
 }

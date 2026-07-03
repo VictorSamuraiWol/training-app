@@ -20,19 +20,19 @@ Modal.setAppElement('#root')
 function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMenu, descriptionIconName }) {
 
   const { imagesProfilesList, audiosList, gifsList } = useOutletContext()
-  
+
   const [newNameClient, setNewNameClient] = useState('')
+  const [newPasswordClient, setNewPasswordClient] = useState('')
   const [newWeightClient, setNewWeightClient] = useState('')
   const [newHeightClient, setNewHeightClient] = useState('')
-  const [newPasswordClient, setNewPasswordClient] = useState('')
   const [newImageProfileClient, setNewImageProfileClient] = useState('')
   const [newAudioClient, setNewAudioClient] = useState('')
-  const [newTypeClient, setNewTypeClient] = useState('')
   const [videosList, setVideosList] = useState([{id: 0, value1: '', value2: ''}])
   const [exercisesList, setExercisesList] = useState([{id: 0, letter: 'A'}])
   const [exerciseList, setExerciseList] = useState([{id: 0, value1: '', value2: '', position: 'A0'}])
   const [nutritionList, setNutritionList] = useState([{id: 0, value1: '', value2: ''}])
   const [notesList, setNotesList] = useState([{id: 0, value1: ''}])
+  const [newTypeClient, setNewTypeClient] = useState('')
   const [errorMessageInsertClient, setErrorMessageInsertClient] = useState('')
   const [modalIsOpen, setModalIsOpen] = useState(false)
 
@@ -70,48 +70,6 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
   function closeModal() {
     setModalIsOpen(false)
-
-  }
-
-  // add field
-  function addField(setFields, field, value1, value2) {
-    const nextIndex = field.length      
-    const letter = String.fromCharCode(65 + nextIndex)
-
-    if (value1 || value2 || value1 === '' || value2 === '') {
-      setFields([...field, {id: nextIndex, value1: value1, value2: value2}])
-
-    } else {
-      setFields([...field, {id: nextIndex, letter: letter}])
-
-    }
-    
-  }
-
-  // input field in each exercise
-  function addFieldExercise(setFields, field, e, letter) {
-    const nextIndex = exerciseList.filter(field => field.position.includes(letter)).length
-
-    setFields([...field, {id: nextIndex, value: '', position: `${letter}${nextIndex}`}])
-
-  }
-
-  // remove last field and also specific all inputs fields the type training
-  function removeLastField(setFields, removeAllInputs, exerciseList) {
-    const lastTypeTarget = exercisesList.at(-1).value
-
-    setFields(prevFields => prevFields.slice(0, -1))
-
-    exerciseList && removeAllInputs(exerciseList.filter(field => !field.position?.includes(lastTypeTarget)))
-
-  }
-
-  // remove last field in relation to type training
-  function removeLastFieldExercise(setFields, field, e) {
-    const typeTarget = e.currentTarget.parentElement.parentElement.parentElement.children[0].children[1].textContent
-    const lastIndex = field.findLastIndex(item => item.position.startsWith(typeTarget))
-
-    setFields(field.filter((_, index) => index !== lastIndex))
 
   }
 
@@ -172,7 +130,9 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
             throw Error
   
           } else {
-            console.log('Create client', 'client: ', newClient)
+            console.log('Create Client:', newClient)
+            closeModal()
+            resetAllFields()
   
           }
   
@@ -184,12 +144,54 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         }
   
       } else if (newTypeClient === 'db') {
-        insertClient(newClient, setErrorMessageInsertClient)
+        insertClient(newClient, setErrorMessageInsertClient, closeModal())
   
       }
 
     }
 
+
+  }
+
+  // add default fields
+  function addField(setFields, field, value1, value2) {
+    const nextIndex = field.length      
+    const letter = String.fromCharCode(65 + nextIndex)
+
+    if (value1 || value2 || value1 === '' || value2 === '') {
+      setFields([...field, {id: nextIndex, value1: value1, value2: value2}])
+
+    } else {
+      setFields([...field, {id: nextIndex, letter: letter}])
+
+    }
+    
+  }
+
+  // input field in each exercise
+  function addFieldExercise(setFields, field, e, letter) {
+    const nextIndex = exerciseList.filter(field => field.position.includes(letter)).length
+
+    setFields([...field, {id: nextIndex, value1: '', value2: '', position: `${letter}${nextIndex}`}])
+
+  }
+
+  // remove last field and also specific all inputs fields the type training
+  function removeLastField(setFields, removeAllInputs, exerciseList) {
+    const lastTypeTarget = exercisesList.at(-1).value
+
+    setFields(prevFields => prevFields.slice(0, -1))
+
+    exerciseList && removeAllInputs(exerciseList.filter(field => !field.position?.includes(lastTypeTarget)))
+
+  }
+
+  // remove last field in relation to type training
+  function removeLastFieldExercise(setFields, field, e) {
+    const typeTarget = e.currentTarget.parentElement.parentElement.parentElement.children[0].children[1].textContent
+    const lastIndex = field.findLastIndex(item => item.position.startsWith(typeTarget))
+
+    setFields(field.filter((_, index) => index !== lastIndex))
 
   }
 
@@ -209,7 +211,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         setArray(prev =>
           prev.map(field =>
             field.position === position
-              ? { id: id, value1: newValue1, value2: field.value2, position: position }
+              ? { id: id, value1: newValue1, value2: field.value2 !== undefined ? field.value2 : '', position: position }
               : field
           )
         )
@@ -238,6 +240,17 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
       }
 
     }
+
+  }
+
+  // reset all fields
+  function resetAllFields() {
+    setNewNameClient('')
+    setNewPasswordClient('')
+    setNewWeightClient('')
+    setNewHeightClient('')
+    setExerciseList([{id: 0, value1: '', value2: '', position: 'A0'}])
+    setNewTypeClient('')
 
   }
 
@@ -284,6 +297,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                 nameLabel='Name:*' 
                 specificStyleLabel={voidField.newName && newNameClient?.trim() === '' ? 'color-error-input' : null}
               />
+
               <InputDefault
                 value={newNameClient}
                 onChange={(e) => setNewNameClient(e.target.value)}
@@ -298,6 +312,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                   nameLabel='Password:*' 
                   specificStyleLabel={voidField.newPassword && newPasswordClient?.trim() === '' ? 'color-error-input' : null}
                 />
+
                 <InputDefault 
                   value={newPasswordClient}
                   onChange={(e) => setNewPasswordClient(e.target.value)}
@@ -311,6 +326,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                   nameLabel='Weight:*' 
                   specificStyleLabel={voidField.newWeight && newWeightClient?.trim() === '' ? 'color-error-input' : null}
                 />
+
                 <InputDefault 
                   value={newWeightClient}
                   onChange={(e) => setNewWeightClient(e.target.value)}
@@ -324,6 +340,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                   nameLabel='Height:*' 
                   specificStyleLabel={voidField.newHeight && newHeightClient?.trim() === '' ? 'color-error-input' : null}
                 />
+
                 <InputDefault 
                   value={newHeightClient}
                   onChange={(e) => setNewHeightClient(e.target.value)}
@@ -334,6 +351,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
               <div className='form-insert-client-info-image'>
                 <LabelDefault nameLabel='Image Profile:' />
+
                 <SelectDefault 
                   selectValue={newImageProfileClient}
                   setSelectValue={setNewImageProfileClient}
@@ -345,6 +363,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
               <div className='form-insert-client-info-audio'>
                 <LabelDefault nameLabel='Audio:' />
+
                 <SelectDefault
                   selectValue={newAudioClient}
                   setSelectValue={setNewAudioClient}
@@ -380,6 +399,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                   >
                     <div className='form-insert-client-info-youtube-title'>
                       <LabelDefault nameLabel='Title Youtube:' />
+
                       <InputDefault 
                         key={field.id}
                         value={field.value1}
@@ -390,6 +410,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
                     <div className='form-insert-client-info-youtube-id'>
                       <LabelDefault nameLabel='ID Emded Youtube:' />
+
                       <InputDefault
                         key={field.id}
                         value={field.value2}
@@ -480,6 +501,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
                         nameLabel='Gif:*' 
                         specificStyleLabel={voidField.newExercise && exerciseList[0].value2?.trim() === '' ? 'color-error-input' : null}
                       />
+
                       <SelectDefault
                         selectValue={exercise.value2}
                         onChangeOut={(e) => onChangeArray(exercise.id, setExerciseList, null, e.target.value, `${field.letter}${exercise.id}`)}
@@ -527,6 +549,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
               >
                 <div className='form-insert-client-nutrition-type-text'>
                   <LabelDefault nameLabel='Type:' />
+
                   <InputDefault
                     value={field.value1}
                     onChange={(e) => onChangeArray(field.id, setNutritionList, e.target.value, null)}
@@ -536,6 +559,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
                 <div className='form-insert-client-nutrition-nutri-text'>
                   <LabelDefault nameLabel='Nutri:' />
+
                   <InputDefault
                     value={field.value2}
                     onChange={(e) => onChangeArray(field.id, setNutritionList, null, e.target.value)}

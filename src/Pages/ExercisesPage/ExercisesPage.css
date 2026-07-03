@@ -214,6 +214,17 @@
   .specificStyleMusicButton {
     font-size: 0.4rem;
     padding: 4px 20px;
+    color: var(--text);
+    background-color: var(--border-green);
+    box-shadow: 2px 2px 3px var(--border);
+  }
+
+  .disableSpecificStyleMusicButton {
+    font-size: 0.4rem;
+    padding: 4px 20px;
+    color: var(--text-inactive);
+    background-color: var(--bg-inactive);
+    box-shadow: 2px 2px 3px var(--text-inactive);
   }
 
   .menu-exercises-page-style-cards-timer-title-music-toggle-video-modal {
@@ -310,6 +321,17 @@
   .specificStyleMusicButton {
     font-size: 0.4rem;
     padding: 4px 20px;
+    color: var(--text);
+    background-color: var(--border-green);
+    box-shadow: 2px 2px 3px var(--border);
+  }
+
+  .disableSpecificStyleMusicButton {
+    font-size: 0.4rem;
+    padding: 4px 20px;
+    color: var(--text-inactive);
+    background-color: var(--bg-inactive);
+    box-shadow: 2px 2px 3px var(--text-inactive);
   }
 
 }
@@ -343,6 +365,11 @@
   }
 
   .specificStyleMusicButton {
+    font-size: 0.75rem;
+    padding: 4px 24px;
+  }
+
+  .disableSpecificStyleMusicButton {
     font-size: 0.75rem;
     padding: 4px 24px;
   }
@@ -414,6 +441,11 @@
     padding: 6px 24px;
   }
 
+  .disableSpecificStyleMusicButton {
+    font-size: 0.8rem;
+    padding: 6px 24px;
+  }
+
   .music-delete-icon {
     font-size: 1.1rem;
   }
@@ -438,6 +470,10 @@
   }
 
   .specificStyleMusicButton {
+    font-size: 0.85rem;
+  }
+
+  .disableSpecificStyleMusicButton {
     font-size: 0.85rem;
   }
 
@@ -469,6 +505,10 @@
   }
 
   .specificStyleMusicButton {
+    font-size: 0.9rem;
+  }
+
+  .disableSpecificStyleMusicButton {
     font-size: 0.9rem;
   }
 
