@@ -458,6 +458,10 @@
     width: 35%;
   }
 
+  .errorMessageInsertClient {
+    font-size: 0.6rem;
+  }
+
 }
 
 @media (min-width: 481px) {
@@ -492,6 +496,10 @@
 
   .form-insert-client-nutrition-type-text, .form-insert-client-nutrition-nutri-text {
     width: 100%;
+  }
+
+  .errorMessageInsertClient {
+    font-size: 0.6rem;
   }
 
 }
@@ -530,6 +538,10 @@
     width: 70%;
   }
 
+  .errorMessageInsertClient {
+    font-size: 0.7rem;
+  }
+
 }
 
 @media (min-width: 1024px) {
@@ -549,6 +561,10 @@
     width: 20%;
   }
 
+  .errorMessageInsertClient {
+    font-size: 0.8rem;
+  }
+
 }
 
 @media (min-width: 1280px) {
@@ -556,11 +572,19 @@
     font-size: 2rem;
   }
 
+  .errorMessageInsertClient {
+    font-size: 0.9rem;
+  }
+
 }
 
 @media (min-width: 1440px) {
   .form-insert-client-info-weight, .form-insert-client-info-height {
     width: 15%;
+  }
+
+  .errorMessageInsertClient {
+    font-size: 1rem;
   }
 
 }
