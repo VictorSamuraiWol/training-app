@@ -75,6 +75,7 @@ function Login({ setActivateNavigateDefault }) {
         <div className='form-labels-inputs'>
           <div className='form-label-input'>
             <LabelDefault htmlFor='name' nameLabel='Name:' />
+
             <InputDefault
               onChange={onNameUserValidate}
               value={nameUser}
@@ -86,6 +87,7 @@ function Login({ setActivateNavigateDefault }) {
 
           <div className='form-label-input short-pass'>
             <LabelDefault htmlFor='password' nameLabel='Pass:' />
+
             <InputDefault
               onChange={onPasswordUserValidate}
               value={passwordUser}
@@ -98,6 +100,7 @@ function Login({ setActivateNavigateDefault }) {
 
           <div className='form-label-input long-pass'>
             <LabelDefault htmlFor='password' nameLabel='Password:' />
+            
             <InputDefault
               onChange={onPasswordUserValidate}
               value={passwordUser}

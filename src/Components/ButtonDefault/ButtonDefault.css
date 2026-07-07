@@ -1,7 +1,4 @@
 button {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   font-family: var(--bebas);
   font-weight: bold;
   padding: 16px;
@@ -13,4 +10,25 @@ button {
 
 button:hover {
   transform: scale(0.94);
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  button {
+    padding: 12px;
+  }
+
+}
+
+@media (min-width: 481px) {
+  button {
+    padding: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  button {
+    padding: 16px;
+  }
+
 }

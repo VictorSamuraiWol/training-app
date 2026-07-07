@@ -658,7 +658,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
             <ButtonDefault
               onClick={closeModal}
-              specificStylesButton='insert-client-button' 
+              specificStylesButton='insert-client-close-button' 
               imageReact={<MdCancel />} 
               typeButton='button' 
             />

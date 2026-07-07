@@ -37,7 +37,7 @@
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   position: absolute;
   background: var(--bg);
   color: var(--border-green);
@@ -72,6 +72,7 @@
 }
 
 .container-insert-client-modal-delete-text {
+  font-size: 2rem;
   margin: 0;
   cursor: default;
 }
@@ -373,10 +374,193 @@
   border-bottom: 1px solid var(--border);
 }
 
+.insert-client-close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--border-green);
+  text-shadow: 1px 1px 2px var(--border);
+  background-color: var(--text);
+  height: 15px;
+  width: 130px;
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--bg);
+  border-bottom: 1px solid var(--bg);
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out, text-shadow 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.insert-client-close-button:hover {
+  color: var(--border-yellow);
+  border-left: 1px solid var(--bg);
+  border-top: 1px solid var(--bg);
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
 .errorMessageInsertClient {
   position: absolute;
   bottom: -80%;
   color: var(--error-color);
   text-shadow: none;
   font-size: 0.9rem;
+}
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  .insert-user-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modalInsertClientContent {
+    gap: 12px;
+  }
+
+  .container-insert-client-modal-delete-text {
+    font-size: 1.3rem;
+  }
+
+  .container-insert-client-modal-delete-icon {
+    font-size: 1.3rem;
+  }
+
+  .form-insert-client-info-name, .form-insert-client-info-pass {
+    width: 100%;
+  }
+
+  .form-insert-client-info-weight, .form-insert-client-info-height {
+    width: 45%;
+  }
+
+  .form-insert-client-info-youtube-title-id, .container-form-insert-client-nutrition-type-nutri {
+    flex-direction: column;
+  }
+
+  .form-insert-client-nutrition-type-text, .form-insert-client-nutrition-nutri-text {
+    width: 100%;
+  }
+
+  .container-insert-client-buttons {
+    gap: 32px;
+  }
+
+  .insert-client-buttons-spans {
+    width: 35%;
+  }
+
+  .insert-client-button {
+    width: 100%;
+  }
+
+  .insert-client-close-button {
+    width: 35%;
+  }
+
+}
+
+@media (min-width: 481px) {
+  .insert-user-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .modalInsertClientContent {
+    gap: 12px;
+  }
+
+  .container-insert-client-modal-delete-text {
+    font-size: 1.3rem;
+  }
+
+  .container-insert-client-modal-delete-icon {
+    font-size: 1.3rem;
+  }
+
+  .form-insert-client-info-name, .form-insert-client-info-pass {
+    width: 100%;
+  }
+
+  .form-insert-client-info-weight, .form-insert-client-info-height {
+    width: 40%;
+  }
+
+  .form-insert-client-info-youtube-title-id, .container-form-insert-client-nutrition-type-nutri {
+    flex-direction: column;
+  }
+
+  .form-insert-client-nutrition-type-text, .form-insert-client-nutrition-nutri-text {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .insert-user-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .modalInsertClientContent {
+    gap: 12px;
+  }
+
+  .container-insert-client-modal-delete-text {
+    font-size: 1.5rem;
+  }
+
+  .container-insert-client-modal-delete-icon {
+    font-size: 1.4rem;
+  }
+
+  .form-insert-client-info-weight, .form-insert-client-info-height {
+    width: 30%;
+  }
+
+  .form-insert-client-info-youtube-title-id, .container-form-insert-client-nutrition-type-nutri {
+    flex-direction: row;
+  }
+
+  .form-insert-client-nutrition-type-text {
+    width: 30%;
+  }
+
+  .form-insert-client-nutrition-nutri-text {
+    width: 70%;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .modalInsertClientContent {
+    gap: 16px;
+  }
+
+  .container-insert-client-modal-delete-text {
+    font-size: 1.7rem;
+  }
+
+  .container-insert-client-modal-delete-icon {
+    font-size: 1.5rem;
+  }
+
+  .form-insert-client-info-weight, .form-insert-client-info-height {
+    width: 20%;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .container-insert-client-modal-delete-text {
+    font-size: 2rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  .form-insert-client-info-weight, .form-insert-client-info-height {
+    width: 15%;
+  }
+
 }

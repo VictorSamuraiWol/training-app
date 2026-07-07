@@ -48,3 +48,70 @@ select:focus {
 .select-option:checked {
   color: var(--border-yellow);
 }
+
+/* Responsiveness */
+@media (max-width: 480px) {
+  select {
+    font-size: 0.95rem;
+    padding: 2px 25px 2px 5px;
+  }
+
+  .select-triangle-icon {
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (min-width: 481px) {
+  select {
+    font-size: 1rem;
+    padding: 2px 25px 2px 5px;
+  }
+
+  .select-triangle-icon {
+    font-size: 0.7rem;
+  }
+
+}
+
+@media (min-width: 768px) {
+  select {
+    padding: 5px 25px 5px 8px;
+  }
+
+  .select-triangle-icon {
+    font-size: 0.8rem;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  select {
+    font-size: 1.05rem;
+    padding: 5px 25px 5px 8px;
+  }
+
+  .select-triangle-icon {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  select {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  select {
+    font-size: 1.125rem;
+    padding: 7px 30px 7px 10px;
+  }
+
+  .select-triangle-icon {
+    font-size: 0.9rem;
+  }
+
+}
