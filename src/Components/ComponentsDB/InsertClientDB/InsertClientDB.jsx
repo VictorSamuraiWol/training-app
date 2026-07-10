@@ -85,20 +85,20 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
       || (video.value1 === '' && video.value2 !== ''))
 
     if (voidFieldVideos.length !== 0 && (voidFieldNutrition.length !== 0)) {
-      setErrorMessageInsertClient("Some video and nutrition fields are empty. Please fill them in or remove them before submitting.")
+      setErrorMessageInsertClient("Fill in or remove all videos and nutrition fields.")
       setTimeout(() => setErrorMessageInsertClient(null), 5000)
 
       voidField = true
 
     } else if (voidFieldVideos.length !== 0) {
-      setErrorMessageInsertClient("Some video fields are empty. Please fill them in or remove them before submitting.")
+      setErrorMessageInsertClient("Please fill in or remove all videos fields.")
       setTimeout(() => setErrorMessageInsertClient(null), 5000)
 
       voidField = true
 
     } else if (voidFieldNutrition.length !== 0) {
-      setErrorMessageInsertClient("Some nutrition fields are empty. Please fill them in or remove them before submitting.")
-      setTimeout(() => setErrorMessageInsertClient(null), 5000)
+      setErrorMessageInsertClient("Please fill in or remove all nutrition fields.")
+      setTimeout(() => setErrorMessageInsertClient(null), 5000) 
 
       voidField = true
 
