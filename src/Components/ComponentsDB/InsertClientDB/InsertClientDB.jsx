@@ -74,83 +74,37 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
   }
 
-  async function onSaveNewClient(e) {
-    e.preventDefault()
+  // check the void fields in the optional video and nutrition fields
+  function voidOptionalFieldsVideosNutrition() {
+    let voidField = false
 
-    const isValid = validateField()
+    const voidFieldVideos = videosList.filter(video => (video.value1 !== '' && video.value2 === '') 
+      || (video.value1 === '' && video.value2 !== ''))
 
-    if (!isValid) {
-      setErrorMessageInsertClient("Please fill in all required fields.")
-      setTimeout(() => setErrorMessageInsertClient(null), 3000)
+    const voidFieldNutrition = nutritionList.filter(video => (video.value1 !== '' && video.value2 === '') 
+      || (video.value1 === '' && video.value2 !== ''))
 
-    } else {
-      // data new client
-      const newClient = {
-        name : newNameClient,
-        weight: newWeightClient,
-        height: newHeightClient,
-        exercises: // array exercisesList
-                  exercisesList.map(field => (
-                  [{type: field.letter}, {exercises:
-                                            // array exerciseList
-                                            exerciseList.filter(exercise => exercise.position.includes(field.letter))
-                                            .map(exercise => (
-                                            [{exercise: exercise.value1}, {gif: exercise.value2}]
-                                            ))
-                                          }
-                  ])),
-        nutrition:  // array nutritionList
-                    nutritionList.map(nutri => (
-                    [nutri.value1, [nutri.value2]]
-                    )),
-        notes:  // array notesList
-                notesList.map(note => (
-                [note.value1]
-                )),
-        password: newPasswordClient,
-        image_profile: newImageProfileClient === '' ? 'none' : newImageProfileClient,
-        audio: newAudioClient === '' ? 'none' : newAudioClient,
-        video_yt: // array videosList
-                  videosList.map(video => (
-                  {name: video.value1, id: video.value2}
-                  ))    
-      }
-  
-      if (newTypeClient === 'json') {
-        try {
-          const response = await fetch('http://localhost:3001/clients', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(newClient)
-  
-          })
-  
-          if (!response.ok) {
-            throw Error
-  
-          } else {
-            console.log('Create Client:', newClient)
-            closeModal()
-            resetAllFields()
-  
-          }
-  
-        } catch (error) {
-          setErrorMessageInsertClient('Error inserting client into Json.')
-          setTimeout(() => setErrorMessageInsertClient(null), 3000)
-          console.error(error)
-  
-        }
-  
-      } else if (newTypeClient === 'db') {
-        insertClient(newClient, setErrorMessageInsertClient, closeModal, resetAllFields)
-  
-      }
+    if (voidFieldVideos.length !== 0 && (voidFieldNutrition.length !== 0)) {
+      setErrorMessageInsertClient("Some video and nutrition fields are empty. Please fill them in or remove them before submitting.")
+      setTimeout(() => setErrorMessageInsertClient(null), 5000)
+
+      voidField = true
+
+    } else if (voidFieldVideos.length !== 0) {
+      setErrorMessageInsertClient("Some video fields are empty. Please fill them in or remove them before submitting.")
+      setTimeout(() => setErrorMessageInsertClient(null), 5000)
+
+      voidField = true
+
+    } else if (voidFieldNutrition.length !== 0) {
+      setErrorMessageInsertClient("Some nutrition fields are empty. Please fill them in or remove them before submitting.")
+      setTimeout(() => setErrorMessageInsertClient(null), 5000)
+
+      voidField = true
 
     }
 
+    return voidField
 
   }
 
@@ -203,7 +157,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         setArray(prev =>
           prev.map(field =>
             field.id === id
-              ? { id: id, value1: newValue1, value2: field.value2 !== undefined ? field.value2 : null }
+              ? { id: id, value1: newValue1, value2: field.value2 !== undefined ? field.value2 : '' }
               : field
           )
         )
@@ -224,7 +178,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         setArray(prev =>
           prev.map(field =>
             field.id === id
-              ? { id: id, value1: field.value1, value2: newValue2 }
+              ? { id: id, value1: field.value1 !== undefined ? field.value1 : '', value2: newValue2 }
               : field
           )
         )
@@ -233,7 +187,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
         setArray(prev =>
           prev.map(field =>
             field.position === position
-              ? { id: id, value1: field.value1, value2: newValue2, position: position }
+              ? { id: id, value1: field.value1 !== undefined ? field.value1 : '', value2: newValue2, position: position }
               : field
           )
         )
@@ -250,8 +204,98 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
     setNewPasswordClient('')
     setNewWeightClient('')
     setNewHeightClient('')
+    setNewImageProfileClient('')
+    setNewAudioClient('')
+    setVideosList([{id: 0, value1: '', value2: ''}])
+    setExercisesList([{id: 0, letter: 'A'}])
     setExerciseList([{id: 0, value1: '', value2: '', position: 'A0'}])
+    setNutritionList([{id: 0, value1: '', value2: ''}])
+    setNotesList([{id: 0, value1: ''}])
     setNewTypeClient('')
+
+  }
+
+  async function onSaveNewClient(e) {
+    e.preventDefault()
+
+    const isValid = validateField()
+
+    if (!isValid) {
+      setErrorMessageInsertClient("Please fill in all required fields.")
+      setTimeout(() => setErrorMessageInsertClient(null), 3000)
+
+    } else if (voidOptionalFieldsVideosNutrition() === true) {
+      voidOptionalFieldsVideosNutrition()
+
+    } else {
+      // data new client
+      const newClient = {
+        name : newNameClient,
+        weight: newWeightClient,
+        height: newHeightClient,
+        exercises: // array exercisesList
+                  exercisesList.map(field => (
+                  [{type: field.letter}, {exercises:
+                                            // array exerciseList
+                                            exerciseList.filter(exercise => exercise.position.includes(field.letter))
+                                            .map(exercise => (
+                                            [{exercise: exercise.value1}, {gif: exercise.value2}]
+                                            ))
+                                          }
+                  ])),
+        nutrition:  // array nutritionList
+                    nutritionList.map(nutri => (
+                    [nutri.value1, [nutri.value2]]
+                    )),
+        notes:  // array notesList
+                notesList.map(note => (
+                [note.value1]
+                )),
+        password: newPasswordClient,
+        image_profile: newImageProfileClient === '' ? 'none' : newImageProfileClient,
+        audio: newAudioClient === '' ? 'none' : newAudioClient,
+        video_yt: // array videosList
+                  videosList.map(video => (
+                  {name: video.value1, id: video.value2}
+                  ))    
+      }
+  
+      if (newTypeClient === 'json') {
+        try {
+          const response = await fetch('http://localhost:3001/clients', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newClient)
+  
+          })
+  
+          if (!response.ok) {
+            throw Error
+  
+          } else {
+            console.log('Create Client:', newClient)
+            closeModal()
+            resetAllFields()
+            alert("Client added successfully!")
+  
+          }
+  
+        } catch (error) {
+          setErrorMessageInsertClient('Error inserting client into Json.')
+          setTimeout(() => setErrorMessageInsertClient(null), 3000)
+          console.error(error)
+  
+        }
+  
+      } else if (newTypeClient === 'db') {
+        insertClient(newClient, setErrorMessageInsertClient, closeModal, resetAllFields)
+  
+      }
+
+    }
+
 
   }
 
@@ -380,7 +424,7 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
 
                   <div className='form-insert-client-info-youtube-plus-minus-icons'>
                     <CiCirclePlus
-                      onClick={() => addField(setVideosList, videosList)}
+                      onClick={() => addField(setVideosList, videosList, '', '')}
                       className='insert-client-icons'
                     />
 

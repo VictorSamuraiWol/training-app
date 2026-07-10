@@ -44,6 +44,7 @@ export async function insertClient(client, errorMessage, closeModal, resetAllFie
   } 
   
   console.log('Client successfully created:', data)
+  alert("Client added successfully!")
   closeModal()
   resetAllFields()
 
