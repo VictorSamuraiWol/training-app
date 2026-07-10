@@ -75,6 +75,7 @@ export async function insertAllClients(clients, errorMessage) {
 
   errorMessage(null)
   console.log(`${clients.length} clients successfully added/updated!`)
+  alert("Clients added successfully!")
 
   return data
 

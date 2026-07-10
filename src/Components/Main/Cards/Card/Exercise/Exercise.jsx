@@ -30,6 +30,7 @@ import standingCalfRaise from '../../../../../assets/images/exercises-gif/standi
 import seatedCalfRaise from '../../../../../assets/images/exercises-gif/seated-calf-raise-gif.gif';
 import barbellCurl from '../../../../../assets/images/exercises-gif/barbell-curl-gif.gif';
 import alternatingDumbbellCurl from '../../../../../assets/images/exercises-gif/alternating-dumbbell-curl-gif.gif';
+import cableShoulderExtension from '../../../../../assets/images/exercises-gif/cable-shoulder-extension-gif.gif';
 import { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
@@ -72,7 +73,8 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
     standingCalfRaise: standingCalfRaise,
     seatedCalfRaise: seatedCalfRaise,
     barbellCurl: barbellCurl,
-    alternatingDumbbellCurl: alternatingDumbbellCurl
+    alternatingDumbbellCurl: alternatingDumbbellCurl,
+    cableShoulderExtension: cableShoulderExtension
 
   })
 
