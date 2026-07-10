@@ -213,6 +213,17 @@ function InsertClientDBModal({ onMouseOver, onMouseLeave, ableDescriptionIconsMe
     setNotesList([{id: 0, value1: ''}])
     setNewTypeClient('')
 
+    // reset all styles inputs
+    setVoidField({
+      newName: false,
+      newPassword: false,
+      newWeight: false,
+      newHeight: false,
+      newExercise: false,
+      newGif: false,
+      newType: false
+    })
+
   }
 
   async function onSaveNewClient(e) {
