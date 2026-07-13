@@ -40,24 +40,28 @@ function SelectDefault({ setSelectValue, selectValue, onChangeOut, specificStyle
         </option>
 
         {specificArray && specificArray.map((item, index) => (
-          Object.values(item).length === 1 ? 
+          // object element
+          typeof(item) === 'object' && Object.values(item)?.length > 1 ? 
+            <option
+                key={index + 1}
+                value={item.id}
+                className='select-option'
+              >
+                {compactUserName && compactUserName(item.name, 60)}
+                {!compactUserName && item.name}
+            </option>
+
+          :
+          // string element
+          typeof(item) === 'string' &&
             <option
               key={index + 1}
               value={item}
               className='select-option'
             >
-              {compactUserName(item)}
-            </option> 
-          
-            :
-  
-            <option
-              key={index + 1}
-              value={item.id}
-              className='select-option'
-            >
-              {compactUserName(item.name)}
-            </option>
+              {compactUserName && compactUserName(item, 60)}
+              {!compactUserName && item}
+            </option>            
 
         ))}
 
