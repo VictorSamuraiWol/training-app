@@ -31,6 +31,9 @@ import seatedCalfRaise from '../../../../../assets/images/exercises-gif/seated-c
 import barbellCurl from '../../../../../assets/images/exercises-gif/barbell-curl-gif.gif';
 import alternatingDumbbellCurl from '../../../../../assets/images/exercises-gif/alternating-dumbbell-curl-gif.gif';
 import cableShoulderExtension from '../../../../../assets/images/exercises-gif/cable-shoulder-extension-gif.gif';
+import oneArmDumbbellRow from '../../../../../assets/images/exercises-gif/one-arm-dumbbell-row-gif.gif';
+import dumbbellShrug from '../../../../../assets/images/exercises-gif/dumbbell-shrug-gif.gif';
+import squat from '../../../../../assets/images/exercises-gif/squat-gif.gif';
 import { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
@@ -74,7 +77,10 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
     seatedCalfRaise: seatedCalfRaise,
     barbellCurl: barbellCurl,
     alternatingDumbbellCurl: alternatingDumbbellCurl,
-    cableShoulderExtension: cableShoulderExtension
+    cableShoulderExtension: cableShoulderExtension,
+    oneArmDumbbellRow: oneArmDumbbellRow,
+    dumbbellShrug: dumbbellShrug,
+    squat: squat
 
   })
 
