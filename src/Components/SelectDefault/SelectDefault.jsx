@@ -2,7 +2,9 @@ import './SelectDefault.css';
 import { useState } from 'react';
 import { TbTriangleInvertedFilled } from "react-icons/tb";
 
-function SelectDefault({ optionDisabledName, specificArray, selectValue, setSelectValue, onChangeOut, specificStylesSelect }) {
+function SelectDefault({ setSelectValue, selectValue, onChangeOut, specificStylesSelect, optionDisabledName, 
+  specificArray, compactUserName
+}) {
 
   const [openSelect, setOpenSelect] = useState(false)
 
@@ -38,13 +40,25 @@ function SelectDefault({ optionDisabledName, specificArray, selectValue, setSele
         </option>
 
         {specificArray && specificArray.map((item, index) => (
-          <option
-            key={index + 1}
-            value={item}
-            className='select-option'
-          >
-            {item}
-          </option>
+          Object.values(item).length === 1 ? 
+            <option
+              key={index + 1}
+              value={item}
+              className='select-option'
+            >
+              {compactUserName(item)}
+            </option> 
+          
+            :
+  
+            <option
+              key={index + 1}
+              value={item.id}
+              className='select-option'
+            >
+              {compactUserName(item.name)}
+            </option>
+
         ))}
 
       </select>

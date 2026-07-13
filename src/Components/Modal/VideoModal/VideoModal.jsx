@@ -5,9 +5,10 @@ import bgVideoModal from '../../../assets/images/bg-video-modal.png';
 import LabelDefault from '../../LabelDefault/LabelDefault';
 import InputDefault from '../../InputDefault/InputDefault';
 import DescriptionIconsMenu from '../../DescriptionIconsMenu/DescriptionIconsMenu';
+import SelectDefault from '../../SelectDefault/SelectDefault';
 import { useContext, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
-import { TiDeleteOutline } from "react-icons/ti"
+import { TiDeleteOutline } from "react-icons/ti";
 import { GiClick } from "react-icons/gi";
 import { DataContext } from '../../DataContext/DataContext';
 import { AiFillYoutube } from "react-icons/ai";
@@ -26,8 +27,7 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
     setAbleVideoBanner, setAbleBanner, selectNameVideoModal, setSelectNameVideoModal
   } = useOutletContext()
   
-  const [modalIsOpen, setModalIsOpen] = useState(false)    
-  const [openVideoModal, setOpenVideoModal] = useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   const [errorMessageVideoModal, setErrorMessageVideoModal] = useState('')
   const [selectedRadio, setSelectedRadio] = useState(null)
 
@@ -47,11 +47,6 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
   function onChangeSelectVideoModal(e) {
     setSelectIdVideoModal(e.target.value)
     setErrorMessageVideoModal('')
-
-  }
-
-  function onClickSelectVideoModal() {
-    setOpenVideoModal(prev => !prev)
 
   }
 
@@ -219,62 +214,35 @@ function VideoModal({ specificsStylesTogglesVideoModal, onMouseOver, onMouseLeav
 
         </div>
 
-        <div className='videos-selects'>
-          <TbTriangleInvertedFilled className={`videos-selects-icon ${openVideoModal ? 
-            "videos-selects-icon-animation" : ""}`} 
-          />
-
-          <select
-            value={selectIdVideoModal}
-            onChange={onChangeSelectVideoModal}
-            onClick={onClickSelectVideoModal}
-            onBlur={() => setOpenVideoModal(false)}
-            className='videos-selects-select'
-          >
-            <option 
-              value=''
-              disabled
-              className='videos-selects-select-option-default'>
-                select video
-            </option>
-
-            {/* Static and Dynamic User Contents */}
-            {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
-            .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
-            .map(user => (
-              user.video_yt && user.video_yt.map((video, indice) => 
-                video && 
-                <option
-                  key={indice}
-                  value={video.id}
-                  className='videos-selects-select-option'
-                >
-                  {compactUserName(video.name, 60)}
-                </option>)
-
-            ))}
-
-          </select>
-
-        </div>
+        {/* Static and Dynamic User Contents */}
+        {(staticUsersContents || dbUsers) && loginValidate && [...(staticUsersContents), ...(dbUsers)]
+          .filter(user => user.name.toLowerCase() === nameUser.toLowerCase().trim())
+          .map((user) => (
+            <SelectDefault key={user} setSelectValue={setSelectIdVideoModal} selectValue={selectIdVideoModal} 
+              onChangeOut={onChangeSelectVideoModal} specificStylesSelect='videos-selects-select' 
+              optionDisabledName='select video' specificArray={user.video_yt} compactUserName={compactUserName}
+            />
+        ))}
 
         <div className='videos-target'>
           {!selectIdVideoModal &&
-          <img
-            className='bg-video-modal-style'
-            src={bgVideoModal}
-            alt='img-bg-video-modal'
-          />}
+            <img
+              className='bg-video-modal-style'
+              src={bgVideoModal}
+              alt='img-bg-video-modal'
+            />
+          }
 
           {selectIdVideoModal && 
-          <iframe
-            className='videos-target-iframe'
-            src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
-            title={selectNameVideoModal}
-            allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          />}
+            <iframe
+              className='videos-target-iframe'
+              src={`https://www.youtube.com/embed/${selectIdVideoModal}`}
+              title={selectNameVideoModal}
+              allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          }
 
         </div>
 
