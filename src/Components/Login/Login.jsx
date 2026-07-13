@@ -14,34 +14,39 @@ function Login({ setActivateNavigateDefault }) {
 
   const [alertLoginMessage, setAlertLoginMessage] = useState('')
 
+  const [ableAlertLoginMessage, setAbleAlertLoginMessage] = useState(false)
+
   const { staticUsersContents, dbUsers, setLoginValidate, nameUser, setNameUser } = useContext(DataContext)
 
   const onLoginValidate = (e) => {
     e.preventDefault()
-    const errorMessage = document.querySelector('#alert-login-message')
 
     let matchedUsersContents;
 
-    {/* Static and Dynamic User Contents */}
-    matchedUsersContents = (staticUsersContents || dbUsers) && [...(staticUsersContents), ...(dbUsers)].filter(user =>
-      (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
-      (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
-
-    if (matchedUsersContents) {
-      setLoginValidate(true)
-      setActivateNavigateDefault(true)
+    if (nameUser === '' || passwordUser === '') {
+      setAlertLoginMessage('Please, fill all fields')
+      setAbleAlertLoginMessage(true)
+      setTimeout(() => setAbleAlertLoginMessage(false), 3000)
 
     } else {
-      setLoginValidate(false)
-      setAlertLoginMessage('Invalid user')
-      errorMessage.classList.add('alert-login-message-able')
-      errorMessage.classList.remove('alert-login-message-disable')
+    
+      /* Static and Dynamic User Contents */
+      matchedUsersContents = (staticUsersContents || dbUsers) && [...(staticUsersContents), ...(dbUsers)].filter(user =>
+        (user.name.toLowerCase() === nameUser.toLowerCase().trim()) && 
+        (user.password.toLowerCase() === passwordUser.toLowerCase().trim()))[0]
 
-      setTimeout(() => {
-        errorMessage.classList.add('alert-login-message-disable')
-        errorMessage.classList.remove('alert-login-message-able')
+      if (matchedUsersContents) {
+        setLoginValidate(true)
+        setActivateNavigateDefault(true)
 
-      } , 3000)
+      } else {
+        setLoginValidate(false)
+        setAlertLoginMessage('Invalid user')
+
+        setAbleAlertLoginMessage(true)
+        setTimeout(() => setAbleAlertLoginMessage(false), 3000)
+
+      }
 
     }
 
@@ -80,7 +85,6 @@ function Login({ setActivateNavigateDefault }) {
               onChange={onNameUserValidate}
               value={nameUser}
               inputId='name'
-              required={true}
               name='name'
             />
           </div>
@@ -92,7 +96,6 @@ function Login({ setActivateNavigateDefault }) {
               onChange={onPasswordUserValidate}
               value={passwordUser}
               inputId='password'
-              required={true}
               name='password'
               // typeInput='password' obs: avoid use this to prevent leak, because this is a test project
             />
@@ -105,7 +108,6 @@ function Login({ setActivateNavigateDefault }) {
               onChange={onPasswordUserValidate}
               value={passwordUser}
               inputId='password'
-              required={true}
               name='password'
               // typeInput='password' obs: avoid use this to prevent leak, because this is a test project
             />
@@ -113,7 +115,7 @@ function Login({ setActivateNavigateDefault }) {
 
           <span
             id='alert-login-message'
-            className='alert-login-message-disable'
+            className={ableAlertLoginMessage ? 'alert-login-message-able' : 'alert-login-message-disable'}
           >
             {alertLoginMessage}
           </span>
