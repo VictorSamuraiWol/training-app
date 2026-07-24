@@ -34,6 +34,8 @@ import cableShoulderExtension from '../../../../../assets/images/exercises-gif/c
 import oneArmDumbbellRow from '../../../../../assets/images/exercises-gif/one-arm-dumbbell-row-gif.gif';
 import dumbbellShrug from '../../../../../assets/images/exercises-gif/dumbbell-shrug-gif.gif';
 import squat from '../../../../../assets/images/exercises-gif/squat-gif.gif';
+import gluteBridge from '../../../../../assets/images/exercises-gif/glute-bridge-gif.gif';
+import inclinePushUp from '../../../../../assets/images/exercises-gif/incline-push-up-gif.gif';
 import { useEffect, useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 
@@ -80,7 +82,9 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
     cableShoulderExtension: cableShoulderExtension,
     oneArmDumbbellRow: oneArmDumbbellRow,
     dumbbellShrug: dumbbellShrug,
-    squat: squat
+    squat: squat,
+    gluteBridge: gluteBridge,
+    inclinePushUp: inclinePushUp
 
   })
 
