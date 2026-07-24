@@ -129,7 +129,7 @@
                   "exercise": "Glute Bridge: 1x 16-20 (bodyweight) + 3x 12-14 (bodyweight)"
                 },
                 {
-                  "gif": "waitingTheExercise"
+                  "gif": "none"
                 }
               ],
               [
@@ -194,7 +194,7 @@
                   "exercise": "Incline Push-up: 1x 16-20 + 3x 12-14 (bodyweight)"
                 },
                 {
-                  "gif": "waitingTheExercise"
+                  "gif": "none"
                 }
               ],
               [
@@ -347,194 +347,6 @@
         }
       ],
       "id": "Victor"
-    },
-    {
-      "name": "1",
-      "weight": "Example",
-      "height": "Example",
-      "exercises": [
-        [
-          {
-            "type": "A"
-          },
-          {
-            "exercises": [
-              [
-                {
-                  "exercise": "exercise1"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise2"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise3"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ]
-            ]
-          }
-        ],
-        [
-          {
-            "type": "B"
-          },
-          {
-            "exercises": [
-              [
-                {
-                  "exercise": "exercise1"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise2"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise3"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise4"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ]
-            ]
-          }
-        ],
-        [
-          {
-            "type": "C"
-          },
-          {
-            "exercises": [
-              [
-                {
-                  "exercise": "exercise1"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise2"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise3"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise4"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ],
-              [
-                {
-                  "exercise": "exercise5"
-                },
-                {
-                  "gif": "waitingTheExercise"
-                }
-              ]
-            ]
-          }
-        ]
-      ],
-      "nutrition": [
-        [
-          "Supplements",
-          [
-            "Example"
-          ]
-        ],
-        [
-          "Breakfast",
-          [
-            "Example"
-          ]
-        ],
-        [
-          "Snack",
-          [
-            "Example"
-          ]
-        ],
-        [
-          "Lunch",
-          [
-            "Example"
-          ]
-        ],
-        [
-          "Snack",
-          [
-            "Example"
-          ]
-        ],
-        [
-          "Dinner",
-          [
-            "Example"
-          ]
-        ],
-        [
-          "Late-night Snack",
-          [
-            "Example"
-          ]
-        ]
-      ],
-      "notes": [
-        "Example",
-        "Example"
-      ],
-      "password": "1",
-      "image_profile": "example",
-      "audio": "audio2",
-      "video_yt": [
-        {
-          "name": "The Best of Armin Only",
-          "id": "vDe9pO6P84Q?si=3m0ht2pEGEE4Kl2t"
-        }
-      ],
-      "id": "1"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -2,7 +2,7 @@ import './Exercise.css';
 import InputDefault from '../../../../InputDefault/InputDefault';
 import Timer from '../../../../Timer/Timer';
 import ExercisesGif from '../../../../ExercisesGif/ExercisesGif';
-import waitingTheExercise from '../../../../../assets/images/exercises-gif/waiting-the-exercise-gif.gif';
+import none from '../../../../../assets/images/exercises-gif/waiting-the-exercise-gif.gif';
 import hiit from '../../../../../assets/images/exercises-gif/hiit-gif.gif';
 import barbellBenchPress from '../../../../../assets/images/exercises-gif/barbell-bench-press-gif.gif';
 import concentrationCurl from '../../../../../assets/images/exercises-gif/concentration-curl-gif.gif';
@@ -49,7 +49,7 @@ function Exercise({ exerciseName, exerciseGif, _key }) {
 
     // exercises gifs
   const [exercisesGifs] = useState({
-    waitingTheExercise: waitingTheExercise,
+    none: none,
     hiit: hiit,
     barbellBenchPress: barbellBenchPress,
     concentrationCurl: concentrationCurl,
